@@ -65,15 +65,15 @@ def get_transcripts_json(gcsPath, langCode, phraseHints=[], speakerCount=1, enha
     # Helper function for simplifying Google speech client response
     def _jsonify(result):
         json = []
-        for section in result.results:
+        for section in result['results']:
             data = {
                 "transcript": section.alternatives[0].transcript,
                 "words": []
             }
-            for word in section.alternatives[0].words:
+            for word in section['alternatives'][0]['words']:
                 data["words"].append({
-                    "word": word.word,
-                    "start_time": word.start_time.total_seconds(),
+                    "word": word['word'],
+                    "start_time": word['startTime'].total_seconds(),
                     "end_time": word.end_time.total_seconds(),
                     "speaker_tag": word.speaker_tag
                 })
@@ -137,12 +137,12 @@ def parse_sentence_with_speaker(json, lang):
             if not sentence:
                 sentence = {
                     lang: [wordText],
-                    'speaker': word['speaker_tag'],
+                    # 'speaker': word['speaker_tag'],
                     'start_time': word['start_time'],
                     'end_time': word['end_time']
                 }
             # If we have a new speaker, save the sentence and create a new one:
-            elif word['speaker_tag'] != sentence['speaker']:
+            elif 'speaker_tag' in word and word['speaker_tag'] != sentence['speaker']:
                 sentence[lang] = ' '.join(sentence[lang])
                 sentences.append(sentence)
                 sentence = {
