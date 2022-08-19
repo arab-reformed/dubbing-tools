@@ -34,25 +34,15 @@ def jsonify(result):
     return json
 
 
-def textify(transcript):
-    txt = ''
-    for section in transcript:
-        section_text = ''
-        for word in section['words']:
-            section_text += (' ` ' if section_text else '') + word['word']
-
-        txt += f"{section_text}\n\n"
-
-    return txt
-
-
 def cmd(transcript_file: str):
     with open(transcript_file, 'r') as input:
         transcript = json.load(input)
 
     transcript = jsonify(transcript)
 
-    print(textify(transcript))
+    sentences = parse_sentence_with_speaker(transcript, SOURCE_LANG)
+
+    print(json.dumps(sentences, indent=2))
 
 
 if __name__ == "__main__":
