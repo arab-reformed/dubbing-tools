@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from functions import jsonify, Word
 import json
 import os

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from dubber import parse_sentence_with_speaker
 from functions import jsonify, textify
 import json

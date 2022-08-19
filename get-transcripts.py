@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from dubber import get_transcripts_json, parse_sentence_with_speaker
 import json
 import os

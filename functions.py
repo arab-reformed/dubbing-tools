@@ -1,6 +1,8 @@
 from typing import List, Optional
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
+import re
+import sys
 
 
 def jsonify(result):
@@ -64,11 +66,27 @@ class Word:
         return round(self.end_time - self.start_time, 2)
 
     def gap_between(self, next_word: 'Word'):
-        return round(self.end_time - next_word.start_time, 2)
+        return round(next_word.start_time - self.end_time, 2)
 
-    def break_after(self, next_word: 'Word'):
-        return self.hard_break or self.gap_between(next_word) > 0.5
+    def break_reason(self, next_word: 'Word', gap: float = 0.5) -> Optional[str]:
+        if self.hard_break:
+            return "^"
+        
+        # if self.gap_between(next_word) > 0.0:
+            # print(f"  {self.gap_between(next_word)}", file=sys.stderr)
 
+        if self.gap_between(next_word) > gap:
+            return f"gap>{gap}"
+            
+        matches = re.search(r'(?P<punc>[.!?,])"*$', self.word)
+        if matches:
+            return matches.group('punc')
+
+        return None
+
+    def break_after(self, next_word: 'Word', gap: float = 0.5) -> bool:
+        return self.break_reason(next_word=next_word, gap=gap) is not None
+        
     @staticmethod
     def secs_to_float(secs: str):
         return round(float(secs.replace('s', '')), 2)
@@ -83,6 +101,7 @@ class Phrase:
     start_word: int
     end_word: int
     target_lang: str = None
+    reason: str = None
 
     def word_count(self) -> int:
         return self.end_word - self.start_word + 1
@@ -92,13 +111,13 @@ class Phrase:
 
     def split(self, words: List[Word], split_at: int) -> 'Phrase':
         next = Phrase(
-            src_lang=' '.join([w.word for w in words[split_at+1:self.end_word]]),
+            src_lang=' '.join([w.word for w in words[split_at+1:self.end_word+1]]),
             start_time=words[split_at+1].start_time,
             end_time=words[self.end_word].end_time,
             start_word=split_at+1,
-            end_word=self.end_word,
+            end_word=self.end_word
         )
-        self.src_lang = ' '.join([w.word for w in words[self.start_word:split_at]])
+        self.src_lang = ' '.join([w.word for w in words[self.start_word:split_at+1]])
         self.end_time = words[split_at].end_time
         self.end_word = split_at
 
@@ -116,9 +135,14 @@ class Phrase:
 
 
 def get_phrases(words: List[Word], lang: str, gap: float = 1.0):
+    clauses = [
+        ['through', 'that', 'which', 'whereby', 'is'],
+        ['of', 'by', 'about', 'from', 'in', 'into', 'for']
+    ]
 
     phrases = []
     phrase = None
+    reason = None
     for i, word in enumerate(words):
         if not phrase:
             phrase = Phrase(
@@ -127,15 +151,21 @@ def get_phrases(words: List[Word], lang: str, gap: float = 1.0):
                 end_time=word.end_time,
                 start_word=i,
                 end_word=i,
+                reason=reason
             )
+
         else:
             phrase.src_lang += ' ' + word.word
             phrase.end_time = word.end_time
             phrase.end_word = i
 
+        if i < len(words)-1:
+            reason = word.break_reason(next_word=words[i+1], gap=gap)
+        else:
+            reason = None
+ 
         # If there's greater than one second gap, assume this is a new sentence
-        if word.word[-1] in [',', '.', '?', '!'] or \
-                i < len(words)-1 and word.end_time - words[i + 1].start_time > gap:
+        if reason is not None:
             phrases.append(phrase)
             phrase = None
 
@@ -143,12 +173,44 @@ def get_phrases(words: List[Word], lang: str, gap: float = 1.0):
         phrases.append(phrase)
 
     # Process phrases to make sure none are too long
-    shortened = []
-    for phrase in phrases:
-        shortened.append(phrase)
-        if phrase.word_count() > 6:
-            for i in range(phrase.start_word+2, phrase.end_word-3):
-                if words[i].break_after(words[i+1]):
-                    shortened.append(phrase.split(words, i))
+    for small_gap in [0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0.0]:
+        changed = True
+        while changed:
+            changed = False
+            shortened = []
+            print(f"gap = {small_gap}", file=sys.stderr)
+            for p, phrase in enumerate(phrases):
+                shortened.append(phrase)
+                print(f"Phrase: {p}", file=sys.stderr)
+                if phrase.word_count() > 6:
+                    for i in range(phrase.start_word+3, phrase.end_word-3):
+                        reason = words[i].break_reason(next_word=words[i+1], gap=small_gap)
+                        # print(i, reason, file=sys.stderr)
+                        if reason is not None:
+                            new = phrase.split(words, split_at=i)
+                            new.reason = reason
+                            shortened.append(new)
+                            changed = True
+                            break
+
+            phrases = shortened
+
+    for intros in clauses:
+        changed = True
+        while changed:
+            changed = False
+            shortened = []
+            for phrase in phrases:
+                shortened.append(phrase)
+                if phrase.word_count() > 6:
+                    for i in range(phrase.start_word+3, phrase.end_word-3):
+                        if words[i].word in intros:
+                            new = phrase.split(words, split_at=i-1)
+                            new.reason = words[i].word
+                            shortened.append(new)
+                            changed = True
+                            break
+
+            phrases = shortened
 
     return phrases

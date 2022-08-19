@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import json
 import fire
 from functions import get_phrases, Word, Phrase

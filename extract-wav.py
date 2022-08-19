@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from dubber import decode_audio
 import json
 import os
