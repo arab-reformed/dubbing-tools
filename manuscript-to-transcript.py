@@ -1,4 +1,4 @@
-from sentences import jsonify
+from functions import jsonify
 import json
 import os
 import fire
@@ -11,41 +11,39 @@ PHRASE_HINTS = []
 
 def cmd(json_file: str, text_file: str):
     with open(json_file, 'r') as f:
-        tramscript = json.load(f)
+        transcript = json.load(f)
 
-    transcript = jsonify(tramscript)
+    transcript = jsonify(transcript)
+
+    timings = []
 
     i = 0
     with open(text_file, 'r') as f:
-        section_transcript = ''
         for line in f.readlines():
             if len(line.strip()) == 0:
-                if section_transcript:
-                    transcript[i]['transcript'] = section_transcript
-
-                section_transcript = ''
                 i += 1
+
             else:
                 words = line.split('`')
                 j = 0
                 k = 0
                 while j < len(words):
+                    timing = transcript[i]['words'][k]
                     if j < len(words)-1 and words[j][-1] != ' ' and words[j+1][0] != ' ':
-                        transcript[i]['words'][k]['word'] = (words[j] + words[j+1]).strip()
-                        transcript[i]['words'][k]['end_time'] = transcript[i]['words'][k+1]['end_time']
-                        del transcript[i]['words'][k+1]
-                        j += 2
-                    else:
-                        transcript[i]['words'][k]['word'] = words[j].strip()
+                        timing['word'] = (words[j] + words[j+1]).strip()
+                        timing['end_time'] = transcript[i]['words'][k+1]['end_time']
+                        k += 1
                         j += 1
+                    else:
+                        timing['word'] = words[j].strip()
 
-                    section_transcript += (' ' if section_transcript else '') + transcript[i]['words'][k]['word']
+                    timing['start_time'] = float(timing['start_time'].replace('s', ''))
+                    timing['end_time'] = float(timing['end_time'].replace('s', ''))
+                    timings.append(timing)
+                    j += 1
                     k += 1
 
-        if section_transcript:
-            transcript[i]['transcript'] = section_transcript
-
-    print(json.dumps(transcript, indent=2))
+    print(json.dumps(timings, indent=2))
 
 
 if __name__ == "__main__":
