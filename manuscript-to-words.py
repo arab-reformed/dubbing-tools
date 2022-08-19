@@ -1,4 +1,4 @@
-from functions import jsonify
+from functions import jsonify, Word
 import json
 import os
 import fire
@@ -29,25 +29,22 @@ def cmd(json_file: str, text_file: str):
                 k = 0
                 while j < len(words):
                     timing = transcript[i]['words'][k]
+                    word = Word(
+                        word=words[j].strip(),
+                        start_time=Word.secs_to_float(timing['start_time']),
+                        end_time=Word.secs_to_float(timing['end_time']),
+                    )
                     if j < len(words)-1 and words[j][-1] != ' ' and words[j+1][0] != ' ':
-                        timing['word'] = (words[j] + words[j+1]).strip()
-                        timing['end_time'] = transcript[i]['words'][k+1]['end_time']
+                        word.set_word((words[j] + words[j+1]).strip())
+                        word.end_time = Word.secs_to_float(transcript[i]['words'][k+1]['end_time'])
                         k += 1
                         j += 1
-                    else:
-                        timing['word'] = words[j].strip()
 
-                    if '^' in timing['word']:
-                        timing['break_after'] = True
-                        timing['word'] = timing['word'].replace('^', '').strip()
-
-                    timing['start_time'] = float(timing['start_time'].replace('s', ''))
-                    timing['end_time'] = float(timing['end_time'].replace('s', ''))
-                    timings.append(timing)
+                    timings.append(word)
                     j += 1
                     k += 1
 
-    print(json.dumps(timings, indent=2))
+    print(Word.schema().dumps(timings, many=True, indent=2))
 
 
 if __name__ == "__main__":

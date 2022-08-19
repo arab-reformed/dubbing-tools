@@ -13,3 +13,4 @@ googleapis-common-protos
 pydub
 moviepy
 python-dotenv
+dataclasses-json

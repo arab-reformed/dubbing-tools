@@ -1,15 +1,17 @@
 import json
 import fire
-from functions import get_phrases
+from functions import get_phrases, Word, Phrase
 
 
 def cmd(words_file: str):
     with open(words_file, 'r') as f:
-        words = json.load(f)
+        words = []
+        for word in json.load(f):
+            words.append(Word(**word))
 
     phrases = get_phrases(words, 'en')
 
-    print(json.dumps(phrases, indent=2))
+    print(Phrase.schema().dumps(phrases, many=True, indent=2))
 
 
 if __name__ == "__main__":

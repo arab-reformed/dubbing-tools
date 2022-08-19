@@ -1,697 +1,1162 @@
 [
   {
-    "en": "Well,",
+    "src_lang": "Well,",
+    "end_word": 0,
+    "start_word": 0,
     "start_time": 1.2,
+    "target_lang": null,
     "end_time": 1.4
   },
   {
-    "en": "welcome to soteriology this course deals with the Holy Spirit and the doctrine of the Holy Spirit,",
+    "src_lang": "welcome to soteriology.",
+    "end_word": 3,
+    "start_word": 1,
     "start_time": 1.4,
-    "end_time": 11.5
+    "target_lang": null,
+    "end_time": 3.6
   },
   {
-    "en": "how the Holy Spirit works in the soul.",
+    "src_lang": "This course deals with the Holy",
+    "end_word": 10,
+    "start_word": 4,
+    "start_time": 4.2,
+    "target_lang": null,
+    "end_time": 8.2
+  },
+  {
+    "src_lang": "how the Holy Spirit works in the soul.",
+    "end_word": 25,
+    "start_word": 18,
     "start_time": 11.5,
+    "target_lang": null,
     "end_time": 13.7
   },
   {
-    "en": "Running all the way from his effectual calling and regeneration all the way to glorification.",
+    "src_lang": "Running all the way from His effectual calling,",
+    "end_word": 33,
+    "start_word": 26,
     "start_time": 14.0,
+    "target_lang": null,
+    "end_time": 17.7
+  },
+  {
+    "src_lang": "and regeneration,",
+    "end_word": 35,
+    "start_word": 34,
+    "start_time": 18.2,
+    "target_lang": null,
+    "end_time": 19.4
+  },
+  {
+    "src_lang": "all the way to glorification.",
+    "end_word": 40,
+    "start_word": 36,
+    "start_time": 19.9,
+    "target_lang": null,
     "end_time": 21.9
   },
   {
-    "en": "So it's a very important subject and I'm glad you're with me.",
+    "src_lang": "So it's a very important subject and I'm glad you're with me.",
+    "end_word": 52,
+    "start_word": 41,
     "start_time": 22.4,
+    "target_lang": null,
     "end_time": 28.9
   },
   {
-    "en": "We're going to look at it in some detail.",
+    "src_lang": "We're going to look at it in some detail.",
+    "end_word": 61,
+    "start_word": 53,
     "start_time": 30.0,
+    "target_lang": null,
     "end_time": 32.8
   },
   {
-    "en": "I think you'll enjoy the class.",
+    "src_lang": "I think you'll enjoy the class.",
+    "end_word": 67,
+    "start_word": 62,
     "start_time": 33.7,
+    "target_lang": null,
     "end_time": 35.7
   },
   {
-    "en": "After all,",
+    "src_lang": "After all,",
+    "end_word": 69,
+    "start_word": 68,
     "start_time": 36.5,
+    "target_lang": null,
     "end_time": 37.3
   },
   {
-    "en": "all of our Christianity,",
+    "src_lang": "all of our Christianity,",
+    "end_word": 73,
+    "start_word": 70,
     "start_time": 37.3,
+    "target_lang": null,
     "end_time": 41.5
   },
   {
-    "en": "all of our personal religion is just a sham without the Holy Spirit.",
+    "src_lang": "all of our personal religion is just a sham without the Holy Spirit.",
+    "end_word": 86,
+    "start_word": 74,
     "start_time": 41.5,
+    "target_lang": null,
     "end_time": 46.0
   },
   {
-    "en": "So we're very,",
+    "src_lang": "So we're very,",
+    "end_word": 89,
+    "start_word": 87,
     "start_time": 46.0,
+    "target_lang": null,
     "end_time": 47.9
   },
   {
-    "en": "very grateful for the ministry of the Holy Spirit,",
+    "src_lang": "very grateful for the ministry of the Holy Spirit,",
+    "end_word": 98,
+    "start_word": 90,
     "start_time": 47.9,
+    "target_lang": null,
     "end_time": 51.6
   },
   {
-    "en": "I want to begin this first lecture with the reading of God's word,",
+    "src_lang": "I want to begin this first lecture with the reading of God's word,",
+    "end_word": 111,
+    "start_word": 99,
     "start_time": 52.8,
+    "target_lang": null,
     "end_time": 58.9
   },
   {
-    "en": "as we will with each each lecture.",
+    "src_lang": "as we will with each each lecture.",
+    "end_word": 118,
+    "start_word": 112,
     "start_time": 59.6,
+    "target_lang": null,
     "end_time": 61.8
   },
   {
-    "en": "Turn with me,",
+    "src_lang": "Turn with me,",
+    "end_word": 121,
+    "start_word": 119,
     "start_time": 62.3,
+    "target_lang": null,
     "end_time": 62.9
   },
   {
-    "en": "please,",
+    "src_lang": "please,",
+    "end_word": 122,
+    "start_word": 122,
     "start_time": 62.9,
+    "target_lang": null,
     "end_time": 63.3
   },
   {
-    "en": "to Romans 8 and I'll read 13 through 17.",
+    "src_lang": "to Romans 8 and I'll read 13 through 17.",
+    "end_word": 131,
+    "start_word": 123,
     "start_time": 63.3,
+    "target_lang": null,
     "end_time": 68.4
   },
   {
-    "en": "Romans 8: 13 through 17.",
+    "src_lang": "Romans 8: 13 through 17.",
+    "end_word": 136,
+    "start_word": 132,
     "start_time": 68.4,
+    "target_lang": null,
     "end_time": 70.6
   },
   {
-    "en": "For,",
+    "src_lang": "For,",
+    "end_word": 137,
+    "start_word": 137,
     "start_time": 72.3,
+    "target_lang": null,
     "end_time": 72.4
   },
   {
-    "en": "if you live after the flesh,",
+    "src_lang": "if you live after the flesh,",
+    "end_word": 143,
+    "start_word": 138,
     "start_time": 72.4,
+    "target_lang": null,
     "end_time": 74.4
   },
   {
-    "en": "you shall die.",
+    "src_lang": "you shall die.",
+    "end_word": 146,
+    "start_word": 144,
     "start_time": 75.0,
+    "target_lang": null,
     "end_time": 76.0
   },
   {
-    "en": "But if ye through the Spirit do mortify,",
+    "src_lang": "But if ye through the Spirit do mortify,",
+    "end_word": 154,
+    "start_word": 147,
     "start_time": 76.5,
+    "target_lang": null,
     "end_time": 78.8
   },
   {
-    "en": "the deeds of the body ye shall live.",
+    "src_lang": "the deeds of the body ye shall live.",
+    "end_word": 162,
+    "start_word": 155,
     "start_time": 78.8,
+    "target_lang": null,
     "end_time": 82.3
   },
   {
-    "en": "For as many as are led by the Spirit of God,",
+    "src_lang": "For as many as are led by the Spirit of God,",
+    "end_word": 173,
+    "start_word": 163,
     "start_time": 83.3,
+    "target_lang": null,
     "end_time": 86.1
   },
   {
-    "en": "they are the sons of God.",
+    "src_lang": "they are the sons of God.",
+    "end_word": 179,
+    "start_word": 174,
     "start_time": 86.6,
+    "target_lang": null,
     "end_time": 88.0
   },
   {
-    "en": "For you have not received the Spirit of bondage again to fear,",
+    "src_lang": "For you have not received the Spirit of bondage again to fear,",
+    "end_word": 191,
+    "start_word": 180,
     "start_time": 88.7,
+    "target_lang": null,
     "end_time": 92.5
   },
   {
-    "en": "but you have received the Spirit of adoption whereby we cry Abba,",
+    "src_lang": "but you have received the Spirit of adoption whereby we cry Abba,",
+    "end_word": 203,
+    "start_word": 192,
     "start_time": 93.1,
+    "target_lang": null,
     "end_time": 98.4
   },
   {
-    "en": "Father The Spirit itself beareth witness with our spirit that we are the children of God and if children then heirs,",
+    "src_lang": "Father.",
+    "end_word": 204,
+    "start_word": 204,
     "start_time": 98.6,
+    "target_lang": null,
+    "end_time": 99.3
+  },
+  {
+    "src_lang": "The Spirit itself beareth witness with our spirit that we are the children of God,",
+    "end_word": 219,
+    "start_word": 205,
+    "start_time": 100.1,
+    "target_lang": null,
+    "end_time": 104.9
+  },
+  {
+    "src_lang": "and if children then heirs,",
+    "end_word": 224,
+    "start_word": 220,
+    "start_time": 105.7,
+    "target_lang": null,
     "end_time": 108.1
   },
   {
-    "en": "heirs of God and joint heirs with Christ.",
+    "src_lang": "heirs of God and joint heirs with Christ.",
+    "end_word": 232,
+    "start_word": 225,
     "start_time": 108.3,
+    "target_lang": null,
     "end_time": 111.0
   },
   {
-    "en": "If so be that we suffer with him,",
+    "src_lang": "If so be that we suffer with him,",
+    "end_word": 240,
+    "start_word": 233,
     "start_time": 111.7,
+    "target_lang": null,
     "end_time": 114.8
   },
   {
-    "en": "that we may also be glorified together.",
+    "src_lang": "that we may also be glorified together.",
+    "end_word": 247,
+    "start_word": 241,
     "start_time": 115.2,
+    "target_lang": null,
     "end_time": 119.8
   },
   {
-    "en": "Let's seek God's face in prayer.",
+    "src_lang": "Let's seek God's face in prayer.",
+    "end_word": 253,
+    "start_word": 248,
     "start_time": 121.3,
+    "target_lang": null,
     "end_time": 123.1
   },
   {
-    "en": "Lord God,",
+    "src_lang": "Lord God,",
+    "end_word": 255,
+    "start_word": 254,
     "start_time": 126.6,
+    "target_lang": null,
     "end_time": 127.3
   },
   {
-    "en": "we stand on holy ground as we approach this immense subject of the third person of the Holy Trinity and his salvific work in our souls.",
+    "src_lang": "we stand on holy ground,",
+    "end_word": 260,
+    "start_word": 256,
     "start_time": 127.3,
+    "target_lang": null,
+    "end_time": 130.0
+  },
+  {
+    "src_lang": "as we approach this immense subject of the third person of the Holy Trinity and his salvific work in our souls.",
+    "end_word": 281,
+    "start_word": 261,
+    "start_time": 130.0,
+    "target_lang": null,
     "end_time": 144.0
   },
   {
-    "en": "And we do pray that by the end of this course,",
+    "src_lang": "And we do pray that by the end of this course,",
+    "end_word": 292,
+    "start_word": 282,
     "start_time": 145.0,
+    "target_lang": null,
     "end_time": 148.1
   },
   {
-    "en": "we will have a much more profound appreciation for the saving ministry of the Holy Spirit,",
+    "src_lang": "we will have a much more profound appreciation for the saving ministry of the Holy Spirit,",
+    "end_word": 308,
+    "start_word": 293,
     "start_time": 148.1,
+    "target_lang": null,
     "end_time": 155.0
   },
   {
-    "en": "than we perhaps might have at present Help us to grow,",
+    "src_lang": "than we perhaps might have at present Help us to grow,",
+    "end_word": 319,
+    "start_word": 309,
     "start_time": 156.0,
+    "target_lang": null,
     "end_time": 160.5
   },
   {
-    "en": "not only in the grace and knowledge of Jesus,",
+    "src_lang": "not only in the grace and knowledge of Jesus,",
+    "end_word": 328,
+    "start_word": 320,
     "start_time": 160.8,
+    "target_lang": null,
     "end_time": 163.4
   },
   {
-    "en": "whom the Spirit focuses upon,",
+    "src_lang": "whom the Spirit focuses upon,",
+    "end_word": 333,
+    "start_word": 329,
     "start_time": 164.6,
+    "target_lang": null,
     "end_time": 166.5
   },
   {
-    "en": "but also that we would grow in the grace and knowledge of the Holy Spirit,",
+    "src_lang": "but also that we would grow in the grace and knowledge of the Holy Spirit,",
+    "end_word": 348,
+    "start_word": 334,
     "start_time": 167.5,
+    "target_lang": null,
     "end_time": 172.1
   },
   {
-    "en": "becoming more aware of His work,",
+    "src_lang": "becoming more aware of His work,",
+    "end_word": 354,
+    "start_word": 349,
     "start_time": 173.3,
+    "target_lang": null,
     "end_time": 175.5
   },
   {
-    "en": "His saving work,",
+    "src_lang": "His saving work,",
+    "end_word": 357,
+    "start_word": 355,
     "start_time": 176.1,
+    "target_lang": null,
     "end_time": 177.3
   },
   {
-    "en": "and appreciating more profoundly the vastness of His ministry as he works in sinners and rebels,",
+    "src_lang": "and appreciating more profoundly the vastness of His ministry as he works in sinners and rebels,",
+    "end_word": 373,
+    "start_word": 358,
     "start_time": 178.0,
+    "target_lang": null,
     "end_time": 185.6
   },
   {
-    "en": "such as we all are by nature.",
+    "src_lang": "such as we all are by nature.",
+    "end_word": 380,
+    "start_word": 374,
     "start_time": 186.1,
+    "target_lang": null,
     "end_time": 188.0
   },
   {
-    "en": "So Lord bless this class.",
+    "src_lang": "So Lord bless this class.",
+    "end_word": 385,
+    "start_word": 381,
     "start_time": 189.2,
+    "target_lang": null,
     "end_time": 190.8
   },
   {
-    "en": "Help me in teaching.",
+    "src_lang": "Help me in teaching.",
+    "end_word": 389,
+    "start_word": 386,
     "start_time": 191.4,
+    "target_lang": null,
     "end_time": 192.3
   },
   {
-    "en": "Help the students in listening,",
+    "src_lang": "Help the students in listening,",
+    "end_word": 394,
+    "start_word": 390,
     "start_time": 192.3,
+    "target_lang": null,
     "end_time": 193.9
   },
   {
-    "en": "learning,",
+    "src_lang": "learning,",
+    "end_word": 395,
+    "start_word": 395,
     "start_time": 194.7,
+    "target_lang": null,
     "end_time": 195.4
   },
   {
-    "en": "and grant that each lecture may serve to thy glory,",
+    "src_lang": "and grant that each lecture may serve to thy glory,",
+    "end_word": 405,
+    "start_word": 396,
     "start_time": 196.3,
+    "target_lang": null,
     "end_time": 202.9
   },
   {
-    "en": "to our spiritual growth,",
+    "src_lang": "to our spiritual growth,",
+    "end_word": 409,
+    "start_word": 406,
     "start_time": 203.8,
+    "target_lang": null,
     "end_time": 205.3
   },
   {
-    "en": "and to the well-being of our entire being as we journey to the never-ending eternity.",
+    "src_lang": "and to the well-being of our entire being as we journey to the never-ending eternity.",
+    "end_word": 424,
+    "start_word": 410,
     "start_time": 206.2,
+    "target_lang": null,
     "end_time": 215.4
   },
   {
-    "en": "Be with us now we pray.",
+    "src_lang": "Be with us now we pray.",
+    "end_word": 430,
+    "start_word": 425,
     "start_time": 216.2,
+    "target_lang": null,
     "end_time": 217.5
   },
   {
-    "en": "In Jesus name.",
+    "src_lang": "In Jesus name.",
+    "end_word": 433,
+    "start_word": 431,
     "start_time": 217.5,
+    "target_lang": null,
     "end_time": 218.4
   },
   {
-    "en": "Amen.",
+    "src_lang": "Amen.",
+    "end_word": 434,
+    "start_word": 434,
     "start_time": 219.5,
+    "target_lang": null,
     "end_time": 220.1
   },
   {
-    "en": "Well,",
+    "src_lang": "Well,",
+    "end_word": 435,
+    "start_word": 435,
     "start_time": 223.5,
+    "target_lang": null,
     "end_time": 223.8
   },
   {
-    "en": "thank you for joining us for this class and I want to begin with the first lecture,",
+    "src_lang": "thank you for joining us for this class and I want to begin with the first lecture,",
+    "end_word": 452,
+    "start_word": 436,
     "start_time": 223.8,
+    "target_lang": null,
     "end_time": 231.3
   },
   {
-    "en": "which is titled: The Study of the Holy Spirit.",
+    "src_lang": "which is titled: The Study of the Holy Spirit.",
+    "end_word": 461,
+    "start_word": 453,
     "start_time": 231.3,
+    "target_lang": null,
     "end_time": 235.1
   },
   {
-    "en": "The Study of the Holy Spirit.",
+    "src_lang": "The Study of the Holy Spirit.",
+    "end_word": 467,
+    "start_word": 462,
     "start_time": 235.1,
+    "target_lang": null,
     "end_time": 238.9
   },
   {
-    "en": "God's Holy spirit was with God's people from the beginning.",
+    "src_lang": "God's Holy spirit was with God's people from the beginning.",
+    "end_word": 477,
+    "start_word": 468,
     "start_time": 241.0,
+    "target_lang": null,
     "end_time": 246.2
   },
   {
-    "en": "Already in Genesis 1,",
+    "src_lang": "Already in Genesis 1,",
+    "end_word": 480,
+    "start_word": 478,
     "start_time": 247.4,
+    "target_lang": null,
     "end_time": 249.9
   },
   {
-    "en": "verse 2 leading them ultimately to their rest in Jesus Christ (Isaiah 63 14) To know the Spirit therefore is to stand in continuity with the Saints of all ages.",
+    "src_lang": "verse 2 leading them ultimately to their rest in Jesus Christ (Isaiah 63 14) To know the Spirit therefore is to stand in continuity with the Saints of all ages.",
+    "end_word": 510,
+    "start_word": 481,
     "start_time": 249.9,
+    "target_lang": null,
     "end_time": 273.5
   },
   {
-    "en": "God has promised,",
+    "src_lang": "God has promised,",
+    "end_word": 513,
+    "start_word": 511,
     "start_time": 275.8,
+    "target_lang": null,
     "end_time": 277.0
   },
   {
-    "en": "his Spirit already to Israel,",
+    "src_lang": "his Spirit already to Israel,",
+    "end_word": 518,
+    "start_word": 514,
     "start_time": 277.0,
+    "target_lang": null,
     "end_time": 278.9
   },
   {
-    "en": "His chosen people.",
+    "src_lang": "His chosen people.",
+    "end_word": 521,
+    "start_word": 519,
     "start_time": 280.4,
+    "target_lang": null,
     "end_time": 281.6
   },
   {
-    "en": "We know that in the Old Testament,",
+    "src_lang": "We know that in the Old Testament,",
+    "end_word": 528,
+    "start_word": 522,
     "start_time": 282.9,
+    "target_lang": null,
     "end_time": 284.7
   },
   {
-    "en": "various individuals experience a comfort of that Spirit.",
+    "src_lang": "various individuals experience a comfort of that Spirit.",
+    "end_word": 536,
+    "start_word": 529,
     "start_time": 284.7,
+    "target_lang": null,
     "end_time": 288.9
   },
   {
-    "en": "Think of David,",
+    "src_lang": "Think of David,",
+    "end_word": 539,
+    "start_word": 537,
     "start_time": 288.9,
+    "target_lang": null,
     "end_time": 289.6
   },
   {
-    "en": "for example (Psalm 51) But God promised a far richer and broader work of the Spirit than we might possibly imagine.",
+    "src_lang": "for example (Psalm 51) But God promised a far richer and broader work of the Spirit than we might possibly imagine.",
+    "end_word": 560,
+    "start_word": 540,
     "start_time": 289.6,
+    "target_lang": null,
     "end_time": 304.5
   },
   {
-    "en": "Isaiah foretold of a righteous king whose administration would be like,",
+    "src_lang": "Isaiah foretold of a righteous king whose administration would be like,",
+    "end_word": 571,
+    "start_word": 561,
     "start_time": 305.9,
+    "target_lang": null,
     "end_time": 311.4
   },
   {
-    "en": "rivers of waters in a dry place and the transformation of the barren wilderness into a world filled with the fruit of righteousness (Isaiah 32).",
+    "src_lang": "rivers of waters in a dry place and the transformation of the barren wilderness into a world filled with the fruit of righteousness (Isaiah 32).",
+    "end_word": 596,
+    "start_word": 572,
     "start_time": 311.6,
+    "target_lang": null,
     "end_time": 323.4
   },
   {
-    "en": "When the Spirit,",
+    "src_lang": "When the Spirit,",
+    "end_word": 599,
+    "start_word": 597,
     "start_time": 324.2,
+    "target_lang": null,
     "end_time": 325.8
   },
   {
-    "en": "When the Spirit is poured out upon us from on high.",
+    "src_lang": "When the Spirit is poured out upon us from on high.",
+    "end_word": 610,
+    "start_word": 600,
     "start_time": 326.4,
+    "target_lang": null,
     "end_time": 332.5
   },
   {
-    "en": "And then he goes on to say in Isaiah 44,",
+    "src_lang": "And then he goes on to say in Isaiah 44,",
+    "end_word": 620,
+    "start_word": 611,
     "start_time": 334.7,
+    "target_lang": null,
     "end_time": 337.1
   },
   {
-    "en": "that the Spirit would be poured out on Israel,",
+    "src_lang": "that the Spirit would be poured out on Israel,",
+    "end_word": 629,
+    "start_word": 621,
     "start_time": 337.7,
+    "target_lang": null,
     "end_time": 339.5
   },
   {
-    "en": "like a river of water on dry ground,",
+    "src_lang": "like a river of water on dry ground,",
+    "end_word": 637,
+    "start_word": 630,
     "start_time": 339.5,
+    "target_lang": null,
     "end_time": 341.7
   },
   {
-    "en": "irrigating faithless souls to produce a people who say I am the Lord's.",
+    "src_lang": "irrigating faithless souls to produce a people who say I am the Lord's.",
+    "end_word": 650,
+    "start_word": 638,
     "start_time": 341.9,
+    "target_lang": null,
     "end_time": 351.2
   },
   {
-    "en": "And so the Spirit is the answer of God's covenantal faithfulness to the chronic problem of Israel's covenant breaking.",
+    "src_lang": "And so the Spirit is the answer of God's covenantal faithfulness to the chronic problem of Israel's covenant breaking.",
+    "end_word": 669,
+    "start_word": 651,
     "start_time": 352.6,
+    "target_lang": null,
     "end_time": 364.8
   },
   {
-    "en": "You find that also in the Book of Joel that the Lord would pour out his Spirit upon all his people that whosoever would call on the name of the Lord would be saved (Joel 2:28 to 32).",
+    "src_lang": "You find that also in the Book of Joel that the Lord would pour out his Spirit upon all his people that whosoever would call on the name of the Lord would be saved (Joel 2:28 to 32).",
+    "end_word": 707,
+    "start_word": 670,
     "start_time": 366.1,
+    "target_lang": null,
     "end_time": 381.2
   },
   {
-    "en": "So to study the work of the Holy Spirit is to study heavenly work,",
+    "src_lang": "So to study the work of the Holy Spirit is to study heavenly work,",
+    "end_word": 721,
+    "start_word": 708,
     "start_time": 382.3,
+    "target_lang": null,
     "end_time": 388.8
   },
   {
-    "en": "saving work.",
+    "src_lang": "saving work.",
+    "end_word": 723,
+    "start_word": 722,
     "start_time": 389.5,
+    "target_lang": null,
     "end_time": 390.6
   },
   {
-    "en": "And work that abides forever.",
+    "src_lang": "And work that abides forever.",
+    "end_word": 728,
+    "start_word": 724,
     "start_time": 391.8,
+    "target_lang": null,
     "end_time": 395.1
   },
   {
-    "en": "Now,",
+    "src_lang": "Now,",
+    "end_word": 729,
+    "start_word": 729,
     "start_time": 396.9,
+    "target_lang": null,
     "end_time": 397.0
   },
   {
-    "en": "of course,",
+    "src_lang": "of course,",
+    "end_word": 731,
+    "start_word": 730,
     "start_time": 397.0,
+    "target_lang": null,
     "end_time": 397.5
   },
   {
-    "en": "in the New Testament age you know,",
+    "src_lang": "in the New Testament age you know,",
+    "end_word": 738,
+    "start_word": 732,
     "start_time": 397.5,
+    "target_lang": null,
     "end_time": 400.1
   },
   {
-    "en": "that when Jesus rose from the dead and ascended into heaven,",
+    "src_lang": "that when Jesus rose from the dead and ascended into heaven,",
+    "end_word": 749,
+    "start_word": 739,
     "start_time": 400.1,
+    "target_lang": null,
     "end_time": 404.3
   },
   {
-    "en": "He poured out His Spirit in much larger measures than had previously been known (Acts 2 17,",
+    "src_lang": "He poured out His Spirit in much larger measures than had previously been known (Acts 2 17,",
+    "end_word": 766,
+    "start_word": 750,
     "start_time": 405.9,
+    "target_lang": null,
     "end_time": 418.0
   },
   {
-    "en": "through 21 and 33 and 34) And Peter after his sermon is interrupted by thousands of people who are under great conviction of sin.",
+    "src_lang": "through 21 and 33 and 34) And Peter after his sermon is interrupted by thousands of people who are under great conviction of sin.",
+    "end_word": 790,
+    "start_word": 767,
     "start_time": 418.0,
+    "target_lang": null,
     "end_time": 431.3
   },
   {
-    "en": "Under it and they cried out men and Brethren.",
+    "src_lang": "Under it and they cried out men and Brethren.",
+    "end_word": 799,
+    "start_word": 791,
     "start_time": 431.3,
+    "target_lang": null,
     "end_time": 435.2
   },
   {
-    "en": "What shall we do?",
+    "src_lang": "What shall we do?",
+    "end_word": 803,
+    "start_word": 800,
     "start_time": 435.2,
+    "target_lang": null,
     "end_time": 436.4
   },
   {
-    "en": "Peter said to them,",
+    "src_lang": "Peter said to them,",
+    "end_word": 807,
+    "start_word": 804,
     "start_time": 437.7,
+    "target_lang": null,
     "end_time": 438.8
   },
   {
-    "en": "repent and be baptized everyone of you in the name of Jesus Christ.",
+    "src_lang": "repent and be baptized everyone of you in the name of Jesus Christ.",
+    "end_word": 820,
+    "start_word": 808,
     "start_time": 438.8,
+    "target_lang": null,
     "end_time": 443.6
   },
   {
-    "en": "And you shall receive the gift of the Holy Ghost.",
+    "src_lang": "And you shall receive the gift of the Holy Ghost.",
+    "end_word": 830,
+    "start_word": 821,
     "start_time": 444.1,
+    "target_lang": null,
     "end_time": 448.6
   },
   {
-    "en": "For the promise is unto you and to your children and to all that are afar off.",
+    "src_lang": "For the promise is unto you and to your children and to all that are afar off.",
+    "end_word": 847,
+    "start_word": 831,
     "start_time": 449.6,
+    "target_lang": null,
     "end_time": 454.5
   },
   {
-    "en": "Even as many as the Lord,",
+    "src_lang": "Even as many as the Lord,",
+    "end_word": 853,
+    "start_word": 848,
     "start_time": 454.7,
+    "target_lang": null,
     "end_time": 456.1
   },
   {
-    "en": "Our God shall call (Acts 2: 38 and 39).",
+    "src_lang": "Our God shall call (Acts 2: 38 and 39).",
+    "end_word": 862,
+    "start_word": 854,
     "start_time": 456.1,
+    "target_lang": null,
     "end_time": 460.0
   },
   {
-    "en": "And so the rest of the New Testament writings,",
+    "src_lang": "And so the rest of the New Testament writings,",
+    "end_word": 871,
+    "start_word": 863,
     "start_time": 462.7,
+    "target_lang": null,
     "end_time": 465.9
   },
   {
-    "en": "particularly Paul's Epistles,",
+    "src_lang": "particularly Paul's Epistles,",
+    "end_word": 874,
+    "start_word": 872,
     "start_time": 465.9,
+    "target_lang": null,
     "end_time": 467.5
   },
   {
-    "en": "are just filled with the Holy Spirit.",
+    "src_lang": "are just filled with the Holy Spirit.",
+    "end_word": 881,
+    "start_word": 875,
     "start_time": 467.8,
+    "target_lang": null,
     "end_time": 472.1
   },
   {
-    "en": "He speaks often about being born of the Spirit such as Galatians,",
+    "src_lang": "He speaks often about being born of the Spirit such as Galatians,",
+    "end_word": 893,
+    "start_word": 882,
     "start_time": 472.9,
+    "target_lang": null,
     "end_time": 477.2
   },
   {
-    "en": "4: 29.",
+    "src_lang": "4: 29.",
+    "end_word": 895,
+    "start_word": 894,
     "start_time": 477.2,
+    "target_lang": null,
     "end_time": 479.0
   },
   {
-    "en": "And he's talking constantly about different aspects of the Spirit's saving work.",
+    "src_lang": "And he's talking constantly about different aspects of the Spirit's saving work.",
+    "end_word": 907,
+    "start_word": 896,
     "start_time": 479.3,
+    "target_lang": null,
     "end_time": 484.9
   },
   {
-    "en": "Like we just read a few of them to you from from Romans 8.",
+    "src_lang": "Like we just read a few of them to you from from Romans 8.",
+    "end_word": 921,
+    "start_word": 908,
     "start_time": 485.1,
+    "target_lang": null,
     "end_time": 488.7
   },
   {
-    "en": "So if we treasure Christ as our only mediator,",
+    "src_lang": "So if we treasure Christ as our only mediator,",
+    "end_word": 930,
+    "start_word": 922,
     "start_time": 489.8,
+    "target_lang": null,
     "end_time": 492.9
   },
   {
-    "en": "we will also treasure the Holy Spirit as Christ's great gift,",
+    "src_lang": "we will also treasure the Holy Spirit as Christ's great gift,",
+    "end_word": 941,
+    "start_word": 931,
     "start_time": 493.8,
+    "target_lang": null,
     "end_time": 499.2
   },
   {
-    "en": "which is inseparable from Him,",
+    "src_lang": "which is inseparable from Him,",
+    "end_word": 946,
+    "start_word": 942,
     "start_time": 499.2,
+    "target_lang": null,
     "end_time": 501.0
   },
   {
-    "en": "to sinners (John 4 and again John 7).",
+    "src_lang": "to sinners (John 4 and again John 7).",
+    "end_word": 954,
+    "start_word": 947,
     "start_time": 502.0,
+    "target_lang": null,
     "end_time": 506.7
   },
   {
-    "en": "Jonathan Edwards put it this way.",
+    "src_lang": "Jonathan Edwards put it this way.",
+    "end_word": 960,
+    "start_word": 955,
     "start_time": 508.1,
+    "target_lang": null,
     "end_time": 509.7
   },
   {
-    "en": "\"The sum of the blessings Christ sought by what he did and suffered in the work of redemption,",
+    "src_lang": "\"The sum of the blessings Christ sought by what he did and suffered in the work of redemption,",
+    "end_word": 978,
+    "start_word": 961,
     "start_time": 509.9,
+    "target_lang": null,
     "end_time": 517.0
   },
   {
-    "en": "was the Holy Spirit,",
+    "src_lang": "was the Holy Spirit,",
+    "end_word": 982,
+    "start_word": 979,
     "start_time": 517.9,
+    "target_lang": null,
     "end_time": 519.2
   },
   {
-    "en": "the Holy Spirit in His indwelling,",
+    "src_lang": "the Holy Spirit in His indwelling,",
+    "end_word": 988,
+    "start_word": 983,
     "start_time": 520.2,
+    "target_lang": null,
     "end_time": 522.0
   },
   {
-    "en": "His influences and fruits is the sum of all grace,",
+    "src_lang": "His influences and fruits is the sum of all grace,",
+    "end_word": 998,
+    "start_word": 989,
     "start_time": 522.4,
+    "target_lang": null,
     "end_time": 526.1
   },
   {
-    "en": "holiness,",
+    "src_lang": "holiness,",
+    "end_word": 999,
+    "start_word": 999,
     "start_time": 526.3,
+    "target_lang": null,
     "end_time": 527.0
   },
   {
-    "en": "comfort and joy,",
+    "src_lang": "comfort and joy,",
+    "end_word": 1002,
+    "start_word": 1000,
     "start_time": 527.3,
+    "target_lang": null,
     "end_time": 528.7
   },
   {
-    "en": "or in one word of all the spiritual good Christ purchased for men in this world.",
+    "src_lang": "or in one word of all the spiritual good Christ purchased for men in this world.",
+    "end_word": 1018,
+    "start_word": 1003,
     "start_time": 528.9,
+    "target_lang": null,
     "end_time": 534.1
   },
   {
-    "en": "And is also the sum of all perfection,",
+    "src_lang": "And is also the sum of all perfection,",
+    "end_word": 1026,
+    "start_word": 1019,
     "start_time": 534.8,
+    "target_lang": null,
     "end_time": 538.0
   },
   {
-    "en": "glory,",
+    "src_lang": "glory,",
+    "end_word": 1027,
+    "start_word": 1027,
     "start_time": 538.0,
+    "target_lang": null,
     "end_time": 538.6
   },
   {
-    "en": "and eternal joy,",
+    "src_lang": "and eternal joy,",
+    "end_word": 1030,
+    "start_word": 1028,
     "start_time": 538.6,
+    "target_lang": null,
     "end_time": 539.9
   },
   {
-    "en": "that he purchased for them in another world.\" That's an amazing quote by Edwards.",
+    "src_lang": "that he purchased for them in another world.\" That's an amazing quote by Edwards.",
+    "end_word": 1044,
+    "start_word": 1031,
     "start_time": 540.1,
+    "target_lang": null,
     "end_time": 547.2
   },
   {
-    "en": "And it certainly shows us that many today are minimizing the role of the ministry of the Holy Spirit as integral with the entire sum of blessings that God's people receive in salvation.",
+    "src_lang": "And it certainly shows us that many today are minimizing the role of the ministry of the Holy Spirit as integral with the entire sum of blessings that God's people receive in salvation.",
+    "end_word": 1077,
+    "start_word": 1045,
     "start_time": 548.4,
+    "target_lang": null,
     "end_time": 566.1
   },
   {
-    "en": "John Brown of Headington put it this way,",
+    "src_lang": "John Brown of Headington put it this way,",
+    "end_word": 1085,
+    "start_word": 1078,
     "start_time": 568.8,
+    "target_lang": null,
     "end_time": 571.7
   },
   {
-    "en": "\"Did Christ purchase the Holy Spirit?",
+    "src_lang": "\"Did Christ purchase the Holy Spirit?",
+    "end_word": 1091,
+    "start_word": 1086,
     "start_time": 572.4,
+    "target_lang": null,
     "end_time": 574.6
   },
   {
-    "en": "Christ purchased the Spirit's gifts,",
+    "src_lang": "Christ purchased the Spirit's gifts,",
+    "end_word": 1096,
+    "start_word": 1092,
     "start_time": 576.6,
+    "target_lang": null,
     "end_time": 578.7
   },
   {
-    "en": "and influences in applying redemption,",
+    "src_lang": "and influences in applying redemption,",
+    "end_word": 1101,
+    "start_word": 1097,
     "start_time": 578.7,
+    "target_lang": null,
     "end_time": 582.2
   },
   {
-    "en": "but not his being,",
+    "src_lang": "but not his being,",
+    "end_word": 1105,
+    "start_word": 1102,
     "start_time": 582.7,
+    "target_lang": null,
     "end_time": 584.2
   },
   {
-    "en": "which is independent.\" So the work of the Spirit in many ways is the fruit of Christ's death and resurrection.",
+    "src_lang": "which is independent.\" So the work of the Spirit in many ways is the fruit of Christ's death and resurrection.",
+    "end_word": 1125,
+    "start_word": 1106,
     "start_time": 585.0,
+    "target_lang": null,
     "end_time": 594.8
   },
   {
-    "en": "Now,",
+    "src_lang": "Now,",
+    "end_word": 1126,
+    "start_word": 1126,
     "start_time": 597.0,
+    "target_lang": null,
     "end_time": 597.4
   },
   {
-    "en": "salvation in Christ is appreciated and enjoyed therefore only by knowing the Holy Spirit and his saving work.",
+    "src_lang": "salvation in Christ is appreciated and enjoyed therefore only by knowing the Holy Spirit and his saving work.",
+    "end_word": 1144,
+    "start_word": 1127,
     "start_time": 598.2,
+    "target_lang": null,
     "end_time": 605.6
   },
   {
-    "en": "And this is one of the greatest doctrines of the Reformation,",
+    "src_lang": "And this is one of the greatest doctrines of the Reformation,",
+    "end_word": 1155,
+    "start_word": 1145,
     "start_time": 606.7,
+    "target_lang": null,
     "end_time": 610.9
   },
   {
-    "en": "developed so thoroughly and then even augmented by the Puritans.",
+    "src_lang": "developed so thoroughly and then even augmented by the Puritans.",
+    "end_word": 1165,
+    "start_word": 1156,
     "start_time": 610.9,
+    "target_lang": null,
     "end_time": 616.3
   },
   {
-    "en": "What a treasure Reformed theology brings us about the saving ministry of the Holy Spirit.",
+    "src_lang": "What a treasure Reformed theology brings us about the saving ministry of the Holy Spirit.",
+    "end_word": 1180,
+    "start_word": 1166,
     "start_time": 617.1,
+    "target_lang": null,
     "end_time": 626.7
   },
   {
-    "en": "In fact,",
+    "src_lang": "In fact,",
+    "end_word": 1182,
+    "start_word": 1181,
     "start_time": 628.3,
+    "target_lang": null,
     "end_time": 629.4
   },
   {
-    "en": "BB Warfield called John Calvin The Theologian of the Holy Spirit.",
+    "src_lang": "BB Warfield called John Calvin The Theologian of the Holy Spirit.",
+    "end_word": 1193,
+    "start_word": 1183,
     "start_time": 629.4,
+    "target_lang": null,
     "end_time": 635.0
   },
   {
-    "en": "And Warfield went on to claim the developed doctrine of the work of the Holy Spirit is an exclusively Reformation doctrine,",
+    "src_lang": "And Warfield went on to claim the developed doctrine of the work of the Holy Spirit is an exclusively Reformation doctrine,",
+    "end_word": 1214,
+    "start_word": 1194,
     "start_time": 635.4,
+    "target_lang": null,
     "end_time": 643.6
   },
   {
-    "en": "and more particularly a Reformed doctrine,",
+    "src_lang": "and more particularly a Reformed doctrine,",
+    "end_word": 1220,
+    "start_word": 1215,
     "start_time": 643.6,
+    "target_lang": null,
     "end_time": 645.7
   },
   {
-    "en": "and still more particularly a Puritan doctrine.",
+    "src_lang": "and still more particularly a Puritan doctrine.",
+    "end_word": 1227,
+    "start_word": 1221,
     "start_time": 645.9,
+    "target_lang": null,
     "end_time": 648.5
   },
   {
-    "en": "And so,",
+    "src_lang": "And so,",
+    "end_word": 1229,
+    "start_word": 1228,
     "start_time": 650.8,
+    "target_lang": null,
     "end_time": 651.4
   },
   {
-    "en": "study of the Spirit through Reformed experiential soteriology,",
+    "src_lang": "study of the Spirit through Reformed experiential soteriology,",
+    "end_word": 1237,
+    "start_word": 1230,
     "start_time": 652.1,
+    "target_lang": null,
     "end_time": 659.0
   },
   {
-    "en": "- that is,",
+    "src_lang": "- that is,",
+    "end_word": 1239,
+    "start_word": 1238,
     "start_time": 659.4,
+    "target_lang": null,
     "end_time": 659.7
   },
   {
-    "en": "salvation that we experience by the work of the Spirit in the soul - opens up a vast wealth of wisdom and joy to the believer.",
+    "src_lang": "salvation that we experience by the work of the Spirit in the soul - opens up a vast wealth of wisdom and joy to the believer.",
+    "end_word": 1264,
+    "start_word": 1240,
     "start_time": 659.7,
+    "target_lang": null,
     "end_time": 670.5
   }
 ]
