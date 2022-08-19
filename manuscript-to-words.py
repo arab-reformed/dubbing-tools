@@ -37,6 +37,10 @@ def cmd(json_file: str, text_file: str):
                     else:
                         timing['word'] = words[j].strip()
 
+                    if '^' in timing['word']:
+                        timing['break_after'] = True
+                        timing['word'] = timing['word'].replace('^', '').strip()
+
                     timing['start_time'] = float(timing['start_time'].replace('s', ''))
                     timing['end_time'] = float(timing['end_time'].replace('s', ''))
                     timings.append(timing)
