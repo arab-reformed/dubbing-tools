@@ -1,3 +1,4 @@
+from google.cloud import translate_v2 as translate
 from typing import List, Optional
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
@@ -71,13 +72,13 @@ class Word:
     def break_reason(self, next_word: 'Word', gap: float = 0.5) -> Optional[str]:
         if self.hard_break:
             return "^"
-        
+
         # if self.gap_between(next_word) > 0.0:
             # print(f"  {self.gap_between(next_word)}", file=sys.stderr)
 
         if self.gap_between(next_word) > gap:
             return f"gap>{gap}"
-            
+
         matches = re.search(r'(?P<punc>[.!?,])"*$', self.word)
         if matches:
             return matches.group('punc')
@@ -86,7 +87,7 @@ class Word:
 
     def break_after(self, next_word: 'Word', gap: float = 0.5) -> bool:
         return self.break_reason(next_word=next_word, gap=gap) is not None
-        
+
     @staticmethod
     def secs_to_float(secs: str):
         return round(float(secs.replace('s', '')), 2)
@@ -102,6 +103,9 @@ class Phrase:
     end_word: int
     target_lang: str = None
     reason: str = None
+
+    SRC_LANG = 1
+    TARGET_LANG = 2
 
     def word_count(self) -> int:
         return self.end_word - self.start_word + 1
@@ -133,6 +137,67 @@ class Phrase:
             end_word=start_word+len(words)-1
         )
 
+    def translate_text(self, target_lang, source_lang=None):
+        translate_client = translate.Client()
+        result = translate_client.translate(
+            self.src_lang,
+            format_='text',
+            target_language=target_lang,
+            source_language=source_lang
+        )
+
+        self.target_lang = result['translatedText']
+
+    def to_srt(self, lang: int, index) -> str:
+        def _srt_time(seconds):
+            millisecs = seconds * 1000
+            seconds, millisecs = divmod(millisecs, 1000)
+            minutes, seconds = divmod(seconds, 60)
+            hours, minutes = divmod(minutes, 60)
+            return "%d:%d:%d,%d" % (hours, minutes, seconds, millisecs)
+        if lang == self.SRC_LANG:
+            text = self.src_lang
+        else:
+            text = self.target_lang
+
+        return f"{index}\n" + _srt_time(self.start_time) + " --> " + _srt_time(self.end_time) + f"\n{text}"
+
+
+@dataclass_json
+@dataclass
+class Phrases:
+    src_lang: str
+    target_lang: str
+    phrases: List[Phrase] = None
+
+    def __post_init__(self):
+        if self.phrases is None:
+            self.phrases = []
+
+    def translate(self):
+        for phrase in self.phrases:
+            phrase.translate_text(self.target_lang, self.src_lang)
+
+    def target_to_srt(self) -> str:
+        srt = ''
+        index = 1
+        for phrase in self.phrases:
+            srt += phrase.target_to_srt(index)
+            srt += "\n\n"
+            index += 1
+
+        return srt
+
+    def to_srt(self, lang: int) -> str:
+        srt = ''
+        index = 1
+        for phrase in self.phrases:
+            srt += phrase.to_srt(lang, index)
+            srt += "\n\n"
+            index += 1
+
+        return srt
+
 
 def get_phrases(words: List[Word], lang: str, gap: float = 1.0):
     clauses = [
@@ -163,7 +228,7 @@ def get_phrases(words: List[Word], lang: str, gap: float = 1.0):
             reason = word.break_reason(next_word=words[i+1], gap=gap)
         else:
             reason = None
- 
+
         # If there's greater than one second gap, assume this is a new sentence
         if reason is not None:
             phrases.append(phrase)
