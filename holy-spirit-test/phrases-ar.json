@@ -1,2207 +1,2211 @@
-[
-  {
-    "target_lang": "\u0646\u062d\u0646 \u0633\u0648\u0641\u060c",
-    "end_time": 1.4,
-    "start_word": 0,
-    "end_word": 0,
-    "src_lang": "Well,",
-    "reason": null,
-    "start_time": 1.2
-  },
-  {
-    "target_lang": "\u0645\u0631\u062d\u0628\u0627 \u0628\u0643\u0645 \u0641\u064a \u0639\u0644\u0645 \u0627\u0644\u062e\u0644\u0627\u0635.",
-    "end_time": 3.6,
-    "start_word": 1,
-    "end_word": 3,
-    "src_lang": "welcome to soteriology.",
-    "reason": ",",
-    "start_time": 1.4
-  },
-  {
-    "target_lang": "\u062a\u062a\u0646\u0627\u0648\u0644 \u0647\u0630\u0647 \u0627\u0644\u062f\u0648\u0631\u0629 \u0645\u0648\u0636\u0648\u0639 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633",
-    "end_time": 8.2,
-    "start_word": 4,
-    "end_word": 10,
-    "src_lang": "This course deals with the Holy Spirit",
-    "reason": ".",
-    "start_time": 4.2
-  },
-  {
-    "target_lang": "\u0648\u0639\u0642\u064a\u062f\u0629 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633.",
-    "end_time": 11.5,
-    "start_word": 11,
-    "end_word": 17,
-    "src_lang": "and the doctrine of the Holy Spirit,",
-    "reason": "^",
-    "start_time": 8.8
-  },
-  {
-    "target_lang": "\u0643\u064a\u0641 \u064a\u0639\u0645\u0644 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633 \u0641\u064a \u0627\u0644\u0646\u0641\u0633.",
-    "end_time": 13.7,
-    "start_word": 18,
-    "end_word": 25,
-    "src_lang": "how the Holy Spirit works in the soul.",
-    "reason": ",",
-    "start_time": 11.5
-  },
-  {
-    "target_lang": "\u0641\u0631\u0627\u0631\u0627\u064b \u0645\u0646 \u062f\u0639\u0648\u062a\u0647 \u0627\u0644\u0641\u0639\u0627\u0644\u0629 \u060c",
-    "end_time": 17.7,
-    "start_word": 26,
-    "end_word": 33,
-    "src_lang": "Running all the way from His effectual calling,",
-    "reason": ".",
-    "start_time": 14.0
-  },
-  {
-    "target_lang": "\u0648\u0627\u0644\u062a\u062c\u062f\u064a\u062f \u060c",
-    "end_time": 19.4,
-    "start_word": 34,
-    "end_word": 35,
-    "src_lang": "and regeneration,",
-    "reason": ",",
-    "start_time": 18.2
-  },
-  {
-    "target_lang": "\u0648\u0635\u0648\u0644\u0627 \u0625\u0644\u0649 \u0627\u0644\u062a\u0645\u062c\u064a\u062f.",
-    "end_time": 21.9,
-    "start_word": 36,
-    "end_word": 40,
-    "src_lang": "all the way to glorification.",
-    "reason": ",",
-    "start_time": 19.9
-  },
-  {
-    "target_lang": "\u0644\u0630\u0644\u0643 \u0641\u0647\u0648 \u0645\u0648\u0636\u0648\u0639 \u0645\u0647\u0645 \u0644\u0644\u063a\u0627\u064a\u0629",
-    "end_time": 26.1,
-    "start_word": 41,
-    "end_word": 46,
-    "src_lang": "So it's a very important subject",
-    "reason": ".",
-    "start_time": 22.4
-  },
-  {
-    "target_lang": "\u0648\u0623\u0646\u0627 \u0633\u0639\u064a\u062f \u0644\u0623\u0646\u0643 \u0645\u0639\u064a.",
-    "end_time": 28.9,
-    "start_word": 47,
-    "end_word": 52,
-    "src_lang": "and I'm glad you're with me.",
-    "reason": "gap>0.5",
-    "start_time": 26.7
-  },
-  {
-    "target_lang": "\u0633\u0648\u0641 \u0646\u0646\u0638\u0631 \u0641\u064a \u0627\u0644\u0623\u0645\u0631 \u0628\u0634\u064a\u0621 \u0645\u0646 \u0627\u0644\u062a\u0641\u0635\u064a\u0644.",
-    "end_time": 32.8,
-    "start_word": 53,
-    "end_word": 61,
-    "src_lang": "We're going to look at it in some detail.",
-    "reason": "gap>1.0",
-    "start_time": 30.0
-  },
-  {
-    "target_lang": "\u0623\u0639\u062a\u0642\u062f \u0623\u0646\u0643 \u0633\u062a\u0633\u062a\u0645\u062a\u0639 \u0628\u0627\u0644\u0641\u0635\u0644.",
-    "end_time": 35.7,
-    "start_word": 62,
-    "end_word": 67,
-    "src_lang": "I think you'll enjoy the class.",
-    "reason": ".",
-    "start_time": 33.7
-  },
-  {
-    "target_lang": "\u0628\u0639\u062f \u0643\u0644 \u0634\u064a\u0621\u060c",
-    "end_time": 37.3,
-    "start_word": 68,
-    "end_word": 69,
-    "src_lang": "After all,",
-    "reason": ".",
-    "start_time": 36.5
-  },
-  {
-    "target_lang": "\u0643\u0644 \u0645\u0646\u0627",
-    "end_time": 38.1,
-    "start_word": 70,
-    "end_word": 72,
-    "src_lang": "all of our",
-    "reason": ",",
-    "start_time": 37.3
-  },
-  {
-    "target_lang": "\u0627\u0644\u0646\u0635\u0631\u0627\u0646\u064a\u0629\u060c",
-    "end_time": 41.5,
-    "start_word": 73,
-    "end_word": 73,
-    "src_lang": "Christianity,",
-    "reason": "gap>1.0",
-    "start_time": 40.5
-  },
-  {
-    "target_lang": "\u0643\u0644 \u062f\u064a\u0646\u0646\u0627 \u0627\u0644\u0634\u062e\u0635\u064a",
-    "end_time": 43.5,
-    "start_word": 74,
-    "end_word": 78,
-    "src_lang": "all of our personal religion",
-    "reason": ",",
-    "start_time": 41.5
-  },
-  {
-    "target_lang": "\u0645\u062c\u0631\u062f \u062e\u062f\u0639\u0629 \u0628\u062f\u0648\u0646 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633.",
-    "end_time": 46.0,
-    "start_word": 79,
-    "end_word": 86,
-    "src_lang": "is just a sham without the Holy Spirit.",
-    "reason": "is",
-    "start_time": 43.5
-  },
-  {
-    "target_lang": "\u0644\u0630\u0644\u0643 \u0646\u062d\u0646 \u062c\u062f\u0627 \u060c",
-    "end_time": 47.9,
-    "start_word": 87,
-    "end_word": 89,
-    "src_lang": "So we're very,",
-    "reason": ".",
-    "start_time": 46.0
-  },
-  {
-    "target_lang": "\u0645\u0645\u062a\u0646 \u062c\u062f\u0627 \u0644\u062e\u062f\u0645\u0629 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633 \u060c",
-    "end_time": 51.6,
-    "start_word": 90,
-    "end_word": 98,
-    "src_lang": "very grateful for the ministry of the Holy Spirit,",
-    "reason": ",",
-    "start_time": 47.9
-  },
-  {
-    "target_lang": "\u0623\u0631\u064a\u062f \u0623\u0646 \u0623\u0628\u062f\u0623 \u0647\u0630\u0627",
-    "end_time": 54.4,
-    "start_word": 99,
-    "end_word": 103,
-    "src_lang": "I want to begin this",
-    "reason": "gap>1.0",
-    "start_time": 52.8
-  },
-  {
-    "target_lang": "\u0627\u0644\u0645\u062d\u0627\u0636\u0631\u0629 \u0627\u0644\u0623\u0648\u0644\u0649 \u0628\u0642\u0631\u0627\u0621\u0629 \u0643\u0644\u0645\u0629 \u0627\u0644\u0644\u0647 \u060c",
-    "end_time": 58.9,
-    "start_word": 104,
-    "end_word": 111,
-    "src_lang": "first lecture with the reading of God's word,",
-    "reason": "gap>1.0",
-    "start_time": 56.0
-  },
-  {
-    "target_lang": "\u0643\u0645\u0627 \u0646\u0641\u0639\u0644 \u0645\u0639 \u0643\u0644 \u0645\u062d\u0627\u0636\u0631\u0629.",
-    "end_time": 61.8,
-    "start_word": 112,
-    "end_word": 118,
-    "src_lang": "as we will with each each lecture.",
-    "reason": ",",
-    "start_time": 59.6
-  },
-  {
-    "target_lang": "\u0627\u0633\u062a\u062f\u0631 \u0645\u0639\u064a \u060c",
-    "end_time": 62.9,
-    "start_word": 119,
-    "end_word": 121,
-    "src_lang": "Turn with me,",
-    "reason": ".",
-    "start_time": 62.3
-  },
-  {
-    "target_lang": "\u0645\u0646 \u0641\u0636\u0644\u0643\u060c",
-    "end_time": 63.3,
-    "start_word": 122,
-    "end_word": 122,
-    "src_lang": "please,",
-    "reason": ",",
-    "start_time": 62.9
-  },
-  {
-    "target_lang": "\u0625\u0644\u0649 \u0631\u0648\u0645\u064a\u0629 8 \u0648\u0633\u0623\u0642\u0631\u0623 \u0645\u0646 13 \u0625\u0644\u0649 17.",
-    "end_time": 68.4,
-    "start_word": 123,
-    "end_word": 131,
-    "src_lang": "to Romans 8 and I'll read 13 through 17.",
-    "reason": ",",
-    "start_time": 63.3
-  },
-  {
-    "target_lang": "\u0631\u0648\u0645\u064a\u0629 8: 13 \u062d\u062a\u0649 17.",
-    "end_time": 70.6,
-    "start_word": 132,
-    "end_word": 136,
-    "src_lang": "Romans 8: 13 through 17.",
-    "reason": ".",
-    "start_time": 68.4
-  },
-  {
-    "target_lang": "\u0625\u0644\u0649 \u0639\u0646 \u0639\u0644\u0649\u060c",
-    "end_time": 72.4,
-    "start_word": 137,
-    "end_word": 137,
-    "src_lang": "For,",
-    "reason": "gap>1.0",
-    "start_time": 72.3
-  },
-  {
-    "target_lang": "\u0625\u0630\u0627 \u0643\u0646\u062a \u062a\u0639\u064a\u0634 \u0628\u0639\u062f \u0627\u0644\u062c\u0633\u062f \u060c",
-    "end_time": 74.4,
-    "start_word": 138,
-    "end_word": 143,
-    "src_lang": "if you live after the flesh,",
-    "reason": ",",
-    "start_time": 72.4
-  },
-  {
-    "target_lang": "\u062a\u0645\u0648\u062a.",
-    "end_time": 76.0,
-    "start_word": 144,
-    "end_word": 146,
-    "src_lang": "you shall die.",
-    "reason": ",",
-    "start_time": 75.0
-  },
-  {
-    "target_lang": "\u0648\u0644\u0643\u0646 \u0625\u0630\u0627 \u0643\u0646\u062a\u0645",
-    "end_time": 77.1,
-    "start_word": 147,
-    "end_word": 149,
-    "src_lang": "But if ye",
-    "reason": ".",
-    "start_time": 76.5
-  },
-  {
-    "target_lang": "\u0645\u0646 \u062e\u0644\u0627\u0644 \u0627\u0644\u0631\u0648\u062d \u062a\u0645\u064a\u062a \u060c",
-    "end_time": 78.8,
-    "start_word": 150,
-    "end_word": 154,
-    "src_lang": "through the Spirit do mortify,",
-    "reason": "through",
-    "start_time": 77.1
-  },
-  {
-    "target_lang": "\u0623\u0641\u0639\u0627\u0644 \u0627\u0644\u062c\u0633\u062f",
-    "end_time": 80.0,
-    "start_word": 155,
-    "end_word": 159,
-    "src_lang": "the deeds of the body",
-    "reason": ",",
-    "start_time": 78.8
-  },
-  {
-    "target_lang": "\u0633\u062a\u0639\u064a\u0634\u0648\u0646.",
-    "end_time": 82.3,
-    "start_word": 160,
-    "end_word": 162,
-    "src_lang": "ye shall live.",
-    "reason": "gap>1.0",
-    "start_time": 81.3
-  },
-  {
-    "target_lang": "\u0644\u0643\u062b\u064a\u0631 \u0645\u0646 \u0627\u0644\u0630\u064a\u0646 \u064a\u0642\u0648\u062f\u0648\u0646",
-    "end_time": 84.7,
-    "start_word": 163,
-    "end_word": 168,
-    "src_lang": "For as many as are led",
-    "reason": ".",
-    "start_time": 83.3
-  },
-  {
-    "target_lang": "\u0628\u0631\u0648\u062d \u0627\u0644\u0644\u0647",
-    "end_time": 86.1,
-    "start_word": 169,
-    "end_word": 173,
-    "src_lang": "by the Spirit of God,",
-    "reason": "by",
-    "start_time": 84.7
-  },
-  {
-    "target_lang": "\u0647\u0645 \u0627\u0628\u0646\u0627\u0621 \u0627\u0644\u0644\u0647.",
-    "end_time": 88.0,
-    "start_word": 174,
-    "end_word": 179,
-    "src_lang": "they are the sons of God.",
-    "reason": ",",
-    "start_time": 86.6
-  },
-  {
-    "target_lang": "\u0644\u0623\u0646\u0643 \u0644\u0645 \u062a\u0642\u0628\u0644 \u0627\u0644\u0631\u0648\u062d",
-    "end_time": 90.3,
-    "start_word": 180,
-    "end_word": 186,
-    "src_lang": "For you have not received the Spirit",
-    "reason": ".",
-    "start_time": 88.7
-  },
-  {
-    "target_lang": "\u0645\u0646 \u0627\u0644\u0639\u0628\u0648\u062f\u064a\u0629 \u0645\u0631\u0629 \u0623\u062e\u0631\u0649 \u0644\u0644\u062e\u0648\u0641 \u060c",
-    "end_time": 92.5,
-    "start_word": 187,
-    "end_word": 191,
-    "src_lang": "of bondage again to fear,",
-    "reason": "of",
-    "start_time": 90.3
-  },
-  {
-    "target_lang": "\u0648\u0644\u0643\u0646\u0643 \u0642\u062f \u0642\u0628\u0644\u062a \u0631\u0648\u062d \u0627\u0644\u062a\u0628\u0646\u064a",
-    "end_time": 95.5,
-    "start_word": 192,
-    "end_word": 199,
-    "src_lang": "but you have received the Spirit of adoption",
-    "reason": ",",
-    "start_time": 93.1
-  },
-  {
-    "target_lang": "\u062d\u064a\u062b \u0646\u0628\u0643\u064a \u0623\u0628\u0627 \u060c",
-    "end_time": 98.4,
-    "start_word": 200,
-    "end_word": 203,
-    "src_lang": "whereby we cry Abba,",
-    "reason": "gap>0.3",
-    "start_time": 95.9
-  },
-  {
-    "target_lang": "\u0623\u0628.",
-    "end_time": 99.3,
-    "start_word": 204,
-    "end_word": 204,
-    "src_lang": "Father.",
-    "reason": ",",
-    "start_time": 98.6
-  },
-  {
-    "target_lang": "\u0627\u0644\u0631\u0648\u062d \u0646\u0641\u0633\u0647 \u064a\u0634\u0647\u062f \u0644\u0623\u0631\u0648\u0627\u062d\u0646\u0627",
-    "end_time": 102.9,
-    "start_word": 205,
-    "end_word": 212,
-    "src_lang": "The Spirit itself beareth witness with our spirit",
-    "reason": ".",
-    "start_time": 100.1
-  },
-  {
-    "target_lang": "\u0623\u0646\u0646\u0627 \u0623\u0628\u0646\u0627\u0621 \u0627\u0644\u0644\u0647 \u060c",
-    "end_time": 104.9,
-    "start_word": 213,
-    "end_word": 219,
-    "src_lang": "that we are the children of God,",
-    "reason": "gap>0.2",
-    "start_time": 103.2
-  },
-  {
-    "target_lang": "\u0648\u0625\u0630\u0627 \u0643\u0627\u0646 \u0627\u0644\u0623\u0628\u0646\u0627\u0621 \u062b\u0645 \u0627\u0644\u0648\u0631\u062b\u0629 \u060c",
-    "end_time": 108.1,
-    "start_word": 220,
-    "end_word": 224,
-    "src_lang": "and if children then heirs,",
-    "reason": ",",
-    "start_time": 105.7
-  },
-  {
-    "target_lang": "\u0648\u0631\u062b\u0629 \u0627\u0644\u0644\u0647 \u0648\u0648\u0627\u0631\u062b\u0648\u0646 \u0645\u0634\u062a\u0631\u0643\u0648\u0646 \u0645\u0639 \u0627\u0644\u0645\u0633\u064a\u062d.",
-    "end_time": 111.0,
-    "start_word": 225,
-    "end_word": 232,
-    "src_lang": "heirs of God and joint heirs with Christ.",
-    "reason": ",",
-    "start_time": 108.3
-  },
-  {
-    "target_lang": "\u0625\u0630\u0627 \u0643\u0627\u0646 \u0627\u0644\u0623\u0645\u0631 \u0643\u0630\u0644\u0643",
-    "end_time": 112.7,
-    "start_word": 233,
-    "end_word": 235,
-    "src_lang": "If so be",
-    "reason": ".",
-    "start_time": 111.7
-  },
-  {
-    "target_lang": "\u0627\u0644\u062a\u064a \u0646\u0639\u0627\u0646\u064a\u0647\u0627 \u0645\u0639\u0647 \u060c",
-    "end_time": 114.8,
-    "start_word": 236,
-    "end_word": 240,
-    "src_lang": "that we suffer with him,",
-    "reason": "that",
-    "start_time": 113.0
-  },
-  {
-    "target_lang": "\u062d\u062a\u0649 \u0646\u062a\u0645\u062c\u062f \u0627\u064a\u0636\u0627 \u0645\u0639\u0627.",
-    "end_time": 119.8,
-    "start_word": 241,
-    "end_word": 247,
-    "src_lang": "that we may also be glorified together.",
-    "reason": ",",
-    "start_time": 115.2
-  },
-  {
-    "target_lang": "\u062f\u0639\u0648\u0646\u0627 \u0646\u0637\u0644\u0628 \u0648\u062c\u0647 \u0627\u0644\u0644\u0647 \u0641\u064a \u0627\u0644\u0635\u0644\u0627\u0629.",
-    "end_time": 123.1,
-    "start_word": 248,
-    "end_word": 253,
-    "src_lang": "Let's seek God's face in prayer.",
-    "reason": "gap>1.0",
-    "start_time": 121.3
-  },
-  {
-    "target_lang": "\u0631\u0628\u0646\u0627 \u064a\u0627\u0631\u0628",
-    "end_time": 127.3,
-    "start_word": 254,
-    "end_word": 255,
-    "src_lang": "Lord God,",
-    "reason": "gap>1.0",
-    "start_time": 126.6
-  },
-  {
-    "target_lang": "\u0646\u0642\u0641 \u0639\u0644\u0649 \u0623\u0631\u0636 \u0645\u0642\u062f\u0633\u0629 \u060c",
-    "end_time": 130.0,
-    "start_word": 256,
-    "end_word": 260,
-    "src_lang": "we stand on holy ground,",
-    "reason": ",",
-    "start_time": 127.3
-  },
-  {
-    "target_lang": "\u0648\u0646\u062d\u0646 \u0646\u0642\u062a\u0631\u0628 \u0645\u0646 \u0647\u0630\u0627",
-    "end_time": 132.6,
-    "start_word": 261,
-    "end_word": 264,
-    "src_lang": "as we approach this",
-    "reason": ",",
-    "start_time": 130.0
-  },
-  {
-    "target_lang": "\u0645\u0648\u0636\u0648\u0639 \u0647\u0627\u0626\u0644 \u0644\u0644\u0634\u062e\u0635 \u0627\u0644\u062b\u0627\u0644\u062b \u0645\u0646 \u0627\u0644\u062b\u0627\u0644\u0648\u062b \u0627\u0644\u0623\u0642\u062f\u0633",
-    "end_time": 138.0,
-    "start_word": 265,
-    "end_word": 274,
-    "src_lang": "immense subject of the third person of the Holy Trinity",
-    "reason": "gap>0.4",
-    "start_time": 133.1
-  },
-  {
-    "target_lang": "\u0648\u0639\u0645\u0644\u0647 \u0627\u0644\u062e\u0644\u0627\u0635\u064a \u0641\u064a \u0646\u0641\u0648\u0633\u0646\u0627.",
-    "end_time": 144.0,
-    "start_word": 275,
-    "end_word": 281,
-    "src_lang": "and his salvific work in our souls.",
-    "reason": "gap>1.0",
-    "start_time": 139.5
-  },
-  {
-    "target_lang": "\u0648\u0646\u062d\u0646 \u0646\u0635\u0644\u064a \u0630\u0644\u0643",
-    "end_time": 146.4,
-    "start_word": 282,
-    "end_word": 286,
-    "src_lang": "And we do pray that",
-    "reason": ".",
-    "start_time": 145.0
-  },
-  {
-    "target_lang": "\u0628\u0646\u0647\u0627\u064a\u0629 \u0647\u0630\u0647 \u0627\u0644\u062f\u0648\u0631\u0629 \u060c",
-    "end_time": 148.1,
-    "start_word": 287,
-    "end_word": 292,
-    "src_lang": "by the end of this course,",
-    "reason": "gap>0.4",
-    "start_time": 146.9
-  },
-  {
-    "target_lang": "\u0633\u064a\u0643\u0648\u0646 \u0644\u062f\u064a\u0646\u0627 \u062a\u0642\u062f\u064a\u0631 \u0623\u0643\u062b\u0631 \u0639\u0645\u0642\u0627",
-    "end_time": 151.4,
-    "start_word": 293,
-    "end_word": 300,
-    "src_lang": "we will have a much more profound appreciation",
-    "reason": ",",
-    "start_time": 148.1
-  },
-  {
-    "target_lang": "\u0644\u062e\u062f\u0645\u0629 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633 \u0627\u0644\u062e\u0644\u0627\u0635\u064a \u060c",
-    "end_time": 155.0,
-    "start_word": 301,
-    "end_word": 308,
-    "src_lang": "for the saving ministry of the Holy Spirit,",
-    "reason": "gap>1.0",
-    "start_time": 152.6
-  },
-  {
-    "target_lang": "\u0645\u0645\u0627 \u0642\u062f \u064a\u0643\u0648\u0646 \u0644\u062f\u064a\u0646\u0627 \u0641\u064a \u0627\u0644\u0648\u0642\u062a \u0627\u0644\u062d\u0627\u0636\u0631",
-    "end_time": 158.4,
-    "start_word": 309,
-    "end_word": 315,
-    "src_lang": "than we perhaps might have at present",
-    "reason": ",",
-    "start_time": 156.0
-  },
-  {
-    "target_lang": "\u0633\u0627\u0639\u062f\u0646\u0627 \u0639\u0644\u0649 \u0627\u0644\u0646\u0645\u0648 \u060c",
-    "end_time": 160.5,
-    "start_word": 316,
-    "end_word": 319,
-    "src_lang": "Help us to grow,",
-    "reason": "gap>0.9",
-    "start_time": 159.4
-  },
-  {
-    "target_lang": "\u0644\u064a\u0633 \u0641\u0642\u0637 \u0628\u0646\u0639\u0645\u0629 \u064a\u0633\u0648\u0639 \u0648\u0645\u0639\u0631\u0641\u062a\u0647 \u060c",
-    "end_time": 163.4,
-    "start_word": 320,
-    "end_word": 328,
-    "src_lang": "not only in the grace and knowledge of Jesus,",
-    "reason": ",",
-    "start_time": 160.8
-  },
-  {
-    "target_lang": "\u0627\u0644\u0630\u064a \u064a\u0631\u0643\u0632 \u0639\u0644\u064a\u0647 \u0627\u0644\u0631\u0648\u062d \u060c",
-    "end_time": 166.5,
-    "start_word": 329,
-    "end_word": 333,
-    "src_lang": "whom the Spirit focuses upon,",
-    "reason": "gap>1.0",
-    "start_time": 164.6
-  },
-  {
-    "target_lang": "\u0648\u0644\u0643\u0646 \u0623\u064a\u0636\u064b\u0627 \u0623\u0646\u0646\u0627 \u0633\u0646\u0646\u0645\u0648",
-    "end_time": 169.1,
-    "start_word": 334,
-    "end_word": 339,
-    "src_lang": "but also that we would grow",
-    "reason": ",",
-    "start_time": 167.5
-  },
-  {
-    "target_lang": "\u0628\u0646\u0639\u0645\u0629 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633 \u0648\u0645\u0639\u0631\u0641\u062a\u0647 \u060c",
-    "end_time": 172.1,
-    "start_word": 340,
-    "end_word": 348,
-    "src_lang": "in the grace and knowledge of the Holy Spirit,",
-    "reason": "gap>0.6",
-    "start_time": 169.8
-  },
-  {
-    "target_lang": "\u0623\u0646 \u064a\u0635\u0628\u062d \u0623\u0643\u062b\u0631 \u0648\u0639\u064a\u0627\u064b \u0628\u0639\u0645\u0644\u0647 \u060c",
-    "end_time": 175.5,
-    "start_word": 349,
-    "end_word": 354,
-    "src_lang": "becoming more aware of His work,",
-    "reason": "gap>1.0",
-    "start_time": 173.3
-  },
-  {
-    "target_lang": "\u0639\u0645\u0644\u0647 \u0627\u0644\u062e\u0644\u0627\u0635\u064a \u060c",
-    "end_time": 177.3,
-    "start_word": 355,
-    "end_word": 357,
-    "src_lang": "His saving work,",
-    "reason": ",",
-    "start_time": 176.1
-  },
-  {
-    "target_lang": "\u0648\u062a\u0642\u062f\u064a\u0631 \u0623\u0643\u062b\u0631 \u0639\u0645\u0642\u0627",
-    "end_time": 180.0,
-    "start_word": 358,
-    "end_word": 361,
-    "src_lang": "and appreciating more profoundly",
-    "reason": ",",
-    "start_time": 178.0
-  },
-  {
-    "target_lang": "\u0627\u062a\u0633\u0627\u0639 \u062e\u062f\u0645\u062a\u0647",
-    "end_time": 181.9,
-    "start_word": 362,
-    "end_word": 366,
-    "src_lang": "the vastness of His ministry",
-    "reason": "gap>0.0",
-    "start_time": 180.1
-  },
-  {
-    "target_lang": "\u0643\u0645\u0627 \u064a\u0639\u0645\u0644 \u0641\u064a \u0627\u0644\u062e\u0637\u0627\u0629 \u0648\u0627\u0644\u0645\u062a\u0645\u0631\u062f\u064a\u0646 \u060c",
-    "end_time": 185.6,
-    "start_word": 367,
-    "end_word": 373,
-    "src_lang": "as he works in sinners and rebels,",
-    "reason": "gap>1.0",
-    "start_time": 183.2
-  },
-  {
-    "target_lang": "\u0645\u062b\u0644\u0646\u0627 \u062c\u0645\u064a\u0639\u064b\u0627 \u0628\u0637\u0628\u064a\u0639\u062a\u0646\u0627.",
-    "end_time": 188.0,
-    "start_word": 374,
-    "end_word": 380,
-    "src_lang": "such as we all are by nature.",
-    "reason": ",",
-    "start_time": 186.1
-  },
-  {
-    "target_lang": "\u0644\u0630\u0644\u0643 \u0628\u0627\u0631\u0643 \u0627\u0644\u0631\u0628 \u0647\u0630\u0627 \u0627\u0644\u0641\u0635\u0644.",
-    "end_time": 190.8,
-    "start_word": 381,
-    "end_word": 385,
-    "src_lang": "So Lord bless this class.",
-    "reason": "gap>1.0",
-    "start_time": 189.2
-  },
-  {
-    "target_lang": "\u0633\u0627\u0639\u062f\u0646\u064a \u0641\u064a \u0627\u0644\u062a\u062f\u0631\u064a\u0633.",
-    "end_time": 192.3,
-    "start_word": 386,
-    "end_word": 389,
-    "src_lang": "Help me in teaching.",
-    "reason": ".",
-    "start_time": 191.4
-  },
-  {
-    "target_lang": "\u0645\u0633\u0627\u0639\u062f\u0629 \u0627\u0644\u0637\u0644\u0627\u0628 \u0641\u064a \u0627\u0644\u0627\u0633\u062a\u0645\u0627\u0639 \u060c",
-    "end_time": 193.9,
-    "start_word": 390,
-    "end_word": 394,
-    "src_lang": "Help the students in listening,",
-    "reason": ".",
-    "start_time": 192.3
-  },
-  {
-    "target_lang": "\u0627\u0644\u062a\u0639\u0644\u0645\u060c",
-    "end_time": 195.4,
-    "start_word": 395,
-    "end_word": 395,
-    "src_lang": "learning,",
-    "reason": ",",
-    "start_time": 194.7
-  },
-  {
-    "target_lang": "\u0648\u0627\u0645\u0646\u062d \u0627\u0646 \u0643\u0644 \u0645\u062d\u0627\u0636\u0631\u0629",
-    "end_time": 200.4,
-    "start_word": 396,
-    "end_word": 400,
-    "src_lang": "and grant that each lecture",
-    "reason": ",",
-    "start_time": 196.3
-  },
-  {
-    "target_lang": "\u0642\u062f \u064a\u062e\u062f\u0645 \u0645\u062c\u062f\u0643 \u060c",
-    "end_time": 202.9,
-    "start_word": 401,
-    "end_word": 405,
-    "src_lang": "may serve to thy glory,",
-    "reason": "gap>0.7",
-    "start_time": 201.2
-  },
-  {
-    "target_lang": "\u0644\u0646\u0645\u0648\u0646\u0627 \u0627\u0644\u0631\u0648\u062d\u064a \u060c",
-    "end_time": 205.3,
-    "start_word": 406,
-    "end_word": 409,
-    "src_lang": "to our spiritual growth,",
-    "reason": ",",
-    "start_time": 203.8
-  },
-  {
-    "target_lang": "\u0648\u0627\u0644\u0631\u0641\u0627\u0647\u064a\u0629",
-    "end_time": 207.7,
-    "start_word": 410,
-    "end_word": 413,
-    "src_lang": "and to the well-being",
-    "reason": ",",
-    "start_time": 206.2
-  },
-  {
-    "target_lang": "\u0645\u0646 \u0643\u064a\u0627\u0646\u0646\u0627 \u0628\u0623\u0643\u0645\u0644\u0647 \u0623\u062b\u0646\u0627\u0621 \u0631\u062d\u0644\u062a\u0646\u0627",
-    "end_time": 212.5,
-    "start_word": 414,
-    "end_word": 420,
-    "src_lang": "of our entire being as we journey",
-    "reason": "gap>0.9",
-    "start_time": 208.7
-  },
-  {
-    "target_lang": "\u0625\u0644\u0649 \u0627\u0644\u0623\u0628\u062f\u064a\u0629 \u0627\u0644\u062a\u064a \u0644\u0627 \u062a\u0646\u062a\u0647\u064a.",
-    "end_time": 215.4,
-    "start_word": 421,
-    "end_word": 424,
-    "src_lang": "to the never-ending eternity.",
-    "reason": "gap>0.7",
-    "start_time": 213.3
-  },
-  {
-    "target_lang": "\u0643\u0646 \u0645\u0639\u0646\u0627 \u0627\u0644\u0622\u0646 \u0646\u0635\u0644\u064a.",
-    "end_time": 217.5,
-    "start_word": 425,
-    "end_word": 430,
-    "src_lang": "Be with us now we pray.",
-    "reason": ".",
-    "start_time": 216.2
-  },
-  {
-    "target_lang": "\u0628\u0627\u0633\u0645 \u064a\u0633\u0648\u0639.",
-    "end_time": 218.4,
-    "start_word": 431,
-    "end_word": 433,
-    "src_lang": "In Jesus name.",
-    "reason": ".",
-    "start_time": 217.5
-  },
-  {
-    "target_lang": "\u0622\u0645\u064a\u0646.",
-    "end_time": 220.1,
-    "start_word": 434,
-    "end_word": 434,
-    "src_lang": "Amen.",
-    "reason": "gap>1.0",
-    "start_time": 219.5
-  },
-  {
-    "target_lang": "\u0646\u062d\u0646 \u0633\u0648\u0641\u060c",
-    "end_time": 223.8,
-    "start_word": 435,
-    "end_word": 435,
-    "src_lang": "Well,",
-    "reason": "gap>1.0",
-    "start_time": 223.5
-  },
-  {
-    "target_lang": "\u0634\u0643\u0631\u0627 \u0644\u0627\u0646\u0636\u0645\u0627\u0645\u0643 \u0625\u0644\u064a\u0646\u0627 \u0641\u064a \u0647\u0630\u0627 \u0627\u0644\u0641\u0635\u0644",
-    "end_time": 226.3,
-    "start_word": 436,
-    "end_word": 443,
-    "src_lang": "thank you for joining us for this class",
-    "reason": ",",
-    "start_time": 223.8
-  },
-  {
-    "target_lang": "\u0648\u0627\u0646\u0627 \u0627\u0631\u064a\u062f \u0627\u0646",
-    "end_time": 227.8,
-    "start_word": 444,
-    "end_word": 447,
-    "src_lang": "and I want to",
-    "reason": "gap>0.0",
-    "start_time": 226.4
-  },
-  {
-    "target_lang": "\u062a\u0628\u062f\u0623 \u0628\u0627\u0644\u0645\u062d\u0627\u0636\u0631\u0629 \u0627\u0644\u0623\u0648\u0644\u0649 \u060c",
-    "end_time": 231.3,
-    "start_word": 448,
-    "end_word": 452,
-    "src_lang": "begin with the first lecture,",
-    "reason": "gap>0.6",
-    "start_time": 228.5
-  },
-  {
-    "target_lang": "\u0648\u0647\u064a \u0627\u0644\u062f\u0631\u0627\u0633\u0629",
-    "end_time": 233.2,
-    "start_word": 453,
-    "end_word": 457,
-    "src_lang": "which is titled: The Study",
-    "reason": ",",
-    "start_time": 231.3
-  },
-  {
-    "target_lang": "\u0645\u0646 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633.",
-    "end_time": 235.1,
-    "start_word": 458,
-    "end_word": 461,
-    "src_lang": "of the Holy Spirit.",
-    "reason": "gap>0.6",
-    "start_time": 233.9
-  },
-  {
-    "target_lang": "\u062f\u0631\u0627\u0633\u0629 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633.",
-    "end_time": 238.9,
-    "start_word": 462,
-    "end_word": 467,
-    "src_lang": "The Study of the Holy Spirit.",
-    "reason": ".",
-    "start_time": 235.1
-  },
-  {
-    "target_lang": "\u0643\u0627\u0646 \u0631\u0648\u062d \u0627\u0644\u0644\u0647 \u0627\u0644\u0642\u062f\u0648\u0633 \u0645\u0639 \u0634\u0639\u0628 \u0627\u0644\u0644\u0647 \u0645\u0646\u0630 \u0627\u0644\u0628\u062f\u0627\u064a\u0629.",
-    "end_time": 246.2,
-    "start_word": 468,
-    "end_word": 477,
-    "src_lang": "God's Holy spirit was with God's people from the beginning.",
-    "reason": "gap>1.0",
-    "start_time": 241.0
-  },
-  {
-    "target_lang": "\u0628\u0627\u0644\u0641\u0639\u0644 \u0641\u064a \u062a\u0643\u0648\u064a\u0646 1 \u060c",
-    "end_time": 249.9,
-    "start_word": 478,
-    "end_word": 480,
-    "src_lang": "Already in Genesis 1,",
-    "reason": "gap>1.0",
-    "start_time": 247.4
-  },
-  {
-    "target_lang": "\u0627\u0644\u0622\u064a\u0629 2",
-    "end_time": 250.6,
-    "start_word": 481,
-    "end_word": 482,
-    "src_lang": "verse 2",
-    "reason": ",",
-    "start_time": 249.9
-  },
-  {
-    "target_lang": "\u064a\u0642\u0648\u062f\u0647\u0645 \u0641\u064a \u0627\u0644\u0646\u0647\u0627\u064a\u0629 \u0625\u0644\u0649 \u0631\u0627\u062d\u062a\u0647\u0645",
-    "end_time": 256.4,
-    "start_word": 483,
-    "end_word": 488,
-    "src_lang": "leading them ultimately to their rest",
-    "reason": "gap>1.0",
-    "start_time": 252.3
-  },
-  {
-    "target_lang": "\u0641\u064a \u064a\u0633\u0648\u0639 \u0627\u0644\u0645\u0633\u064a\u062d (\u0625\u0634\u0639\u064a\u0627\u0621 63 14)",
-    "end_time": 262.9,
-    "start_word": 489,
-    "end_word": 494,
-    "src_lang": "in Jesus Christ (Isaiah 63 14)",
-    "reason": "gap>0.8",
-    "start_time": 257.3
-  },
-  {
-    "target_lang": "\u0644\u0645\u0639\u0631\u0641\u0629 \u0627\u0644\u0631\u0648\u062d",
-    "end_time": 266.3,
-    "start_word": 495,
-    "end_word": 498,
-    "src_lang": "To know the Spirit",
-    "reason": "gap>1.0",
-    "start_time": 265.0
-  },
-  {
-    "target_lang": "\u0644\u0630\u0644\u0643 \u0647\u0648 \u0627\u0644\u0648\u0642\u0648\u0641 \u0641\u064a \u0627\u0644\u0627\u0633\u062a\u0645\u0631\u0627\u0631\u064a\u0629",
-    "end_time": 270.7,
-    "start_word": 499,
-    "end_word": 504,
-    "src_lang": "therefore is to stand in continuity",
-    "reason": "gap>0.7",
-    "start_time": 267.1
-  },
-  {
-    "target_lang": "\u0645\u0639 \u0627\u0644\u0642\u062f\u064a\u0633\u064a\u0646 \u0645\u0646 \u062c\u0645\u064a\u0639 \u0627\u0644\u0623\u0639\u0645\u0627\u0631.",
-    "end_time": 273.5,
-    "start_word": 505,
-    "end_word": 510,
-    "src_lang": "with the Saints of all ages.",
-    "reason": "gap>1.0",
-    "start_time": 271.9
-  },
-  {
-    "target_lang": "\u0648\u0639\u062f \u0627\u0644\u0644\u0647 \u060c",
-    "end_time": 277.0,
-    "start_word": 511,
-    "end_word": 513,
-    "src_lang": "God has promised,",
-    "reason": "gap>1.0",
-    "start_time": 275.8
-  },
-  {
-    "target_lang": "\u0631\u0648\u062d\u0647 \u0628\u0627\u0644\u0641\u0639\u0644 \u0644\u0625\u0633\u0631\u0627\u0626\u064a\u0644 \u060c",
-    "end_time": 278.9,
-    "start_word": 514,
-    "end_word": 518,
-    "src_lang": "his Spirit already to Israel,",
-    "reason": ",",
-    "start_time": 277.0
-  },
-  {
-    "target_lang": "\u0634\u0639\u0628\u0647 \u0627\u0644\u0645\u062e\u062a\u0627\u0631.",
-    "end_time": 281.6,
-    "start_word": 519,
-    "end_word": 521,
-    "src_lang": "His chosen people.",
-    "reason": "gap>1.0",
-    "start_time": 280.4
-  },
-  {
-    "target_lang": "\u0646\u062d\u0646 \u0646\u0639\u0644\u0645 \u0623\u0646\u0647 \u0641\u064a \u0627\u0644\u0639\u0647\u062f \u0627\u0644\u0642\u062f\u064a\u0645 \u060c",
-    "end_time": 284.7,
-    "start_word": 522,
-    "end_word": 528,
-    "src_lang": "We know that in the Old Testament,",
-    "reason": "gap>1.0",
-    "start_time": 282.9
-  },
-  {
-    "target_lang": "\u0627\u0644\u0639\u062f\u064a\u062f \u0645\u0646 \u0627\u0644\u0623\u0641\u0631\u0627\u062f \u064a\u062e\u062a\u0628\u0631\u0648\u0646 \u0631\u0627\u062d\u0629 \u0630\u0644\u0643 \u0627\u0644\u0631\u0648\u062d.",
-    "end_time": 288.9,
-    "start_word": 529,
-    "end_word": 536,
-    "src_lang": "various individuals experience a comfort of that Spirit.",
-    "reason": ",",
-    "start_time": 284.7
-  },
-  {
-    "target_lang": "\u0641\u0643\u0631 \u0641\u064a \u062f\u064a\u0641\u064a\u062f \u060c",
-    "end_time": 289.6,
-    "start_word": 537,
-    "end_word": 539,
-    "src_lang": "Think of David,",
-    "reason": ".",
-    "start_time": 288.9
-  },
-  {
-    "target_lang": "\u0639\u0644\u0649 \u0633\u0628\u064a\u0644 \u0627\u0644\u0645\u062b\u0627\u0644 (\u0645\u0632\u0645\u0648\u0631 51)",
-    "end_time": 291.6,
-    "start_word": 540,
-    "end_word": 543,
-    "src_lang": "for example (Psalm 51)",
-    "reason": ",",
-    "start_time": 289.6
-  },
-  {
-    "target_lang": "\u0644\u0643\u0646 \u0627\u0644\u0644\u0647 \u0648\u0639\u062f",
-    "end_time": 295.4,
-    "start_word": 544,
-    "end_word": 546,
-    "src_lang": "But God promised",
-    "reason": "gap>1.0",
-    "start_time": 294.0
-  },
-  {
-    "target_lang": "\u0639\u0645\u0644 \u0627\u0644\u0631\u0648\u062d \u0623\u063a\u0646\u0649 \u0648\u0623\u0648\u0633\u0639",
-    "end_time": 301.0,
-    "start_word": 547,
-    "end_word": 555,
-    "src_lang": "a far richer and broader work of the Spirit",
-    "reason": "gap>1.0",
-    "start_time": 296.6
-  },
-  {
-    "target_lang": "\u0645\u0645\u0627 \u0642\u062f \u0646\u062a\u062e\u064a\u0644\u0647.",
-    "end_time": 304.5,
-    "start_word": 556,
-    "end_word": 560,
-    "src_lang": "than we might possibly imagine.",
-    "reason": "gap>0.7",
-    "start_time": 301.8
-  },
-  {
-    "target_lang": "\u0627\u0646\u0628\u0623 \u0627\u0634\u0639\u064a\u0627\u0621 \u0628\u0645\u0644\u0643 \u0628\u0627\u0631",
-    "end_time": 309.2,
-    "start_word": 561,
-    "end_word": 566,
-    "src_lang": "Isaiah foretold of a righteous king",
-    "reason": "gap>1.0",
-    "start_time": 305.9
-  },
-  {
-    "target_lang": "\u0625\u062f\u0627\u0631\u062a\u0647 \u0633\u062a\u0643\u0648\u0646 \u0645\u062b\u0644 \u060c",
-    "end_time": 311.4,
-    "start_word": 567,
-    "end_word": 571,
-    "src_lang": "whose administration would be like,",
-    "reason": "gap>0.4",
-    "start_time": 309.7
-  },
-  {
-    "target_lang": "\u0623\u0646\u0647\u0627\u0631 \u0627\u0644\u0645\u064a\u0627\u0647 \u0641\u064a \u0645\u0643\u0627\u0646 \u062c\u0627\u0641",
-    "end_time": 314.0,
-    "start_word": 572,
-    "end_word": 578,
-    "src_lang": "rivers of waters in a dry place",
-    "reason": ",",
-    "start_time": 311.6
-  },
-  {
-    "target_lang": "\u0648\u062a\u062d\u0648\u0644 \u0627\u0644\u0628\u0631\u064a\u0629 \u0627\u0644\u0642\u0627\u062d\u0644\u0629",
-    "end_time": 317.5,
-    "start_word": 579,
-    "end_word": 585,
-    "src_lang": "and the transformation of the barren wilderness",
-    "reason": "gap>0.3",
-    "start_time": 314.4
-  },
-  {
-    "target_lang": "\u0625\u0644\u0649 \u0639\u0627\u0644\u0645 \u0645\u0644\u064a\u0621 \u0628\u062b\u0645\u0627\u0631 \u0627\u0644\u0628\u0631 (\u0625\u0634\u0639\u064a\u0627\u0621 32).",
-    "end_time": 323.4,
-    "start_word": 586,
-    "end_word": 596,
-    "src_lang": "into a world filled with the fruit of righteousness (Isaiah 32).",
-    "reason": "gap>0.3",
-    "start_time": 317.9
-  },
-  {
-    "target_lang": "\u0639\u0646\u062f\u0645\u0627 \u0627\u0644\u0631\u0648\u062d \u060c",
-    "end_time": 325.8,
-    "start_word": 597,
-    "end_word": 599,
-    "src_lang": "When the Spirit,",
-    "reason": ".",
-    "start_time": 324.2
-  },
-  {
-    "target_lang": "\u0639\u0646\u062f\u0645\u0627 \u0627\u0644\u0631\u0648\u062d",
-    "end_time": 328.0,
-    "start_word": 600,
-    "end_word": 602,
-    "src_lang": "When the Spirit",
-    "reason": ",",
-    "start_time": 326.4
-  },
-  {
-    "target_lang": "\u064a\u0633\u0643\u0628 \u0639\u0644\u064a\u0646\u0627 \u0645\u0646 \u0627\u0644\u0639\u0644\u0627\u0621.",
-    "end_time": 332.5,
-    "start_word": 603,
-    "end_word": 610,
-    "src_lang": "is poured out upon us from on high.",
-    "reason": "is",
-    "start_time": 328.5
-  },
-  {
-    "target_lang": "\u062b\u0645 \u064a\u0630\u0647\u0628 \u0644\u064a\u0642\u0648\u0644 \u0641\u064a \u0625\u0634\u0639\u064a\u0627\u0621 44 \u060c",
-    "end_time": 337.1,
-    "start_word": 611,
-    "end_word": 620,
-    "src_lang": "And then he goes on to say in Isaiah 44,",
-    "reason": "gap>1.0",
-    "start_time": 334.7
-  },
-  {
-    "target_lang": "\u062d\u062a\u0649 \u064a\u0646\u0633\u0643\u0628 \u0627\u0644\u0631\u0648\u062d \u0639\u0644\u0649 \u0625\u0633\u0631\u0627\u0626\u064a\u0644 \u060c",
-    "end_time": 339.5,
-    "start_word": 621,
-    "end_word": 629,
-    "src_lang": "that the Spirit would be poured out on Israel,",
-    "reason": ",",
-    "start_time": 337.7
-  },
-  {
-    "target_lang": "\u0645\u062b\u0644 \u0627\u0644\u0646\u0647\u0631",
-    "end_time": 340.1,
-    "start_word": 630,
-    "end_word": 632,
-    "src_lang": "like a river",
-    "reason": ",",
-    "start_time": 339.5
-  },
-  {
-    "target_lang": "\u0645\u0646 \u0627\u0644\u0645\u0627\u0621 \u0639\u0644\u0649 \u0627\u0644\u0623\u0631\u0636 \u0627\u0644\u062c\u0627\u0641\u0629 \u060c",
-    "end_time": 341.7,
-    "start_word": 633,
-    "end_word": 637,
-    "src_lang": "of water on dry ground,",
-    "reason": "of",
-    "start_time": 340.1
-  },
-  {
-    "target_lang": "\u0633\u0642\u064a \u0627\u0644\u0646\u0641\u0648\u0633 \u0627\u0644\u0643\u0627\u0641\u0631\u0629 \u0644\u0625\u0646\u062a\u0627\u062c \u0627\u0644\u0646\u0627\u0633",
-    "end_time": 347.0,
-    "start_word": 638,
-    "end_word": 644,
-    "src_lang": "irrigating faithless souls to produce a people",
-    "reason": ",",
-    "start_time": 341.9
-  },
-  {
-    "target_lang": "\u0645\u0646 \u064a\u0642\u0648\u0644 \u0627\u0646\u064a \u0644\u0644\u0631\u0628.",
-    "end_time": 351.2,
-    "start_word": 645,
-    "end_word": 650,
-    "src_lang": "who say I am the Lord's.",
-    "reason": "gap>0.2",
-    "start_time": 347.3
-  },
-  {
-    "target_lang": "\u0648\u0643\u0630\u0644\u0643 \u0627\u0644\u0631\u0648\u062d",
-    "end_time": 353.9,
-    "start_word": 651,
-    "end_word": 654,
-    "src_lang": "And so the Spirit",
-    "reason": "gap>1.0",
-    "start_time": 352.6
-  },
-  {
-    "target_lang": "\u0647\u0648 \u062c\u0648\u0627\u0628 \u0623\u0645\u0627\u0646\u0629 \u0627\u0644\u0644\u0647 \u0641\u064a \u0627\u0644\u0639\u0647\u062f",
-    "end_time": 358.6,
-    "start_word": 655,
-    "end_word": 661,
-    "src_lang": "is the answer of God's covenantal faithfulness",
-    "reason": "gap>0.8",
-    "start_time": 354.8
-  },
-  {
-    "target_lang": "\u0644\u0644\u0645\u0634\u0643\u0644\u0629 \u0627\u0644\u0645\u0632\u0645\u0646\u0629",
-    "end_time": 362.3,
-    "start_word": 662,
-    "end_word": 665,
-    "src_lang": "to the chronic problem",
-    "reason": "gap>1.0",
-    "start_time": 359.8
-  },
-  {
-    "target_lang": "\u0645\u0646 \u0643\u0633\u0631 \u0639\u0647\u062f \u0625\u0633\u0631\u0627\u0626\u064a\u0644.",
-    "end_time": 364.8,
-    "start_word": 666,
-    "end_word": 669,
-    "src_lang": "of Israel's covenant breaking.",
-    "reason": "gap>0.3",
-    "start_time": 362.7
-  },
-  {
-    "target_lang": "\u062a\u062c\u062f \u0630\u0644\u0643 \u0623\u064a\u0636\u064b\u0627 \u0641\u064a",
-    "end_time": 367.2,
-    "start_word": 670,
-    "end_word": 674,
-    "src_lang": "You find that also in",
-    "reason": "gap>1.0",
-    "start_time": 366.1
-  },
-  {
-    "target_lang": "\u0643\u062a\u0627\u0628 \u064a\u0648\u0626\u064a\u0644",
-    "end_time": 368.7,
-    "start_word": 675,
-    "end_word": 678,
-    "src_lang": "the Book of Joel",
-    "reason": "gap>0.4",
-    "start_time": 367.7
-  },
-  {
-    "target_lang": "\u0623\u0646 \u064a\u0633\u0643\u0628 \u0627\u0644\u0631\u0628 \u0631\u0648\u062d\u0647 \u0639\u0644\u0649 \u0643\u0644 \u0634\u0639\u0628\u0647",
-    "end_time": 372.5,
-    "start_word": 679,
-    "end_word": 690,
-    "src_lang": "that the Lord would pour out his Spirit upon all his people",
-    "reason": "gap>0.3",
-    "start_time": 369.1
-  },
-  {
-    "target_lang": "\u0623\u0646 \u0645\u0646 \u064a\u0646\u0627\u062f\u064a \u0628\u0627\u0644\u0627\u0633\u0645",
-    "end_time": 375.3,
-    "start_word": 691,
-    "end_word": 697,
-    "src_lang": "that whosoever would call on the name",
-    "reason": "gap>0.6",
-    "start_time": 373.2
-  },
-  {
-    "target_lang": "\u0645\u0646 \u0627\u0644\u0631\u0628 \u0633\u064a\u062e\u0644\u0635",
-    "end_time": 378.0,
-    "start_word": 698,
-    "end_word": 703,
-    "src_lang": "of the Lord would be saved",
-    "reason": "of",
-    "start_time": 375.3
-  },
-  {
-    "target_lang": "(\u064a\u0648\u0626\u064a\u0644 2:28 \u0625\u0644\u0649 32).",
-    "end_time": 381.2,
-    "start_word": 704,
-    "end_word": 707,
-    "src_lang": "(Joel 2:28 to 32).",
-    "reason": "gap>0.7",
-    "start_time": 378.8
-  },
-  {
-    "target_lang": "\u0644\u0630\u0627 \u0644\u062f\u0631\u0627\u0633\u0629 \u0639\u0645\u0644 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633",
-    "end_time": 384.9,
-    "start_word": 708,
-    "end_word": 716,
-    "src_lang": "So to study the work of the Holy Spirit",
-    "reason": "gap>1.0",
-    "start_time": 382.3
-  },
-  {
-    "target_lang": "\u0647\u0648 \u062f\u0631\u0627\u0633\u0629 \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u0633\u0645\u0627\u0648\u064a \u060c",
-    "end_time": 388.8,
-    "start_word": 717,
-    "end_word": 721,
-    "src_lang": "is to study heavenly work,",
-    "reason": "gap>1.0",
-    "start_time": 386.1
-  },
-  {
-    "target_lang": "\u0625\u0646\u0642\u0627\u0630 \u0627\u0644\u0639\u0645\u0644.",
-    "end_time": 390.6,
-    "start_word": 722,
-    "end_word": 723,
-    "src_lang": "saving work.",
-    "reason": ",",
-    "start_time": 389.5
-  },
-  {
-    "target_lang": "\u0648\u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u0630\u064a \u064a\u0628\u0642\u0649 \u0625\u0644\u0649 \u0627\u0644\u0623\u0628\u062f.",
-    "end_time": 395.1,
-    "start_word": 724,
-    "end_word": 728,
-    "src_lang": "And work that abides forever.",
-    "reason": "gap>1.0",
-    "start_time": 391.8
-  },
-  {
-    "target_lang": "\u062d\u0627\u0644\u064a\u0627\u060c",
-    "end_time": 397.0,
-    "start_word": 729,
-    "end_word": 729,
-    "src_lang": "Now,",
-    "reason": "gap>1.0",
-    "start_time": 396.9
-  },
-  {
-    "target_lang": "\u0628\u0627\u0644\u0637\u0628\u0639\u060c",
-    "end_time": 397.5,
-    "start_word": 730,
-    "end_word": 731,
-    "src_lang": "of course,",
-    "reason": ",",
-    "start_time": 397.0
-  },
-  {
-    "target_lang": "\u0641\u064a \u0639\u0635\u0631 \u0627\u0644\u0639\u0647\u062f \u0627\u0644\u062c\u062f\u064a\u062f \u0643\u0645\u0627 \u062a\u0639\u0644\u0645 \u060c",
-    "end_time": 400.1,
-    "start_word": 732,
-    "end_word": 738,
-    "src_lang": "in the New Testament age you know,",
-    "reason": ",",
-    "start_time": 397.5
-  },
-  {
-    "target_lang": "\u0623\u0646\u0647 \u0639\u0646\u062f\u0645\u0627 \u0642\u0627\u0645 \u064a\u0633\u0648\u0639 \u0645\u0646 \u0628\u064a\u0646 \u0627\u0644\u0623\u0645\u0648\u0627\u062a",
-    "end_time": 402.4,
-    "start_word": 739,
-    "end_word": 745,
-    "src_lang": "that when Jesus rose from the dead",
-    "reason": ",",
-    "start_time": 400.1
-  },
-  {
-    "target_lang": "\u0648\u0635\u0639\u062f \u0625\u0644\u0649 \u0627\u0644\u062c\u0646\u0629",
-    "end_time": 404.3,
-    "start_word": 746,
-    "end_word": 749,
-    "src_lang": "and ascended into heaven,",
-    "reason": "gap>0.6",
-    "start_time": 403.1
-  },
-  {
-    "target_lang": "\u0633\u0643\u0628 \u0631\u0648\u062d\u0647",
-    "end_time": 408.4,
-    "start_word": 750,
-    "end_word": 754,
-    "src_lang": "He poured out His Spirit",
-    "reason": "gap>1.0",
-    "start_time": 405.9
-  },
-  {
-    "target_lang": "\u0628\u0645\u0642\u0627\u064a\u064a\u0633 \u0623\u0643\u0628\u0631 \u0628\u0643\u062b\u064a\u0631 \u0645\u0646",
-    "end_time": 412.1,
-    "start_word": 755,
-    "end_word": 759,
-    "src_lang": "in much larger measures than",
-    "reason": "gap>0.6",
-    "start_time": 409.1
-  },
-  {
-    "target_lang": "\u0643\u0627\u0646 \u0645\u0639\u0631\u0648\u0641\u0627 \u0645\u0646 \u0642\u0628\u0644",
-    "end_time": 414.6,
-    "start_word": 760,
-    "end_word": 763,
-    "src_lang": "had previously been known",
-    "reason": "gap>0.9",
-    "start_time": 413.1
-  },
-  {
-    "target_lang": "(\u0623\u0639\u0645\u0627\u0644 2 17 \u060c",
-    "end_time": 418.0,
-    "start_word": 764,
-    "end_word": 766,
-    "src_lang": "(Acts 2 17,",
-    "reason": "gap>1.0",
-    "start_time": 415.8
-  },
-  {
-    "target_lang": "\u0645\u0646 \u062e\u0644\u0627\u0644 21 \u0648 33 \u0648 34)",
-    "end_time": 422.2,
-    "start_word": 767,
-    "end_word": 772,
-    "src_lang": "through 21 and 33 and 34)",
-    "reason": ",",
-    "start_time": 418.0
-  },
-  {
-    "target_lang": "\u0648\u0627\u0646\u0642\u0637\u0639 \u0628\u0637\u0631\u0633 \u0628\u0639\u062f \u062e\u0637\u0628\u062a\u0647",
-    "end_time": 428.1,
-    "start_word": 773,
-    "end_word": 780,
-    "src_lang": "And Peter after his sermon is interrupted by",
-    "reason": "gap>1.0",
-    "start_time": 424.0
-  },
-  {
-    "target_lang": "\u0627\u0644\u0622\u0644\u0627\u0641 \u0645\u0646 \u0627\u0644\u0646\u0627\u0633 \u0627\u0644\u0630\u064a\u0646 \u062a\u062d\u062a \u062a\u0628\u0643\u064a\u062a \u0639\u0638\u064a\u0645 \u0639\u0644\u0649 \u0627\u0644\u062e\u0637\u064a\u0626\u0629.",
-    "end_time": 431.3,
-    "start_word": 781,
-    "end_word": 790,
-    "src_lang": "thousands of people who are under great conviction of sin.",
-    "reason": "gap>0.4",
-    "start_time": 428.6
-  },
-  {
-    "target_lang": "\u062a\u062d\u062a\u0647",
-    "end_time": 432.2,
-    "start_word": 791,
-    "end_word": 792,
-    "src_lang": "Under it",
-    "reason": ".",
-    "start_time": 431.3
-  },
-  {
-    "target_lang": "\u0641\u0635\u0631\u062e\u0648\u0627 \u0631\u062c\u0627\u0644\u0627 \u0648\u0627\u062e\u0648\u0629.",
-    "end_time": 435.2,
-    "start_word": 793,
-    "end_word": 799,
-    "src_lang": "and they cried out men and Brethren.",
-    "reason": "gap>1.0",
-    "start_time": 433.4
-  },
-  {
-    "target_lang": "\u0645\u0627\u0630\u0627 \u0639\u0633\u0627\u0646\u0627 \u0646\u0641\u0639\u0644\u061f",
-    "end_time": 436.4,
-    "start_word": 800,
-    "end_word": 803,
-    "src_lang": "What shall we do?",
-    "reason": ".",
-    "start_time": 435.2
-  },
-  {
-    "target_lang": "\u0642\u0627\u0644 \u0644\u0647\u0645 \u0628\u0637\u0631\u0633:",
-    "end_time": 438.8,
-    "start_word": 804,
-    "end_word": 807,
-    "src_lang": "Peter said to them,",
-    "reason": "gap>1.0",
-    "start_time": 437.7
-  },
-  {
-    "target_lang": "\u062a\u0648\u0628\u0648\u0627 \u0648\u0644\u064a\u0639\u062a\u0645\u062f\u0648\u0627 \u062c\u0645\u064a\u0639\u0643\u0645",
-    "end_time": 441.5,
-    "start_word": 808,
-    "end_word": 814,
-    "src_lang": "repent and be baptized everyone of you",
-    "reason": ",",
-    "start_time": 438.8
-  },
-  {
-    "target_lang": "\u0628\u0627\u0633\u0645 \u064a\u0633\u0648\u0639 \u0627\u0644\u0645\u0633\u064a\u062d.",
-    "end_time": 443.6,
-    "start_word": 815,
-    "end_word": 820,
-    "src_lang": "in the name of Jesus Christ.",
-    "reason": "gap>0.2",
-    "start_time": 441.8
-  },
-  {
-    "target_lang": "\u0648\u062a\u0646\u0627\u0644 \u0639\u0637\u064a\u0629 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633.",
-    "end_time": 448.6,
-    "start_word": 821,
-    "end_word": 830,
-    "src_lang": "And you shall receive the gift of the Holy Ghost.",
-    "reason": ".",
-    "start_time": 444.1
-  },
-  {
-    "target_lang": "\u0644\u0627\u0646 \u0627\u0644\u0648\u0639\u062f \u0644\u0643\u0645",
-    "end_time": 451.1,
-    "start_word": 831,
-    "end_word": 836,
-    "src_lang": "For the promise is unto you",
-    "reason": ".",
-    "start_time": 449.6
-  },
-  {
-    "target_lang": "\u0648\u0644\u0623\u0637\u0641\u0627\u0644\u0643",
-    "end_time": 452.6,
-    "start_word": 837,
-    "end_word": 840,
-    "src_lang": "and to your children",
-    "reason": "gap>0.3",
-    "start_time": 451.5
-  },
-  {
-    "target_lang": "\u0648\u0644\u0643\u0644 \u0645\u0627 \u0647\u0648 \u0628\u0639\u064a\u062f.",
-    "end_time": 454.5,
-    "start_word": 841,
-    "end_word": 847,
-    "src_lang": "and to all that are afar off.",
-    "reason": "gap>0.0",
-    "start_time": 452.7
-  },
-  {
-    "target_lang": "\u062d\u062a\u0649 \u0643\u0644 \u0645\u0646 \u0627\u0644\u0631\u0628 \u060c",
-    "end_time": 456.1,
-    "start_word": 848,
-    "end_word": 853,
-    "src_lang": "Even as many as the Lord,",
-    "reason": ".",
-    "start_time": 454.7
-  },
-  {
-    "target_lang": "\u0633\u064a\u062f\u0639\u0648 \u0625\u0644\u0647\u0646\u0627 (\u0623\u0639\u0645\u0627\u0644 \u0627\u0644\u0631\u0633\u0644 2: 38 \u0648 39).",
-    "end_time": 460.0,
-    "start_word": 854,
-    "end_word": 862,
-    "src_lang": "Our God shall call (Acts 2: 38 and 39).",
-    "reason": ",",
-    "start_time": 456.1
-  },
-  {
-    "target_lang": "\u0648\u0647\u0643\u0630\u0627 \u0627\u0644\u0628\u0627\u0642\u064a",
-    "end_time": 464.6,
-    "start_word": 863,
-    "end_word": 866,
-    "src_lang": "And so the rest",
-    "reason": "gap>1.0",
-    "start_time": 462.7
-  },
-  {
-    "target_lang": "\u0645\u0646 \u0643\u062a\u0627\u0628\u0627\u062a \u0627\u0644\u0639\u0647\u062f \u0627\u0644\u062c\u062f\u064a\u062f \u060c",
-    "end_time": 465.9,
-    "start_word": 867,
-    "end_word": 871,
-    "src_lang": "of the New Testament writings,",
-    "reason": "of",
-    "start_time": 464.6
-  },
-  {
-    "target_lang": "\u0648\u0644\u0627 \u0633\u064a\u0645\u0627 \u0631\u0633\u0627\u0626\u0644 \u0628\u0648\u0644\u0633 \u060c",
-    "end_time": 467.5,
-    "start_word": 872,
-    "end_word": 874,
-    "src_lang": "particularly Paul's Epistles,",
-    "reason": ",",
-    "start_time": 465.9
-  },
-  {
-    "target_lang": "\u0641\u0642\u0637 \u0645\u0646 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633.",
-    "end_time": 472.1,
-    "start_word": 875,
-    "end_word": 881,
-    "src_lang": "are just filled with the Holy Spirit.",
-    "reason": ",",
-    "start_time": 467.8
-  },
-  {
-    "target_lang": "\u064a\u062a\u062d\u062f\u062b \u0643\u062b\u064a\u0631\u0627",
-    "end_time": 473.9,
-    "start_word": 882,
-    "end_word": 884,
-    "src_lang": "He speaks often",
-    "reason": ".",
-    "start_time": 472.9
-  },
-  {
-    "target_lang": "\u0639\u0646 \u0648\u0644\u0627\u062f\u062a\u0647\u0645",
-    "end_time": 474.9,
-    "start_word": 885,
-    "end_word": 887,
-    "src_lang": "about being born",
-    "reason": "about",
-    "start_time": 473.9
-  },
-  {
-    "target_lang": "\u0645\u0646 \u0627\u0644\u0631\u0648\u062d \u0645\u062b\u0644 \u063a\u0644\u0627\u0637\u064a\u0629 \u060c",
-    "end_time": 477.2,
-    "start_word": 888,
-    "end_word": 893,
-    "src_lang": "of the Spirit such as Galatians,",
-    "reason": "of",
-    "start_time": 474.9
-  },
-  {
-    "target_lang": "4:29.",
-    "end_time": 479.0,
-    "start_word": 894,
-    "end_word": 895,
-    "src_lang": "4: 29.",
-    "reason": ",",
-    "start_time": 477.2
-  },
-  {
-    "target_lang": "\u0648\u0647\u0648 \u064a\u062a\u062d\u062f\u062b \u0628\u0627\u0633\u062a\u0645\u0631\u0627\u0631",
-    "end_time": 481.6,
-    "start_word": 896,
-    "end_word": 899,
-    "src_lang": "And he's talking constantly",
-    "reason": ".",
-    "start_time": 479.3
-  },
-  {
-    "target_lang": "\u062d\u0648\u0644 \u0627\u0644\u062c\u0648\u0627\u0646\u0628 \u0627\u0644\u0645\u062e\u062a\u0644\u0641\u0629",
-    "end_time": 483.2,
-    "start_word": 900,
-    "end_word": 902,
-    "src_lang": "about different aspects",
-    "reason": "gap>0.0",
-    "start_time": 481.7
-  },
-  {
-    "target_lang": "\u0644\u0639\u0645\u0644 \u062e\u0644\u0627\u0635 \u0627\u0644\u0631\u0648\u062d.",
-    "end_time": 484.9,
-    "start_word": 903,
-    "end_word": 907,
-    "src_lang": "of the Spirit's saving work.",
-    "reason": "of",
-    "start_time": 483.2
-  },
-  {
-    "target_lang": "\u0643\u0645\u0627 \u0642\u0631\u0623\u0646\u0627 \u0641\u0642\u0637 \u0627\u0644\u0642\u0644\u064a\u0644",
-    "end_time": 486.1,
-    "start_word": 908,
-    "end_word": 913,
-    "src_lang": "Like we just read a few",
-    "reason": ".",
-    "start_time": 485.1
-  },
-  {
-    "target_lang": "\u0645\u0646\u0647\u0645 \u0645\u0646 \u0631\u0648\u0645\u064a\u0629 8.",
-    "end_time": 488.7,
-    "start_word": 914,
-    "end_word": 921,
-    "src_lang": "of them to you from from Romans 8.",
-    "reason": "of",
-    "start_time": 486.1
-  },
-  {
-    "target_lang": "\u0644\u0630\u0644\u0643 \u0625\u0630\u0627 \u0643\u0646\u0627 \u0646\u0639\u062a\u0632 \u0628\u0627\u0644\u0645\u0633\u064a\u062d \u0628\u0627\u0639\u062a\u0628\u0627\u0631\u0647 \u0627\u0644\u0648\u0633\u064a\u0637 \u0627\u0644\u0648\u062d\u064a\u062f \u0644\u062f\u064a\u0646\u0627 \u060c",
-    "end_time": 492.9,
-    "start_word": 922,
-    "end_word": 930,
-    "src_lang": "So if we treasure Christ as our only mediator,",
-    "reason": "gap>1.0",
-    "start_time": 489.8
-  },
-  {
-    "target_lang": "\u0633\u0648\u0641 \u0646\u0639\u062a\u0632 \u0623\u064a\u0636\u064b\u0627 \u0628\u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633",
-    "end_time": 496.3,
-    "start_word": 931,
-    "end_word": 937,
-    "src_lang": "we will also treasure the Holy Spirit",
-    "reason": ",",
-    "start_time": 493.8
-  },
-  {
-    "target_lang": "\u0643\u0647\u062f\u064a\u0629 \u0627\u0644\u0645\u0633\u064a\u062d \u0627\u0644\u0639\u0638\u064a\u0645\u0629 \u060c",
-    "end_time": 499.2,
-    "start_word": 938,
-    "end_word": 941,
-    "src_lang": "as Christ's great gift,",
-    "reason": "gap>0.2",
-    "start_time": 496.6
-  },
-  {
-    "target_lang": "\u0627\u0644\u0630\u064a \u0644\u0627 \u064a\u0646\u0641\u0635\u0644 \u0639\u0646\u0647 \u060c",
-    "end_time": 501.0,
-    "start_word": 942,
-    "end_word": 946,
-    "src_lang": "which is inseparable from Him,",
-    "reason": ",",
-    "start_time": 499.2
-  },
-  {
-    "target_lang": "\u0644\u0644\u062e\u0637\u0627\u0629 (\u064a\u0648\u062d\u0646\u0627 4",
-    "end_time": 504.5,
-    "start_word": 947,
-    "end_word": 950,
-    "src_lang": "to sinners (John 4",
-    "reason": ",",
-    "start_time": 502.0
-  },
-  {
-    "target_lang": "\u0648\u0645\u0631\u0629 \u0623\u062e\u0631\u0649 \u064a\u0648\u062d\u0646\u0627 7).",
-    "end_time": 506.7,
-    "start_word": 951,
-    "end_word": 954,
-    "src_lang": "and again John 7).",
-    "reason": "gap>0.8",
-    "start_time": 505.4
-  },
-  {
-    "target_lang": "\u0648\u0636\u0639 \u062c\u0648\u0646\u0627\u062b\u0627\u0646 \u0625\u062f\u0648\u0627\u0631\u062f\u0632 \u0627\u0644\u0623\u0645\u0631 \u0628\u0647\u0630\u0647 \u0627\u0644\u0637\u0631\u064a\u0642\u0629.",
-    "end_time": 509.7,
-    "start_word": 955,
-    "end_word": 960,
-    "src_lang": "Jonathan Edwards put it this way.",
-    "reason": "gap>1.0",
-    "start_time": 508.1
-  },
-  {
-    "target_lang": "\"\u0645\u062c\u0645\u0648\u0639 \u0627\u0644\u0628\u0631\u0643\u0627\u062a \u0627\u0644\u062a\u064a \u0637\u0644\u0628\u0647\u0627 \u0627\u0644\u0645\u0633\u064a\u062d",
-    "end_time": 513.1,
-    "start_word": 961,
-    "end_word": 967,
-    "src_lang": "\"The sum of the blessings Christ sought",
-    "reason": ".",
-    "start_time": 509.9
-  },
-  {
-    "target_lang": "\u0628\u0645\u0627 \u0641\u0639\u0644\u0647 \u0648\u0639\u0627\u0646\u0649",
-    "end_time": 515.6,
-    "start_word": 968,
-    "end_word": 973,
-    "src_lang": "by what he did and suffered",
-    "reason": "gap>0.5",
-    "start_time": 513.7
-  },
-  {
-    "target_lang": "\u0641\u064a \u0639\u0645\u0644 \u0627\u0644\u0641\u062f\u0627\u0621 \u060c",
-    "end_time": 517.0,
-    "start_word": 974,
-    "end_word": 978,
-    "src_lang": "in the work of redemption,",
-    "reason": "in",
-    "start_time": 515.6
-  },
-  {
-    "target_lang": "\u0643\u0627\u0646 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633 \u060c",
-    "end_time": 519.2,
-    "start_word": 979,
-    "end_word": 982,
-    "src_lang": "was the Holy Spirit,",
-    "reason": ",",
-    "start_time": 517.9
-  },
-  {
-    "target_lang": "\u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633 \u0641\u064a \u0633\u0643\u0646\u0647 \u060c",
-    "end_time": 522.0,
-    "start_word": 983,
-    "end_word": 988,
-    "src_lang": "the Holy Spirit in His indwelling,",
-    "reason": ",",
-    "start_time": 520.2
-  },
-  {
-    "target_lang": "\u062a\u0623\u062b\u064a\u0631\u0627\u062a\u0647 \u0648\u062b\u0645\u0627\u0631\u0647",
-    "end_time": 524.0,
-    "start_word": 989,
-    "end_word": 992,
-    "src_lang": "His influences and fruits",
-    "reason": ",",
-    "start_time": 522.4
-  },
-  {
-    "target_lang": "\u0647\u0648 \u0645\u062c\u0645\u0648\u0639 \u0643\u0644 \u0646\u0639\u0645\u0629 \u060c",
-    "end_time": 526.1,
-    "start_word": 993,
-    "end_word": 998,
-    "src_lang": "is the sum of all grace,",
-    "reason": "gap>0.1",
-    "start_time": 524.2
-  },
-  {
-    "target_lang": "\u0642\u062f\u0627\u0633\u0629\u060c",
-    "end_time": 527.0,
-    "start_word": 999,
-    "end_word": 999,
-    "src_lang": "holiness,",
-    "reason": ",",
-    "start_time": 526.3
-  },
-  {
-    "target_lang": "\u0627\u0644\u0631\u0627\u062d\u0629 \u0648\u0627\u0644\u0641\u0631\u062d \u060c",
-    "end_time": 528.7,
-    "start_word": 1000,
-    "end_word": 1002,
-    "src_lang": "comfort and joy,",
-    "reason": ",",
-    "start_time": 527.3
-  },
-  {
-    "target_lang": "\u0623\u0648 \u0641\u064a \u0643\u0644\u0645\u0629 \u0648\u0627\u062d\u062f\u0629",
-    "end_time": 530.0,
-    "start_word": 1003,
-    "end_word": 1006,
-    "src_lang": "or in one word",
-    "reason": ",",
-    "start_time": 528.9
-  },
-  {
-    "target_lang": "\u0645\u0646 \u0643\u0644 \u062e\u064a\u0631 \u0631\u0648\u062d\u064a \u0627\u0642\u062a\u0646\u0627\u0647\u0627 \u0627\u0644\u0645\u0633\u064a\u062d",
-    "end_time": 532.7,
-    "start_word": 1007,
-    "end_word": 1013,
-    "src_lang": "of all the spiritual good Christ purchased",
-    "reason": "of",
-    "start_time": 530.0
-  },
-  {
-    "target_lang": "\u0644\u0644\u0631\u062c\u0627\u0644 \u0641\u064a \u0647\u0630\u0627 \u0627\u0644\u0639\u0627\u0644\u0645.",
-    "end_time": 534.1,
-    "start_word": 1014,
-    "end_word": 1018,
-    "src_lang": "for men in this world.",
-    "reason": "for",
-    "start_time": 532.7
-  },
-  {
-    "target_lang": "\u0648\u0647\u0648 \u0623\u064a\u0636\u064b\u0627 \u0645\u062c\u0645\u0648\u0639 \u0643\u0644 \u0643\u0645\u0627\u0644 \u060c",
-    "end_time": 538.0,
-    "start_word": 1019,
-    "end_word": 1026,
-    "src_lang": "And is also the sum of all perfection,",
-    "reason": ".",
-    "start_time": 534.8
-  },
-  {
-    "target_lang": "\u0645\u062c\u062f\u060c",
-    "end_time": 538.6,
-    "start_word": 1027,
-    "end_word": 1027,
-    "src_lang": "glory,",
-    "reason": ",",
-    "start_time": 538.0
-  },
-  {
-    "target_lang": "\u0648\u0627\u0644\u0641\u0631\u062d \u0627\u0644\u0623\u0628\u062f\u064a \u060c",
-    "end_time": 539.9,
-    "start_word": 1028,
-    "end_word": 1030,
-    "src_lang": "and eternal joy,",
-    "reason": ",",
-    "start_time": 538.6
-  },
-  {
-    "target_lang": "\u0627\u0644\u0630\u064a \u0627\u0634\u062a\u0631\u0627\u0647",
-    "end_time": 540.8,
-    "start_word": 1031,
-    "end_word": 1033,
-    "src_lang": "that he purchased",
-    "reason": ",",
-    "start_time": 540.1
-  },
-  {
-    "target_lang": "\u0644\u0647\u0645 \u0641\u064a \u0639\u0627\u0644\u0645 \u0622\u062e\u0631 \".",
-    "end_time": 542.3,
-    "start_word": 1034,
-    "end_word": 1038,
-    "src_lang": "for them in another world.\"",
-    "reason": "for",
-    "start_time": 540.8
-  },
-  {
-    "target_lang": "\u0647\u0630\u0627 \u0627\u0642\u062a\u0628\u0627\u0633 \u0631\u0627\u0626\u0639 \u0645\u0646 \u0625\u062f\u0648\u0627\u0631\u062f\u0632.",
-    "end_time": 547.2,
-    "start_word": 1039,
-    "end_word": 1044,
-    "src_lang": "That's an amazing quote by Edwards.",
-    "reason": "gap>1.0",
-    "start_time": 544.5
-  },
-  {
-    "target_lang": "\u0648\u0647\u0630\u0627 \u064a\u0638\u0647\u0631 \u0644\u0646\u0627 \u0628\u0627\u0644\u062a\u0623\u0643\u064a\u062f",
-    "end_time": 549.8,
-    "start_word": 1045,
-    "end_word": 1049,
-    "src_lang": "And it certainly shows us",
-    "reason": "gap>1.0",
-    "start_time": 548.4
-  },
-  {
-    "target_lang": "\u0627\u0644\u062a\u064a \u064a\u0642\u0648\u0645 \u0627\u0644\u0643\u062b\u064a\u0631\u0648\u0646 \u0628\u062a\u0642\u0644\u064a\u0644\u0647\u0627 \u0627\u0644\u064a\u0648\u0645",
-    "end_time": 553.6,
-    "start_word": 1050,
-    "end_word": 1054,
-    "src_lang": "that many today are minimizing",
-    "reason": "gap>0.6",
-    "start_time": 550.5
-  },
-  {
-    "target_lang": "\u062f\u0648\u0631 \u0627\u0644\u0648\u0632\u0627\u0631\u0629",
-    "end_time": 555.8,
-    "start_word": 1055,
-    "end_word": 1059,
-    "src_lang": "the role of the ministry",
-    "reason": "gap>0.6",
-    "start_time": 554.3
-  },
-  {
-    "target_lang": "\u0645\u0646 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633",
-    "end_time": 557.8,
-    "start_word": 1060,
-    "end_word": 1064,
-    "src_lang": "of the Holy Spirit as",
-    "reason": "gap>0.5",
-    "start_time": 556.4
-  },
-  {
-    "target_lang": "\u0645\u062a\u0643\u0627\u0645\u0644 \u0645\u0639 \u0627\u0644\u0643\u0644",
-    "end_time": 560.9,
-    "start_word": 1065,
-    "end_word": 1068,
-    "src_lang": "integral with the entire",
-    "reason": "gap>1.0",
-    "start_time": 559.1
-  },
-  {
-    "target_lang": "\u0645\u062c\u0645\u0648\u0639 \u0627\u0644\u0646\u0639\u0645",
-    "end_time": 563.1,
-    "start_word": 1069,
-    "end_word": 1071,
-    "src_lang": "sum of blessings",
-    "reason": "gap>0.7",
-    "start_time": 561.7
-  },
-  {
-    "target_lang": "\u0627\u0644\u062a\u064a \u064a\u0646\u0627\u0644\u0647\u0627 \u0634\u0639\u0628 \u0627\u0644\u0644\u0647 \u0641\u064a \u0627\u0644\u062e\u0644\u0627\u0635.",
-    "end_time": 566.1,
-    "start_word": 1072,
-    "end_word": 1077,
-    "src_lang": "that God's people receive in salvation.",
-    "reason": "that",
-    "start_time": 563.1
-  },
-  {
-    "target_lang": "\u062c\u0648\u0646 \u0628\u0631\u0627\u0648\u0646 \u0645\u0646 \u0647\u064a\u062f\u064a\u0646\u063a\u062a\u0648\u0646",
-    "end_time": 570.0,
-    "start_word": 1078,
-    "end_word": 1081,
-    "src_lang": "John Brown of Headington",
-    "reason": "gap>1.0",
-    "start_time": 568.8
-  },
-  {
-    "target_lang": "\u0636\u0639\u0647\u0627 \u0628\u0647\u0630\u0647 \u0627\u0644\u0637\u0631\u064a\u0642\u0629\u060c",
-    "end_time": 571.7,
-    "start_word": 1082,
-    "end_word": 1085,
-    "src_lang": "put it this way,",
-    "reason": "gap>0.8",
-    "start_time": 570.9
-  },
-  {
-    "target_lang": "\"\u0647\u0644 \u0627\u0642\u062a\u0646\u0649 \u0627\u0644\u0645\u0633\u064a\u062d \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633\u061f",
-    "end_time": 574.6,
-    "start_word": 1086,
-    "end_word": 1091,
-    "src_lang": "\"Did Christ purchase the Holy Spirit?",
-    "reason": ",",
-    "start_time": 572.4
-  },
-  {
-    "target_lang": "\u0627\u0634\u062a\u0631\u0649 \u0627\u0644\u0645\u0633\u064a\u062d \u0645\u0648\u0627\u0647\u0628 \u0627\u0644\u0631\u0648\u062d \u060c",
-    "end_time": 578.7,
-    "start_word": 1092,
-    "end_word": 1096,
-    "src_lang": "Christ purchased the Spirit's gifts,",
-    "reason": "gap>1.0",
-    "start_time": 576.6
-  },
-  {
-    "target_lang": "\u0648\u062a\u0623\u062b\u064a\u0631\u0627\u062a \u0641\u064a \u062a\u0637\u0628\u064a\u0642 \u0627\u0644\u0641\u062f\u0627\u0621 \u060c",
-    "end_time": 582.2,
-    "start_word": 1097,
-    "end_word": 1101,
-    "src_lang": "and influences in applying redemption,",
-    "reason": ",",
-    "start_time": 578.7
-  },
-  {
-    "target_lang": "\u0648\u0644\u0643\u0646 \u0644\u064a\u0633 \u0643\u064a\u0627\u0646\u0647 \u060c",
-    "end_time": 584.2,
-    "start_word": 1102,
-    "end_word": 1105,
-    "src_lang": "but not his being,",
-    "reason": ",",
-    "start_time": 582.7
-  },
-  {
-    "target_lang": "\u0648\u0647\u0648 \u0645\u0633\u062a\u0642\u0644 \".",
-    "end_time": 586.4,
-    "start_word": 1106,
-    "end_word": 1108,
-    "src_lang": "which is independent.\"",
-    "reason": ",",
-    "start_time": 585.0
-  },
-  {
-    "target_lang": "\u0647\u0643\u0630\u0627 \u0639\u0645\u0644 \u0627\u0644\u0631\u0648\u062d",
-    "end_time": 589.5,
-    "start_word": 1109,
-    "end_word": 1114,
-    "src_lang": "So the work of the Spirit",
-    "reason": "gap>1.0",
-    "start_time": 587.9
-  },
-  {
-    "target_lang": "\u0628\u0637\u0631\u0642 \u0639\u062f\u0629",
-    "end_time": 591.4,
-    "start_word": 1115,
-    "end_word": 1117,
-    "src_lang": "in many ways",
-    "reason": "gap>0.9",
-    "start_time": 590.5
-  },
-  {
-    "target_lang": "\u0647\u064a \u0627\u0644\u0641\u0627\u0643\u0647\u0629",
-    "end_time": 593.0,
-    "start_word": 1118,
-    "end_word": 1120,
-    "src_lang": "is the fruit",
-    "reason": "is",
-    "start_time": 591.6
-  },
-  {
-    "target_lang": "\u0639\u0646 \u0645\u0648\u062a \u0627\u0644\u0645\u0633\u064a\u062d \u0648\u0642\u064a\u0627\u0645\u062a\u0647.",
-    "end_time": 594.8,
-    "start_word": 1121,
-    "end_word": 1125,
-    "src_lang": "of Christ's death and resurrection.",
-    "reason": "of",
-    "start_time": 593.0
-  },
-  {
-    "target_lang": "\u062d\u0627\u0644\u064a\u0627\u060c",
-    "end_time": 597.4,
-    "start_word": 1126,
-    "end_word": 1126,
-    "src_lang": "Now,",
-    "reason": "gap>1.0",
-    "start_time": 597.0
-  },
-  {
-    "target_lang": "\u0627\u0644\u062e\u0644\u0627\u0635 \u0641\u064a \u0627\u0644\u0645\u0633\u064a\u062d",
-    "end_time": 599.4,
-    "start_word": 1127,
-    "end_word": 1129,
-    "src_lang": "salvation in Christ",
-    "reason": ",",
-    "start_time": 598.2
-  },
-  {
-    "target_lang": "\u0647\u0648 \u0645\u0648\u0636\u0639 \u062a\u0642\u062f\u064a\u0631 \u0648\u0627\u0644\u0627\u0633\u062a\u0645\u062a\u0627\u0639 \u0644\u0630\u0644\u0643",
-    "end_time": 601.6,
-    "start_word": 1130,
-    "end_word": 1134,
-    "src_lang": "is appreciated and enjoyed therefore",
-    "reason": "is",
-    "start_time": 599.4
-  },
-  {
-    "target_lang": "\u0641\u0642\u0637 \u0628\u0645\u0639\u0631\u0641\u0629 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633",
-    "end_time": 604.4,
-    "start_word": 1135,
-    "end_word": 1140,
-    "src_lang": "only by knowing the Holy Spirit",
-    "reason": "gap>0.5",
-    "start_time": 602.2
-  },
-  {
-    "target_lang": "\u0648\u0639\u0645\u0644\u0647 \u0627\u0644\u0645\u0646\u0642\u0630.",
-    "end_time": 605.6,
-    "start_word": 1141,
-    "end_word": 1144,
-    "src_lang": "and his saving work.",
-    "reason": "gap>0.0",
-    "start_time": 604.5
-  },
-  {
-    "target_lang": "\u0648\u0647\u0630\u0647 \u0648\u0627\u062d\u062f\u0629 \u0645\u0646",
-    "end_time": 608.0,
-    "start_word": 1145,
-    "end_word": 1150,
-    "src_lang": "And this is one of the",
-    "reason": "gap>1.0",
-    "start_time": 606.7
-  },
-  {
-    "target_lang": "\u0623\u0639\u0638\u0645 \u0645\u0630\u0627\u0647\u0628 \u0627\u0644\u0625\u0635\u0644\u0627\u062d \u060c",
-    "end_time": 610.9,
-    "start_word": 1151,
-    "end_word": 1155,
-    "src_lang": "greatest doctrines of the Reformation,",
-    "reason": "gap>0.6",
-    "start_time": 608.7
-  },
-  {
-    "target_lang": "\u062a\u0645 \u062a\u0637\u0648\u064a\u0631\u0647 \u0628\u062f\u0642\u0629 \u062b\u0645 \u062d\u062a\u0649",
-    "end_time": 613.6,
-    "start_word": 1156,
-    "end_word": 1161,
-    "src_lang": "developed so thoroughly and then even",
-    "reason": ",",
-    "start_time": 610.9
-  },
-  {
-    "target_lang": "\u0639\u0632\u0632\u0647\u0627 \u0627\u0644\u0645\u062a\u0634\u062f\u062f\u0648\u0646.",
-    "end_time": 616.3,
-    "start_word": 1162,
-    "end_word": 1165,
-    "src_lang": "augmented by the Puritans.",
-    "reason": "gap>0.0",
-    "start_time": 613.7
-  },
-  {
-    "target_lang": "\u064a\u0627 \u0644\u0647 \u0645\u0646 \u0643\u0646\u0632 \u064a\u062c\u0644\u0628\u0647 \u0644\u0646\u0627 \u0639\u0644\u0645 \u0627\u0644\u0644\u0627\u0647\u0648\u062a \u0627\u0644\u0645\u0635\u0644\u062d",
-    "end_time": 622.0,
-    "start_word": 1166,
-    "end_word": 1172,
-    "src_lang": "What a treasure Reformed theology brings us",
-    "reason": ".",
-    "start_time": 617.1
-  },
-  {
-    "target_lang": "\u062d\u0648\u0644 \u062e\u062f\u0645\u0629 \u062e\u0644\u0627\u0635 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633.",
-    "end_time": 626.7,
-    "start_word": 1173,
-    "end_word": 1180,
-    "src_lang": "about the saving ministry of the Holy Spirit.",
-    "reason": "gap>1.0",
-    "start_time": 623.4
-  },
-  {
-    "target_lang": "\u0641\u064a \u0627\u0644\u0648\u0627\u0642\u0639\u060c",
-    "end_time": 629.4,
-    "start_word": 1181,
-    "end_word": 1182,
-    "src_lang": "In fact,",
-    "reason": "gap>1.0",
-    "start_time": 628.3
-  },
-  {
-    "target_lang": "\u062f\u0639\u0627 BB Warfield \u062c\u0648\u0646 \u0643\u0627\u0644\u0641\u064a\u0646",
-    "end_time": 631.6,
-    "start_word": 1183,
-    "end_word": 1187,
-    "src_lang": "BB Warfield called John Calvin",
-    "reason": ",",
-    "start_time": 629.4
-  },
-  {
-    "target_lang": "\u0644\u0627\u0647\u0648\u062a\u064a \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633.",
-    "end_time": 635.0,
-    "start_word": 1188,
-    "end_word": 1193,
-    "src_lang": "The Theologian of the Holy Spirit.",
-    "reason": "gap>0.2",
-    "start_time": 631.9
-  },
-  {
-    "target_lang": "\u0648\u0627\u0633\u062a\u0645\u0631 \u0648\u0627\u0631\u0641\u064a\u0644\u062f \u0641\u064a \u0627\u0644\u0645\u0637\u0627\u0644\u0628\u0629",
-    "end_time": 637.0,
-    "start_word": 1194,
-    "end_word": 1199,
-    "src_lang": "And Warfield went on to claim",
-    "reason": ".",
-    "start_time": 635.4
-  },
-  {
-    "target_lang": "\u0627\u0644\u0639\u0642\u064a\u062f\u0629 \u0627\u0644\u0645\u062a\u0637\u0648\u0631\u0629",
-    "end_time": 639.0,
-    "start_word": 1200,
-    "end_word": 1202,
-    "src_lang": "the developed doctrine",
-    "reason": "gap>0.9",
-    "start_time": 638.0
-  },
-  {
-    "target_lang": "\u0645\u0646 \u0639\u0645\u0644 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633",
-    "end_time": 640.8,
-    "start_word": 1203,
-    "end_word": 1209,
-    "src_lang": "of the work of the Holy Spirit",
-    "reason": "of",
-    "start_time": 639.0
-  },
-  {
-    "target_lang": "\u0647\u064a \u0639\u0642\u064a\u062f\u0629 \u0627\u0644\u0625\u0635\u0644\u0627\u062d \u062d\u0635\u0631\u064a\u064b\u0627 \u060c",
-    "end_time": 643.6,
-    "start_word": 1210,
-    "end_word": 1214,
-    "src_lang": "is an exclusively Reformation doctrine,",
-    "reason": "gap>0.3",
-    "start_time": 641.2
-  },
-  {
-    "target_lang": "\u0648\u0639\u0644\u0649 \u0648\u062c\u0647 \u0627\u0644\u062e\u0635\u0648\u0635 \u0627\u0644\u0639\u0642\u064a\u062f\u0629 \u0627\u0644\u0625\u0635\u0644\u0627\u062d\u064a\u0629 \u060c",
-    "end_time": 645.7,
-    "start_word": 1215,
-    "end_word": 1220,
-    "src_lang": "and more particularly a Reformed doctrine,",
-    "reason": ",",
-    "start_time": 643.6
-  },
-  {
-    "target_lang": "\u0648\u0644\u0627 \u064a\u0632\u0627\u0644 \u0639\u0644\u0649 \u0648\u062c\u0647 \u0627\u0644\u062e\u0635\u0648\u0635 \u0639\u0642\u064a\u062f\u0629 \u0628\u064a\u0648\u0631\u064a\u062a\u0627\u0646\u064a\u0629.",
-    "end_time": 648.5,
-    "start_word": 1221,
-    "end_word": 1227,
-    "src_lang": "and still more particularly a Puritan doctrine.",
-    "reason": ",",
-    "start_time": 645.9
-  },
-  {
-    "target_lang": "\u0648\u0647\u0643\u0630\u0627\u060c",
-    "end_time": 651.4,
-    "start_word": 1228,
-    "end_word": 1229,
-    "src_lang": "And so,",
-    "reason": "gap>1.0",
-    "start_time": 650.8
-  },
-  {
-    "target_lang": "\u062f\u0631\u0627\u0633\u0629 \u0627\u0644\u0631\u0648\u062d",
-    "end_time": 653.3,
-    "start_word": 1230,
-    "end_word": 1233,
-    "src_lang": "study of the Spirit",
-    "reason": ",",
-    "start_time": 652.1
-  },
-  {
-    "target_lang": "\u0645\u0646 \u062e\u0644\u0627\u0644 \u0639\u0644\u0645 \u0627\u0644\u062e\u0644\u0627\u0635 \u0627\u0644\u062a\u062c\u0631\u064a\u0628\u064a \u0627\u0644\u0645\u064f\u0635\u0644\u062d \u060c",
-    "end_time": 659.0,
-    "start_word": 1234,
-    "end_word": 1237,
-    "src_lang": "through Reformed experiential soteriology,",
-    "reason": "gap>1.0",
-    "start_time": 654.5
-  },
-  {
-    "target_lang": "- \u0647\u0630\u0627 \u0647\u0648\u060c",
-    "end_time": 659.7,
-    "start_word": 1238,
-    "end_word": 1239,
-    "src_lang": "- that is,",
-    "reason": ",",
-    "start_time": 659.4
-  },
-  {
-    "target_lang": "\u0627\u0644\u062e\u0644\u0627\u0635 \u0627\u0644\u0630\u064a \u0646\u062e\u062a\u0628\u0631\u0647",
-    "end_time": 661.5,
-    "start_word": 1240,
-    "end_word": 1243,
-    "src_lang": "salvation that we experience",
-    "reason": ",",
-    "start_time": 659.7
-  },
-  {
-    "target_lang": "\u0645\u0646 \u062e\u0644\u0627\u0644 \u0627\u0644\u0639\u0645\u0644",
-    "end_time": 662.4,
-    "start_word": 1244,
-    "end_word": 1246,
-    "src_lang": "by the work",
-    "reason": "gap>0.2",
-    "start_time": 661.8
-  },
-  {
-    "target_lang": "\u0644\u0644\u0631\u0648\u062d \u0641\u064a \u0627\u0644\u0631\u0648\u062d -",
-    "end_time": 663.6,
-    "start_word": 1247,
-    "end_word": 1252,
-    "src_lang": "of the Spirit in the soul -",
-    "reason": "of",
-    "start_time": 662.4
-  },
-  {
-    "target_lang": "\u064a\u0641\u062a\u062d \u062b\u0631\u0648\u0629 \u0647\u0627\u0626\u0644\u0629 \u0645\u0646 \u0627\u0644\u062d\u0643\u0645\u0629",
-    "end_time": 667.2,
-    "start_word": 1253,
-    "end_word": 1259,
-    "src_lang": "opens up a vast wealth of wisdom",
-    "reason": "gap>0.4",
-    "start_time": 664.1
-  },
-  {
-    "target_lang": "\u0648\u0627\u0644\u0641\u0631\u062d \u0644\u0644\u0645\u0624\u0645\u0646.",
-    "end_time": 670.5,
-    "start_word": 1260,
-    "end_word": 1264,
-    "src_lang": "and joy to the believer.",
-    "reason": "gap>0.5",
-    "start_time": 667.8
-  }
-]
+{
+  "src_lang": "en",
+  "target_lang": "ar",
+  "phrases": [
+    {
+      "target_lang": "\u0646\u062d\u0646 \u0633\u0648\u0641\u060c",
+      "end_time": 1.4,
+      "start_word": 0,
+      "end_word": 0,
+      "src_lang": "Well,",
+      "reason": null,
+      "start_time": 1.2
+    },
+    {
+      "target_lang": "\u0645\u0631\u062d\u0628\u0627 \u0628\u0643\u0645 \u0641\u064a \u0639\u0644\u0645 \u0627\u0644\u062e\u0644\u0627\u0635.",
+      "end_time": 3.6,
+      "start_word": 1,
+      "end_word": 3,
+      "src_lang": "welcome to soteriology.",
+      "reason": ",",
+      "start_time": 1.4
+    },
+    {
+      "target_lang": "\u062a\u062a\u0646\u0627\u0648\u0644 \u0647\u0630\u0647 \u0627\u0644\u062f\u0648\u0631\u0629 \u0645\u0648\u0636\u0648\u0639 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633",
+      "end_time": 8.2,
+      "start_word": 4,
+      "end_word": 10,
+      "src_lang": "This course deals with the Holy Spirit",
+      "reason": ".",
+      "start_time": 4.2
+    },
+    {
+      "target_lang": "\u0648\u0639\u0642\u064a\u062f\u0629 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633.",
+      "end_time": 11.5,
+      "start_word": 11,
+      "end_word": 17,
+      "src_lang": "and the doctrine of the Holy Spirit,",
+      "reason": "^",
+      "start_time": 8.8
+    },
+    {
+      "target_lang": "\u0643\u064a\u0641 \u064a\u0639\u0645\u0644 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633 \u0641\u064a \u0627\u0644\u0646\u0641\u0633.",
+      "end_time": 13.7,
+      "start_word": 18,
+      "end_word": 25,
+      "src_lang": "how the Holy Spirit works in the soul.",
+      "reason": ",",
+      "start_time": 11.5
+    },
+    {
+      "target_lang": "\u0641\u0631\u0627\u0631\u0627\u064b \u0645\u0646 \u062f\u0639\u0648\u062a\u0647 \u0627\u0644\u0641\u0639\u0627\u0644\u0629 \u060c",
+      "end_time": 17.7,
+      "start_word": 26,
+      "end_word": 33,
+      "src_lang": "Running all the way from His effectual calling,",
+      "reason": ".",
+      "start_time": 14.0
+    },
+    {
+      "target_lang": "\u0648\u0627\u0644\u062a\u062c\u062f\u064a\u062f \u060c",
+      "end_time": 19.4,
+      "start_word": 34,
+      "end_word": 35,
+      "src_lang": "and regeneration,",
+      "reason": ",",
+      "start_time": 18.2
+    },
+    {
+      "target_lang": "\u0648\u0635\u0648\u0644\u0627 \u0625\u0644\u0649 \u0627\u0644\u062a\u0645\u062c\u064a\u062f.",
+      "end_time": 21.9,
+      "start_word": 36,
+      "end_word": 40,
+      "src_lang": "all the way to glorification.",
+      "reason": ",",
+      "start_time": 19.9
+    },
+    {
+      "target_lang": "\u0644\u0630\u0644\u0643 \u0641\u0647\u0648 \u0645\u0648\u0636\u0648\u0639 \u0645\u0647\u0645 \u0644\u0644\u063a\u0627\u064a\u0629",
+      "end_time": 26.1,
+      "start_word": 41,
+      "end_word": 46,
+      "src_lang": "So it's a very important subject",
+      "reason": ".",
+      "start_time": 22.4
+    },
+    {
+      "target_lang": "\u0648\u0623\u0646\u0627 \u0633\u0639\u064a\u062f \u0644\u0623\u0646\u0643 \u0645\u0639\u064a.",
+      "end_time": 28.9,
+      "start_word": 47,
+      "end_word": 52,
+      "src_lang": "and I'm glad you're with me.",
+      "reason": "gap>0.5",
+      "start_time": 26.7
+    },
+    {
+      "target_lang": "\u0633\u0648\u0641 \u0646\u0646\u0638\u0631 \u0641\u064a \u0627\u0644\u0623\u0645\u0631 \u0628\u0634\u064a\u0621 \u0645\u0646 \u0627\u0644\u062a\u0641\u0635\u064a\u0644.",
+      "end_time": 32.8,
+      "start_word": 53,
+      "end_word": 61,
+      "src_lang": "We're going to look at it in some detail.",
+      "reason": "gap>1.0",
+      "start_time": 30.0
+    },
+    {
+      "target_lang": "\u0623\u0639\u062a\u0642\u062f \u0623\u0646\u0643 \u0633\u062a\u0633\u062a\u0645\u062a\u0639 \u0628\u0627\u0644\u0641\u0635\u0644.",
+      "end_time": 35.7,
+      "start_word": 62,
+      "end_word": 67,
+      "src_lang": "I think you'll enjoy the class.",
+      "reason": ".",
+      "start_time": 33.7
+    },
+    {
+      "target_lang": "\u0628\u0639\u062f \u0643\u0644 \u0634\u064a\u0621\u060c",
+      "end_time": 37.3,
+      "start_word": 68,
+      "end_word": 69,
+      "src_lang": "After all,",
+      "reason": ".",
+      "start_time": 36.5
+    },
+    {
+      "target_lang": "\u0643\u0644 \u0645\u0646\u0627",
+      "end_time": 38.1,
+      "start_word": 70,
+      "end_word": 72,
+      "src_lang": "all of our",
+      "reason": ",",
+      "start_time": 37.3
+    },
+    {
+      "target_lang": "\u0627\u0644\u0646\u0635\u0631\u0627\u0646\u064a\u0629\u060c",
+      "end_time": 41.5,
+      "start_word": 73,
+      "end_word": 73,
+      "src_lang": "Christianity,",
+      "reason": "gap>1.0",
+      "start_time": 40.5
+    },
+    {
+      "target_lang": "\u0643\u0644 \u062f\u064a\u0646\u0646\u0627 \u0627\u0644\u0634\u062e\u0635\u064a",
+      "end_time": 43.5,
+      "start_word": 74,
+      "end_word": 78,
+      "src_lang": "all of our personal religion",
+      "reason": ",",
+      "start_time": 41.5
+    },
+    {
+      "target_lang": "\u0645\u062c\u0631\u062f \u062e\u062f\u0639\u0629 \u0628\u062f\u0648\u0646 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633.",
+      "end_time": 46.0,
+      "start_word": 79,
+      "end_word": 86,
+      "src_lang": "is just a sham without the Holy Spirit.",
+      "reason": "is",
+      "start_time": 43.5
+    },
+    {
+      "target_lang": "\u0644\u0630\u0644\u0643 \u0646\u062d\u0646 \u062c\u062f\u0627 \u060c",
+      "end_time": 47.9,
+      "start_word": 87,
+      "end_word": 89,
+      "src_lang": "So we're very,",
+      "reason": ".",
+      "start_time": 46.0
+    },
+    {
+      "target_lang": "\u0645\u0645\u062a\u0646 \u062c\u062f\u0627 \u0644\u062e\u062f\u0645\u0629 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633 \u060c",
+      "end_time": 51.6,
+      "start_word": 90,
+      "end_word": 98,
+      "src_lang": "very grateful for the ministry of the Holy Spirit,",
+      "reason": ",",
+      "start_time": 47.9
+    },
+    {
+      "target_lang": "\u0623\u0631\u064a\u062f \u0623\u0646 \u0623\u0628\u062f\u0623 \u0647\u0630\u0627",
+      "end_time": 54.4,
+      "start_word": 99,
+      "end_word": 103,
+      "src_lang": "I want to begin this",
+      "reason": "gap>1.0",
+      "start_time": 52.8
+    },
+    {
+      "target_lang": "\u0627\u0644\u0645\u062d\u0627\u0636\u0631\u0629 \u0627\u0644\u0623\u0648\u0644\u0649 \u0628\u0642\u0631\u0627\u0621\u0629 \u0643\u0644\u0645\u0629 \u0627\u0644\u0644\u0647 \u060c",
+      "end_time": 58.9,
+      "start_word": 104,
+      "end_word": 111,
+      "src_lang": "first lecture with the reading of God's word,",
+      "reason": "gap>1.0",
+      "start_time": 56.0
+    },
+    {
+      "target_lang": "\u0643\u0645\u0627 \u0646\u0641\u0639\u0644 \u0645\u0639 \u0643\u0644 \u0645\u062d\u0627\u0636\u0631\u0629.",
+      "end_time": 61.8,
+      "start_word": 112,
+      "end_word": 118,
+      "src_lang": "as we will with each each lecture.",
+      "reason": ",",
+      "start_time": 59.6
+    },
+    {
+      "target_lang": "\u0627\u0633\u062a\u062f\u0631 \u0645\u0639\u064a \u060c",
+      "end_time": 62.9,
+      "start_word": 119,
+      "end_word": 121,
+      "src_lang": "Turn with me,",
+      "reason": ".",
+      "start_time": 62.3
+    },
+    {
+      "target_lang": "\u0645\u0646 \u0641\u0636\u0644\u0643\u060c",
+      "end_time": 63.3,
+      "start_word": 122,
+      "end_word": 122,
+      "src_lang": "please,",
+      "reason": ",",
+      "start_time": 62.9
+    },
+    {
+      "target_lang": "\u0625\u0644\u0649 \u0631\u0648\u0645\u064a\u0629 8 \u0648\u0633\u0623\u0642\u0631\u0623 \u0645\u0646 13 \u0625\u0644\u0649 17.",
+      "end_time": 68.4,
+      "start_word": 123,
+      "end_word": 131,
+      "src_lang": "to Romans 8 and I'll read 13 through 17.",
+      "reason": ",",
+      "start_time": 63.3
+    },
+    {
+      "target_lang": "\u0631\u0648\u0645\u064a\u0629 8: 13 \u062d\u062a\u0649 17.",
+      "end_time": 70.6,
+      "start_word": 132,
+      "end_word": 136,
+      "src_lang": "Romans 8: 13 through 17.",
+      "reason": ".",
+      "start_time": 68.4
+    },
+    {
+      "target_lang": "\u0625\u0644\u0649 \u0639\u0646 \u0639\u0644\u0649\u060c",
+      "end_time": 72.4,
+      "start_word": 137,
+      "end_word": 137,
+      "src_lang": "For,",
+      "reason": "gap>1.0",
+      "start_time": 72.3
+    },
+    {
+      "target_lang": "\u0625\u0630\u0627 \u0643\u0646\u062a \u062a\u0639\u064a\u0634 \u0628\u0639\u062f \u0627\u0644\u062c\u0633\u062f \u060c",
+      "end_time": 74.4,
+      "start_word": 138,
+      "end_word": 143,
+      "src_lang": "if you live after the flesh,",
+      "reason": ",",
+      "start_time": 72.4
+    },
+    {
+      "target_lang": "\u062a\u0645\u0648\u062a.",
+      "end_time": 76.0,
+      "start_word": 144,
+      "end_word": 146,
+      "src_lang": "you shall die.",
+      "reason": ",",
+      "start_time": 75.0
+    },
+    {
+      "target_lang": "\u0648\u0644\u0643\u0646 \u0625\u0630\u0627 \u0643\u0646\u062a\u0645",
+      "end_time": 77.1,
+      "start_word": 147,
+      "end_word": 149,
+      "src_lang": "But if ye",
+      "reason": ".",
+      "start_time": 76.5
+    },
+    {
+      "target_lang": "\u0645\u0646 \u062e\u0644\u0627\u0644 \u0627\u0644\u0631\u0648\u062d \u062a\u0645\u064a\u062a \u060c",
+      "end_time": 78.8,
+      "start_word": 150,
+      "end_word": 154,
+      "src_lang": "through the Spirit do mortify,",
+      "reason": "through",
+      "start_time": 77.1
+    },
+    {
+      "target_lang": "\u0623\u0641\u0639\u0627\u0644 \u0627\u0644\u062c\u0633\u062f",
+      "end_time": 80.0,
+      "start_word": 155,
+      "end_word": 159,
+      "src_lang": "the deeds of the body",
+      "reason": ",",
+      "start_time": 78.8
+    },
+    {
+      "target_lang": "\u0633\u062a\u0639\u064a\u0634\u0648\u0646.",
+      "end_time": 82.3,
+      "start_word": 160,
+      "end_word": 162,
+      "src_lang": "ye shall live.",
+      "reason": "gap>1.0",
+      "start_time": 81.3
+    },
+    {
+      "target_lang": "\u0644\u0643\u062b\u064a\u0631 \u0645\u0646 \u0627\u0644\u0630\u064a\u0646 \u064a\u0642\u0648\u062f\u0648\u0646",
+      "end_time": 84.7,
+      "start_word": 163,
+      "end_word": 168,
+      "src_lang": "For as many as are led",
+      "reason": ".",
+      "start_time": 83.3
+    },
+    {
+      "target_lang": "\u0628\u0631\u0648\u062d \u0627\u0644\u0644\u0647",
+      "end_time": 86.1,
+      "start_word": 169,
+      "end_word": 173,
+      "src_lang": "by the Spirit of God,",
+      "reason": "by",
+      "start_time": 84.7
+    },
+    {
+      "target_lang": "\u0647\u0645 \u0627\u0628\u0646\u0627\u0621 \u0627\u0644\u0644\u0647.",
+      "end_time": 88.0,
+      "start_word": 174,
+      "end_word": 179,
+      "src_lang": "they are the sons of God.",
+      "reason": ",",
+      "start_time": 86.6
+    },
+    {
+      "target_lang": "\u0644\u0623\u0646\u0643 \u0644\u0645 \u062a\u0642\u0628\u0644 \u0627\u0644\u0631\u0648\u062d",
+      "end_time": 90.3,
+      "start_word": 180,
+      "end_word": 186,
+      "src_lang": "For you have not received the Spirit",
+      "reason": ".",
+      "start_time": 88.7
+    },
+    {
+      "target_lang": "\u0645\u0646 \u0627\u0644\u0639\u0628\u0648\u062f\u064a\u0629 \u0645\u0631\u0629 \u0623\u062e\u0631\u0649 \u0644\u0644\u062e\u0648\u0641 \u060c",
+      "end_time": 92.5,
+      "start_word": 187,
+      "end_word": 191,
+      "src_lang": "of bondage again to fear,",
+      "reason": "of",
+      "start_time": 90.3
+    },
+    {
+      "target_lang": "\u0648\u0644\u0643\u0646\u0643 \u0642\u062f \u0642\u0628\u0644\u062a \u0631\u0648\u062d \u0627\u0644\u062a\u0628\u0646\u064a",
+      "end_time": 95.5,
+      "start_word": 192,
+      "end_word": 199,
+      "src_lang": "but you have received the Spirit of adoption",
+      "reason": ",",
+      "start_time": 93.1
+    },
+    {
+      "target_lang": "\u062d\u064a\u062b \u0646\u0628\u0643\u064a \u0623\u0628\u0627 \u060c",
+      "end_time": 98.4,
+      "start_word": 200,
+      "end_word": 203,
+      "src_lang": "whereby we cry Abba,",
+      "reason": "gap>0.3",
+      "start_time": 95.9
+    },
+    {
+      "target_lang": "\u0623\u0628.",
+      "end_time": 99.3,
+      "start_word": 204,
+      "end_word": 204,
+      "src_lang": "Father.",
+      "reason": ",",
+      "start_time": 98.6
+    },
+    {
+      "target_lang": "\u0627\u0644\u0631\u0648\u062d \u0646\u0641\u0633\u0647 \u064a\u0634\u0647\u062f \u0644\u0623\u0631\u0648\u0627\u062d\u0646\u0627",
+      "end_time": 102.9,
+      "start_word": 205,
+      "end_word": 212,
+      "src_lang": "The Spirit itself beareth witness with our spirit",
+      "reason": ".",
+      "start_time": 100.1
+    },
+    {
+      "target_lang": "\u0623\u0646\u0646\u0627 \u0623\u0628\u0646\u0627\u0621 \u0627\u0644\u0644\u0647 \u060c",
+      "end_time": 104.9,
+      "start_word": 213,
+      "end_word": 219,
+      "src_lang": "that we are the children of God,",
+      "reason": "gap>0.2",
+      "start_time": 103.2
+    },
+    {
+      "target_lang": "\u0648\u0625\u0630\u0627 \u0643\u0627\u0646 \u0627\u0644\u0623\u0628\u0646\u0627\u0621 \u062b\u0645 \u0627\u0644\u0648\u0631\u062b\u0629 \u060c",
+      "end_time": 108.1,
+      "start_word": 220,
+      "end_word": 224,
+      "src_lang": "and if children then heirs,",
+      "reason": ",",
+      "start_time": 105.7
+    },
+    {
+      "target_lang": "\u0648\u0631\u062b\u0629 \u0627\u0644\u0644\u0647 \u0648\u0648\u0627\u0631\u062b\u0648\u0646 \u0645\u0634\u062a\u0631\u0643\u0648\u0646 \u0645\u0639 \u0627\u0644\u0645\u0633\u064a\u062d.",
+      "end_time": 111.0,
+      "start_word": 225,
+      "end_word": 232,
+      "src_lang": "heirs of God and joint heirs with Christ.",
+      "reason": ",",
+      "start_time": 108.3
+    },
+    {
+      "target_lang": "\u0625\u0630\u0627 \u0643\u0627\u0646 \u0627\u0644\u0623\u0645\u0631 \u0643\u0630\u0644\u0643",
+      "end_time": 112.7,
+      "start_word": 233,
+      "end_word": 235,
+      "src_lang": "If so be",
+      "reason": ".",
+      "start_time": 111.7
+    },
+    {
+      "target_lang": "\u0627\u0644\u062a\u064a \u0646\u0639\u0627\u0646\u064a\u0647\u0627 \u0645\u0639\u0647 \u060c",
+      "end_time": 114.8,
+      "start_word": 236,
+      "end_word": 240,
+      "src_lang": "that we suffer with him,",
+      "reason": "that",
+      "start_time": 113.0
+    },
+    {
+      "target_lang": "\u062d\u062a\u0649 \u0646\u062a\u0645\u062c\u062f \u0627\u064a\u0636\u0627 \u0645\u0639\u0627.",
+      "end_time": 119.8,
+      "start_word": 241,
+      "end_word": 247,
+      "src_lang": "that we may also be glorified together.",
+      "reason": ",",
+      "start_time": 115.2
+    },
+    {
+      "target_lang": "\u062f\u0639\u0648\u0646\u0627 \u0646\u0637\u0644\u0628 \u0648\u062c\u0647 \u0627\u0644\u0644\u0647 \u0641\u064a \u0627\u0644\u0635\u0644\u0627\u0629.",
+      "end_time": 123.1,
+      "start_word": 248,
+      "end_word": 253,
+      "src_lang": "Let's seek God's face in prayer.",
+      "reason": "gap>1.0",
+      "start_time": 121.3
+    },
+    {
+      "target_lang": "\u0631\u0628\u0646\u0627 \u064a\u0627\u0631\u0628",
+      "end_time": 127.3,
+      "start_word": 254,
+      "end_word": 255,
+      "src_lang": "Lord God,",
+      "reason": "gap>1.0",
+      "start_time": 126.6
+    },
+    {
+      "target_lang": "\u0646\u0642\u0641 \u0639\u0644\u0649 \u0623\u0631\u0636 \u0645\u0642\u062f\u0633\u0629 \u060c",
+      "end_time": 130.0,
+      "start_word": 256,
+      "end_word": 260,
+      "src_lang": "we stand on holy ground,",
+      "reason": ",",
+      "start_time": 127.3
+    },
+    {
+      "target_lang": "\u0648\u0646\u062d\u0646 \u0646\u0642\u062a\u0631\u0628 \u0645\u0646 \u0647\u0630\u0627",
+      "end_time": 132.6,
+      "start_word": 261,
+      "end_word": 264,
+      "src_lang": "as we approach this",
+      "reason": ",",
+      "start_time": 130.0
+    },
+    {
+      "target_lang": "\u0645\u0648\u0636\u0648\u0639 \u0647\u0627\u0626\u0644 \u0644\u0644\u0634\u062e\u0635 \u0627\u0644\u062b\u0627\u0644\u062b \u0645\u0646 \u0627\u0644\u062b\u0627\u0644\u0648\u062b \u0627\u0644\u0623\u0642\u062f\u0633",
+      "end_time": 138.0,
+      "start_word": 265,
+      "end_word": 274,
+      "src_lang": "immense subject of the third person of the Holy Trinity",
+      "reason": "gap>0.4",
+      "start_time": 133.1
+    },
+    {
+      "target_lang": "\u0648\u0639\u0645\u0644\u0647 \u0627\u0644\u062e\u0644\u0627\u0635\u064a \u0641\u064a \u0646\u0641\u0648\u0633\u0646\u0627.",
+      "end_time": 144.0,
+      "start_word": 275,
+      "end_word": 281,
+      "src_lang": "and his salvific work in our souls.",
+      "reason": "gap>1.0",
+      "start_time": 139.5
+    },
+    {
+      "target_lang": "\u0648\u0646\u062d\u0646 \u0646\u0635\u0644\u064a \u0630\u0644\u0643",
+      "end_time": 146.4,
+      "start_word": 282,
+      "end_word": 286,
+      "src_lang": "And we do pray that",
+      "reason": ".",
+      "start_time": 145.0
+    },
+    {
+      "target_lang": "\u0628\u0646\u0647\u0627\u064a\u0629 \u0647\u0630\u0647 \u0627\u0644\u062f\u0648\u0631\u0629 \u060c",
+      "end_time": 148.1,
+      "start_word": 287,
+      "end_word": 292,
+      "src_lang": "by the end of this course,",
+      "reason": "gap>0.4",
+      "start_time": 146.9
+    },
+    {
+      "target_lang": "\u0633\u064a\u0643\u0648\u0646 \u0644\u062f\u064a\u0646\u0627 \u062a\u0642\u062f\u064a\u0631 \u0623\u0643\u062b\u0631 \u0639\u0645\u0642\u0627",
+      "end_time": 151.4,
+      "start_word": 293,
+      "end_word": 300,
+      "src_lang": "we will have a much more profound appreciation",
+      "reason": ",",
+      "start_time": 148.1
+    },
+    {
+      "target_lang": "\u0644\u062e\u062f\u0645\u0629 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633 \u0627\u0644\u062e\u0644\u0627\u0635\u064a \u060c",
+      "end_time": 155.0,
+      "start_word": 301,
+      "end_word": 308,
+      "src_lang": "for the saving ministry of the Holy Spirit,",
+      "reason": "gap>1.0",
+      "start_time": 152.6
+    },
+    {
+      "target_lang": "\u0645\u0645\u0627 \u0642\u062f \u064a\u0643\u0648\u0646 \u0644\u062f\u064a\u0646\u0627 \u0641\u064a \u0627\u0644\u0648\u0642\u062a \u0627\u0644\u062d\u0627\u0636\u0631",
+      "end_time": 158.4,
+      "start_word": 309,
+      "end_word": 315,
+      "src_lang": "than we perhaps might have at present",
+      "reason": ",",
+      "start_time": 156.0
+    },
+    {
+      "target_lang": "\u0633\u0627\u0639\u062f\u0646\u0627 \u0639\u0644\u0649 \u0627\u0644\u0646\u0645\u0648 \u060c",
+      "end_time": 160.5,
+      "start_word": 316,
+      "end_word": 319,
+      "src_lang": "Help us to grow,",
+      "reason": "gap>0.9",
+      "start_time": 159.4
+    },
+    {
+      "target_lang": "\u0644\u064a\u0633 \u0641\u0642\u0637 \u0628\u0646\u0639\u0645\u0629 \u064a\u0633\u0648\u0639 \u0648\u0645\u0639\u0631\u0641\u062a\u0647 \u060c",
+      "end_time": 163.4,
+      "start_word": 320,
+      "end_word": 328,
+      "src_lang": "not only in the grace and knowledge of Jesus,",
+      "reason": ",",
+      "start_time": 160.8
+    },
+    {
+      "target_lang": "\u0627\u0644\u0630\u064a \u064a\u0631\u0643\u0632 \u0639\u0644\u064a\u0647 \u0627\u0644\u0631\u0648\u062d \u060c",
+      "end_time": 166.5,
+      "start_word": 329,
+      "end_word": 333,
+      "src_lang": "whom the Spirit focuses upon,",
+      "reason": "gap>1.0",
+      "start_time": 164.6
+    },
+    {
+      "target_lang": "\u0648\u0644\u0643\u0646 \u0623\u064a\u0636\u064b\u0627 \u0623\u0646\u0646\u0627 \u0633\u0646\u0646\u0645\u0648",
+      "end_time": 169.1,
+      "start_word": 334,
+      "end_word": 339,
+      "src_lang": "but also that we would grow",
+      "reason": ",",
+      "start_time": 167.5
+    },
+    {
+      "target_lang": "\u0628\u0646\u0639\u0645\u0629 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633 \u0648\u0645\u0639\u0631\u0641\u062a\u0647 \u060c",
+      "end_time": 172.1,
+      "start_word": 340,
+      "end_word": 348,
+      "src_lang": "in the grace and knowledge of the Holy Spirit,",
+      "reason": "gap>0.6",
+      "start_time": 169.8
+    },
+    {
+      "target_lang": "\u0623\u0646 \u064a\u0635\u0628\u062d \u0623\u0643\u062b\u0631 \u0648\u0639\u064a\u0627\u064b \u0628\u0639\u0645\u0644\u0647 \u060c",
+      "end_time": 175.5,
+      "start_word": 349,
+      "end_word": 354,
+      "src_lang": "becoming more aware of His work,",
+      "reason": "gap>1.0",
+      "start_time": 173.3
+    },
+    {
+      "target_lang": "\u0639\u0645\u0644\u0647 \u0627\u0644\u062e\u0644\u0627\u0635\u064a \u060c",
+      "end_time": 177.3,
+      "start_word": 355,
+      "end_word": 357,
+      "src_lang": "His saving work,",
+      "reason": ",",
+      "start_time": 176.1
+    },
+    {
+      "target_lang": "\u0648\u062a\u0642\u062f\u064a\u0631 \u0623\u0643\u062b\u0631 \u0639\u0645\u0642\u0627",
+      "end_time": 180.0,
+      "start_word": 358,
+      "end_word": 361,
+      "src_lang": "and appreciating more profoundly",
+      "reason": ",",
+      "start_time": 178.0
+    },
+    {
+      "target_lang": "\u0627\u062a\u0633\u0627\u0639 \u062e\u062f\u0645\u062a\u0647",
+      "end_time": 181.9,
+      "start_word": 362,
+      "end_word": 366,
+      "src_lang": "the vastness of His ministry",
+      "reason": "gap>0.0",
+      "start_time": 180.1
+    },
+    {
+      "target_lang": "\u0643\u0645\u0627 \u064a\u0639\u0645\u0644 \u0641\u064a \u0627\u0644\u062e\u0637\u0627\u0629 \u0648\u0627\u0644\u0645\u062a\u0645\u0631\u062f\u064a\u0646 \u060c",
+      "end_time": 185.6,
+      "start_word": 367,
+      "end_word": 373,
+      "src_lang": "as he works in sinners and rebels,",
+      "reason": "gap>1.0",
+      "start_time": 183.2
+    },
+    {
+      "target_lang": "\u0645\u062b\u0644\u0646\u0627 \u062c\u0645\u064a\u0639\u064b\u0627 \u0628\u0637\u0628\u064a\u0639\u062a\u0646\u0627.",
+      "end_time": 188.0,
+      "start_word": 374,
+      "end_word": 380,
+      "src_lang": "such as we all are by nature.",
+      "reason": ",",
+      "start_time": 186.1
+    },
+    {
+      "target_lang": "\u0644\u0630\u0644\u0643 \u0628\u0627\u0631\u0643 \u0627\u0644\u0631\u0628 \u0647\u0630\u0627 \u0627\u0644\u0641\u0635\u0644.",
+      "end_time": 190.8,
+      "start_word": 381,
+      "end_word": 385,
+      "src_lang": "So Lord bless this class.",
+      "reason": "gap>1.0",
+      "start_time": 189.2
+    },
+    {
+      "target_lang": "\u0633\u0627\u0639\u062f\u0646\u064a \u0641\u064a \u0627\u0644\u062a\u062f\u0631\u064a\u0633.",
+      "end_time": 192.3,
+      "start_word": 386,
+      "end_word": 389,
+      "src_lang": "Help me in teaching.",
+      "reason": ".",
+      "start_time": 191.4
+    },
+    {
+      "target_lang": "\u0645\u0633\u0627\u0639\u062f\u0629 \u0627\u0644\u0637\u0644\u0627\u0628 \u0641\u064a \u0627\u0644\u0627\u0633\u062a\u0645\u0627\u0639 \u060c",
+      "end_time": 193.9,
+      "start_word": 390,
+      "end_word": 394,
+      "src_lang": "Help the students in listening,",
+      "reason": ".",
+      "start_time": 192.3
+    },
+    {
+      "target_lang": "\u0627\u0644\u062a\u0639\u0644\u0645\u060c",
+      "end_time": 195.4,
+      "start_word": 395,
+      "end_word": 395,
+      "src_lang": "learning,",
+      "reason": ",",
+      "start_time": 194.7
+    },
+    {
+      "target_lang": "\u0648\u0627\u0645\u0646\u062d \u0627\u0646 \u0643\u0644 \u0645\u062d\u0627\u0636\u0631\u0629",
+      "end_time": 200.4,
+      "start_word": 396,
+      "end_word": 400,
+      "src_lang": "and grant that each lecture",
+      "reason": ",",
+      "start_time": 196.3
+    },
+    {
+      "target_lang": "\u0642\u062f \u064a\u062e\u062f\u0645 \u0645\u062c\u062f\u0643 \u060c",
+      "end_time": 202.9,
+      "start_word": 401,
+      "end_word": 405,
+      "src_lang": "may serve to thy glory,",
+      "reason": "gap>0.7",
+      "start_time": 201.2
+    },
+    {
+      "target_lang": "\u0644\u0646\u0645\u0648\u0646\u0627 \u0627\u0644\u0631\u0648\u062d\u064a \u060c",
+      "end_time": 205.3,
+      "start_word": 406,
+      "end_word": 409,
+      "src_lang": "to our spiritual growth,",
+      "reason": ",",
+      "start_time": 203.8
+    },
+    {
+      "target_lang": "\u0648\u0627\u0644\u0631\u0641\u0627\u0647\u064a\u0629",
+      "end_time": 207.7,
+      "start_word": 410,
+      "end_word": 413,
+      "src_lang": "and to the well-being",
+      "reason": ",",
+      "start_time": 206.2
+    },
+    {
+      "target_lang": "\u0645\u0646 \u0643\u064a\u0627\u0646\u0646\u0627 \u0628\u0623\u0643\u0645\u0644\u0647 \u0623\u062b\u0646\u0627\u0621 \u0631\u062d\u0644\u062a\u0646\u0627",
+      "end_time": 212.5,
+      "start_word": 414,
+      "end_word": 420,
+      "src_lang": "of our entire being as we journey",
+      "reason": "gap>0.9",
+      "start_time": 208.7
+    },
+    {
+      "target_lang": "\u0625\u0644\u0649 \u0627\u0644\u0623\u0628\u062f\u064a\u0629 \u0627\u0644\u062a\u064a \u0644\u0627 \u062a\u0646\u062a\u0647\u064a.",
+      "end_time": 215.4,
+      "start_word": 421,
+      "end_word": 424,
+      "src_lang": "to the never-ending eternity.",
+      "reason": "gap>0.7",
+      "start_time": 213.3
+    },
+    {
+      "target_lang": "\u0643\u0646 \u0645\u0639\u0646\u0627 \u0627\u0644\u0622\u0646 \u0646\u0635\u0644\u064a.",
+      "end_time": 217.5,
+      "start_word": 425,
+      "end_word": 430,
+      "src_lang": "Be with us now we pray.",
+      "reason": ".",
+      "start_time": 216.2
+    },
+    {
+      "target_lang": "\u0628\u0627\u0633\u0645 \u064a\u0633\u0648\u0639.",
+      "end_time": 218.4,
+      "start_word": 431,
+      "end_word": 433,
+      "src_lang": "In Jesus name.",
+      "reason": ".",
+      "start_time": 217.5
+    },
+    {
+      "target_lang": "\u0622\u0645\u064a\u0646.",
+      "end_time": 220.1,
+      "start_word": 434,
+      "end_word": 434,
+      "src_lang": "Amen.",
+      "reason": "gap>1.0",
+      "start_time": 219.5
+    },
+    {
+      "target_lang": "\u0646\u062d\u0646 \u0633\u0648\u0641\u060c",
+      "end_time": 223.8,
+      "start_word": 435,
+      "end_word": 435,
+      "src_lang": "Well,",
+      "reason": "gap>1.0",
+      "start_time": 223.5
+    },
+    {
+      "target_lang": "\u0634\u0643\u0631\u0627 \u0644\u0627\u0646\u0636\u0645\u0627\u0645\u0643 \u0625\u0644\u064a\u0646\u0627 \u0641\u064a \u0647\u0630\u0627 \u0627\u0644\u0641\u0635\u0644",
+      "end_time": 226.3,
+      "start_word": 436,
+      "end_word": 443,
+      "src_lang": "thank you for joining us for this class",
+      "reason": ",",
+      "start_time": 223.8
+    },
+    {
+      "target_lang": "\u0648\u0627\u0646\u0627 \u0627\u0631\u064a\u062f \u0627\u0646",
+      "end_time": 227.8,
+      "start_word": 444,
+      "end_word": 447,
+      "src_lang": "and I want to",
+      "reason": "gap>0.0",
+      "start_time": 226.4
+    },
+    {
+      "target_lang": "\u062a\u0628\u062f\u0623 \u0628\u0627\u0644\u0645\u062d\u0627\u0636\u0631\u0629 \u0627\u0644\u0623\u0648\u0644\u0649 \u060c",
+      "end_time": 231.3,
+      "start_word": 448,
+      "end_word": 452,
+      "src_lang": "begin with the first lecture,",
+      "reason": "gap>0.6",
+      "start_time": 228.5
+    },
+    {
+      "target_lang": "\u0648\u0647\u064a \u0627\u0644\u062f\u0631\u0627\u0633\u0629",
+      "end_time": 233.2,
+      "start_word": 453,
+      "end_word": 457,
+      "src_lang": "which is titled: The Study",
+      "reason": ",",
+      "start_time": 231.3
+    },
+    {
+      "target_lang": "\u0645\u0646 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633.",
+      "end_time": 235.1,
+      "start_word": 458,
+      "end_word": 461,
+      "src_lang": "of the Holy Spirit.",
+      "reason": "gap>0.6",
+      "start_time": 233.9
+    },
+    {
+      "target_lang": "\u062f\u0631\u0627\u0633\u0629 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633.",
+      "end_time": 238.9,
+      "start_word": 462,
+      "end_word": 467,
+      "src_lang": "The Study of the Holy Spirit.",
+      "reason": ".",
+      "start_time": 235.1
+    },
+    {
+      "target_lang": "\u0643\u0627\u0646 \u0631\u0648\u062d \u0627\u0644\u0644\u0647 \u0627\u0644\u0642\u062f\u0648\u0633 \u0645\u0639 \u0634\u0639\u0628 \u0627\u0644\u0644\u0647 \u0645\u0646\u0630 \u0627\u0644\u0628\u062f\u0627\u064a\u0629.",
+      "end_time": 246.2,
+      "start_word": 468,
+      "end_word": 477,
+      "src_lang": "God's Holy spirit was with God's people from the beginning.",
+      "reason": "gap>1.0",
+      "start_time": 241.0
+    },
+    {
+      "target_lang": "\u0628\u0627\u0644\u0641\u0639\u0644 \u0641\u064a \u062a\u0643\u0648\u064a\u0646 1 \u060c",
+      "end_time": 249.9,
+      "start_word": 478,
+      "end_word": 480,
+      "src_lang": "Already in Genesis 1,",
+      "reason": "gap>1.0",
+      "start_time": 247.4
+    },
+    {
+      "target_lang": "\u0627\u0644\u0622\u064a\u0629 2",
+      "end_time": 250.6,
+      "start_word": 481,
+      "end_word": 482,
+      "src_lang": "verse 2",
+      "reason": ",",
+      "start_time": 249.9
+    },
+    {
+      "target_lang": "\u064a\u0642\u0648\u062f\u0647\u0645 \u0641\u064a \u0627\u0644\u0646\u0647\u0627\u064a\u0629 \u0625\u0644\u0649 \u0631\u0627\u062d\u062a\u0647\u0645",
+      "end_time": 256.4,
+      "start_word": 483,
+      "end_word": 488,
+      "src_lang": "leading them ultimately to their rest",
+      "reason": "gap>1.0",
+      "start_time": 252.3
+    },
+    {
+      "target_lang": "\u0641\u064a \u064a\u0633\u0648\u0639 \u0627\u0644\u0645\u0633\u064a\u062d (\u0625\u0634\u0639\u064a\u0627\u0621 63 14)",
+      "end_time": 262.9,
+      "start_word": 489,
+      "end_word": 494,
+      "src_lang": "in Jesus Christ (Isaiah 63 14)",
+      "reason": "gap>0.8",
+      "start_time": 257.3
+    },
+    {
+      "target_lang": "\u0644\u0645\u0639\u0631\u0641\u0629 \u0627\u0644\u0631\u0648\u062d",
+      "end_time": 266.3,
+      "start_word": 495,
+      "end_word": 498,
+      "src_lang": "To know the Spirit",
+      "reason": "gap>1.0",
+      "start_time": 265.0
+    },
+    {
+      "target_lang": "\u0644\u0630\u0644\u0643 \u0647\u0648 \u0627\u0644\u0648\u0642\u0648\u0641 \u0641\u064a \u0627\u0644\u0627\u0633\u062a\u0645\u0631\u0627\u0631\u064a\u0629",
+      "end_time": 270.7,
+      "start_word": 499,
+      "end_word": 504,
+      "src_lang": "therefore is to stand in continuity",
+      "reason": "gap>0.7",
+      "start_time": 267.1
+    },
+    {
+      "target_lang": "\u0645\u0639 \u0627\u0644\u0642\u062f\u064a\u0633\u064a\u0646 \u0645\u0646 \u062c\u0645\u064a\u0639 \u0627\u0644\u0623\u0639\u0645\u0627\u0631.",
+      "end_time": 273.5,
+      "start_word": 505,
+      "end_word": 510,
+      "src_lang": "with the Saints of all ages.",
+      "reason": "gap>1.0",
+      "start_time": 271.9
+    },
+    {
+      "target_lang": "\u0648\u0639\u062f \u0627\u0644\u0644\u0647 \u060c",
+      "end_time": 277.0,
+      "start_word": 511,
+      "end_word": 513,
+      "src_lang": "God has promised,",
+      "reason": "gap>1.0",
+      "start_time": 275.8
+    },
+    {
+      "target_lang": "\u0631\u0648\u062d\u0647 \u0628\u0627\u0644\u0641\u0639\u0644 \u0644\u0625\u0633\u0631\u0627\u0626\u064a\u0644 \u060c",
+      "end_time": 278.9,
+      "start_word": 514,
+      "end_word": 518,
+      "src_lang": "his Spirit already to Israel,",
+      "reason": ",",
+      "start_time": 277.0
+    },
+    {
+      "target_lang": "\u0634\u0639\u0628\u0647 \u0627\u0644\u0645\u062e\u062a\u0627\u0631.",
+      "end_time": 281.6,
+      "start_word": 519,
+      "end_word": 521,
+      "src_lang": "His chosen people.",
+      "reason": "gap>1.0",
+      "start_time": 280.4
+    },
+    {
+      "target_lang": "\u0646\u062d\u0646 \u0646\u0639\u0644\u0645 \u0623\u0646\u0647 \u0641\u064a \u0627\u0644\u0639\u0647\u062f \u0627\u0644\u0642\u062f\u064a\u0645 \u060c",
+      "end_time": 284.7,
+      "start_word": 522,
+      "end_word": 528,
+      "src_lang": "We know that in the Old Testament,",
+      "reason": "gap>1.0",
+      "start_time": 282.9
+    },
+    {
+      "target_lang": "\u0627\u0644\u0639\u062f\u064a\u062f \u0645\u0646 \u0627\u0644\u0623\u0641\u0631\u0627\u062f \u064a\u062e\u062a\u0628\u0631\u0648\u0646 \u0631\u0627\u062d\u0629 \u0630\u0644\u0643 \u0627\u0644\u0631\u0648\u062d.",
+      "end_time": 288.9,
+      "start_word": 529,
+      "end_word": 536,
+      "src_lang": "various individuals experience a comfort of that Spirit.",
+      "reason": ",",
+      "start_time": 284.7
+    },
+    {
+      "target_lang": "\u0641\u0643\u0631 \u0641\u064a \u062f\u064a\u0641\u064a\u062f \u060c",
+      "end_time": 289.6,
+      "start_word": 537,
+      "end_word": 539,
+      "src_lang": "Think of David,",
+      "reason": ".",
+      "start_time": 288.9
+    },
+    {
+      "target_lang": "\u0639\u0644\u0649 \u0633\u0628\u064a\u0644 \u0627\u0644\u0645\u062b\u0627\u0644 (\u0645\u0632\u0645\u0648\u0631 51)",
+      "end_time": 291.6,
+      "start_word": 540,
+      "end_word": 543,
+      "src_lang": "for example (Psalm 51)",
+      "reason": ",",
+      "start_time": 289.6
+    },
+    {
+      "target_lang": "\u0644\u0643\u0646 \u0627\u0644\u0644\u0647 \u0648\u0639\u062f",
+      "end_time": 295.4,
+      "start_word": 544,
+      "end_word": 546,
+      "src_lang": "But God promised",
+      "reason": "gap>1.0",
+      "start_time": 294.0
+    },
+    {
+      "target_lang": "\u0639\u0645\u0644 \u0627\u0644\u0631\u0648\u062d \u0623\u063a\u0646\u0649 \u0648\u0623\u0648\u0633\u0639",
+      "end_time": 301.0,
+      "start_word": 547,
+      "end_word": 555,
+      "src_lang": "a far richer and broader work of the Spirit",
+      "reason": "gap>1.0",
+      "start_time": 296.6
+    },
+    {
+      "target_lang": "\u0645\u0645\u0627 \u0642\u062f \u0646\u062a\u062e\u064a\u0644\u0647.",
+      "end_time": 304.5,
+      "start_word": 556,
+      "end_word": 560,
+      "src_lang": "than we might possibly imagine.",
+      "reason": "gap>0.7",
+      "start_time": 301.8
+    },
+    {
+      "target_lang": "\u0627\u0646\u0628\u0623 \u0627\u0634\u0639\u064a\u0627\u0621 \u0628\u0645\u0644\u0643 \u0628\u0627\u0631",
+      "end_time": 309.2,
+      "start_word": 561,
+      "end_word": 566,
+      "src_lang": "Isaiah foretold of a righteous king",
+      "reason": "gap>1.0",
+      "start_time": 305.9
+    },
+    {
+      "target_lang": "\u0625\u062f\u0627\u0631\u062a\u0647 \u0633\u062a\u0643\u0648\u0646 \u0645\u062b\u0644 \u060c",
+      "end_time": 311.4,
+      "start_word": 567,
+      "end_word": 571,
+      "src_lang": "whose administration would be like,",
+      "reason": "gap>0.4",
+      "start_time": 309.7
+    },
+    {
+      "target_lang": "\u0623\u0646\u0647\u0627\u0631 \u0627\u0644\u0645\u064a\u0627\u0647 \u0641\u064a \u0645\u0643\u0627\u0646 \u062c\u0627\u0641",
+      "end_time": 314.0,
+      "start_word": 572,
+      "end_word": 578,
+      "src_lang": "rivers of waters in a dry place",
+      "reason": ",",
+      "start_time": 311.6
+    },
+    {
+      "target_lang": "\u0648\u062a\u062d\u0648\u0644 \u0627\u0644\u0628\u0631\u064a\u0629 \u0627\u0644\u0642\u0627\u062d\u0644\u0629",
+      "end_time": 317.5,
+      "start_word": 579,
+      "end_word": 585,
+      "src_lang": "and the transformation of the barren wilderness",
+      "reason": "gap>0.3",
+      "start_time": 314.4
+    },
+    {
+      "target_lang": "\u0625\u0644\u0649 \u0639\u0627\u0644\u0645 \u0645\u0644\u064a\u0621 \u0628\u062b\u0645\u0627\u0631 \u0627\u0644\u0628\u0631 (\u0625\u0634\u0639\u064a\u0627\u0621 32).",
+      "end_time": 323.4,
+      "start_word": 586,
+      "end_word": 596,
+      "src_lang": "into a world filled with the fruit of righteousness (Isaiah 32).",
+      "reason": "gap>0.3",
+      "start_time": 317.9
+    },
+    {
+      "target_lang": "\u0639\u0646\u062f\u0645\u0627 \u0627\u0644\u0631\u0648\u062d \u060c",
+      "end_time": 325.8,
+      "start_word": 597,
+      "end_word": 599,
+      "src_lang": "When the Spirit,",
+      "reason": ".",
+      "start_time": 324.2
+    },
+    {
+      "target_lang": "\u0639\u0646\u062f\u0645\u0627 \u0627\u0644\u0631\u0648\u062d",
+      "end_time": 328.0,
+      "start_word": 600,
+      "end_word": 602,
+      "src_lang": "When the Spirit",
+      "reason": ",",
+      "start_time": 326.4
+    },
+    {
+      "target_lang": "\u064a\u0633\u0643\u0628 \u0639\u0644\u064a\u0646\u0627 \u0645\u0646 \u0627\u0644\u0639\u0644\u0627\u0621.",
+      "end_time": 332.5,
+      "start_word": 603,
+      "end_word": 610,
+      "src_lang": "is poured out upon us from on high.",
+      "reason": "is",
+      "start_time": 328.5
+    },
+    {
+      "target_lang": "\u062b\u0645 \u064a\u0630\u0647\u0628 \u0644\u064a\u0642\u0648\u0644 \u0641\u064a \u0625\u0634\u0639\u064a\u0627\u0621 44 \u060c",
+      "end_time": 337.1,
+      "start_word": 611,
+      "end_word": 620,
+      "src_lang": "And then he goes on to say in Isaiah 44,",
+      "reason": "gap>1.0",
+      "start_time": 334.7
+    },
+    {
+      "target_lang": "\u062d\u062a\u0649 \u064a\u0646\u0633\u0643\u0628 \u0627\u0644\u0631\u0648\u062d \u0639\u0644\u0649 \u0625\u0633\u0631\u0627\u0626\u064a\u0644 \u060c",
+      "end_time": 339.5,
+      "start_word": 621,
+      "end_word": 629,
+      "src_lang": "that the Spirit would be poured out on Israel,",
+      "reason": ",",
+      "start_time": 337.7
+    },
+    {
+      "target_lang": "\u0645\u062b\u0644 \u0627\u0644\u0646\u0647\u0631",
+      "end_time": 340.1,
+      "start_word": 630,
+      "end_word": 632,
+      "src_lang": "like a river",
+      "reason": ",",
+      "start_time": 339.5
+    },
+    {
+      "target_lang": "\u0645\u0646 \u0627\u0644\u0645\u0627\u0621 \u0639\u0644\u0649 \u0627\u0644\u0623\u0631\u0636 \u0627\u0644\u062c\u0627\u0641\u0629 \u060c",
+      "end_time": 341.7,
+      "start_word": 633,
+      "end_word": 637,
+      "src_lang": "of water on dry ground,",
+      "reason": "of",
+      "start_time": 340.1
+    },
+    {
+      "target_lang": "\u0633\u0642\u064a \u0627\u0644\u0646\u0641\u0648\u0633 \u0627\u0644\u0643\u0627\u0641\u0631\u0629 \u0644\u0625\u0646\u062a\u0627\u062c \u0627\u0644\u0646\u0627\u0633",
+      "end_time": 347.0,
+      "start_word": 638,
+      "end_word": 644,
+      "src_lang": "irrigating faithless souls to produce a people",
+      "reason": ",",
+      "start_time": 341.9
+    },
+    {
+      "target_lang": "\u0645\u0646 \u064a\u0642\u0648\u0644 \u0627\u0646\u064a \u0644\u0644\u0631\u0628.",
+      "end_time": 351.2,
+      "start_word": 645,
+      "end_word": 650,
+      "src_lang": "who say I am the Lord's.",
+      "reason": "gap>0.2",
+      "start_time": 347.3
+    },
+    {
+      "target_lang": "\u0648\u0643\u0630\u0644\u0643 \u0627\u0644\u0631\u0648\u062d",
+      "end_time": 353.9,
+      "start_word": 651,
+      "end_word": 654,
+      "src_lang": "And so the Spirit",
+      "reason": "gap>1.0",
+      "start_time": 352.6
+    },
+    {
+      "target_lang": "\u0647\u0648 \u062c\u0648\u0627\u0628 \u0623\u0645\u0627\u0646\u0629 \u0627\u0644\u0644\u0647 \u0641\u064a \u0627\u0644\u0639\u0647\u062f",
+      "end_time": 358.6,
+      "start_word": 655,
+      "end_word": 661,
+      "src_lang": "is the answer of God's covenantal faithfulness",
+      "reason": "gap>0.8",
+      "start_time": 354.8
+    },
+    {
+      "target_lang": "\u0644\u0644\u0645\u0634\u0643\u0644\u0629 \u0627\u0644\u0645\u0632\u0645\u0646\u0629",
+      "end_time": 362.3,
+      "start_word": 662,
+      "end_word": 665,
+      "src_lang": "to the chronic problem",
+      "reason": "gap>1.0",
+      "start_time": 359.8
+    },
+    {
+      "target_lang": "\u0645\u0646 \u0643\u0633\u0631 \u0639\u0647\u062f \u0625\u0633\u0631\u0627\u0626\u064a\u0644.",
+      "end_time": 364.8,
+      "start_word": 666,
+      "end_word": 669,
+      "src_lang": "of Israel's covenant breaking.",
+      "reason": "gap>0.3",
+      "start_time": 362.7
+    },
+    {
+      "target_lang": "\u062a\u062c\u062f \u0630\u0644\u0643 \u0623\u064a\u0636\u064b\u0627 \u0641\u064a",
+      "end_time": 367.2,
+      "start_word": 670,
+      "end_word": 674,
+      "src_lang": "You find that also in",
+      "reason": "gap>1.0",
+      "start_time": 366.1
+    },
+    {
+      "target_lang": "\u0643\u062a\u0627\u0628 \u064a\u0648\u0626\u064a\u0644",
+      "end_time": 368.7,
+      "start_word": 675,
+      "end_word": 678,
+      "src_lang": "the Book of Joel",
+      "reason": "gap>0.4",
+      "start_time": 367.7
+    },
+    {
+      "target_lang": "\u0623\u0646 \u064a\u0633\u0643\u0628 \u0627\u0644\u0631\u0628 \u0631\u0648\u062d\u0647 \u0639\u0644\u0649 \u0643\u0644 \u0634\u0639\u0628\u0647",
+      "end_time": 372.5,
+      "start_word": 679,
+      "end_word": 690,
+      "src_lang": "that the Lord would pour out his Spirit upon all his people",
+      "reason": "gap>0.3",
+      "start_time": 369.1
+    },
+    {
+      "target_lang": "\u0623\u0646 \u0645\u0646 \u064a\u0646\u0627\u062f\u064a \u0628\u0627\u0644\u0627\u0633\u0645",
+      "end_time": 375.3,
+      "start_word": 691,
+      "end_word": 697,
+      "src_lang": "that whosoever would call on the name",
+      "reason": "gap>0.6",
+      "start_time": 373.2
+    },
+    {
+      "target_lang": "\u0645\u0646 \u0627\u0644\u0631\u0628 \u0633\u064a\u062e\u0644\u0635",
+      "end_time": 378.0,
+      "start_word": 698,
+      "end_word": 703,
+      "src_lang": "of the Lord would be saved",
+      "reason": "of",
+      "start_time": 375.3
+    },
+    {
+      "target_lang": "(\u064a\u0648\u0626\u064a\u0644 2:28 \u0625\u0644\u0649 32).",
+      "end_time": 381.2,
+      "start_word": 704,
+      "end_word": 707,
+      "src_lang": "(Joel 2:28 to 32).",
+      "reason": "gap>0.7",
+      "start_time": 378.8
+    },
+    {
+      "target_lang": "\u0644\u0630\u0627 \u0644\u062f\u0631\u0627\u0633\u0629 \u0639\u0645\u0644 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633",
+      "end_time": 384.9,
+      "start_word": 708,
+      "end_word": 716,
+      "src_lang": "So to study the work of the Holy Spirit",
+      "reason": "gap>1.0",
+      "start_time": 382.3
+    },
+    {
+      "target_lang": "\u0647\u0648 \u062f\u0631\u0627\u0633\u0629 \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u0633\u0645\u0627\u0648\u064a \u060c",
+      "end_time": 388.8,
+      "start_word": 717,
+      "end_word": 721,
+      "src_lang": "is to study heavenly work,",
+      "reason": "gap>1.0",
+      "start_time": 386.1
+    },
+    {
+      "target_lang": "\u0625\u0646\u0642\u0627\u0630 \u0627\u0644\u0639\u0645\u0644.",
+      "end_time": 390.6,
+      "start_word": 722,
+      "end_word": 723,
+      "src_lang": "saving work.",
+      "reason": ",",
+      "start_time": 389.5
+    },
+    {
+      "target_lang": "\u0648\u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u0630\u064a \u064a\u0628\u0642\u0649 \u0625\u0644\u0649 \u0627\u0644\u0623\u0628\u062f.",
+      "end_time": 395.1,
+      "start_word": 724,
+      "end_word": 728,
+      "src_lang": "And work that abides forever.",
+      "reason": "gap>1.0",
+      "start_time": 391.8
+    },
+    {
+      "target_lang": "\u062d\u0627\u0644\u064a\u0627\u060c",
+      "end_time": 397.0,
+      "start_word": 729,
+      "end_word": 729,
+      "src_lang": "Now,",
+      "reason": "gap>1.0",
+      "start_time": 396.9
+    },
+    {
+      "target_lang": "\u0628\u0627\u0644\u0637\u0628\u0639\u060c",
+      "end_time": 397.5,
+      "start_word": 730,
+      "end_word": 731,
+      "src_lang": "of course,",
+      "reason": ",",
+      "start_time": 397.0
+    },
+    {
+      "target_lang": "\u0641\u064a \u0639\u0635\u0631 \u0627\u0644\u0639\u0647\u062f \u0627\u0644\u062c\u062f\u064a\u062f \u0643\u0645\u0627 \u062a\u0639\u0644\u0645 \u060c",
+      "end_time": 400.1,
+      "start_word": 732,
+      "end_word": 738,
+      "src_lang": "in the New Testament age you know,",
+      "reason": ",",
+      "start_time": 397.5
+    },
+    {
+      "target_lang": "\u0623\u0646\u0647 \u0639\u0646\u062f\u0645\u0627 \u0642\u0627\u0645 \u064a\u0633\u0648\u0639 \u0645\u0646 \u0628\u064a\u0646 \u0627\u0644\u0623\u0645\u0648\u0627\u062a",
+      "end_time": 402.4,
+      "start_word": 739,
+      "end_word": 745,
+      "src_lang": "that when Jesus rose from the dead",
+      "reason": ",",
+      "start_time": 400.1
+    },
+    {
+      "target_lang": "\u0648\u0635\u0639\u062f \u0625\u0644\u0649 \u0627\u0644\u062c\u0646\u0629",
+      "end_time": 404.3,
+      "start_word": 746,
+      "end_word": 749,
+      "src_lang": "and ascended into heaven,",
+      "reason": "gap>0.6",
+      "start_time": 403.1
+    },
+    {
+      "target_lang": "\u0633\u0643\u0628 \u0631\u0648\u062d\u0647",
+      "end_time": 408.4,
+      "start_word": 750,
+      "end_word": 754,
+      "src_lang": "He poured out His Spirit",
+      "reason": "gap>1.0",
+      "start_time": 405.9
+    },
+    {
+      "target_lang": "\u0628\u0645\u0642\u0627\u064a\u064a\u0633 \u0623\u0643\u0628\u0631 \u0628\u0643\u062b\u064a\u0631 \u0645\u0646",
+      "end_time": 412.1,
+      "start_word": 755,
+      "end_word": 759,
+      "src_lang": "in much larger measures than",
+      "reason": "gap>0.6",
+      "start_time": 409.1
+    },
+    {
+      "target_lang": "\u0643\u0627\u0646 \u0645\u0639\u0631\u0648\u0641\u0627 \u0645\u0646 \u0642\u0628\u0644",
+      "end_time": 414.6,
+      "start_word": 760,
+      "end_word": 763,
+      "src_lang": "had previously been known",
+      "reason": "gap>0.9",
+      "start_time": 413.1
+    },
+    {
+      "target_lang": "(\u0623\u0639\u0645\u0627\u0644 2 17 \u060c",
+      "end_time": 418.0,
+      "start_word": 764,
+      "end_word": 766,
+      "src_lang": "(Acts 2 17,",
+      "reason": "gap>1.0",
+      "start_time": 415.8
+    },
+    {
+      "target_lang": "\u0645\u0646 \u062e\u0644\u0627\u0644 21 \u0648 33 \u0648 34)",
+      "end_time": 422.2,
+      "start_word": 767,
+      "end_word": 772,
+      "src_lang": "through 21 and 33 and 34)",
+      "reason": ",",
+      "start_time": 418.0
+    },
+    {
+      "target_lang": "\u0648\u0627\u0646\u0642\u0637\u0639 \u0628\u0637\u0631\u0633 \u0628\u0639\u062f \u062e\u0637\u0628\u062a\u0647",
+      "end_time": 428.1,
+      "start_word": 773,
+      "end_word": 780,
+      "src_lang": "And Peter after his sermon is interrupted by",
+      "reason": "gap>1.0",
+      "start_time": 424.0
+    },
+    {
+      "target_lang": "\u0627\u0644\u0622\u0644\u0627\u0641 \u0645\u0646 \u0627\u0644\u0646\u0627\u0633 \u0627\u0644\u0630\u064a\u0646 \u062a\u062d\u062a \u062a\u0628\u0643\u064a\u062a \u0639\u0638\u064a\u0645 \u0639\u0644\u0649 \u0627\u0644\u062e\u0637\u064a\u0626\u0629.",
+      "end_time": 431.3,
+      "start_word": 781,
+      "end_word": 790,
+      "src_lang": "thousands of people who are under great conviction of sin.",
+      "reason": "gap>0.4",
+      "start_time": 428.6
+    },
+    {
+      "target_lang": "\u062a\u062d\u062a\u0647",
+      "end_time": 432.2,
+      "start_word": 791,
+      "end_word": 792,
+      "src_lang": "Under it",
+      "reason": ".",
+      "start_time": 431.3
+    },
+    {
+      "target_lang": "\u0641\u0635\u0631\u062e\u0648\u0627 \u0631\u062c\u0627\u0644\u0627 \u0648\u0627\u062e\u0648\u0629.",
+      "end_time": 435.2,
+      "start_word": 793,
+      "end_word": 799,
+      "src_lang": "and they cried out men and Brethren.",
+      "reason": "gap>1.0",
+      "start_time": 433.4
+    },
+    {
+      "target_lang": "\u0645\u0627\u0630\u0627 \u0639\u0633\u0627\u0646\u0627 \u0646\u0641\u0639\u0644\u061f",
+      "end_time": 436.4,
+      "start_word": 800,
+      "end_word": 803,
+      "src_lang": "What shall we do?",
+      "reason": ".",
+      "start_time": 435.2
+    },
+    {
+      "target_lang": "\u0642\u0627\u0644 \u0644\u0647\u0645 \u0628\u0637\u0631\u0633:",
+      "end_time": 438.8,
+      "start_word": 804,
+      "end_word": 807,
+      "src_lang": "Peter said to them,",
+      "reason": "gap>1.0",
+      "start_time": 437.7
+    },
+    {
+      "target_lang": "\u062a\u0648\u0628\u0648\u0627 \u0648\u0644\u064a\u0639\u062a\u0645\u062f\u0648\u0627 \u062c\u0645\u064a\u0639\u0643\u0645",
+      "end_time": 441.5,
+      "start_word": 808,
+      "end_word": 814,
+      "src_lang": "repent and be baptized everyone of you",
+      "reason": ",",
+      "start_time": 438.8
+    },
+    {
+      "target_lang": "\u0628\u0627\u0633\u0645 \u064a\u0633\u0648\u0639 \u0627\u0644\u0645\u0633\u064a\u062d.",
+      "end_time": 443.6,
+      "start_word": 815,
+      "end_word": 820,
+      "src_lang": "in the name of Jesus Christ.",
+      "reason": "gap>0.2",
+      "start_time": 441.8
+    },
+    {
+      "target_lang": "\u0648\u062a\u0646\u0627\u0644 \u0639\u0637\u064a\u0629 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633.",
+      "end_time": 448.6,
+      "start_word": 821,
+      "end_word": 830,
+      "src_lang": "And you shall receive the gift of the Holy Ghost.",
+      "reason": ".",
+      "start_time": 444.1
+    },
+    {
+      "target_lang": "\u0644\u0627\u0646 \u0627\u0644\u0648\u0639\u062f \u0644\u0643\u0645",
+      "end_time": 451.1,
+      "start_word": 831,
+      "end_word": 836,
+      "src_lang": "For the promise is unto you",
+      "reason": ".",
+      "start_time": 449.6
+    },
+    {
+      "target_lang": "\u0648\u0644\u0623\u0637\u0641\u0627\u0644\u0643",
+      "end_time": 452.6,
+      "start_word": 837,
+      "end_word": 840,
+      "src_lang": "and to your children",
+      "reason": "gap>0.3",
+      "start_time": 451.5
+    },
+    {
+      "target_lang": "\u0648\u0644\u0643\u0644 \u0645\u0627 \u0647\u0648 \u0628\u0639\u064a\u062f.",
+      "end_time": 454.5,
+      "start_word": 841,
+      "end_word": 847,
+      "src_lang": "and to all that are afar off.",
+      "reason": "gap>0.0",
+      "start_time": 452.7
+    },
+    {
+      "target_lang": "\u062d\u062a\u0649 \u0643\u0644 \u0645\u0646 \u0627\u0644\u0631\u0628 \u060c",
+      "end_time": 456.1,
+      "start_word": 848,
+      "end_word": 853,
+      "src_lang": "Even as many as the Lord,",
+      "reason": ".",
+      "start_time": 454.7
+    },
+    {
+      "target_lang": "\u0633\u064a\u062f\u0639\u0648 \u0625\u0644\u0647\u0646\u0627 (\u0623\u0639\u0645\u0627\u0644 \u0627\u0644\u0631\u0633\u0644 2: 38 \u0648 39).",
+      "end_time": 460.0,
+      "start_word": 854,
+      "end_word": 862,
+      "src_lang": "Our God shall call (Acts 2: 38 and 39).",
+      "reason": ",",
+      "start_time": 456.1
+    },
+    {
+      "target_lang": "\u0648\u0647\u0643\u0630\u0627 \u0627\u0644\u0628\u0627\u0642\u064a",
+      "end_time": 464.6,
+      "start_word": 863,
+      "end_word": 866,
+      "src_lang": "And so the rest",
+      "reason": "gap>1.0",
+      "start_time": 462.7
+    },
+    {
+      "target_lang": "\u0645\u0646 \u0643\u062a\u0627\u0628\u0627\u062a \u0627\u0644\u0639\u0647\u062f \u0627\u0644\u062c\u062f\u064a\u062f \u060c",
+      "end_time": 465.9,
+      "start_word": 867,
+      "end_word": 871,
+      "src_lang": "of the New Testament writings,",
+      "reason": "of",
+      "start_time": 464.6
+    },
+    {
+      "target_lang": "\u0648\u0644\u0627 \u0633\u064a\u0645\u0627 \u0631\u0633\u0627\u0626\u0644 \u0628\u0648\u0644\u0633 \u060c",
+      "end_time": 467.5,
+      "start_word": 872,
+      "end_word": 874,
+      "src_lang": "particularly Paul's Epistles,",
+      "reason": ",",
+      "start_time": 465.9
+    },
+    {
+      "target_lang": "\u0641\u0642\u0637 \u0645\u0646 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633.",
+      "end_time": 472.1,
+      "start_word": 875,
+      "end_word": 881,
+      "src_lang": "are just filled with the Holy Spirit.",
+      "reason": ",",
+      "start_time": 467.8
+    },
+    {
+      "target_lang": "\u064a\u062a\u062d\u062f\u062b \u0643\u062b\u064a\u0631\u0627",
+      "end_time": 473.9,
+      "start_word": 882,
+      "end_word": 884,
+      "src_lang": "He speaks often",
+      "reason": ".",
+      "start_time": 472.9
+    },
+    {
+      "target_lang": "\u0639\u0646 \u0648\u0644\u0627\u062f\u062a\u0647\u0645",
+      "end_time": 474.9,
+      "start_word": 885,
+      "end_word": 887,
+      "src_lang": "about being born",
+      "reason": "about",
+      "start_time": 473.9
+    },
+    {
+      "target_lang": "\u0645\u0646 \u0627\u0644\u0631\u0648\u062d \u0645\u062b\u0644 \u063a\u0644\u0627\u0637\u064a\u0629 \u060c",
+      "end_time": 477.2,
+      "start_word": 888,
+      "end_word": 893,
+      "src_lang": "of the Spirit such as Galatians,",
+      "reason": "of",
+      "start_time": 474.9
+    },
+    {
+      "target_lang": "4:29.",
+      "end_time": 479.0,
+      "start_word": 894,
+      "end_word": 895,
+      "src_lang": "4: 29.",
+      "reason": ",",
+      "start_time": 477.2
+    },
+    {
+      "target_lang": "\u0648\u0647\u0648 \u064a\u062a\u062d\u062f\u062b \u0628\u0627\u0633\u062a\u0645\u0631\u0627\u0631",
+      "end_time": 481.6,
+      "start_word": 896,
+      "end_word": 899,
+      "src_lang": "And he's talking constantly",
+      "reason": ".",
+      "start_time": 479.3
+    },
+    {
+      "target_lang": "\u062d\u0648\u0644 \u0627\u0644\u062c\u0648\u0627\u0646\u0628 \u0627\u0644\u0645\u062e\u062a\u0644\u0641\u0629",
+      "end_time": 483.2,
+      "start_word": 900,
+      "end_word": 902,
+      "src_lang": "about different aspects",
+      "reason": "gap>0.0",
+      "start_time": 481.7
+    },
+    {
+      "target_lang": "\u0644\u0639\u0645\u0644 \u062e\u0644\u0627\u0635 \u0627\u0644\u0631\u0648\u062d.",
+      "end_time": 484.9,
+      "start_word": 903,
+      "end_word": 907,
+      "src_lang": "of the Spirit's saving work.",
+      "reason": "of",
+      "start_time": 483.2
+    },
+    {
+      "target_lang": "\u0643\u0645\u0627 \u0642\u0631\u0623\u0646\u0627 \u0641\u0642\u0637 \u0627\u0644\u0642\u0644\u064a\u0644",
+      "end_time": 486.1,
+      "start_word": 908,
+      "end_word": 913,
+      "src_lang": "Like we just read a few",
+      "reason": ".",
+      "start_time": 485.1
+    },
+    {
+      "target_lang": "\u0645\u0646\u0647\u0645 \u0645\u0646 \u0631\u0648\u0645\u064a\u0629 8.",
+      "end_time": 488.7,
+      "start_word": 914,
+      "end_word": 921,
+      "src_lang": "of them to you from from Romans 8.",
+      "reason": "of",
+      "start_time": 486.1
+    },
+    {
+      "target_lang": "\u0644\u0630\u0644\u0643 \u0625\u0630\u0627 \u0643\u0646\u0627 \u0646\u0639\u062a\u0632 \u0628\u0627\u0644\u0645\u0633\u064a\u062d \u0628\u0627\u0639\u062a\u0628\u0627\u0631\u0647 \u0627\u0644\u0648\u0633\u064a\u0637 \u0627\u0644\u0648\u062d\u064a\u062f \u0644\u062f\u064a\u0646\u0627 \u060c",
+      "end_time": 492.9,
+      "start_word": 922,
+      "end_word": 930,
+      "src_lang": "So if we treasure Christ as our only mediator,",
+      "reason": "gap>1.0",
+      "start_time": 489.8
+    },
+    {
+      "target_lang": "\u0633\u0648\u0641 \u0646\u0639\u062a\u0632 \u0623\u064a\u0636\u064b\u0627 \u0628\u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633",
+      "end_time": 496.3,
+      "start_word": 931,
+      "end_word": 937,
+      "src_lang": "we will also treasure the Holy Spirit",
+      "reason": ",",
+      "start_time": 493.8
+    },
+    {
+      "target_lang": "\u0643\u0647\u062f\u064a\u0629 \u0627\u0644\u0645\u0633\u064a\u062d \u0627\u0644\u0639\u0638\u064a\u0645\u0629 \u060c",
+      "end_time": 499.2,
+      "start_word": 938,
+      "end_word": 941,
+      "src_lang": "as Christ's great gift,",
+      "reason": "gap>0.2",
+      "start_time": 496.6
+    },
+    {
+      "target_lang": "\u0627\u0644\u0630\u064a \u0644\u0627 \u064a\u0646\u0641\u0635\u0644 \u0639\u0646\u0647 \u060c",
+      "end_time": 501.0,
+      "start_word": 942,
+      "end_word": 946,
+      "src_lang": "which is inseparable from Him,",
+      "reason": ",",
+      "start_time": 499.2
+    },
+    {
+      "target_lang": "\u0644\u0644\u062e\u0637\u0627\u0629 (\u064a\u0648\u062d\u0646\u0627 4",
+      "end_time": 504.5,
+      "start_word": 947,
+      "end_word": 950,
+      "src_lang": "to sinners (John 4",
+      "reason": ",",
+      "start_time": 502.0
+    },
+    {
+      "target_lang": "\u0648\u0645\u0631\u0629 \u0623\u062e\u0631\u0649 \u064a\u0648\u062d\u0646\u0627 7).",
+      "end_time": 506.7,
+      "start_word": 951,
+      "end_word": 954,
+      "src_lang": "and again John 7).",
+      "reason": "gap>0.8",
+      "start_time": 505.4
+    },
+    {
+      "target_lang": "\u0648\u0636\u0639 \u062c\u0648\u0646\u0627\u062b\u0627\u0646 \u0625\u062f\u0648\u0627\u0631\u062f\u0632 \u0627\u0644\u0623\u0645\u0631 \u0628\u0647\u0630\u0647 \u0627\u0644\u0637\u0631\u064a\u0642\u0629.",
+      "end_time": 509.7,
+      "start_word": 955,
+      "end_word": 960,
+      "src_lang": "Jonathan Edwards put it this way.",
+      "reason": "gap>1.0",
+      "start_time": 508.1
+    },
+    {
+      "target_lang": "\"\u0645\u062c\u0645\u0648\u0639 \u0627\u0644\u0628\u0631\u0643\u0627\u062a \u0627\u0644\u062a\u064a \u0637\u0644\u0628\u0647\u0627 \u0627\u0644\u0645\u0633\u064a\u062d",
+      "end_time": 513.1,
+      "start_word": 961,
+      "end_word": 967,
+      "src_lang": "\"The sum of the blessings Christ sought",
+      "reason": ".",
+      "start_time": 509.9
+    },
+    {
+      "target_lang": "\u0628\u0645\u0627 \u0641\u0639\u0644\u0647 \u0648\u0639\u0627\u0646\u0649",
+      "end_time": 515.6,
+      "start_word": 968,
+      "end_word": 973,
+      "src_lang": "by what he did and suffered",
+      "reason": "gap>0.5",
+      "start_time": 513.7
+    },
+    {
+      "target_lang": "\u0641\u064a \u0639\u0645\u0644 \u0627\u0644\u0641\u062f\u0627\u0621 \u060c",
+      "end_time": 517.0,
+      "start_word": 974,
+      "end_word": 978,
+      "src_lang": "in the work of redemption,",
+      "reason": "in",
+      "start_time": 515.6
+    },
+    {
+      "target_lang": "\u0643\u0627\u0646 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633 \u060c",
+      "end_time": 519.2,
+      "start_word": 979,
+      "end_word": 982,
+      "src_lang": "was the Holy Spirit,",
+      "reason": ",",
+      "start_time": 517.9
+    },
+    {
+      "target_lang": "\u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633 \u0641\u064a \u0633\u0643\u0646\u0647 \u060c",
+      "end_time": 522.0,
+      "start_word": 983,
+      "end_word": 988,
+      "src_lang": "the Holy Spirit in His indwelling,",
+      "reason": ",",
+      "start_time": 520.2
+    },
+    {
+      "target_lang": "\u062a\u0623\u062b\u064a\u0631\u0627\u062a\u0647 \u0648\u062b\u0645\u0627\u0631\u0647",
+      "end_time": 524.0,
+      "start_word": 989,
+      "end_word": 992,
+      "src_lang": "His influences and fruits",
+      "reason": ",",
+      "start_time": 522.4
+    },
+    {
+      "target_lang": "\u0647\u0648 \u0645\u062c\u0645\u0648\u0639 \u0643\u0644 \u0646\u0639\u0645\u0629 \u060c",
+      "end_time": 526.1,
+      "start_word": 993,
+      "end_word": 998,
+      "src_lang": "is the sum of all grace,",
+      "reason": "gap>0.1",
+      "start_time": 524.2
+    },
+    {
+      "target_lang": "\u0642\u062f\u0627\u0633\u0629\u060c",
+      "end_time": 527.0,
+      "start_word": 999,
+      "end_word": 999,
+      "src_lang": "holiness,",
+      "reason": ",",
+      "start_time": 526.3
+    },
+    {
+      "target_lang": "\u0627\u0644\u0631\u0627\u062d\u0629 \u0648\u0627\u0644\u0641\u0631\u062d \u060c",
+      "end_time": 528.7,
+      "start_word": 1000,
+      "end_word": 1002,
+      "src_lang": "comfort and joy,",
+      "reason": ",",
+      "start_time": 527.3
+    },
+    {
+      "target_lang": "\u0623\u0648 \u0641\u064a \u0643\u0644\u0645\u0629 \u0648\u0627\u062d\u062f\u0629",
+      "end_time": 530.0,
+      "start_word": 1003,
+      "end_word": 1006,
+      "src_lang": "or in one word",
+      "reason": ",",
+      "start_time": 528.9
+    },
+    {
+      "target_lang": "\u0645\u0646 \u0643\u0644 \u062e\u064a\u0631 \u0631\u0648\u062d\u064a \u0627\u0642\u062a\u0646\u0627\u0647\u0627 \u0627\u0644\u0645\u0633\u064a\u062d",
+      "end_time": 532.7,
+      "start_word": 1007,
+      "end_word": 1013,
+      "src_lang": "of all the spiritual good Christ purchased",
+      "reason": "of",
+      "start_time": 530.0
+    },
+    {
+      "target_lang": "\u0644\u0644\u0631\u062c\u0627\u0644 \u0641\u064a \u0647\u0630\u0627 \u0627\u0644\u0639\u0627\u0644\u0645.",
+      "end_time": 534.1,
+      "start_word": 1014,
+      "end_word": 1018,
+      "src_lang": "for men in this world.",
+      "reason": "for",
+      "start_time": 532.7
+    },
+    {
+      "target_lang": "\u0648\u0647\u0648 \u0623\u064a\u0636\u064b\u0627 \u0645\u062c\u0645\u0648\u0639 \u0643\u0644 \u0643\u0645\u0627\u0644 \u060c",
+      "end_time": 538.0,
+      "start_word": 1019,
+      "end_word": 1026,
+      "src_lang": "And is also the sum of all perfection,",
+      "reason": ".",
+      "start_time": 534.8
+    },
+    {
+      "target_lang": "\u0645\u062c\u062f\u060c",
+      "end_time": 538.6,
+      "start_word": 1027,
+      "end_word": 1027,
+      "src_lang": "glory,",
+      "reason": ",",
+      "start_time": 538.0
+    },
+    {
+      "target_lang": "\u0648\u0627\u0644\u0641\u0631\u062d \u0627\u0644\u0623\u0628\u062f\u064a \u060c",
+      "end_time": 539.9,
+      "start_word": 1028,
+      "end_word": 1030,
+      "src_lang": "and eternal joy,",
+      "reason": ",",
+      "start_time": 538.6
+    },
+    {
+      "target_lang": "\u0627\u0644\u0630\u064a \u0627\u0634\u062a\u0631\u0627\u0647",
+      "end_time": 540.8,
+      "start_word": 1031,
+      "end_word": 1033,
+      "src_lang": "that he purchased",
+      "reason": ",",
+      "start_time": 540.1
+    },
+    {
+      "target_lang": "\u0644\u0647\u0645 \u0641\u064a \u0639\u0627\u0644\u0645 \u0622\u062e\u0631 \".",
+      "end_time": 542.3,
+      "start_word": 1034,
+      "end_word": 1038,
+      "src_lang": "for them in another world.\"",
+      "reason": "for",
+      "start_time": 540.8
+    },
+    {
+      "target_lang": "\u0647\u0630\u0627 \u0627\u0642\u062a\u0628\u0627\u0633 \u0631\u0627\u0626\u0639 \u0645\u0646 \u0625\u062f\u0648\u0627\u0631\u062f\u0632.",
+      "end_time": 547.2,
+      "start_word": 1039,
+      "end_word": 1044,
+      "src_lang": "That's an amazing quote by Edwards.",
+      "reason": "gap>1.0",
+      "start_time": 544.5
+    },
+    {
+      "target_lang": "\u0648\u0647\u0630\u0627 \u064a\u0638\u0647\u0631 \u0644\u0646\u0627 \u0628\u0627\u0644\u062a\u0623\u0643\u064a\u062f",
+      "end_time": 549.8,
+      "start_word": 1045,
+      "end_word": 1049,
+      "src_lang": "And it certainly shows us",
+      "reason": "gap>1.0",
+      "start_time": 548.4
+    },
+    {
+      "target_lang": "\u0627\u0644\u062a\u064a \u064a\u0642\u0648\u0645 \u0627\u0644\u0643\u062b\u064a\u0631\u0648\u0646 \u0628\u062a\u0642\u0644\u064a\u0644\u0647\u0627 \u0627\u0644\u064a\u0648\u0645",
+      "end_time": 553.6,
+      "start_word": 1050,
+      "end_word": 1054,
+      "src_lang": "that many today are minimizing",
+      "reason": "gap>0.6",
+      "start_time": 550.5
+    },
+    {
+      "target_lang": "\u062f\u0648\u0631 \u0627\u0644\u0648\u0632\u0627\u0631\u0629",
+      "end_time": 555.8,
+      "start_word": 1055,
+      "end_word": 1059,
+      "src_lang": "the role of the ministry",
+      "reason": "gap>0.6",
+      "start_time": 554.3
+    },
+    {
+      "target_lang": "\u0645\u0646 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633",
+      "end_time": 557.8,
+      "start_word": 1060,
+      "end_word": 1064,
+      "src_lang": "of the Holy Spirit as",
+      "reason": "gap>0.5",
+      "start_time": 556.4
+    },
+    {
+      "target_lang": "\u0645\u062a\u0643\u0627\u0645\u0644 \u0645\u0639 \u0627\u0644\u0643\u0644",
+      "end_time": 560.9,
+      "start_word": 1065,
+      "end_word": 1068,
+      "src_lang": "integral with the entire",
+      "reason": "gap>1.0",
+      "start_time": 559.1
+    },
+    {
+      "target_lang": "\u0645\u062c\u0645\u0648\u0639 \u0627\u0644\u0646\u0639\u0645",
+      "end_time": 563.1,
+      "start_word": 1069,
+      "end_word": 1071,
+      "src_lang": "sum of blessings",
+      "reason": "gap>0.7",
+      "start_time": 561.7
+    },
+    {
+      "target_lang": "\u0627\u0644\u062a\u064a \u064a\u0646\u0627\u0644\u0647\u0627 \u0634\u0639\u0628 \u0627\u0644\u0644\u0647 \u0641\u064a \u0627\u0644\u062e\u0644\u0627\u0635.",
+      "end_time": 566.1,
+      "start_word": 1072,
+      "end_word": 1077,
+      "src_lang": "that God's people receive in salvation.",
+      "reason": "that",
+      "start_time": 563.1
+    },
+    {
+      "target_lang": "\u062c\u0648\u0646 \u0628\u0631\u0627\u0648\u0646 \u0645\u0646 \u0647\u064a\u062f\u064a\u0646\u063a\u062a\u0648\u0646",
+      "end_time": 570.0,
+      "start_word": 1078,
+      "end_word": 1081,
+      "src_lang": "John Brown of Headington",
+      "reason": "gap>1.0",
+      "start_time": 568.8
+    },
+    {
+      "target_lang": "\u0636\u0639\u0647\u0627 \u0628\u0647\u0630\u0647 \u0627\u0644\u0637\u0631\u064a\u0642\u0629\u060c",
+      "end_time": 571.7,
+      "start_word": 1082,
+      "end_word": 1085,
+      "src_lang": "put it this way,",
+      "reason": "gap>0.8",
+      "start_time": 570.9
+    },
+    {
+      "target_lang": "\"\u0647\u0644 \u0627\u0642\u062a\u0646\u0649 \u0627\u0644\u0645\u0633\u064a\u062d \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633\u061f",
+      "end_time": 574.6,
+      "start_word": 1086,
+      "end_word": 1091,
+      "src_lang": "\"Did Christ purchase the Holy Spirit?",
+      "reason": ",",
+      "start_time": 572.4
+    },
+    {
+      "target_lang": "\u0627\u0634\u062a\u0631\u0649 \u0627\u0644\u0645\u0633\u064a\u062d \u0645\u0648\u0627\u0647\u0628 \u0627\u0644\u0631\u0648\u062d \u060c",
+      "end_time": 578.7,
+      "start_word": 1092,
+      "end_word": 1096,
+      "src_lang": "Christ purchased the Spirit's gifts,",
+      "reason": "gap>1.0",
+      "start_time": 576.6
+    },
+    {
+      "target_lang": "\u0648\u062a\u0623\u062b\u064a\u0631\u0627\u062a \u0641\u064a \u062a\u0637\u0628\u064a\u0642 \u0627\u0644\u0641\u062f\u0627\u0621 \u060c",
+      "end_time": 582.2,
+      "start_word": 1097,
+      "end_word": 1101,
+      "src_lang": "and influences in applying redemption,",
+      "reason": ",",
+      "start_time": 578.7
+    },
+    {
+      "target_lang": "\u0648\u0644\u0643\u0646 \u0644\u064a\u0633 \u0643\u064a\u0627\u0646\u0647 \u060c",
+      "end_time": 584.2,
+      "start_word": 1102,
+      "end_word": 1105,
+      "src_lang": "but not his being,",
+      "reason": ",",
+      "start_time": 582.7
+    },
+    {
+      "target_lang": "\u0648\u0647\u0648 \u0645\u0633\u062a\u0642\u0644 \".",
+      "end_time": 586.4,
+      "start_word": 1106,
+      "end_word": 1108,
+      "src_lang": "which is independent.\"",
+      "reason": ",",
+      "start_time": 585.0
+    },
+    {
+      "target_lang": "\u0647\u0643\u0630\u0627 \u0639\u0645\u0644 \u0627\u0644\u0631\u0648\u062d",
+      "end_time": 589.5,
+      "start_word": 1109,
+      "end_word": 1114,
+      "src_lang": "So the work of the Spirit",
+      "reason": "gap>1.0",
+      "start_time": 587.9
+    },
+    {
+      "target_lang": "\u0628\u0637\u0631\u0642 \u0639\u062f\u0629",
+      "end_time": 591.4,
+      "start_word": 1115,
+      "end_word": 1117,
+      "src_lang": "in many ways",
+      "reason": "gap>0.9",
+      "start_time": 590.5
+    },
+    {
+      "target_lang": "\u0647\u064a \u0627\u0644\u0641\u0627\u0643\u0647\u0629",
+      "end_time": 593.0,
+      "start_word": 1118,
+      "end_word": 1120,
+      "src_lang": "is the fruit",
+      "reason": "is",
+      "start_time": 591.6
+    },
+    {
+      "target_lang": "\u0639\u0646 \u0645\u0648\u062a \u0627\u0644\u0645\u0633\u064a\u062d \u0648\u0642\u064a\u0627\u0645\u062a\u0647.",
+      "end_time": 594.8,
+      "start_word": 1121,
+      "end_word": 1125,
+      "src_lang": "of Christ's death and resurrection.",
+      "reason": "of",
+      "start_time": 593.0
+    },
+    {
+      "target_lang": "\u062d\u0627\u0644\u064a\u0627\u060c",
+      "end_time": 597.4,
+      "start_word": 1126,
+      "end_word": 1126,
+      "src_lang": "Now,",
+      "reason": "gap>1.0",
+      "start_time": 597.0
+    },
+    {
+      "target_lang": "\u0627\u0644\u062e\u0644\u0627\u0635 \u0641\u064a \u0627\u0644\u0645\u0633\u064a\u062d",
+      "end_time": 599.4,
+      "start_word": 1127,
+      "end_word": 1129,
+      "src_lang": "salvation in Christ",
+      "reason": ",",
+      "start_time": 598.2
+    },
+    {
+      "target_lang": "\u0647\u0648 \u0645\u0648\u0636\u0639 \u062a\u0642\u062f\u064a\u0631 \u0648\u0627\u0644\u0627\u0633\u062a\u0645\u062a\u0627\u0639 \u0644\u0630\u0644\u0643",
+      "end_time": 601.6,
+      "start_word": 1130,
+      "end_word": 1134,
+      "src_lang": "is appreciated and enjoyed therefore",
+      "reason": "is",
+      "start_time": 599.4
+    },
+    {
+      "target_lang": "\u0641\u0642\u0637 \u0628\u0645\u0639\u0631\u0641\u0629 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633",
+      "end_time": 604.4,
+      "start_word": 1135,
+      "end_word": 1140,
+      "src_lang": "only by knowing the Holy Spirit",
+      "reason": "gap>0.5",
+      "start_time": 602.2
+    },
+    {
+      "target_lang": "\u0648\u0639\u0645\u0644\u0647 \u0627\u0644\u0645\u0646\u0642\u0630.",
+      "end_time": 605.6,
+      "start_word": 1141,
+      "end_word": 1144,
+      "src_lang": "and his saving work.",
+      "reason": "gap>0.0",
+      "start_time": 604.5
+    },
+    {
+      "target_lang": "\u0648\u0647\u0630\u0647 \u0648\u0627\u062d\u062f\u0629 \u0645\u0646",
+      "end_time": 608.0,
+      "start_word": 1145,
+      "end_word": 1150,
+      "src_lang": "And this is one of the",
+      "reason": "gap>1.0",
+      "start_time": 606.7
+    },
+    {
+      "target_lang": "\u0623\u0639\u0638\u0645 \u0645\u0630\u0627\u0647\u0628 \u0627\u0644\u0625\u0635\u0644\u0627\u062d \u060c",
+      "end_time": 610.9,
+      "start_word": 1151,
+      "end_word": 1155,
+      "src_lang": "greatest doctrines of the Reformation,",
+      "reason": "gap>0.6",
+      "start_time": 608.7
+    },
+    {
+      "target_lang": "\u062a\u0645 \u062a\u0637\u0648\u064a\u0631\u0647 \u0628\u062f\u0642\u0629 \u062b\u0645 \u062d\u062a\u0649",
+      "end_time": 613.6,
+      "start_word": 1156,
+      "end_word": 1161,
+      "src_lang": "developed so thoroughly and then even",
+      "reason": ",",
+      "start_time": 610.9
+    },
+    {
+      "target_lang": "\u0639\u0632\u0632\u0647\u0627 \u0627\u0644\u0645\u062a\u0634\u062f\u062f\u0648\u0646.",
+      "end_time": 616.3,
+      "start_word": 1162,
+      "end_word": 1165,
+      "src_lang": "augmented by the Puritans.",
+      "reason": "gap>0.0",
+      "start_time": 613.7
+    },
+    {
+      "target_lang": "\u064a\u0627 \u0644\u0647 \u0645\u0646 \u0643\u0646\u0632 \u064a\u062c\u0644\u0628\u0647 \u0644\u0646\u0627 \u0639\u0644\u0645 \u0627\u0644\u0644\u0627\u0647\u0648\u062a \u0627\u0644\u0645\u0635\u0644\u062d",
+      "end_time": 622.0,
+      "start_word": 1166,
+      "end_word": 1172,
+      "src_lang": "What a treasure Reformed theology brings us",
+      "reason": ".",
+      "start_time": 617.1
+    },
+    {
+      "target_lang": "\u062d\u0648\u0644 \u062e\u062f\u0645\u0629 \u062e\u0644\u0627\u0635 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633.",
+      "end_time": 626.7,
+      "start_word": 1173,
+      "end_word": 1180,
+      "src_lang": "about the saving ministry of the Holy Spirit.",
+      "reason": "gap>1.0",
+      "start_time": 623.4
+    },
+    {
+      "target_lang": "\u0641\u064a \u0627\u0644\u0648\u0627\u0642\u0639\u060c",
+      "end_time": 629.4,
+      "start_word": 1181,
+      "end_word": 1182,
+      "src_lang": "In fact,",
+      "reason": "gap>1.0",
+      "start_time": 628.3
+    },
+    {
+      "target_lang": "\u062f\u0639\u0627 BB Warfield \u062c\u0648\u0646 \u0643\u0627\u0644\u0641\u064a\u0646",
+      "end_time": 631.6,
+      "start_word": 1183,
+      "end_word": 1187,
+      "src_lang": "BB Warfield called John Calvin",
+      "reason": ",",
+      "start_time": 629.4
+    },
+    {
+      "target_lang": "\u0644\u0627\u0647\u0648\u062a\u064a \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633.",
+      "end_time": 635.0,
+      "start_word": 1188,
+      "end_word": 1193,
+      "src_lang": "The Theologian of the Holy Spirit.",
+      "reason": "gap>0.2",
+      "start_time": 631.9
+    },
+    {
+      "target_lang": "\u0648\u0627\u0633\u062a\u0645\u0631 \u0648\u0627\u0631\u0641\u064a\u0644\u062f \u0641\u064a \u0627\u0644\u0645\u0637\u0627\u0644\u0628\u0629",
+      "end_time": 637.0,
+      "start_word": 1194,
+      "end_word": 1199,
+      "src_lang": "And Warfield went on to claim",
+      "reason": ".",
+      "start_time": 635.4
+    },
+    {
+      "target_lang": "\u0627\u0644\u0639\u0642\u064a\u062f\u0629 \u0627\u0644\u0645\u062a\u0637\u0648\u0631\u0629",
+      "end_time": 639.0,
+      "start_word": 1200,
+      "end_word": 1202,
+      "src_lang": "the developed doctrine",
+      "reason": "gap>0.9",
+      "start_time": 638.0
+    },
+    {
+      "target_lang": "\u0645\u0646 \u0639\u0645\u0644 \u0627\u0644\u0631\u0648\u062d \u0627\u0644\u0642\u062f\u0633",
+      "end_time": 640.8,
+      "start_word": 1203,
+      "end_word": 1209,
+      "src_lang": "of the work of the Holy Spirit",
+      "reason": "of",
+      "start_time": 639.0
+    },
+    {
+      "target_lang": "\u0647\u064a \u0639\u0642\u064a\u062f\u0629 \u0627\u0644\u0625\u0635\u0644\u0627\u062d \u062d\u0635\u0631\u064a\u064b\u0627 \u060c",
+      "end_time": 643.6,
+      "start_word": 1210,
+      "end_word": 1214,
+      "src_lang": "is an exclusively Reformation doctrine,",
+      "reason": "gap>0.3",
+      "start_time": 641.2
+    },
+    {
+      "target_lang": "\u0648\u0639\u0644\u0649 \u0648\u062c\u0647 \u0627\u0644\u062e\u0635\u0648\u0635 \u0627\u0644\u0639\u0642\u064a\u062f\u0629 \u0627\u0644\u0625\u0635\u0644\u0627\u062d\u064a\u0629 \u060c",
+      "end_time": 645.7,
+      "start_word": 1215,
+      "end_word": 1220,
+      "src_lang": "and more particularly a Reformed doctrine,",
+      "reason": ",",
+      "start_time": 643.6
+    },
+    {
+      "target_lang": "\u0648\u0644\u0627 \u064a\u0632\u0627\u0644 \u0639\u0644\u0649 \u0648\u062c\u0647 \u0627\u0644\u062e\u0635\u0648\u0635 \u0639\u0642\u064a\u062f\u0629 \u0628\u064a\u0648\u0631\u064a\u062a\u0627\u0646\u064a\u0629.",
+      "end_time": 648.5,
+      "start_word": 1221,
+      "end_word": 1227,
+      "src_lang": "and still more particularly a Puritan doctrine.",
+      "reason": ",",
+      "start_time": 645.9
+    },
+    {
+      "target_lang": "\u0648\u0647\u0643\u0630\u0627\u060c",
+      "end_time": 651.4,
+      "start_word": 1228,
+      "end_word": 1229,
+      "src_lang": "And so,",
+      "reason": "gap>1.0",
+      "start_time": 650.8
+    },
+    {
+      "target_lang": "\u062f\u0631\u0627\u0633\u0629 \u0627\u0644\u0631\u0648\u062d",
+      "end_time": 653.3,
+      "start_word": 1230,
+      "end_word": 1233,
+      "src_lang": "study of the Spirit",
+      "reason": ",",
+      "start_time": 652.1
+    },
+    {
+      "target_lang": "\u0645\u0646 \u062e\u0644\u0627\u0644 \u0639\u0644\u0645 \u0627\u0644\u062e\u0644\u0627\u0635 \u0627\u0644\u062a\u062c\u0631\u064a\u0628\u064a \u0627\u0644\u0645\u064f\u0635\u0644\u062d \u060c",
+      "end_time": 659.0,
+      "start_word": 1234,
+      "end_word": 1237,
+      "src_lang": "through Reformed experiential soteriology,",
+      "reason": "gap>1.0",
+      "start_time": 654.5
+    },
+    {
+      "target_lang": "- \u0647\u0630\u0627 \u0647\u0648\u060c",
+      "end_time": 659.7,
+      "start_word": 1238,
+      "end_word": 1239,
+      "src_lang": "- that is,",
+      "reason": ",",
+      "start_time": 659.4
+    },
+    {
+      "target_lang": "\u0627\u0644\u062e\u0644\u0627\u0635 \u0627\u0644\u0630\u064a \u0646\u062e\u062a\u0628\u0631\u0647",
+      "end_time": 661.5,
+      "start_word": 1240,
+      "end_word": 1243,
+      "src_lang": "salvation that we experience",
+      "reason": ",",
+      "start_time": 659.7
+    },
+    {
+      "target_lang": "\u0645\u0646 \u062e\u0644\u0627\u0644 \u0627\u0644\u0639\u0645\u0644",
+      "end_time": 662.4,
+      "start_word": 1244,
+      "end_word": 1246,
+      "src_lang": "by the work",
+      "reason": "gap>0.2",
+      "start_time": 661.8
+    },
+    {
+      "target_lang": "\u0644\u0644\u0631\u0648\u062d \u0641\u064a \u0627\u0644\u0631\u0648\u062d -",
+      "end_time": 663.6,
+      "start_word": 1247,
+      "end_word": 1252,
+      "src_lang": "of the Spirit in the soul -",
+      "reason": "of",
+      "start_time": 662.4
+    },
+    {
+      "target_lang": "\u064a\u0641\u062a\u062d \u062b\u0631\u0648\u0629 \u0647\u0627\u0626\u0644\u0629 \u0645\u0646 \u0627\u0644\u062d\u0643\u0645\u0629",
+      "end_time": 667.2,
+      "start_word": 1253,
+      "end_word": 1259,
+      "src_lang": "opens up a vast wealth of wisdom",
+      "reason": "gap>0.4",
+      "start_time": 664.1
+    },
+    {
+      "target_lang": "\u0648\u0627\u0644\u0641\u0631\u062d \u0644\u0644\u0645\u0624\u0645\u0646.",
+      "end_time": 670.5,
+      "start_word": 1260,
+      "end_word": 1264,
+      "src_lang": "and joy to the believer.",
+      "reason": "gap>0.5",
+      "start_time": 667.8
+    }
+  ]
+}

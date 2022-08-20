@@ -2,7 +2,8 @@
 
 import json
 import fire
-from functions import get_phrases, Word, Phrase
+from functions import get_phrases
+from classes import *
 
 
 def cmd(words_file: str):
@@ -12,8 +13,13 @@ def cmd(words_file: str):
             words.append(Word(**word))
 
     phrases = get_phrases(words, 'en')
+    container = PhrasesContainer(
+        phrases=phrases,
+        src_lang='en',
+        target_lang='ar',
+    )
 
-    print(Phrase.schema().dumps(phrases, many=True, indent=2))
+    print(container.to_json(indent=2))
 
 
 if __name__ == "__main__":

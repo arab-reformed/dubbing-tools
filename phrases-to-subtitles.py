@@ -3,21 +3,16 @@
 import json
 import fire
 from typing import List
-from functions import Phrase, Project
+from classes import *
 import dotenv
 
 dotenv.load_dotenv()
 
 
-def cmd(phrases_file: str, lang: int):
-    with open(phrases_file, 'r') as f:
-        phrases = []  # type: List[Phrase]
-        for phrase in json.load(f):
-            phrases.append(Phrase(**phrase))
+def cmd(phrases_file: str, lang: str):
+    container = PhrasesContainer.load_file(phrases_file)
 
-    project = Project(phrases=phrases, src_lang='en', target_lang='ar')
-
-    print(project.to_srt(lang=lang))
+    print(container.to_srt(lang=lang))
 
 
 if __name__ == "__main__":

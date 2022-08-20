@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-from functions import jsonify, Word
+from functions import jsonify
+from classes import *
 import json
 import os
 import fire
@@ -32,6 +33,7 @@ def cmd(json_file: str, text_file: str):
                 while j < len(words):
                     timing = transcript[i]['words'][k]
                     word = Word(
+                        id=len(timings),
                         word=words[j].strip(),
                         start_time=Word.secs_to_float(timing['start_time']),
                         end_time=Word.secs_to_float(timing['end_time']),
