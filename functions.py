@@ -106,6 +106,7 @@ class Phrase:
 
     SRC_LANG = 1
     TARGET_LANG = 2
+    BOTH_LANGS = 3
 
     def word_count(self) -> int:
         return self.end_word - self.start_word + 1
@@ -155,8 +156,11 @@ class Phrase:
             minutes, seconds = divmod(seconds, 60)
             hours, minutes = divmod(minutes, 60)
             return "%d:%d:%d,%d" % (hours, minutes, seconds, millisecs)
+
         if lang == self.SRC_LANG:
             text = self.src_lang
+        elif lang == self.BOTH_LANGS:
+            text = f"{self.src_lang}\n{self.target_lang}"
         else:
             text = self.target_lang
 
@@ -165,7 +169,7 @@ class Phrase:
 
 @dataclass_json
 @dataclass
-class Phrases:
+class Project:
     src_lang: str
     target_lang: str
     phrases: List[Phrase] = None
