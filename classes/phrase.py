@@ -83,3 +83,13 @@ class Phrase:
                 end_word=start_word+len(words)-1
             )
         )
+
+    def to_srt(self, lang: str) -> str:
+        def _srt_time(seconds):
+            seconds, milli_secs = divmod(seconds*1000, 1000)
+            minutes, seconds = divmod(seconds, 60)
+            hours, minutes = divmod(minutes, 60)
+            return "%d:%d:%d,%d" % (hours, minutes, seconds, milli_secs)
+
+        return f"{self.id}\n" + _srt_time(self.source.start_time) + " --> " \
+               + _srt_time(self.source.end_time) + f"\n{self.get_text(lang)}"

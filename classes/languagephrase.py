@@ -25,26 +25,15 @@ class LanguagePhrase:
     start_time: float = None
     end_time: float = None
     audio_file: str = None
+    audio_duration: float = None
 
     def gap_between(self, next_phrase: 'LanguagePhrase'):
         return round(next_phrase.start_time - self.end_time, 2)
 
-    def word_count(self) -> int:
-        return self.end_word - self.start_word + 1
-
-    def duration(self) -> float:
-        return round(self.end_time - self.start_time, 2)
-
-    def to_srt(self, lang: str) -> str:
-        def _srt_time(seconds):
-            millisecs = seconds * 1000
-            seconds, millisecs = divmod(millisecs, 1000)
-            minutes, seconds = divmod(seconds, 60)
-            hours, minutes = divmod(minutes, 60)
-            return "%d:%d:%d,%d" % (hours, minutes, seconds, millisecs)
-
-        return f"{self.id}\n" + _srt_time(self.start_time) + " --> " \
-               + _srt_time(self.end_time) + f"\n{self.get_text(lang)}"
+    def duration(self) -> Optional[float]:
+        if self.start_time is not None and self.end_time is not None:
+            return round(self.end_time - self.start_time, 2)
+        return None
 
     def speak(self, voice_name: str = None, speaking_rate: float = 1.0):
 
@@ -55,10 +44,10 @@ class LanguagePhrase:
         client = texttospeech.TextToSpeechClient()
 
         # Set the text input to be synthesized
-        synthesis_input = texttospeech.SynthesisInput(text=self.get_text(lang))
+        synthesis_input = texttospeech.SynthesisInput(text=self.get_text(self.lang))
 
         voice = texttospeech.VoiceSelectionParams(
-            language_code=lang,
+            language_code=self.lang,
             name=voice_name
         )
 
@@ -78,16 +67,16 @@ class LanguagePhrase:
 
         return response.audio_content
 
-    def speak_under_duration(self, lang: str, voice_name: str = None):
+    def speak_under_duration(self, voice_name: str = None):
 
-        base_audio = self.speak(lang, voice_name=voice_name)
+        base_audio = self.speak(voice_name=voice_name)
         assert len(base_audio)
 
         f = tempfile.NamedTemporaryFile(mode="w+b")
         f.write(base_audio)
         f.flush()
 
-        self.target_duration = AudioSegment.from_mp3(f.name).duration_seconds
+        self.audio_duration = AudioSegment.from_mp3(f.name).duration_seconds
         f.close()
         ratio = self.target_duration / self.duration()
 
@@ -101,13 +90,12 @@ class LanguagePhrase:
             ratio = 4
 
         return self.speak(
-            lang=lang,
             voice_name=voice_name,
             speaking_rate=ratio
         )
 
-    def save_audio(self, output_path, lang: str, overwrite: bool = False, use_duration: bool = True):
-        language_path = os.path.join(output_path, lang)
+    def save_audio(self, output_path, overwrite: bool = False, use_duration: bool = True):
+        language_path = os.path.join(output_path, self.lang)
 
         if not os.path.exists(language_path):
             os.mkdir(language_path)
@@ -116,9 +104,9 @@ class LanguagePhrase:
         if overwrite or not os.path.exists(file):
             print(f"Generating: {file}", file=sys.stderr)
             if use_duration:
-                audio = self.speak_under_duration(lang=lang)
+                audio = self.speak_under_duration()
             else:
-                audio = self.speak(lang=lang)
+                audio = self.speak()
 
             with open(file, 'wb') as f:
                 f.write(audio)
@@ -129,7 +117,7 @@ class LanguagePhrase:
         # if self.target_duration is None and os.path.exists(self.audio_file):
         #     self.set_target_duration()
 
-    def get_target_duration(self) -> Optional[float]:
+    def get_audio_duration(self) -> Optional[float]:
         if self.audio_file:
             return AudioSegment.from_mp3(self.audio_file).duration_seconds
 
