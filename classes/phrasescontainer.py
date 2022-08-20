@@ -2,7 +2,7 @@ from google.cloud import translate_v2 as translate
 from typing import List, Optional
 from dataclasses import dataclass, field
 from dataclasses_json import dataclass_json
-from .phrase import Phrase
+from .phrase import OldPhrase
 import json
 
 
@@ -11,11 +11,14 @@ import json
 class PhrasesContainer:
     src_lang: str
     target_lang: str
-    phrases: List[Phrase] = field(default_factory=list)
+    phrases: List[OldPhrase] = field(default_factory=list)
 
     # def __post_init__(self):
     #     if self.phrases is None:
     #         self.phrases = []
+
+    def phrase_count(self):
+        return len(self.phrases)
 
     def translate(self):
         for phrase in self.phrases:
@@ -44,11 +47,11 @@ class PhrasesContainer:
     def load_file(cls, file_name):
         with open(file_name, 'r') as f:
             data = json.load(f)
-            phrases = []  # type: List[Phrase]
+            phrases = []  # type: List[OldPhrase]
             for i, phrase in enumerate(data['phrases']):
                 if 'id' not in phrase:
                     phrase['id'] = i
-                phrases.append(Phrase(**phrase))
+                phrases.append(OldPhrase(**phrase))
 
         return PhrasesContainer(
             phrases=phrases,

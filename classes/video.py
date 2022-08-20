@@ -1,5 +1,6 @@
+import sys
 from dataclasses import dataclass
-from classes import Phrase, PhrasesContainer
+from classes import OldPhrase, PhrasesContainer
 import os
 from pydub import AudioSegment
 from moviepy.editor import VideoFileClip, AudioFileClip, CompositeVideoClip
@@ -19,8 +20,8 @@ class Video:
     AUDIO_CLIPS_SUBDIR = 'audio-clips'
 
     def dub_audio(self, lang: str, overwrite: bool = False, overlay_gain: int = -30):
-        if os.path.exists(self.target_file):
-            return
+        # if os.path.exists(self.target_file):
+        #     return
 
         output_files = os.listdir(self.output_path)
 
@@ -28,8 +29,11 @@ class Video:
         if self.AUDIO_CLIPS_SUBDIR not in output_files:
             os.mkdir(audio_dir)
 
-        print(f"Synthesizing audio for {lang}")
-        self.transcript.save_audio(output_path=audio_dir, lang=lang)
+        print(f"Synthesizing audio for {lang}", file=sys.stderr)
+        self.transcript.save_audio(output_path=audio_dir, lang=lang, overwrite=overwrite)
+
+        if os.path.exists(self.target_file):
+            return
 
         dubbed_path = os.path.join(self.output_path, self.DUBBED_VIDEO_SUBDIR)
 

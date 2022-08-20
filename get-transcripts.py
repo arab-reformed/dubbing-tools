@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys
 
 from dubber import get_transcripts_json, parse_sentence_with_speaker
 import json
@@ -30,7 +31,7 @@ def cmd(audio_file: str):
 
     with open(sentences_file, "w") as f:
         json.dump(sentences, f)
-    print(f"Wrote {sentences_file}")
+    print(f"Wrote {sentences_file}", file=sys.stderr)
 
 
 if __name__ == "__main__":

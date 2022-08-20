@@ -14,7 +14,7 @@ def cmd(phrases_file: str):
     for phrase in container.phrases:
         phrase.translate_text('ar', 'en')
 
-    print(Phrase.schema().dumps(container, ensure_ascii=False, indent=2))
+    print(container.to_json(indent=2))
 
 
 if __name__ == "__main__":

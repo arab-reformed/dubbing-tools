@@ -12,8 +12,8 @@ def jsonify(result):
         section_alt = section['alternatives'][0]
         if 'transcript' in section_alt:
             # import pprint
-            # print(i)
-            # pprint.pprint(section_alt)
+            # print(i, file=sys.stderr)
+            # pprint.pprint(section_alt, file=sys.stderr)
             data = {
                 "transcript": section_alt['transcript'],
                 "end_time": section['resultEndTime'],
@@ -54,7 +54,7 @@ def get_phrases(words: List[Word], lang: str, gap: float = 1.0):
     reason = None
     for i, word in enumerate(words):
         if not phrase:
-            phrase = Phrase(
+            phrase = OldPhrase(
                 id=len(phrases),
                 src_lang=word.word,
                 start_time=word.start_time,
