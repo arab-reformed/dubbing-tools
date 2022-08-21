@@ -12,6 +12,12 @@ class Transcript:
     src_lang: str
     words: list[Word] = field(default_factory=list)
 
+    def phrase_count(self) -> int:
+        return len(self.phrases)
+
+    def words_count(self) -> int:
+        return len(self.words)
+
     def to_srt(self, lang: str, include_source: bool = False) -> str:
         srt = ''
         for phrase in self.phrases:

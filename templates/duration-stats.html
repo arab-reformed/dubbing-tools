@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Duration Statistics - {{ data_file }}</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Target<br/>Duration</th>
+        <th>Source<br/>Duration</th>
+        <th>Ratio</th>
+        <th>Gap<br/>After</th>
+        <th>Target Text</th>
+        <th>Source Text</th>
+    </tr>
+    {% for phrase in phrases %}
+        <tr>
+            <td>{{ phrase.target.natural_duration }}</td>
+            <td>{{ phrase.source.duration() }}</td>
+            <td>{{ phrase.ratio }}</td>
+            <td>{{ phrase.gap_between }}</td>
+            <td>{{ phrase.target.text }}</td>
+            <td>{{ phrase.source.text }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
