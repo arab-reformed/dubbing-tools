@@ -78,12 +78,14 @@ class Phrase:
             )
         )
 
-    def to_srt(self, lang: str) -> str:
-        def _srt_time(seconds):
-            seconds, milli_secs = divmod(seconds*1000, 1000)
-            minutes, seconds = divmod(seconds, 60)
-            hours, minutes = divmod(minutes, 60)
-            return "%d:%d:%d,%d" % (hours, minutes, seconds, milli_secs)
+    def to_srt(self, lang: str = None) -> str:
+        if lang is None:
+            return self.source.to_srt(self.source)
+        else:
+            return self.get_target(lang).to_srt(source=self.source)
 
-        return f"{self.id}\n" + _srt_time(self.source.start_time) + " --> " \
-               + _srt_time(self.source.end_time) + f"\n{self.get_text(lang)}"
+    def to_ass(self, style_name: str, lang: str = None) -> str:
+        if lang is None:
+            return self.source.to_ass(source=self.source, style_name=style_name)
+        else:
+            return self.get_target(lang).to_ass(source=self.source, style_name=style_name)

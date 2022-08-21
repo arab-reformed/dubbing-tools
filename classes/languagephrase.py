@@ -8,6 +8,7 @@ from dataclasses_json import dataclass_json
 from .word import Word
 import tempfile
 import os
+import re
 
 
 @dataclass_json
@@ -122,3 +123,71 @@ class LanguagePhrase:
             return AudioSegment.from_mp3(self.audio_file).duration_seconds
 
         return None
+
+    @staticmethod
+    def time_to_str(seconds: float, milli_sep: str = '.') -> str:
+        millisecs = seconds * 1000
+        seconds, millisecs = divmod(millisecs, 1000)
+        minutes, seconds = divmod(seconds, 60)
+        hours, minutes = divmod(minutes, 60)
+        return "%d:%02d:%02d%s%02d" % (hours, minutes, seconds, milli_sep, millisecs/10)
+
+    def to_srt(self, source: 'SourceLanguagePhrase') -> str:
+        start = self.start_time if self.start_time else source.start_time
+        end = self.end_time if self.end_time else source.end_time
+
+        return f"{self.id}\n" \
+               + self.time_to_str(start, milli_sep=',') \
+               + " --> " \
+               + self.time_to_str(end, milli_sep=',') \
+               + f"\n{self.text}"
+
+    def to_ass(self, source: 'SourceLanguagePhrase', style_name: str):
+        # Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+        # Dialogue: 0,0:00:00.63,0:00:04.56,Arabic,,0,0,0,,أود أن ألفت انتباهكم إلى خمسة أمور
+        start = self.start_time if self.start_time else source.start_time
+        end = self.end_time if self.end_time else source.end_time
+
+        return f"Dialogue: 0,{self.time_to_str(start)},{self.time_to_str(end)},{style_name},,0,0,0,,{self.subtitle_text()}"
+
+    def subtitle_text(self) -> str:
+        def number_replace(m: re.Match):
+            num = str(m.group(0))
+            # print('Number:', num, file=sys.stderr)
+            num = num.replace('0', '٠')
+            num = num.replace('1', '١')
+            num = num.replace('2', '٢')
+            num = num.replace('3', '٣')
+            num = num.replace('4', '٤')
+            num = num.replace('5', '٥')
+            num = num.replace('6', '٦')
+            num = num.replace('7', '٧')
+            num = num.replace('8', '٨')
+            num = num.replace('9', '٩')
+
+            # num = '\u202d' + num + '\u202e'
+
+            reverse = ''
+            for i in range(len(num)):
+                reverse = num[i] + reverse
+
+            return reverse
+
+        text = self.text
+
+        loop = 1
+        while loop:
+            (text, loop) = re.subn(
+                r'(?P<start>(^|\\N)"*)(?P<punc>[.،:])(?P<line>[^.].*?)(?P<end>$|\\N)',
+                r'\g<start>\g<line>\g<punc>\g<end>',
+                text
+            )
+
+        text = re.sub(r'\\N', '\\\\N\u202e', text, flags=re.UNICODE)
+        text = re.sub(r'\.', '\u202e.', text, flags=re.UNICODE)
+        text = re.sub(r'،', '\u202e،', text, flags=re.UNICODE)
+        text = re.sub(r'\(', '\u202e(', text, flags=re.UNICODE)
+        text = re.sub(r'\d+', number_replace, text)
+        text = '\u202e' + text
+
+        return text
