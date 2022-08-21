@@ -66,3 +66,12 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             subtitles += "\n"
 
         return subtitles
+
+    def to_csv(self, lang: str) -> list[tuple]:
+        csv = [
+            ('Id', 'Start', 'End', 'Source', 'Translation')
+        ]
+        for phrase in self.phrases:
+            csv.append(phrase.to_csv(lang=lang))
+
+        return csv

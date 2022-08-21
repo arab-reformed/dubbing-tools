@@ -93,3 +93,12 @@ class Phrase:
                 style_name=style_name,
                 include_source=include_source
             )
+
+    def to_csv(self, lang: str) -> tuple:
+        return (
+            self.id,
+            self.source.start_time,
+            self.source.end_time,
+            self.source.text,
+            self.get_target(lang).text,
+        )
