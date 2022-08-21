@@ -132,23 +132,31 @@ class LanguagePhrase:
         hours, minutes = divmod(minutes, 60)
         return "%d:%02d:%02d%s%02d" % (hours, minutes, seconds, milli_sep, millisecs/10)
 
-    def to_srt(self, source: 'SourceLanguagePhrase') -> str:
+    def to_srt(self, source: 'SourceLanguagePhrase', include_source: bool = False) -> str:
         start = self.start_time if self.start_time else source.start_time
         end = self.end_time if self.end_time else source.end_time
+
+        text = self.subtitle_text()
+        if include_source:
+            text = source.subtitle_text() + '\n' + text
 
         return f"{self.id}\n" \
                + self.time_to_str(start, milli_sep=',') \
                + " --> " \
                + self.time_to_str(end, milli_sep=',') \
-               + f"\n{self.text}"
+               + f"\n{text}"
 
-    def to_ass(self, source: 'SourceLanguagePhrase', style_name: str):
+    def to_ass(self, source: 'SourceLanguagePhrase', style_name: str, include_source: bool = False):
         # Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         # Dialogue: 0,0:00:00.63,0:00:04.56,Arabic,,0,0,0,,أود أن ألفت انتباهكم إلى خمسة أمور
         start = self.start_time if self.start_time else source.start_time
         end = self.end_time if self.end_time else source.end_time
 
-        return f"Dialogue: 0,{self.time_to_str(start)},{self.time_to_str(end)},{style_name},,0,0,0,,{self.subtitle_text()}"
+        text = self.subtitle_text()
+        if include_source:
+            text = '\u202d' + source.subtitle_text() + '\\N' + text
+
+        return f"Dialogue: 0,{self.time_to_str(start)},{self.time_to_str(end)},{style_name},,0,0,0,,{text}"
 
     def subtitle_text(self) -> str:
         def number_replace(m: re.Match):
@@ -174,20 +182,21 @@ class LanguagePhrase:
             return reverse
 
         text = self.text
+        text = text.replace("\n", '\\N')
 
-        loop = 1
-        while loop:
-            (text, loop) = re.subn(
-                r'(?P<start>(^|\\N)"*)(?P<punc>[.،:])(?P<line>[^.].*?)(?P<end>$|\\N)',
-                r'\g<start>\g<line>\g<punc>\g<end>',
-                text
-            )
-
-        text = re.sub(r'\\N', '\\\\N\u202e', text, flags=re.UNICODE)
-        text = re.sub(r'\.', '\u202e.', text, flags=re.UNICODE)
-        text = re.sub(r'،', '\u202e،', text, flags=re.UNICODE)
-        text = re.sub(r'\(', '\u202e(', text, flags=re.UNICODE)
-        text = re.sub(r'\d+', number_replace, text)
-        text = '\u202e' + text
+        if self.lang == 'ar':
+            loop = 1
+            while loop:
+                (text, loop) = re.subn(
+                    r'(?P<start>(^|\\N)"*)(?P<punc>[.،:])(?P<line>[^.].*?)(?P<end>$|\\N)',
+                    r'\g<start>\g<line>\g<punc>\g<end>',
+                    text
+                )
+            text = re.sub(r'\\N', '\\\\N\u202e', text, flags=re.UNICODE)
+            text = re.sub(r'\.', '\u202e.', text, flags=re.UNICODE)
+            text = re.sub(r'،', '\u202e،', text, flags=re.UNICODE)
+            text = re.sub(r'\(', '\u202e(', text, flags=re.UNICODE)
+            text = re.sub(r'\d+', number_replace, text)
+            text = '\u202e' + text
 
         return text

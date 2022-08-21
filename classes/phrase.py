@@ -78,14 +78,18 @@ class Phrase:
             )
         )
 
-    def to_srt(self, lang: str = None) -> str:
+    def to_srt(self, lang: str = None, include_source: bool = False) -> str:
         if lang is None:
             return self.source.to_srt(self.source)
         else:
-            return self.get_target(lang).to_srt(source=self.source)
+            return self.get_target(lang).to_srt(source=self.source, include_source=include_source)
 
-    def to_ass(self, style_name: str, lang: str = None) -> str:
+    def to_ass(self, style_name: str, lang: str = None, include_source: bool = False) -> str:
         if lang is None:
             return self.source.to_ass(source=self.source, style_name=style_name)
         else:
-            return self.get_target(lang).to_ass(source=self.source, style_name=style_name)
+            return self.get_target(lang).to_ass(
+                source=self.source,
+                style_name=style_name,
+                include_source=include_source
+            )
