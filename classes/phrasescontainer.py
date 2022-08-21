@@ -2,7 +2,7 @@ from google.cloud import translate_v2 as translate
 from typing import List, Optional
 from dataclasses import dataclass, field
 from dataclasses_json import dataclass_json
-from .phrase import OldPhrase
+from .oldphrase import OldPhrase
 import json
 
 

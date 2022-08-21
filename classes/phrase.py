@@ -1,16 +1,10 @@
 from dataclasses import dataclass, field
 from .languagephrase import LanguagePhrase
-from typing import List, Dict
-import sys
-from pydub import AudioSegment
-from google.cloud import texttospeech
 from google.cloud import translate_v2 as translate
 from typing import List, Optional
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
 from .word import Word
-import tempfile
-import os
 from .sourcelanguagePhrase import SourceLanguagePhrase
 
 

@@ -25,7 +25,7 @@ class LanguagePhrase:
     start_time: float = None
     end_time: float = None
     audio_file: str = None
-    audio_duration: float = None
+    natural_duration: float = None
 
     def gap_between(self, next_phrase: 'LanguagePhrase'):
         return round(next_phrase.start_time - self.end_time, 2)

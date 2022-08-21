@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import json
+import os.path
+
 import fire
 from typing import List
 from classes import *
@@ -34,15 +36,28 @@ def cmd(phrases_file: str, words_file: str):
             )
         )
         p.set_text(target_lang, phrase['target_lang'])
+        if 'target_duration' in phrase:
+            p.get_target(target_lang).natural_duration = phrase['target_duration']
+
+        if 'audio_file' in phrase:
+            path = os.path.relpath(phrase['audio_file'])
+            p.get_target(target_lang).audio_file = path
+
         phrases.append(p)
+
+    words = []  # type: list[Word]
+    for word in word_data:
+        if 'id' not in word:
+            word['id'] = len(words) + 1
+        words.append(Word.from_dict(word))
 
     transcript = Transcript(
         src_lang=src_lang,
         phrases=phrases,
-        words=word_data
+        words=words
     )
 
-    print(transcript.to_json(indent=2))
+    print(transcript.to_json(indent=2, ensure_ascii=False))
 
 
 if __name__ == "__main__":
