@@ -14,9 +14,6 @@ import re
 @dataclass_json
 @dataclass
 class LanguagePhrase:
-    SRC_LANG = 'en'
-    TARGET_LANG = 'ar'
-    ALL_LANGS = 'all'
     VOICES = {
         'ar': 'ar-XA-Wavenet-B',
     }
@@ -35,6 +32,9 @@ class LanguagePhrase:
         if self.start_time is not None and self.end_time is not None:
             return round(self.end_time - self.start_time, 2)
         return None
+
+    def audio_speed(self):
+        return self.natural_duration / self.duration()
 
     def speak(self, voice_name: str = None, speaking_rate: float = 1.0):
 

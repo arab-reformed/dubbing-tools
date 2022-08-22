@@ -212,3 +212,49 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         txt += f"{section_text}\n\n"
 
         return txt
+
+    def speed_sort(self, lang: str):
+        self.phrases.sort(key=lambda p: p.get_target(lang).audio_speed(), reverse=True)
+
+    def id_sort(self, lang: str):
+        self.phrases.sort(key=lambda p: p.id, reverse=False)
+
+    def gap_between(self, lang: str, id1: int, id2: int) -> Optional[float]:
+        if id2 > self.phrase_count()-1 or id1 < 0:
+            return None
+
+        return self.phrases[id2].get_target(lang).start_time - self.phrases[id1].get_target(lang).end_time
+
+    def adjust_timings(self, lang: str):
+        # set the start and end times for the target language
+        i = 0
+        speeds = []  # type: list[Phrase]
+        for phrase in self.phrases:
+            phrase.id = i
+            i += 1
+
+            target = phrase.get_target(lang)
+            target.start_time = phrase.source.start_time
+            target.end_time = target.start_time + target.natural_duration
+
+            speeds.append(phrase)
+
+        finished = False
+        while not finished:
+            finished = True
+            speeds.sort(key=lambda p: p.get_target(lang).audio_speed(), reverse=True)
+
+            for phrase in speeds:
+                if phrase.speed() > 1.5:
+                    # look ahead and back 3 blocks
+                    gap = self.gap_between(lang, phrase.id+3, phrase.id+4)
+                    pass
+
+                elif phrase.audio_speed() > 1.3:
+                    # look ahead and back 2 blocks
+                    pass
+
+                elif phrase.audio_speed() > 1.2:
+                    # look ahead and back 1 block
+                    pass
+
