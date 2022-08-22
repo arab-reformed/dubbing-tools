@@ -53,12 +53,12 @@ class Phrase:
                 lang=self.source.lang,
                 text=' '.join([w.word for w in words[split_at+1:self.source.end_word+1]]),
                 start_time=words[split_at+1].start_time,
-                end_time=words[self.end_word].end_time,
+                end_time=words[self.source.end_word].end_time,
                 start_word=split_at+1,
                 end_word=self.source.end_word
             )
         )
-        self.source.text = ' '.join([w.word for w in words[self.start_word:split_at + 1]])
+        self.source.text = ' '.join([w.word for w in words[self.source.start_word:split_at + 1]])
         self.source.end_time = words[split_at].end_time
         self.source.end_word = split_at
 

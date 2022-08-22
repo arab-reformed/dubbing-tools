@@ -3,14 +3,18 @@ from dataclasses import dataclass, field
 from .word import Word
 from .phrase import Phrase
 import json
+from .sourcelanguagePhrase import SourceLanguagePhrase
 
 
 @dataclass_json
 @dataclass
 class Transcript:
-    phrases: list[Phrase]
+    words: list[Word]
     src_lang: str
-    words: list[Word] = field(default_factory=list)
+
+    phrases: list[Phrase] = None
+    tts_lang: str = None
+    tts_duration: float = None
 
     def phrase_count(self) -> int:
         return len(self.phrases)
@@ -75,3 +79,136 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             csv.append(phrase.to_csv(lang=lang))
 
         return csv
+
+    @classmethod
+    def load_google_tts(cls, tts_file: str, phrase_gap: float = 1.0):
+        with open(tts_file, 'r') as f:
+            data = json.load(f)
+
+        words = []
+
+        for i, section in enumerate(data['results']):
+            section_alt = section['alternatives'][0]
+            if 'transcript' in section_alt:
+                for j, word in enumerate(section_alt['words']):
+                    words.append(Word(
+                        id=len(words),
+                        word=word['word'],
+                        start_time=Word.secs_to_float(word['startTime']),
+                        end_time=Word.secs_to_float(word['endTime']),
+                        manuscript_break_before=(j == 0),
+                    ))
+
+        transcript = cls(
+            src_lang=data['results'][0]['languageCode'].split('-')[0],
+            tts_lang=data['results'][0]['languageCode'],
+            tts_duration=Word.secs_to_float(data['results'][-1]['resultEndTime']),
+            words=words,
+        )
+
+        transcript.build_phrases(gap=phrase_gap)
+
+        return transcript
+
+    def build_phrases(self, gap: float = 1.0):
+        clauses = [
+            ['through', 'that', 'which', 'whereby', 'is'],
+            ['of', 'by', 'about', 'from', 'in', 'into', 'for']
+        ]
+
+        phrases = []
+        phrase = None
+        reason = None
+        for i, word in enumerate(self.words):
+            if phrase is None:
+                phrase = Phrase(
+                    id=len(phrases),
+                    source=SourceLanguagePhrase(
+                        lang=self.src_lang,
+                        text=word.word,
+                        start_time=word.start_time,
+                        end_time=word.end_time,
+                        start_word=i,
+                        end_word=i,
+                    ),
+                    reason=reason
+                )
+
+            else:
+                phrase.source.text += ' ' + word.word
+                phrase.source.end_time = word.end_time
+                phrase.source.end_word = i
+
+            if i < len(self.words)-1:
+                reason = word.break_reason(next_word=self.words[i+1], gap=gap)
+            else:
+                reason = None
+
+            # If there's greater than one second gap, assume this is a new sentence
+            if reason is not None:
+                phrases.append(phrase)
+                phrase = None
+
+        if phrase:
+            phrases.append(phrase)
+        import sys
+        # Process phrases to make sure none are too long
+        for small_gap in [0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0.0]:
+            changed = True
+            while changed:
+                changed = False
+                shortened = []
+                print(f"gap = {small_gap}", file=sys.stderr)
+                for p, phrase in enumerate(phrases):
+                    shortened.append(phrase)
+                    print(f"Phrase: {p}", file=sys.stderr)
+                    if phrase.source.word_count() > 6:
+                        for i in range(phrase.source.start_word+3, phrase.source.end_word-3):
+                            reason = self.words[i].break_reason(next_word=self.words[i+1], gap=small_gap)
+                            # print(i, reason, file=sys.stderr)
+                            if reason is not None:
+                                new = phrase.split(self.words, split_at=i)
+                                new.reason = reason
+                                shortened.append(new)
+                                changed = True
+                                break
+
+                phrases = shortened
+
+        for intros in clauses:
+            changed = True
+            while changed:
+                changed = False
+                shortened = []
+                for phrase in phrases:
+                    shortened.append(phrase)
+                    if phrase.source.word_count() > 6:
+                        for i in range(phrase.source.start_word+3, phrase.source.end_word-3):
+                            if self.words[i].word in intros:
+                                new = phrase.split(self.words, split_at=i-1)
+                                new.reason = self.words[i].word
+                                shortened.append(new)
+                                changed = True
+                                break
+
+                phrases = shortened
+
+        # renumber phrases
+        for i, phrase in enumerate(phrases):
+            phrase.id = i
+
+        self.phrases = phrases
+
+    def to_manuscript(self) -> str:
+        txt = ''
+        section_text = ''
+        for word in self.words:
+            if word.manuscript_break_before:
+                txt += f"{section_text}\n\n"
+                section_text = ''
+
+            section_text += (' ` ' if section_text else '') + word.word
+
+        txt += f"{section_text}\n\n"
+
+        return txt

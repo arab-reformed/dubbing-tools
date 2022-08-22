@@ -4,7 +4,7 @@ from functions import jsonify, textify
 import json
 import os
 import fire
-
+from classes import *
 
 SOURCE_LANG = 'en-US'
 SPEAKER_COUNT = 1
@@ -12,12 +12,9 @@ PHRASE_HINTS = []
 
 
 def cmd(transcript_file: str):
-    with open(transcript_file, 'r') as input:
-        transcript = json.load(input)
+    transcript = Transcript.load_file(transcript_file)
 
-    transcript = jsonify(transcript)
-
-    print(textify(transcript))
+    print(transcript.to_manuscript())
 
 
 if __name__ == "__main__":

@@ -12,6 +12,7 @@ class Word:
     start_time: float
     end_time: float
     hard_break: bool = False
+    manuscript_break_before: bool = False
 
     def __post_init__(self):
         self.set_word(self.word)
@@ -50,4 +51,3 @@ class Word:
     @staticmethod
     def secs_to_float(secs: str):
         return round(float(secs.replace('s', '')), 2)
-
