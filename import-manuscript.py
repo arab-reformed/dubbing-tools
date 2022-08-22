@@ -13,10 +13,8 @@ PHRASE_HINTS = []
 
 
 def cmd(json_file: str, text_file: str):
-    with open(json_file, 'r') as f:
-        transcript = json.load(f)
 
-    transcript = jsonify(transcript)
+    transcript = Transcript.load_file(json_file)
 
     timings = []
 
