@@ -33,6 +33,10 @@ class LanguagePhrase:
             return round(self.end_time - self.start_time, 2)
         return None
 
+    def reset_timing(self, source: 'LanguagePhrase'):
+        self.start_time = source.start_time
+        self.end_time = source.end_time
+
     def shift(self, increment: float) -> bool:
         # TODO: make sure not shifted past the end of the video
         if self.start_time - increment < 0:
@@ -42,21 +46,21 @@ class LanguagePhrase:
         self.end_time += increment
         return True
 
-    def shift_start(self, increment: float) -> bool:
+    def move_start(self, increment: float) -> bool:
         if self.start_time - increment < 0:
             return False
         self.start_time += increment
         return True
 
-    def shift_end(self, increment: float) -> bool:
+    def move_end(self, increment: float) -> bool:
         # TODO: make sure not shifted past the end of the video
         self.end_time += increment
         return True
 
     def audio_speed(self):
-        return self.natural_duration / self.duration()
+        return round(self.natural_duration / self.duration(),2)
 
-    def speak(self, voice_name: str = None, speaking_rate: float = 1.0):
+    def tts_audio(self, voice_name: str = None, speaking_rate: float = 1.0):
 
         if voice_name is None:
             voice_name = self.VOICES[self.lang]
@@ -88,38 +92,56 @@ class LanguagePhrase:
 
         return response.audio_content
 
-    def speak_under_duration(self, voice_name: str = None):
+    def natural_audio(self, output_path: str):
+        if os.path.exists(self.natural_audio_fullpath(output_path)):
 
-        base_audio = self.speak(voice_name=voice_name)
+    def get_tts_natural_audio(self, voice_name: str = None):
+        base_audio = self.tts_audio(voice_name=voice_name)
         assert len(base_audio)
 
-        f = tempfile.NamedTemporaryFile(mode="w+b")
-        f.write(base_audio)
-        f.flush()
+        return base_audio
 
-        self.audio_duration = AudioSegment.from_mp3(f.name).duration_seconds
-        f.close()
-        ratio = self.target_duration / self.duration()
+    def speak_under_duration(self, target_duration: float, voice_name: str = None):
+
+        ratio = target_duration / self.duration()
 
         # if the audio fits, return it
         if ratio <= 1:
-            return base_audio
+            return self.natural_audio()
 
         # round to one decimal point and go a little faster to be safe,
         ratio = round(ratio, 1)
         if ratio > 4:
             ratio = 4
 
-        return self.speak(
+        return self.tts_audio(
             voice_name=voice_name,
             speaking_rate=ratio
         )
 
-    def save_audio(self, output_path, overwrite: bool = False, use_duration: bool = True):
-        language_path = os.path.join(output_path, self.lang)
+    def audio_filename(self):
+        return f"{str(self.id).rjust(5, '0')}.mp3"
 
-        if not os.path.exists(language_path):
-            os.mkdir(language_path)
+    def natural_audio_path(self, output_path: str) -> str:
+        path = os.path.join(output_path, self.lang, 'natural')
+        if not os.path.exists(path):
+            os.mkdir(path)
+        return path
+
+    def natural_audio_fullpath(self, output_path: str) -> str:
+        return os.path.join(self.natural_audio_path(output_path), self.audio_filename())
+
+    def audio_path(self, output_path: str) -> str:
+        path = os.path.join(output_path, self.lang)
+        if not os.path.exists(path):
+            os.mkdir(path)
+        return path
+
+    def audio_fullpath(self, output_path: str) -> str:
+        return os.path.join(self.audio_path(output_path), self.audio_filename())
+
+    def save_audio(self, output_path, overwrite: bool = False, use_duration: bool = True):
+        language_path = self.audio_path(output_path)
 
         file = os.path.join(language_path, f"{self.id}.mp3")
         if overwrite or not os.path.exists(file):
@@ -127,7 +149,7 @@ class LanguagePhrase:
             if use_duration:
                 audio = self.speak_under_duration()
             else:
-                audio = self.speak()
+                audio = self.tts_audio()
 
             with open(file, 'wb') as f:
                 f.write(audio)
@@ -139,8 +161,14 @@ class LanguagePhrase:
         #     self.set_target_duration()
 
     def get_audio_duration(self) -> Optional[float]:
-        if self.audio_file:
+        if os.path.exists(self.audio_file):
             return AudioSegment.from_mp3(self.audio_file).duration_seconds
+
+        return None
+
+    def get_natural_audio_duration(self, output_path: str) -> Optional[float]:
+        if os.path.exists(self.natural_audio_fullpath(output_path)):
+            return AudioSegment.from_mp3(self.natural_audio_fullpath(output_path)).duration_seconds
 
         return None
 

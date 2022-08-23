@@ -5,11 +5,15 @@ from .phrase import Phrase
 import json
 from .sourcelanguagePhrase import SourceLanguagePhrase
 from typing import Optional
+import sys
 
 MINIMUM_GAP = 0.2
-GAP_INCREMENT = 0.1
-MAX_SPEED = 1.2
-
+GAP_INCREMENT = 0.05
+SPEED_MODERATE = 1.2
+SPEED_VERY_FAST = 1.8
+SPEED_FAST = 1.6
+SPEED_HIGH_MODERATE = 1.4
+SPEED_MODERATE = 1.3
 
 @dataclass_json
 @dataclass
@@ -224,45 +228,52 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     def id_sort(self, lang: str):
         self.phrases.sort(key=lambda p: p.id, reverse=False)
 
+    def reset_timings(self, lang: str):
+        for phrase in self.phrases:
+            phrase.get_target(lang).reset_timing(phrase.source)
+
     def gap_between(self, lang: str, id1: int, id2: int) -> Optional[float]:
         if id2 > self.phrase_count()-1 or id1 < 0:
             return None
 
-        return self.phrases[id2].get_target(lang).start_time - self.phrases[id1].get_target(lang).end_time
+        return round(self.phrases[id2].get_target(lang).start_time - self.phrases[id1].get_target(lang).end_time, 3)
 
     def adjust_timings(self, lang: str):
         # set the start and end times for the target language
+        self.reset_timings(lang=lang)
         i = 0
         speeds = []  # type: list[Phrase]
         for phrase in self.phrases:
             phrase.id = i
             i += 1
 
-            target = phrase.get_target(lang)
-            target.start_time = phrase.source.start_time
-            target.end_time = phrase.source.end_time
-
             speeds.append(phrase)
 
+        iterations = 0
         finished = False
-        while not finished:
+        while not finished and iterations < 4000:
             finished = True
+            iterations += 1
             speeds.sort(key=lambda p: p.get_target(lang).audio_speed(), reverse=True)
 
+            # print("Looping...", file=sys.stderr)
             for phrase in speeds:
                 target = phrase.get_target(lang)
-                if target.audio_speed() <= MAX_SPEED:
+                # print(f"Speed: {target.audio_speed()}", file=sys.stderr)
+
+                if target.audio_speed() <= SPEED_MODERATE:
+                    finished = True
                     break
 
-                if target.audio_speed() > 1.7:
+                if target.audio_speed() > SPEED_VERY_FAST:
                     # look ahead and back 3 blocks
                     look = 4
 
-                elif target.audio_speed() > 1.5:
+                elif target.audio_speed() > SPEED_FAST:
                     # look ahead and back 2 blocks
                     look = 3
 
-                elif target.audio_speed() > 1.3:
+                elif target.audio_speed() > SPEED_HIGH_MODERATE:
                     # look ahead and back 1 block
                     look = 2
 
@@ -272,33 +283,41 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                 for i in range(0, look+1):
                     gap = self.gap_between(lang, phrase.id+i, phrase.id+i+1)
                     if gap is not None and gap > MINIMUM_GAP + GAP_INCREMENT:
-                        if target.shift_end(GAP_INCREMENT):
+                        if target.move_end(GAP_INCREMENT):
                             for j in range(i, 0, -1):
                                 self.phrases[phrase.id+i].get_target(lang).shift(GAP_INCREMENT)
                             finished = False
+                            # print(f"Gap+: {gap}, Ratio: {target.audio_speed()} Id: {phrase.id}, Btwn: {phrase.id+i}-{phrase.id+i+1}", file=sys.stderr)
                             break
 
                     gap = self.gap_between(lang, phrase.id-i-1, phrase.id-i)
                     if gap is not None and gap > MINIMUM_GAP + GAP_INCREMENT:
-                        if target.shift_start(-GAP_INCREMENT):
+                        if target.move_start(-GAP_INCREMENT):
                             for j in range(i, 0, -1):
                                 self.phrases[phrase.id-i].get_target(lang).shift(-GAP_INCREMENT)
                             finished = False
+                            # print(f"Gap-: {gap}, Ratio: {target.audio_speed()}, Id: {phrase.id}, Btwn: {phrase.id-i-1}-{phrase.id-i}", file=sys.stderr)
                             break
 
-                for i in range(0, look+1):
+                if not finished:
+                    break
+
+                # print("Checking for compressible blocks...", file=sys.stderr)
+                for i in range(1, look+1):
                     if phrase.id+i < self.phrase_count():
                         next_target = self.phrases[phrase.id+i].get_target(lang)
-                        if next_target.audio_speed() < MAX_SPEED and next_target.shift_start(GAP_INCREMENT):
+                        if next_target.audio_speed() < SPEED_MODERATE and next_target.move_start(GAP_INCREMENT):
                             for j in range(i-1, 0, -1):
                                 self.phrases[phrase.id+i].get_target(lang).shift(GAP_INCREMENT)
                             finished = False
+                            print(f"Compress Id: {phrase.id+i}", file=sys.stderr)
                             break
 
                     if phrase.id-i >= 0:
                         prev_target = self.phrases[phrase.id-i].get_target(lang)
-                        if prev_target.audio_speed() < MAX_SPEED and prev_target.shift_end(-GAP_INCREMENT):
+                        if prev_target.audio_speed() < SPEED_MODERATE and prev_target.move_end(-GAP_INCREMENT):
                             for j in range(i-1, 0, -1):
                                 self.phrases[phrase.id-i].get_target(lang).shift(-GAP_INCREMENT)
                             finished = False
+                            print(f"Compress Id: {phrase.id-i}", file=sys.stderr)
                             break
