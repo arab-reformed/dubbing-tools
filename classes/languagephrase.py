@@ -33,6 +33,26 @@ class LanguagePhrase:
             return round(self.end_time - self.start_time, 2)
         return None
 
+    def shift(self, increment: float) -> bool:
+        # TODO: make sure not shifted past the end of the video
+        if self.start_time - increment < 0:
+            return False
+
+        self.start_time += increment
+        self.end_time += increment
+        return True
+
+    def shift_start(self, increment: float) -> bool:
+        if self.start_time - increment < 0:
+            return False
+        self.start_time += increment
+        return True
+
+    def shift_end(self, increment: float) -> bool:
+        # TODO: make sure not shifted past the end of the video
+        self.end_time += increment
+        return True
+
     def audio_speed(self):
         return self.natural_duration / self.duration()
 

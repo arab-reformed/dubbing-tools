@@ -4,10 +4,10 @@ import fire
 from classes import *
 
 
-def cmd(transcript_file: str, gap: float = None):
+def cmd(transcript_file: str, lang: str):
     transcript = Transcript.load_file(transcript_file)
 
-    transcript.build_phrases(gap=gap)
+    transcript.adjust_timings(lang=lang)
     print(transcript.to_json(indent=2, ensure_ascii=False))
 
 

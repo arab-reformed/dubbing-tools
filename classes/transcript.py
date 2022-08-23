@@ -4,6 +4,11 @@ from .word import Word
 from .phrase import Phrase
 import json
 from .sourcelanguagePhrase import SourceLanguagePhrase
+from typing import Optional
+
+MINIMUM_GAP = 0.2
+GAP_INCREMENT = 0.1
+MAX_SPEED = 1.2
 
 
 @dataclass_json
@@ -235,7 +240,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
             target = phrase.get_target(lang)
             target.start_time = phrase.source.start_time
-            target.end_time = target.start_time + target.natural_duration
+            target.end_time = phrase.source.end_time
 
             speeds.append(phrase)
 
@@ -245,16 +250,55 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             speeds.sort(key=lambda p: p.get_target(lang).audio_speed(), reverse=True)
 
             for phrase in speeds:
-                if phrase.speed() > 1.5:
+                target = phrase.get_target(lang)
+                if target.audio_speed() <= MAX_SPEED:
+                    break
+
+                if target.audio_speed() > 1.7:
                     # look ahead and back 3 blocks
-                    gap = self.gap_between(lang, phrase.id+3, phrase.id+4)
-                    pass
+                    look = 4
 
-                elif phrase.audio_speed() > 1.3:
+                elif target.audio_speed() > 1.5:
                     # look ahead and back 2 blocks
-                    pass
+                    look = 3
 
-                elif phrase.audio_speed() > 1.2:
+                elif target.audio_speed() > 1.3:
                     # look ahead and back 1 block
-                    pass
+                    look = 2
 
+                else:
+                    look = 1
+
+                for i in range(0, look+1):
+                    gap = self.gap_between(lang, phrase.id+i, phrase.id+i+1)
+                    if gap is not None and gap > MINIMUM_GAP + GAP_INCREMENT:
+                        if target.shift_end(GAP_INCREMENT):
+                            for j in range(i, 0, -1):
+                                self.phrases[phrase.id+i].get_target(lang).shift(GAP_INCREMENT)
+                            finished = False
+                            break
+
+                    gap = self.gap_between(lang, phrase.id-i-1, phrase.id-i)
+                    if gap is not None and gap > MINIMUM_GAP + GAP_INCREMENT:
+                        if target.shift_start(-GAP_INCREMENT):
+                            for j in range(i, 0, -1):
+                                self.phrases[phrase.id-i].get_target(lang).shift(-GAP_INCREMENT)
+                            finished = False
+                            break
+
+                for i in range(0, look+1):
+                    if phrase.id+i < self.phrase_count():
+                        next_target = self.phrases[phrase.id+i].get_target(lang)
+                        if next_target.audio_speed() < MAX_SPEED and next_target.shift_start(GAP_INCREMENT):
+                            for j in range(i-1, 0, -1):
+                                self.phrases[phrase.id+i].get_target(lang).shift(GAP_INCREMENT)
+                            finished = False
+                            break
+
+                    if phrase.id-i >= 0:
+                        prev_target = self.phrases[phrase.id-i].get_target(lang)
+                        if prev_target.audio_speed() < MAX_SPEED and prev_target.shift_end(-GAP_INCREMENT):
+                            for j in range(i-1, 0, -1):
+                                self.phrases[phrase.id-i].get_target(lang).shift(-GAP_INCREMENT)
+                            finished = False
+                            break
