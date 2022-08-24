@@ -1,3 +1,6 @@
+import os.path
+import glob
+import re
 from dataclasses_json import dataclass_json
 from dataclasses import dataclass, field
 from .word import Word
@@ -9,18 +12,18 @@ import sys
 
 MINIMUM_GAP = 0.2
 GAP_INCREMENT = 0.05
-SPEED_MODERATE = 1.2
 SPEED_VERY_FAST = 1.8
 SPEED_FAST = 1.6
 SPEED_HIGH_MODERATE = 1.4
 SPEED_MODERATE = 1.3
+TRANSCRIPT_FILE = 'transcript.json'
 
 @dataclass_json
 @dataclass
 class Transcript:
-    words: list[Word]
-    src_lang: str
-
+    name: str = 'Project'
+    src_lang: str = 'en-US'
+    words: list[Word] = None
     phrases: list[Phrase] = None
     tts_lang: str = None
     tts_duration: float = None
@@ -48,10 +51,46 @@ class Transcript:
             )
 
     @classmethod
-    def load_file(cls, file_name):
+    def load_file(cls, file_name) -> Optional['Transcript']:
         with open(file_name, 'r') as f:
             data = json.load(f)
             return cls.from_dict(data)
+
+    @classmethod
+    def load(cls, path: str) -> Optional['Transcript']:
+        if os.path.isfile(path):
+            return cls.load_file(path)
+        elif os.path.isdir(path):
+            return cls.load_file(os.path.join(path, TRANSCRIPT_FILE))
+
+        return None
+
+    def save_file(self, file_name) -> bool:
+        if os.path.exists(file_name):
+            (path, file) = os.path.split(file_name)
+            files = [f for f in glob.glob(f"{file_name}.*") if re.search(r'\.(\d+)$', f)]
+            sorted(files)
+            if len(files):
+                m = re.search(r'\.(\d+)$', files[-1])
+                last_backup = int(m.group(1))
+            else:
+                last_backup = 0
+            backup_file = f"{file_name}.{str(last_backup).rjust(3,'0')}"
+            os.rename(file_name, backup_file)
+
+        with open(file_name, 'w') as f:
+            f.write(self.to_json(indent=2, ensure_ascii=False))
+            f.close()
+
+        return True
+
+    def save(self, path) -> bool:
+        if os.path.isdir(path):
+            return self.save_file(os.path.join(path, TRANSCRIPT_FILE))
+        elif os.path.isfile(path):
+            return self.save_file(path)
+
+        return False
 
     def to_ass(self, lang: str = None, include_source: bool = False) -> str:
         subtitles = """[Script Info]

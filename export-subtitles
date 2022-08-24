@@ -7,8 +7,8 @@ import dotenv
 dotenv.load_dotenv()
 
 
-def cmd(transcript_file: str, type: str = 'srt', lang: str = None, include_source: bool = False):
-    transcript = Transcript.load_file(transcript_file)
+def cmd(transcript_path: str, type: str = 'srt', lang: str = None, include_source: bool = False):
+    transcript = Transcript.load(transcript_path)
 
     if type == 'srt':
         print(transcript.to_srt(lang=lang, include_source=include_source))
