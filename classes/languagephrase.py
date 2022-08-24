@@ -5,7 +5,7 @@ from google.cloud import translate_v2 as translate
 from typing import List, Optional
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
-from .word import Word
+from classes import Audio
 import tempfile
 import os
 import re
@@ -14,10 +14,6 @@ import re
 @dataclass_json
 @dataclass
 class LanguagePhrase:
-    VOICES = {
-        'ar': 'ar-XA-Wavenet-B',
-    }
-
     lang: str
     text: str
     start_time: float = None
@@ -60,63 +56,43 @@ class LanguagePhrase:
     def audio_speed(self):
         return round(self.natural_duration / self.duration(),2)
 
-    def tts_audio(self, voice_name: str = None, speaking_rate: float = 1.0):
-
-        if voice_name is None:
-            voice_name = self.VOICES[self.lang]
-
-        # Instantiates a client
-        client = texttospeech.TextToSpeechClient()
-
-        # Set the text input to be synthesized
-        synthesis_input = texttospeech.SynthesisInput(text=self.get_text(self.lang))
-
-        voice = texttospeech.VoiceSelectionParams(
-            language_code=self.lang,
-            name=voice_name
+    def get_tts_natural_audio(self, output_path: str, overwrite: bool = False, voice_name: str = None):
+        audio = Audio(
+            lang=self.lang,
+            file_name=self.natural_audio_fullpath(output_path),
+            overwrite=overwrite
         )
-
-        # Select the type of audio file you want returned
-        audio_config = texttospeech.AudioConfig(
-            audio_encoding=texttospeech.AudioEncoding.MP3,
-            speaking_rate=speaking_rate
-        )
-
-        # Perform the text-to-speech request on the text input with the selected
-        # voice parameters and audio file type
-        response = client.synthesize_speech(
-            input=synthesis_input,
-            voice=voice,
-            audio_config=audio_config
-        )
-
-        return response.audio_content
-
-    def natural_audio(self, output_path: str):
-        if os.path.exists(self.natural_audio_fullpath(output_path)):
-
-    def get_tts_natural_audio(self, voice_name: str = None):
-        base_audio = self.tts_audio(voice_name=voice_name)
+        base_audio = audio.tts_audio(text=self.text, voice_name=voice_name)
         assert len(base_audio)
 
         return base_audio
 
-    def speak_under_duration(self, target_duration: float, voice_name: str = None):
+    def get_tts_duration_audio(self, output_path: str, overwrite: bool = False, voice_name: str = None):
 
-        ratio = target_duration / self.duration()
+        ratio = self.natural_duration / self.duration()
 
         # if the audio fits, return it
         if ratio <= 1:
-            return self.natural_audio()
+            return self.get_tts_natural_audio(
+                output_path=output_path,
+                overwrite=overwrite,
+                voice_name=voice_name
+            )
 
         # round to one decimal point and go a little faster to be safe,
         ratio = round(ratio, 1)
         if ratio > 4:
             ratio = 4
 
-        return self.tts_audio(
+        audio = Audio(
+            lang=self.lang,
+            file_name=self.audio_fullpath(output_path),
+            overwrite=overwrite,
+        )
+        return audio.tts_audio(
+            text=self.text,
             voice_name=voice_name,
-            speaking_rate=ratio
+            speaking_rate=ratio,
         )
 
     def audio_filename(self):
@@ -147,7 +123,7 @@ class LanguagePhrase:
         if overwrite or not os.path.exists(file):
             print(f"Generating: {file}", file=sys.stderr)
             if use_duration:
-                audio = self.speak_under_duration()
+                audio = self.get_tts_duration_audio()
             else:
                 audio = self.tts_audio()
 

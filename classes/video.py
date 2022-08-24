@@ -1,6 +1,6 @@
 import sys
 from dataclasses import dataclass
-from classes import OldPhrase, PhrasesContainer
+from classes import Phrase, Transcript
 import os
 from pydub import AudioSegment
 from moviepy.editor import VideoFileClip, AudioFileClip, CompositeVideoClip
@@ -10,7 +10,7 @@ import tempfile
 
 @dataclass
 class Video:
-    transcript: PhrasesContainer
+    transcript: Transcript
     source_file: str
     target_file: str
     output_path: str
@@ -18,6 +18,16 @@ class Video:
 
     DUBBED_VIDEO_SUBDIR = 'dubbed-videos'
     AUDIO_CLIPS_SUBDIR = 'audio-clips'
+
+    def extract_audio(self, output):
+        if not output[-4:] != "wav":
+            output += ".wav"
+
+        # TODO: can we output MP3?
+        AudioSegment \
+            .from_file(self.source_file) \
+            .set_channels(1) \
+            .export(output, format="wav")
 
     def dub_audio(self, lang: str, overwrite: bool = False, overlay_gain: int = -30):
         # if os.path.exists(self.target_file):
