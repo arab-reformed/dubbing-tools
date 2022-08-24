@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+
+import json
+import fire
+from typing import List
+from classes import *
+import dotenv
+
+dotenv.load_dotenv()
+
+
+def cmd(transcript_path: str, to_lang: str):
+    transcript = Transcript.load(transcript_path)
+    for phrase in transcript.phrases:
+        phrase.translate_text(to_lang)
+
+    if not transcript.save(transcript_path):
+        print("Error saving transcript", file=sys.stderr)
+
+
+if __name__ == "__main__":
+    fire.Fire(cmd)
