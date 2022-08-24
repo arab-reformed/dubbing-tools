@@ -5,7 +5,7 @@ from google.cloud import translate_v2 as translate
 from typing import List, Optional
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
-from classes import Audio
+from .audio import Audio
 import tempfile
 import os
 import re
@@ -16,10 +16,13 @@ import re
 class LanguagePhrase:
     lang: str
     text: str
+    id: int = None
     start_time: float = None
     end_time: float = None
-    audio_file: str = None
-    natural_duration: float = None
+    natural_audio: Audio = None
+    duration_audio: Audio = None
+
+    AUDIO_SUBDIR = 'audio-clips'
 
     def gap_between(self, next_phrase: 'LanguagePhrase'):
         return round(next_phrase.start_time - self.end_time, 2)
@@ -54,27 +57,37 @@ class LanguagePhrase:
         return True
 
     def audio_speed(self):
-        return round(self.natural_duration / self.duration(),2)
+        return round(self.natural_audio.duration / self.duration(),2)
 
-    def get_tts_natural_audio(self, output_path: str, overwrite: bool = False, voice_name: str = None):
-        audio = Audio(
+    def get_tts_natural_audio(self, overwrite: bool = False, voice_name: str = None):
+        if self.natural_audio is None:
+            self.natural_audio = Audio(file_name=self.natural_audio_fullpath())
+
+        base_audio = self.natural_audio.tts_audio(
+            text=self.text,
             lang=self.lang,
-            file_name=self.natural_audio_fullpath(output_path),
-            overwrite=overwrite
+            voice_name=voice_name,
+            overwrite=overwrite,
         )
-        base_audio = audio.tts_audio(text=self.text, voice_name=voice_name)
         assert len(base_audio)
 
         return base_audio
 
-    def get_tts_duration_audio(self, output_path: str, overwrite: bool = False, voice_name: str = None):
+    def get_tts_duration_audio(self, overwrite: bool = False, voice_name: str = None):
+        if self.duration_audio is None:
+            self.duration_audio = Audio(self.audio_fullpath())
 
-        ratio = self.natural_duration / self.duration()
+        if self.natural_audio is None:
+            self.get_tts_natural_audio(
+                overwrite=overwrite,
+                voice_name=voice_name,
+            )
+
+        ratio = self.natural_audio.duration / self.duration()
 
         # if the audio fits, return it
         if ratio <= 1:
             return self.get_tts_natural_audio(
-                output_path=output_path,
                 overwrite=overwrite,
                 voice_name=voice_name
             )
@@ -84,69 +97,45 @@ class LanguagePhrase:
         if ratio > 4:
             ratio = 4
 
-        audio = Audio(
-            lang=self.lang,
-            file_name=self.audio_fullpath(output_path),
-            overwrite=overwrite,
-        )
-        return audio.tts_audio(
+        return self.duration_audio.tts_audio(
             text=self.text,
+            lang=self.lang,
             voice_name=voice_name,
             speaking_rate=ratio,
+            overwrite=overwrite,
         )
 
     def audio_filename(self):
         return f"{str(self.id).rjust(5, '0')}.mp3"
 
-    def natural_audio_path(self, output_path: str) -> str:
-        path = os.path.join(output_path, self.lang, 'natural')
+    def natural_audio_path(self) -> str:
+        # print(os.getcwd(), file=sys.stderr)
+        path = os.path.join(self.AUDIO_SUBDIR, self.lang, 'natural')
         if not os.path.exists(path):
-            os.mkdir(path)
+            os.makedirs(path)
         return path
 
-    def natural_audio_fullpath(self, output_path: str) -> str:
-        return os.path.join(self.natural_audio_path(output_path), self.audio_filename())
+    def natural_audio_fullpath(self) -> str:
+        return os.path.join(self.natural_audio_path(), self.audio_filename())
 
-    def audio_path(self, output_path: str) -> str:
-        path = os.path.join(output_path, self.lang)
+    def audio_path(self) -> str:
+        path = os.path.join(self.AUDIO_SUBDIR, self.lang, 'duration')
         if not os.path.exists(path):
-            os.mkdir(path)
+            os.makedirs(path)
         return path
 
-    def audio_fullpath(self, output_path: str) -> str:
-        return os.path.join(self.audio_path(output_path), self.audio_filename())
-
-    def save_audio(self, output_path, overwrite: bool = False, use_duration: bool = True):
-        language_path = self.audio_path(output_path)
-
-        file = os.path.join(language_path, f"{self.id}.mp3")
-        if overwrite or not os.path.exists(file):
-            print(f"Generating: {file}", file=sys.stderr)
-            if use_duration:
-                audio = self.get_tts_duration_audio()
-            else:
-                audio = self.tts_audio()
-
-            with open(file, 'wb') as f:
-                f.write(audio)
-                self.audio_file = file
-        elif os.path.exists(file):
-            self.audio_file = file
-
-        # if self.target_duration is None and os.path.exists(self.audio_file):
-        #     self.set_target_duration()
+    def audio_fullpath(self) -> str:
+        return os.path.join(self.audio_path(), self.audio_filename())
 
     def get_audio_duration(self) -> Optional[float]:
-        if os.path.exists(self.audio_file):
-            return AudioSegment.from_mp3(self.audio_file).duration_seconds
+        if self.duration_audio is None:
+            self.duration_audio = Audio(file_name=self.natural_audio_fullpath())
+        return self.duration_audio.get_duration()
 
-        return None
-
-    def get_natural_audio_duration(self, output_path: str) -> Optional[float]:
-        if os.path.exists(self.natural_audio_fullpath(output_path)):
-            return AudioSegment.from_mp3(self.natural_audio_fullpath(output_path)).duration_seconds
-
-        return None
+    def get_natural_audio_duration(self) -> Optional[float]:
+        if self.natural_audio is None:
+            self.natural_audio = Audio(file_name=self.audio_fullpath())
+        return self.natural_audio.get_duration()
 
     @staticmethod
     def time_to_str(seconds: float, milli_sep: str = '.') -> str:

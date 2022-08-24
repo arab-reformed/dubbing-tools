@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+
+from classes import *
+import sys
+import os
+import fire
+import csv
+
+
+def cmd(transcript_path: str, lang: str, csv_file: str):
+
+    transcript = Transcript.load(transcript_path)
+
+    first_id = None
+    with open(csv_file, 'r') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            if first_id is None:
+                first_id = int(row['Id'])
+
+            transcript.phrases[int(row['Id'])-first_id].get_target(lang).text = row['Translation']
+
+    if not transcript.save():
+        print("Error saving project file.", file=sys.stderr)
+
+
+if __name__ == "__main__":
+    fire.Fire(cmd)

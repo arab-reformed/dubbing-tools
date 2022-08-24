@@ -10,7 +10,7 @@ def cmd(transcript_path: str, gap: float = None):
 
     transcript.build_phrases(gap=gap)
 
-    if not transcript.save(transcript_path):
+    if not transcript.save():
         print("Error saving transcript", file=sys.stderr)
 
 

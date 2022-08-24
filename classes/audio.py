@@ -1,7 +1,6 @@
 import sys
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
-from classes import Phrase, Transcript
 import os
 from pydub import AudioSegment
 from moviepy.editor import VideoFileClip, AudioFileClip, CompositeVideoClip
@@ -12,25 +11,38 @@ from google.cloud import texttospeech
 from typing import Optional
 
 
+@dataclass_json
 @dataclass
 class Audio:
-    lang: str
-    overwrite: bool = True
-    file_name: str = None
+    file_name: str
+    duration: Optional[float] = None
 
     VOICES = {
         'ar': 'ar-XA-Wavenet-B',
     }
 
-    def tts_audio(self, text: str, voice_name: str = None, speaking_rate: float = 1.0):
-        if not self.overwrite and os.path.exists(self.file_name):
+    def file_exists(self):
+        return os.path.exists(self.file_name)
+
+    def get_duration(self) -> Optional[float]:
+        if self.duration is not None and not self.file_exists():
+            self.duration = None
+
+        elif self.duration is None and self.file_exists():
+            self.duration = AudioSegment.from_mp3(self.file_name).duration_seconds
+
+        return self.duration
+
+    def tts_audio(self, text: str, lang: str, voice_name: str = None, speaking_rate: float = 1.0, overwrite: bool = False):
+        print(f"Getting audio: {text}", file=sys.stderr)
+        if not overwrite and os.path.exists(self.file_name):
             with open(self.file_name, 'r+b') as f:
                 audio = f.read()
                 f.close()
                 return audio
 
         if voice_name is None:
-            voice_name = self.VOICES[self.lang]
+            voice_name = self.VOICES[lang]
 
         # Instantiates a client
         client = texttospeech.TextToSpeechClient()
@@ -39,7 +51,7 @@ class Audio:
         synthesis_input = texttospeech.SynthesisInput(text=text)
 
         voice = texttospeech.VoiceSelectionParams(
-            language_code=self.lang,
+            language_code=lang,
             name=voice_name
         )
 
@@ -56,19 +68,18 @@ class Audio:
             voice=voice,
             audio_config=audio_config
         )
-        if self.file_name:
-            self.save(response.audio_content)
+
+        self.save(response.audio_content)
 
         return response.audio_content
 
-    def get_audio_duration(self) -> Optional[float]:
-        if os.path.exists(self.file_name):
-            return AudioSegment.from_mp3(self.file_name).duration_seconds
-
-        return None
-
-    def save(self, audio):
-        if self.file_name is not None and self.overwrite or not os.path.exists(self.file_name):
+    def save(self, audio) -> bool:
+        if self.file_name is not None:
             with open(self.file_name, 'wb') as f:
                 f.write(audio)
                 f.close()
+                self.duration = None
+                self.get_duration()
+                return True
+
+        return False

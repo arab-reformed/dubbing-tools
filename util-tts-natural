@@ -3,12 +3,15 @@
 import fire
 from classes import *
 import sys
+import dotenv
+
+dotenv.load_dotenv()
 
 
-def cmd(transcript_path: str, lang: str):
+def cmd(transcript_path: str, lang: str, overwrite: bool = False):
     transcript = Transcript.load(transcript_path)
 
-    transcript.adjust_timings(lang=lang)
+    transcript.get_tts_natural_audio(lang=lang, overwrite=overwrite)
 
     if not transcript.save():
         print("Error saving transcript", file=sys.stderr)

@@ -14,7 +14,7 @@ def cmd(tts_file: str, transcript_path: str):
         exit(1)
 
     os.mkdir(transcript_path)
-    if not transcript.save(transcript_path):
+    if not transcript.save():
         print("Error saving transcript", file=sys.stderr)
 
 

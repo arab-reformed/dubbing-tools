@@ -8,3 +8,5 @@ out_*
 __pycache__/
 /.credentials.json
 /tmp/
+*.json.*
+*~

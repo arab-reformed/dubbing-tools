@@ -10,7 +10,6 @@ import tempfile
 
 @dataclass
 class Video:
-    transcript: Transcript
     source_file: str
     target_file: str
     output_path: str
@@ -29,35 +28,26 @@ class Video:
             .set_channels(1) \
             .export(output, format="wav")
 
-    def dub_audio(self, lang: str, overwrite: bool = False, overlay_gain: int = -30):
+    def dub_audio(self, transcript: Transcript, lang: str, overwrite: bool = False, overlay_gain: int = -30):
         # if os.path.exists(self.target_file):
         #     return
 
         output_files = os.listdir(self.output_path)
 
-        audio_dir = os.path.join(self.output_path, self.AUDIO_CLIPS_SUBDIR)
-        if self.AUDIO_CLIPS_SUBDIR not in output_files:
-            os.mkdir(audio_dir)
-
         print(f"Synthesizing audio for {lang}", file=sys.stderr)
-        self.transcript.save_audio(output_path=audio_dir, lang=lang, overwrite=overwrite)
 
         if os.path.exists(self.target_file):
             return
-
-        dubbed_path = os.path.join(self.output_path, self.DUBBED_VIDEO_SUBDIR)
-
-        if dubbed_path not in output_files:
-            os.mkdir(dubbed_path)
 
         # Also, grab the original audio
         dubbed = AudioSegment.from_file(self.source_file)
 
         # Place each computer-generated audio at the correct timestamp
-        for phrase in self.transcript.phrases:
+        for phrase in transcript.phrases:
+            target = phrase.get_target(lang)
             dubbed = dubbed.overlay(
-                AudioSegment.from_mp3(phrase.audio_file),
-                position=phrase.start_time * 1000,
+                AudioSegment.from_mp3(target.natural_audio.file_name),
+                position=target.start_time * 1000,
                 gain_during_overlay=overlay_gain
             )
 

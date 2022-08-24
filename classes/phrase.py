@@ -16,6 +16,15 @@ class Phrase:
     targets:  dict[str, LanguagePhrase] = field(default_factory=dict)
     reason: str = None
 
+    def __post_init__(self):
+        self.set_id(self.id)
+
+    def set_id(self, id: int):
+        self.id = id
+        self.source.id = self.id
+        for lang in self.targets:
+            self.get_target(lang).id = self.id
+
     def translate_text(self, target_lang):
         translate_client = translate.Client()
         result = translate_client.translate(
@@ -45,6 +54,7 @@ class Phrase:
 
     def set_target(self, lang, phrase: LanguagePhrase):
         self.targets[lang] = phrase
+        phrase.id = self.id
 
     def split(self, words: List[Word], split_at: int) -> 'Phrase':
         next = Phrase(
@@ -76,6 +86,16 @@ class Phrase:
                 start_word=start_word,
                 end_word=start_word+len(words)-1
             )
+        )
+
+    def get_tts_audio_natural(self, lang: str, overwrite: bool = False):
+        self.get_target(lang).get_tts_natural_audio(
+            overwrite=overwrite
+        )
+
+    def get_tts_audio_duration(self, lang: str, overwrite: bool = False):
+        self.get_target(lang).get_tts_duration_audio(
+            overwrite=overwrite
         )
 
     def to_srt(self, lang: str = None, include_source: bool = False) -> str:

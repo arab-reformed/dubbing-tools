@@ -9,7 +9,7 @@ def cmd(transcript_path: str, lang: str):
     transcript = Transcript.load(transcript_path)
 
     transcript.reset_timings(lang=lang)
-    if not transcript.save(transcript_path):
+    if not transcript.save():
         print("Error saving transcript", file=sys.stderr)
 
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import json
+import sys
 import fire
 from typing import List
 from classes import *
@@ -14,7 +14,7 @@ def cmd(transcript_path: str, to_lang: str):
     for phrase in transcript.phrases:
         phrase.translate_text(to_lang)
 
-    if not transcript.save(transcript_path):
+    if not transcript.save():
         print("Error saving transcript", file=sys.stderr)
 
 

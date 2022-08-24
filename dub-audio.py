@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys
 
 from classes import Video
 import os
@@ -13,7 +14,7 @@ SPEAKER_COUNT = 1
 PHRASE_HINTS = []
 
 
-def cmd(project_path: str, video_file: str, lang: str, srt: bool = False, overwrite: bool = False):
+def cmd(project_path: str, video_file: str, lang: str, srt: bool = False, overwrite: bool = False, overlay_gain: int = -30):
     path = os.path.dirname(__file__)
     project_path = os.path.join(path, project_path)
     video_file = os.path.join(path, video_file)
@@ -23,14 +24,19 @@ def cmd(project_path: str, video_file: str, lang: str, srt: bool = False, overwr
     video = Video(
         source_file=video_file,
         output_path=project_path,
-        transcript=transcript,
         target_file=os.path.join(project_path, f"video-{lang}.mp4"),
-        srt_path=os.path.join(project_path, f"phrases-{lang}.srt")
+        # srt_path=os.path.join(project_path, f"phrases-{lang}.srt")
     )
 
-    video.dub_audio(lang=lang, overwrite=overwrite)
+    video.dub_audio(
+        transcript=transcript,
+        lang=lang,
+        overwrite=overwrite,
+        overlay_gain=overlay_gain,
+    )
 
-    print(transcript.to_json(indent=2))
+    if not transcript.save():
+        print("Error saving project file.", file=sys.stderr)
 
 
 if __name__ == "__main__":
