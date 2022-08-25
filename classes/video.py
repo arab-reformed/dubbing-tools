@@ -42,7 +42,7 @@ class Video:
             return
 
         # Also, grab the original audio
-        dubbed = AudioSegment.from_file(self.source_file)
+        dubbed = AudioSegment.from_file("audio-en.mp3")
 
         clip = VideoFileClip(self.source_file)
 
@@ -56,7 +56,7 @@ class Video:
                 position=target.start_time * 1000,
                 gain_during_overlay=overlay_gain
             )
-            if target.freeze_time is not None and frozen < 150:
+            if target.freeze_time is not None:  # and frozen < 1000:
                 print(f"freezing at: {target.freeze_time}")
                 clip = freeze(clip, t=target.freeze_time, freeze_duration=target.freeze_duration)
                 frozen += 1

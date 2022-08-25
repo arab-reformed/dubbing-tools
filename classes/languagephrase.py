@@ -10,6 +10,8 @@ import tempfile
 import os
 import re
 
+MINIMUM_GAP = 0.3
+
 
 @dataclass_json
 @dataclass
@@ -42,11 +44,16 @@ class LanguagePhrase:
         self.freeze_duration = None
         self.freeze_time = None
 
-    def expand(self, at_speed: float):
+    def expand(self, at_speed: float) -> float:
+        self.freeze_time = None
+        self.freeze_duration = None
         if self.audio_speed() > at_speed:
             self.freeze_time = round(self.end_time, 3)
             self.freeze_duration = round(self.natural_audio.duration / at_speed - self.duration(), 3)
             self.end_time = round(self.end_time + self.freeze_duration, 3)
+            return self.freeze_duration
+
+        return 0.0
 
     def shift(self, increment: float) -> bool:
         # TODO: make sure not shifted past the end of the video

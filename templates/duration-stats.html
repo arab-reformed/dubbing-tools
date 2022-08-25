@@ -8,6 +8,8 @@
 <p>Total freeze: {{ total_freeze }}</p>
 <table>
     <tr>
+        <th>Start</th>
+        <th>End</th>
         <th>Target<br/>Duration</th>
         <th>Source<br/>Duration</th>
         <th>Ratio</th>
@@ -18,9 +20,11 @@
     </tr>
     {% for phrase in phrases %}
         <tr>
+            <td>{{ phrase.target.start_time }}</td>
+            <td>{{ phrase.target.end_time }}</td>
             <td>{{ phrase.target.natural_audio.duration }}</td>
             <td>{{ phrase.source.duration() }}</td>
-            <td>{{ phrase.ratio }}</td>
+            <td>{{ phrase.target.audio_speed() }}</td>
             <td>{{ phrase.gap_between }}</td>
             <td>{{ phrase.freeze }}</td>
             <td>{{ phrase.target.text }}</td>

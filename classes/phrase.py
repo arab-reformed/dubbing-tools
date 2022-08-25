@@ -105,7 +105,7 @@ class Phrase:
             return self.get_target(lang).to_srt(source=self.source, include_source=include_source)
 
     def to_ass(self, style_name: str, lang: str = None, include_source: bool = False) -> str:
-        if lang is None:
+        if lang is None or self.get_target(lang) is None:
             return self.source.to_ass(source=self.source, style_name=style_name)
         else:
             return self.get_target(lang).to_ass(

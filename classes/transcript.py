@@ -11,7 +11,8 @@ from typing import Optional
 import sys
 
 MINIMUM_GAP = 0.5
-DESIRED_GAP = 0.5
+DESIRED_GAP = 0.8
+
 GAP_INCREMENT = 0.05
 SPEED_VERY_FAST = 1.7
 SPEED_FAST = 1.5
@@ -377,5 +378,20 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                             break
 
         # Apply freezes for sections that are too long
+        total_shift = 0.0
         for phrase in self.phrases:
-            phrase.get_target(lang).expand(SPEED_ACCEPTABLE)
+            target = phrase.get_target(lang)
+            if total_shift > 0.0:
+                target.shift(total_shift)
+
+            expansion = target.expand(SPEED_ACCEPTABLE)
+
+            total_shift += expansion
+
+            if expansion > 0.0 and phrase.id < self.phrase_count()-1:
+                gap = target.gap_between(self.phrases[phrase.id+1].get_target(lang)) + total_shift
+                if gap < MINIMUM_GAP:
+                    extra = MINIMUM_GAP - gap
+                    target.freeze_duration = round(target.freeze_duration + extra, 3)
+                    total_shift += extra
+
