@@ -16,3 +16,4 @@ python-dotenv
 dataclasses-json
 jinja2
 dotted-dict
+azure-cognitiveservices-speech
