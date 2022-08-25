@@ -12,7 +12,7 @@ def cmd(transcript_path: str):
 
     for i, word in enumerate(transcript.words):
         if i < len(transcript.words)-1:
-            gap = str(round(transcript.words[i+1]['start_time'] - word['end_time'], 2))
+            gap = str(round(transcript.words[i+1]['start_time'] - word['end_time'], 3))
             if gap in stats:
                 stats[gap] += 1
             else:

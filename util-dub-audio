@@ -9,17 +9,11 @@ import dotenv
 
 dotenv.load_dotenv()
 
-SOURCE_LANG = 'en-US'
-SPEAKER_COUNT = 1
-PHRASE_HINTS = []
-
 
 def cmd(project_path: str, video_file: str, lang: str, srt: bool = False, overwrite: bool = False, overlay_gain: int = -30):
     path = os.path.dirname(__file__)
     project_path = os.path.join(path, project_path)
     video_file = os.path.join(path, video_file)
-
-    transcript = Transcript.load(project_path)
 
     video = Video(
         source_file=video_file,
@@ -28,6 +22,7 @@ def cmd(project_path: str, video_file: str, lang: str, srt: bool = False, overwr
         # srt_path=os.path.join(project_path, f"phrases-{lang}.srt")
     )
 
+    transcript = Transcript.load(project_path)
     video.dub_audio(
         transcript=transcript,
         lang=lang,
@@ -35,8 +30,8 @@ def cmd(project_path: str, video_file: str, lang: str, srt: bool = False, overwr
         overlay_gain=overlay_gain,
     )
 
-    if not transcript.save():
-        print("Error saving project file.", file=sys.stderr)
+    # if not transcript.save():
+    #     print("Error saving project file.", file=sys.stderr)
 
 
 if __name__ == "__main__":

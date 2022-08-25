@@ -13,27 +13,30 @@ dotenv.load_dotenv()
 
 
 def cmd(transcript_file: str, lang: str):
-    transcript = Transcript.load_file(transcript_file)
+    transcript = Transcript.load(transcript_file)
 
     phrases = []
+    total_freeze = 0.0
     for i, phrase in enumerate(transcript.phrases):
         data = DottedDict()
         data.id = phrase.id
         data.source = phrase.source
         data.target = phrase.get_target(lang)
-        data.ratio = round(data.target.natural_duration / data.target.duration(), 2)
+        data.ratio = round(data.target.natural_audio.duration / data.target.duration(), 2)
+        data.freeze = data.target.freeze_duration if data.target.freeze_duration is not None else 0.0
+        total_freeze += data.freeze
         if i < transcript.phrase_count()-1:
             data.gap_between = data.target.gap_between(transcript.phrases[i+1].get_target(lang))
         phrases.append(data)
 
     env = Environment(
-        loader=PackageLoader("duration-stats"),
+        loader=PackageLoader("functions"),
         autoescape=select_autoescape()
     )
 
     try:
         template = env.get_template('duration-stats.html')
-        print(template.render(phrases=phrases))
+        print(template.render(phrases=phrases, total_freeze=round(total_freeze, 3)))
     except TemplateNotFound as e:
         print('Template file not found: ' + str(e), file=sys.stderr)
         exit(1)

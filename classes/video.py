@@ -5,6 +5,7 @@ import os
 from pydub import AudioSegment
 from moviepy.editor import VideoFileClip, AudioFileClip, CompositeVideoClip
 from moviepy.video.tools.subtitles import SubtitlesClip, TextClip
+from moviepy.video.fx.freeze import freeze
 import tempfile
 
 
@@ -37,12 +38,17 @@ class Video:
         print(f"Synthesizing audio for {lang}", file=sys.stderr)
 
         if os.path.exists(self.target_file):
+            print(f"Video file {self.target_file} already exists.", file=sys.stderr)
             return
 
         # Also, grab the original audio
         dubbed = AudioSegment.from_file(self.source_file)
 
+        clip = VideoFileClip(self.source_file)
+
+        sys.setrecursionlimit(10000)
         # Place each computer-generated audio at the correct timestamp
+        frozen = 0
         for phrase in transcript.phrases:
             target = phrase.get_target(lang)
             dubbed = dubbed.overlay(
@@ -50,6 +56,10 @@ class Video:
                 position=target.start_time * 1000,
                 gain_during_overlay=overlay_gain
             )
+            if target.freeze_time is not None and frozen < 150:
+                print(f"freezing at: {target.freeze_time}")
+                clip = freeze(clip, t=target.freeze_time, freeze_duration=target.freeze_duration)
+                frozen += 1
 
         # Write the final audio to a temporary output file
         audio_file = tempfile.NamedTemporaryFile()
@@ -57,7 +67,6 @@ class Video:
         audio_file.flush()
 
         # Add the new audio to the video and save it
-        clip = VideoFileClip(self.source_file)
         audio = AudioFileClip(audio_file.name)
         clip = clip.set_audio(audio)
 

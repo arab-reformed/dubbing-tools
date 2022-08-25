@@ -19,22 +19,34 @@ class LanguagePhrase:
     id: int = None
     start_time: float = None
     end_time: float = None
+    freeze_time: Optional[float] = None
+    freeze_duration: Optional[float] = None
     natural_audio: Audio = None
     duration_audio: Audio = None
 
     AUDIO_SUBDIR = 'audio-clips'
 
     def gap_between(self, next_phrase: 'LanguagePhrase'):
-        return round(next_phrase.start_time - self.end_time, 2)
+        return round(next_phrase.start_time - self.end_time, 3)
 
     def duration(self) -> Optional[float]:
         if self.start_time is not None and self.end_time is not None:
-            return round(self.end_time - self.start_time, 2)
+            return round(self.end_time - self.start_time, 3)
         return None
 
     def reset_timing(self, source: 'LanguagePhrase'):
         self.start_time = source.start_time
         self.end_time = source.end_time
+        if self.audio_speed() < 1.0:
+            self.end_time = round(self.start_time + self.natural_audio.duration, 3)
+        self.freeze_duration = None
+        self.freeze_time = None
+
+    def expand(self, at_speed: float):
+        if self.audio_speed() > at_speed:
+            self.freeze_time = round(self.end_time, 3)
+            self.freeze_duration = round(self.natural_audio.duration / at_speed - self.duration(), 3)
+            self.end_time = round(self.end_time + self.freeze_duration, 3)
 
     def shift(self, increment: float) -> bool:
         # TODO: make sure not shifted past the end of the video
@@ -57,7 +69,7 @@ class LanguagePhrase:
         return True
 
     def audio_speed(self):
-        return round(self.natural_audio.duration / self.duration(),2)
+        return round(self.natural_audio.duration / self.duration(), 2)
 
     def get_tts_natural_audio(self, overwrite: bool = False, voice_name: str = None):
         if self.natural_audio is None:

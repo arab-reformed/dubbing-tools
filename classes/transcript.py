@@ -10,13 +10,16 @@ from .sourcelanguagePhrase import SourceLanguagePhrase
 from typing import Optional
 import sys
 
-MINIMUM_GAP = 0.2
+MINIMUM_GAP = 0.5
+DESIRED_GAP = 0.5
 GAP_INCREMENT = 0.05
-SPEED_VERY_FAST = 1.8
-SPEED_FAST = 1.6
-SPEED_HIGH_MODERATE = 1.4
-SPEED_MODERATE = 1.3
+SPEED_VERY_FAST = 1.7
+SPEED_FAST = 1.5
+SPEED_HIGH_MODERATE = 1.3
+SPEED_MODERATE = 1.1
+SPEED_ACCEPTABLE = 1.05
 TRANSCRIPT_FILE = 'transcript.json'
+
 
 @dataclass_json
 @dataclass
@@ -333,7 +336,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
                 for i in range(0, look+1):
                     gap = self.gap_between(lang, phrase.id+i, phrase.id+i+1)
-                    if gap is not None and gap > MINIMUM_GAP + GAP_INCREMENT:
+                    if gap is not None and gap > DESIRED_GAP + GAP_INCREMENT:
                         if target.move_end(GAP_INCREMENT):
                             for j in range(i, 0, -1):
                                 self.phrases[phrase.id+i].get_target(lang).shift(GAP_INCREMENT)
@@ -342,7 +345,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                             break
 
                     gap = self.gap_between(lang, phrase.id-i-1, phrase.id-i)
-                    if gap is not None and gap > MINIMUM_GAP + GAP_INCREMENT:
+                    if gap is not None and gap > DESIRED_GAP + GAP_INCREMENT:
                         if target.move_start(-GAP_INCREMENT):
                             for j in range(i, 0, -1):
                                 self.phrases[phrase.id-i].get_target(lang).shift(-GAP_INCREMENT)
@@ -357,7 +360,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                 for i in range(1, look+1):
                     if phrase.id+i < self.phrase_count():
                         next_target = self.phrases[phrase.id+i].get_target(lang)
-                        if next_target.audio_speed() < SPEED_MODERATE and next_target.move_start(GAP_INCREMENT):
+                        if next_target.audio_speed() < SPEED_ACCEPTABLE and next_target.move_start(GAP_INCREMENT):
                             for j in range(i-1, 0, -1):
                                 self.phrases[phrase.id+i].get_target(lang).shift(GAP_INCREMENT)
                             finished = False
@@ -366,9 +369,13 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
                     if phrase.id-i >= 0:
                         prev_target = self.phrases[phrase.id-i].get_target(lang)
-                        if prev_target.audio_speed() < SPEED_MODERATE and prev_target.move_end(-GAP_INCREMENT):
+                        if prev_target.audio_speed() < SPEED_ACCEPTABLE and prev_target.move_end(-GAP_INCREMENT):
                             for j in range(i-1, 0, -1):
                                 self.phrases[phrase.id-i].get_target(lang).shift(-GAP_INCREMENT)
                             finished = False
                             print(f"Compress Id: {phrase.id-i}", file=sys.stderr)
                             break
+
+        # Apply freezes for sections that are too long
+        for phrase in self.phrases:
+            phrase.get_target(lang).expand(SPEED_ACCEPTABLE)

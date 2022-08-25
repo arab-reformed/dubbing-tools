@@ -24,10 +24,10 @@ class Word:
         self.word = word.strip()
 
     def duration(self) -> float:
-        return round(self.end_time - self.start_time, 2)
+        return round(self.end_time - self.start_time, 3)
 
     def gap_between(self, next_word: 'Word'):
-        return round(next_word.start_time - self.end_time, 2)
+        return round(next_word.start_time - self.end_time, 3)
 
     def break_reason(self, next_word: 'Word', gap: float = 0.5) -> Optional[str]:
         if self.hard_break:
@@ -50,4 +50,4 @@ class Word:
 
     @staticmethod
     def secs_to_float(secs: str):
-        return round(float(secs.replace('s', '')), 2)
+        return round(float(secs.replace('s', '')), 3)
