@@ -6,6 +6,7 @@ from typing import List, Optional
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
 from .audio import Audio
+from .constants import *
 import tempfile
 import os
 import re
@@ -78,26 +79,26 @@ class LanguagePhrase:
     def audio_speed(self):
         return round(self.natural_audio.duration / self.duration(), 2)
 
-    def get_tts_natural_audio(self, overwrite: bool = False, voice_name: str = None):
+    def get_tts_natural_audio(self, service: str = SERVICE_AZURE, overwrite: bool = False, voice_name: str = None):
         if self.natural_audio is None:
-            self.natural_audio = Audio(file_name=self.natural_audio_fullpath())
+            self.natural_audio = Audio(file_name=self.natural_audio_fullpath(service=service))
 
         base_audio = self.natural_audio.tts_audio(
             text=self.text,
             lang=self.lang,
+            service=service,
             voice_name=voice_name,
             overwrite=overwrite,
         )
         assert len(base_audio)
 
-        return base_audio
-
-    def get_tts_duration_audio(self, overwrite: bool = False, voice_name: str = None):
+    def get_tts_duration_audio(self, service: str = SERVICE_AZURE, overwrite: bool = False, voice_name: str = None):
         if self.duration_audio is None:
-            self.duration_audio = Audio(self.audio_fullpath())
+            self.duration_audio = Audio(self.audio_fullpath(service=service))
 
         if self.natural_audio is None:
             self.get_tts_natural_audio(
+                service=service,
                 overwrite=overwrite,
                 voice_name=voice_name,
             )
@@ -116,7 +117,7 @@ class LanguagePhrase:
         if ratio > 4:
             ratio = 4
 
-        return self.duration_audio.tts_audio(
+        self.duration_audio.tts_audio(
             text=self.text,
             lang=self.lang,
             voice_name=voice_name,
@@ -127,33 +128,33 @@ class LanguagePhrase:
     def audio_filename(self):
         return f"{str(self.id).rjust(5, '0')}.mp3"
 
-    def natural_audio_path(self) -> str:
+    def natural_audio_path(self, service: str) -> str:
         # print(os.getcwd(), file=sys.stderr)
-        path = os.path.join(self.AUDIO_SUBDIR, self.lang, 'natural')
+        path = os.path.join(self.AUDIO_SUBDIR, self.lang, service, 'natural')
         if not os.path.exists(path):
             os.makedirs(path)
         return path
 
-    def natural_audio_fullpath(self) -> str:
-        return os.path.join(self.natural_audio_path(), self.audio_filename())
+    def natural_audio_fullpath(self, service: str) -> str:
+        return os.path.join(self.natural_audio_path(service=service), self.audio_filename())
 
-    def audio_path(self) -> str:
-        path = os.path.join(self.AUDIO_SUBDIR, self.lang, 'duration')
+    def audio_path(self, service: str) -> str:
+        path = os.path.join(self.AUDIO_SUBDIR, self.lang, service, 'duration')
         if not os.path.exists(path):
             os.makedirs(path)
         return path
 
-    def audio_fullpath(self) -> str:
-        return os.path.join(self.audio_path(), self.audio_filename())
+    def audio_fullpath(self, service: str) -> str:
+        return os.path.join(self.audio_path(service=service), self.audio_filename())
 
     def get_audio_duration(self) -> Optional[float]:
         if self.duration_audio is None:
-            self.duration_audio = Audio(file_name=self.natural_audio_fullpath())
+            return None
         return self.duration_audio.get_duration()
 
     def get_natural_audio_duration(self) -> Optional[float]:
         if self.natural_audio is None:
-            self.natural_audio = Audio(file_name=self.audio_fullpath())
+            return None
         return self.natural_audio.get_duration()
 
     @staticmethod

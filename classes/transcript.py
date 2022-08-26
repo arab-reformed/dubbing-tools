@@ -9,17 +9,7 @@ import json
 from .sourcelanguagePhrase import SourceLanguagePhrase
 from typing import Optional
 import sys
-
-MINIMUM_GAP = 0.5
-DESIRED_GAP = 0.8
-
-GAP_INCREMENT = 0.05
-SPEED_VERY_FAST = 1.7
-SPEED_FAST = 1.5
-SPEED_HIGH_MODERATE = 1.3
-SPEED_MODERATE = 1.1
-SPEED_ACCEPTABLE = 1.05
-TRANSCRIPT_FILE = 'transcript.json'
+from .constants import *
 
 
 @dataclass_json
@@ -46,17 +36,19 @@ class Transcript:
 
         return srt
 
-    def get_tts_duration_audio(self, lang: str, overwrite: bool = False, voice_name: str = None):
+    def get_tts_duration_audio(self, lang: str, service: str = SERVICE_AZURE, overwrite: bool = False, voice_name: str = None):
         for phrase in self.phrases:
             phrase.get_target(lang).get_tts_duration_audio(
+                service=service,
                 overwrite=overwrite,
                 voice_name=voice_name,
             )
 
-    def get_tts_natural_audio(self, lang: str, overwrite: bool = False, voice_name: str = None):
+    def get_tts_natural_audio(self, lang: str, service: str = SERVICE_AZURE, overwrite: bool = False, voice_name: str = None):
         print(f"Getting natural audio for {lang}", file=sys.stderr)
         for phrase in self.phrases:
             phrase.get_target(lang).get_tts_natural_audio(
+                service=service,
                 overwrite=overwrite,
                 voice_name=voice_name,
             )

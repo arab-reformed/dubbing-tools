@@ -3,6 +3,7 @@
 import fire
 from classes import *
 from pydub import AudioSegment
+from classes.constants import *
 
 MARGIN = 5
 
@@ -38,7 +39,7 @@ def cmd(transcript_path: str,  lang: str, audio_output: str):
             # print(f"Silence added: {silence}")
             dubbed = dubbed.append(AudioSegment.silent(duration=silence), crossfade=0)
 
-        clip = AudioSegment.from_file(phrase.source.natural_audio_fullpath())
+        clip = AudioSegment.from_file(phrase.source.natural_audio_fullpath(service=SERVICE_SOURCE))
         dubbed = dubbed.append(clip, crossfade=0)
         print(f"Id: {phrase.id}  Start: {target.start_time}  Length: {clip.duration_seconds}")
         # dubbed = dubbed.overlay(

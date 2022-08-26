@@ -3,6 +3,7 @@
 import fire
 from classes import *
 from pydub import AudioSegment
+from classes.constants import *
 
 MARGIN = 5
 
@@ -19,7 +20,7 @@ def cmd(transcript_path: str,  video_file: str):
         clip_duration = target.duration()*1000+MARGIN
         clip_end = target.end_time * 1000 + MARGIN
         segment = audio[clip_start:clip_end]
-        segment.export(target.natural_audio_fullpath())
+        segment.export(target.natural_audio_fullpath(service=SERVICE_SOURCE))
 
 
 if __name__ == "__main__":
