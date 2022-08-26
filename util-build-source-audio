@@ -8,7 +8,7 @@ from classes.constants import *
 MARGIN = 5
 
 
-def cmd(transcript_path: str,  lang: str, audio_output: str):
+def cmd(transcript_path: str,  lang: str, timing_scheme: str, audio_output: str):
     transcript = Transcript.load(transcript_path)
 
     # dubbed = AudioSegment.silent(duration=transcript.phrases[-1].get_target(lang).end_time*1000+100)
@@ -21,7 +21,7 @@ def cmd(transcript_path: str,  lang: str, audio_output: str):
     behind = 0.0
     for phrase in transcript.phrases:
         target = phrase.get_target(lang)
-        gap = target.start_time - dubbed.duration_seconds
+        gap = target.timings.get(timing_scheme).start_time - dubbed.duration_seconds
 
         if gap < 0:
             behind += -gap
@@ -41,7 +41,7 @@ def cmd(transcript_path: str,  lang: str, audio_output: str):
 
         clip = AudioSegment.from_file(phrase.source.natural_audio_fullpath(service=SERVICE_SOURCE))
         dubbed = dubbed.append(clip, crossfade=0)
-        print(f"Id: {phrase.id}  Start: {target.start_time}  Length: {clip.duration_seconds}")
+        print(f"Id: {phrase.id}  Start: {target.timings.get(timing_scheme).start_time}  Length: {clip.duration_seconds}")
         # dubbed = dubbed.overlay(
         #     clip,
         #     position=target.start_time * 1000,
@@ -50,7 +50,7 @@ def cmd(transcript_path: str,  lang: str, audio_output: str):
         # if phrase.id > 10:
         #     break
 
-    tran_length = transcript.phrases[-1].get_target(lang).end_time
+    tran_length = transcript.phrases[-1].get_timing(lang, timing_scheme).end_time
     if dubbed.duration_seconds < tran_length:
         dubbed = dubbed.append(AudioSegment.silent(duration=(tran_length-dubbed.duration_seconds)*1000), crossfade=0)
 

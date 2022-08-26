@@ -29,7 +29,7 @@ class Video:
             .set_channels(1) \
             .export(output, format="wav")
 
-    def dub_audio(self, transcript: Transcript, lang: str, overwrite: bool = False, overlay_gain: int = -30):
+    def dub_audio(self, transcript: Transcript, lang: str, timing_scheme: str, overwrite: bool = False, overlay_gain: int = -30):
         # if os.path.exists(self.target_file):
         #     return
 
@@ -53,7 +53,7 @@ class Video:
             target = phrase.get_target(lang)
             dubbed = dubbed.overlay(
                 AudioSegment.from_mp3(target.natural_audio.file_name),
-                position=target.start_time * 1000,
+                position=target.timings.get(timing_scheme).start_time * 1000,
                 gain_during_overlay=overlay_gain
             )
             if target.freeze_time is not None:  # and frozen < 1000:

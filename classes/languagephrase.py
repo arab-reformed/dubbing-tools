@@ -3,29 +3,30 @@ from pydub import AudioSegment
 from google.cloud import texttospeech
 from google.cloud import translate_v2 as translate
 from typing import List, Optional
-from dataclasses import dataclass
-from dataclasses_json import dataclass_json
+from dataclasses import dataclass, field
+from dataclasses_json import dataclass_json, Undefined, CatchAll
 from .audio import Audio
 from .constants import *
 import tempfile
 import os
 import re
+from .timings import Timings
+from .phrasetiming import PhraseTiming
 
 MINIMUM_GAP = 0.3
 
 
-@dataclass_json
+@dataclass_json(undefined=Undefined.INCLUDE)
 @dataclass
 class LanguagePhrase:
     lang: str
     text: str
     id: int = None
-    start_time: float = None
-    end_time: float = None
-    freeze_time: Optional[float] = None
-    freeze_duration: Optional[float] = None
+    timings: Timings = field(default_factory=Timings)
     natural_audio: Audio = None
     duration_audio: Audio = None
+
+    extra: CatchAll = None
 
     AUDIO_SUBDIR = 'audio-clips'
     ASS_CLASSES = {
@@ -33,55 +34,20 @@ class LanguagePhrase:
         'en': 'Latin'
     }
 
-    def gap_between(self, next_phrase: 'LanguagePhrase'):
-        return round(next_phrase.start_time - self.end_time, 3)
+    def __post_init__(self):
+        if self.extra is not None and hasattr(self.extra, 'start_time') and self.timings.get() is None:
+            self.timings.set(timing=PhraseTiming(
+                start_time=self.extra.start_time,
+                end_time=self.extra.end_time if hasattr(self.extra, 'end_time') else None,
+                freeze_time=self.extra.freeze_time if hasattr(self.extra, 'freeze_time') else None,
+                freeze_duration=self.extra.freeze_duration if hasattr(self.extra, 'freeze_duration') else None,
+            ))
 
-    def duration(self) -> Optional[float]:
-        if self.start_time is not None and self.end_time is not None:
-            return round(self.end_time - self.start_time, 3)
-        return None
+    def get_timing(self, timing_scheme: str = None) -> PhraseTiming:
+        return self.timings.get(timing_scheme)
 
-    def reset_timing(self, source: 'LanguagePhrase'):
-        self.start_time = source.start_time
-        self.end_time = source.end_time
-        if self.audio_speed() < 1.0:
-            self.end_time = round(self.start_time + self.natural_audio.duration, 3)
-        self.freeze_duration = None
-        self.freeze_time = None
-
-    def expand(self, at_speed: float) -> float:
-        self.freeze_time = None
-        self.freeze_duration = None
-        if self.audio_speed() > at_speed:
-            self.freeze_time = round(self.end_time, 3)
-            self.freeze_duration = round(self.natural_audio.duration / at_speed - self.duration(), 3)
-            self.end_time = round(self.end_time + self.freeze_duration, 3)
-            return self.freeze_duration
-
-        return 0.0
-
-    def shift(self, increment: float) -> bool:
-        # TODO: make sure not shifted past the end of the video
-        if self.start_time - increment < 0:
-            return False
-
-        self.start_time += increment
-        self.end_time += increment
-        return True
-
-    def move_start(self, increment: float) -> bool:
-        if self.start_time - increment < 0:
-            return False
-        self.start_time += increment
-        return True
-
-    def move_end(self, increment: float) -> bool:
-        # TODO: make sure not shifted past the end of the video
-        self.end_time += increment
-        return True
-
-    def audio_speed(self):
-        return round(self.natural_audio.duration / self.duration(), 2)
+    def audio_speed(self, timing_scheme: str = None):
+        return round(self.natural_audio.duration / self.timings.get(timing_scheme).duration(), 2)
 
     def get_tts_natural_audio(self, service: str = SERVICE_AZURE, overwrite: bool = False, voice_name: str = None):
         if self.natural_audio is None or overwrite:
@@ -168,13 +134,13 @@ class LanguagePhrase:
         hours, minutes = divmod(minutes, 60)
         return "%d:%02d:%02d%s%02d" % (hours, minutes, seconds, milli_sep, millisecs/10)
 
-    def to_srt(self, source: 'SourceLanguagePhrase', timings: 'LanguagePhrase' = None, include_source: bool = False) -> str:
-        if timings is not None:
-            start = timings.start_time
-            end = timings.end_time
+    def to_srt(self, source: 'SourceLanguagePhrase', timing_scheme: str = None, timing: PhraseTiming = None, include_source: bool = False) -> str:
+        if timing is not None:
+            start = timing.start_time
+            end = timing.end_time
         else:
-            start = self.start_time
-            end = self.end_time
+            start = self.timings.get(timing_scheme).start_time
+            end = self.timings.get(timing_scheme).end_time
 
         text = self.subtitle_text()
         if include_source:
@@ -186,16 +152,16 @@ class LanguagePhrase:
                + self.time_to_str(end, milli_sep=',') \
                + f"\n{text}"
 
-    def to_ass(self, source: 'SourceLanguagePhrase', timings: 'LanguagePhrase' = None, include_source: bool = False):
+    def to_ass(self, source: 'SourceLanguagePhrase', timing: PhraseTiming = None, timing_scheme: str = None, include_source: bool = False):
         # Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         # Dialogue: 0,0:00:00.63,0:00:04.56,Arabic,,0,0,0,,أود أن ألفت انتباهكم إلى خمسة أمور
 
-        if timings is not None:
-            start = timings.start_time
-            end = timings.end_time
+        if timing is not None:
+            start = timing.start_time
+            end = timing.end_time
         else:
-            start = self.start_time
-            end = self.end_time
+            start = self.timings.get(timing_scheme).start_time
+            end = self.timings.get(timing_scheme).end_time
 
         text = self.subtitle_text()
         if include_source:

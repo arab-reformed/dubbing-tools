@@ -6,6 +6,8 @@ from dataclasses import dataclass
 from dataclasses_json import dataclass_json
 from .word import Word
 from .sourcelanguagePhrase import SourceLanguagePhrase
+from .timings import Timings
+from .phrasetiming import PhraseTiming
 
 
 @dataclass_json
@@ -24,6 +26,9 @@ class Phrase:
         self.source.id = self.id
         for lang in self.targets:
             self.get_target(lang).id = self.id
+
+    def get_timing(self, lang: str, timing_scheme: str = None) -> PhraseTiming:
+        return self.get_target(lang).timings.get(timing_scheme)
 
     def translate_text(self, target_lang):
         translate_client = translate.Client()
@@ -66,31 +71,42 @@ class Phrase:
             source=SourceLanguagePhrase(
                 lang=self.source.lang,
                 text=' '.join([w.word for w in words[split_at+1:self.source.end_word+1]]),
-                start_time=words[split_at+1].start_time,
-                end_time=words[self.source.end_word].end_time,
                 start_word=split_at+1,
                 end_word=self.source.end_word
             )
         )
+        next.source.timings.set(
+            scheme=Timings.TIMING_SOURCE,
+            timing=PhraseTiming(
+                start_time=words[split_at+1].start_time,
+                end_time=words[self.source.end_word].end_time,
+            )
+        )
         self.source.text = ' '.join([w.word for w in words[self.source.start_word:split_at + 1]])
-        self.source.end_time = words[split_at].end_time
+        self.source.timings.get(Timings.TIMING_SOURCE).end_time = words[split_at].end_time
         self.source.end_word = split_at
 
         return next
 
     @classmethod
-    def words_to_phrase(cls, lang: str, words: List[Word], start_word: int):
-        return cls(
+    def words_to_phrase(cls, lang: str, words: List[Word], start_word: int) -> 'Phrase':
+        p = cls(
             id=-1,
             source=SourceLanguagePhrase(
                 lang=lang,
                 text=' '. join([w.word for w in words]),
-                start_time=words[0].start_time,
-                end_time=words[-1].end_time,
                 start_word=start_word,
                 end_word=start_word+len(words)-1
             )
         )
+        p.source.timings.set(
+            scheme=Timings.TIMING_SOURCE,
+            timing=PhraseTiming(
+                start_time=words[0].start_time,
+                end_time=words[-1].end_time,
+            )
+        )
+        return p
 
     def get_tts_audio_natural(self, lang: str, overwrite: bool = False):
         self.get_target(lang).get_tts_natural_audio(
@@ -102,33 +118,34 @@ class Phrase:
             overwrite=overwrite
         )
 
-    def to_srt(self, lang: str, timings_lang: str = None, include_source: bool = False) -> str:
+    def to_srt(self, lang: str, timings_lang: str = None, timing_scheme: str = None, include_source: bool = False) -> str:
         timings = None
         if timings_lang is not None:
-            timings = self.get_target(timings_lang)
+            timings = self.get_target(timings_lang).timings.get(timing_scheme)
 
         return self.get_target(lang).to_srt(
             source=self.source,
-            timings=timings,
+            timing=timings,
             include_source=include_source
         )
 
-    def to_ass(self, lang: str, timings_lang: str = None, include_source: bool = False) -> str:
+    def to_ass(self, lang: str, timings_lang: str = None, timing_scheme: str = None, include_source: bool = False) -> str:
         timings = None
         if timings_lang is not None:
-            timings = self.get_target(timings_lang)
+            timings = self.get_target(timings_lang).timings.get(timing_scheme)
 
         return self.get_target(lang).to_ass(
             source=self.source,
-            timings=timings,
+            timing=timings,
             include_source=include_source
         )
 
     def to_csv(self, lang: str) -> tuple:
+        timing = self.source.timings.get(Timings.TIMING_SOURCE)
         return (
             self.id,
-            self.source.start_time,
-            self.source.end_time,
+            timing.start_time,
+            timing.end_time,
             self.source.text,
             self.get_target(lang).text,
         )
