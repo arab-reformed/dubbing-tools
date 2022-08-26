@@ -50,6 +50,10 @@ class Phrase:
     def get_target(self, lang: str) -> Optional[LanguagePhrase]:
         if lang in self.targets:
             return self.targets[lang]
+
+        elif lang == self.source.lang:
+            return self.source
+
         return None
 
     def set_target(self, lang, phrase: LanguagePhrase):
@@ -98,21 +102,27 @@ class Phrase:
             overwrite=overwrite
         )
 
-    def to_srt(self, lang: str = None, include_source: bool = False) -> str:
-        if lang is None:
-            return self.source.to_srt(self.source)
-        else:
-            return self.get_target(lang).to_srt(source=self.source, include_source=include_source)
+    def to_srt(self, lang: str, timings_lang: str = None, include_source: bool = False) -> str:
+        timings = None
+        if timings_lang is not None:
+            timings = self.get_target(timings_lang)
 
-    def to_ass(self, style_name: str, lang: str = None, include_source: bool = False) -> str:
-        if lang is None or self.get_target(lang) is None:
-            return self.source.to_ass(source=self.source, style_name=style_name)
-        else:
-            return self.get_target(lang).to_ass(
-                source=self.source,
-                style_name=style_name,
-                include_source=include_source
-            )
+        return self.get_target(lang).to_srt(
+            source=self.source,
+            timings=timings,
+            include_source=include_source
+        )
+
+    def to_ass(self, lang: str, timings_lang: str = None, include_source: bool = False) -> str:
+        timings = None
+        if timings_lang is not None:
+            timings = self.get_target(timings_lang)
+
+        return self.get_target(lang).to_ass(
+            source=self.source,
+            timings=timings,
+            include_source=include_source
+        )
 
     def to_csv(self, lang: str) -> tuple:
         return (

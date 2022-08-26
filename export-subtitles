@@ -2,18 +2,23 @@
 
 import fire
 from classes import *
-import dotenv
-
-dotenv.load_dotenv()
 
 
-def cmd(transcript_path: str, type: str = 'srt', lang: str = None, include_source: bool = False):
+def cmd(transcript_path: str, lang: str, timings_lang: str = None, type: str = 'ass', include_source: bool = False):
     transcript = Transcript.load(transcript_path)
 
     if type == 'srt':
-        print(transcript.to_srt(lang=lang, include_source=include_source))
+        print(transcript.to_srt(
+            lang=lang,
+            timings_lang=timings_lang,
+            include_source=include_source
+        ))
     else:
-        print(transcript.to_ass(lang=lang, include_source=include_source))
+        print(transcript.to_ass(
+            lang=lang,
+            timings_lang=timings_lang,
+            include_source=include_source
+        ))
 
 
 if __name__ == "__main__":
