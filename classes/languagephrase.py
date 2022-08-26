@@ -80,20 +80,19 @@ class LanguagePhrase:
         return round(self.natural_audio.duration / self.duration(), 2)
 
     def get_tts_natural_audio(self, service: str = SERVICE_AZURE, overwrite: bool = False, voice_name: str = None):
-        if self.natural_audio is None:
+        if self.natural_audio is None or overwrite:
             self.natural_audio = Audio(file_name=self.natural_audio_fullpath(service=service))
 
-        base_audio = self.natural_audio.tts_audio(
+        self.natural_audio.tts_audio(
             text=self.text,
             lang=self.lang,
             service=service,
             voice_name=voice_name,
             overwrite=overwrite,
         )
-        assert len(base_audio)
 
     def get_tts_duration_audio(self, service: str = SERVICE_AZURE, overwrite: bool = False, voice_name: str = None):
-        if self.duration_audio is None:
+        if self.duration_audio is None or overwrite:
             self.duration_audio = Audio(self.audio_fullpath(service=service))
 
         if self.natural_audio is None:
