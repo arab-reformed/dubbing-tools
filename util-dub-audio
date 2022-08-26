@@ -10,7 +10,7 @@ import dotenv
 dotenv.load_dotenv()
 
 
-def cmd(project_path: str, video_file: str, lang: str, srt: bool = False, overwrite: bool = False, overlay_gain: int = -30):
+def cmd(project_path: str, video_file: str, lang: str, timing_scheme: str, srt: bool = False, overwrite: bool = False, overlay_gain: int = -30):
     path = os.path.dirname(__file__)
     project_path = os.path.join(path, project_path)
     video_file = os.path.join(path, video_file)
@@ -18,7 +18,7 @@ def cmd(project_path: str, video_file: str, lang: str, srt: bool = False, overwr
     video = Video(
         source_file=video_file,
         output_path=project_path,
-        target_file=os.path.join(project_path, f"video-{lang}.mp4"),
+        target_file=os.path.join(project_path, f"video-{timing_scheme}-{lang}.mp4"),
         # srt_path=os.path.join(project_path, f"phrases-{lang}.srt")
     )
 
@@ -26,6 +26,7 @@ def cmd(project_path: str, video_file: str, lang: str, srt: bool = False, overwr
     video.dub_audio(
         transcript=transcript,
         lang=lang,
+        timing_scheme=timing_scheme,
         overwrite=overwrite,
         overlay_gain=overlay_gain,
     )

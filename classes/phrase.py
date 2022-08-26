@@ -2,7 +2,6 @@ from dataclasses import dataclass, field
 from .languagephrase import LanguagePhrase
 from google.cloud import translate_v2 as translate
 from typing import List, Optional
-from dataclasses import dataclass
 from dataclasses_json import dataclass_json
 from .word import Word
 from .sourcelanguagePhrase import SourceLanguagePhrase
@@ -29,6 +28,9 @@ class Phrase:
 
     def get_timing(self, lang: str, timing_scheme: str = None) -> PhraseTiming:
         return self.get_target(lang).timings.get(timing_scheme)
+
+    def set_timing(self, lang: str, timing_scheme: str, timing: PhraseTiming):
+        self.get_target(lang).timings.set(scheme=timing_scheme, timing=timing)
 
     def translate_text(self, target_lang):
         translate_client = translate.Client()
@@ -76,14 +78,14 @@ class Phrase:
             )
         )
         next.source.timings.set(
-            scheme=Timings.TIMING_SOURCE,
+            scheme=Timings.SOURCE,
             timing=PhraseTiming(
                 start_time=words[split_at+1].start_time,
                 end_time=words[self.source.end_word].end_time,
             )
         )
         self.source.text = ' '.join([w.word for w in words[self.source.start_word:split_at + 1]])
-        self.source.timings.get(Timings.TIMING_SOURCE).end_time = words[split_at].end_time
+        self.source.timings.get(Timings.SOURCE).end_time = words[split_at].end_time
         self.source.end_word = split_at
 
         return next
@@ -100,7 +102,7 @@ class Phrase:
             )
         )
         p.source.timings.set(
-            scheme=Timings.TIMING_SOURCE,
+            scheme=Timings.SOURCE,
             timing=PhraseTiming(
                 start_time=words[0].start_time,
                 end_time=words[-1].end_time,
@@ -113,8 +115,9 @@ class Phrase:
             overwrite=overwrite
         )
 
-    def get_tts_audio_duration(self, lang: str, overwrite: bool = False):
+    def get_tts_audio_duration(self, lang: str, timing_scheme: str, overwrite: bool = False):
         self.get_target(lang).get_tts_duration_audio(
+            timing_scheme=timing_scheme,
             overwrite=overwrite
         )
 
@@ -141,7 +144,7 @@ class Phrase:
         )
 
     def to_csv(self, lang: str) -> tuple:
-        timing = self.source.timings.get(Timings.TIMING_SOURCE)
+        timing = self.source.timings.get(Timings.SOURCE)
         return (
             self.id,
             timing.start_time,

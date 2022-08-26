@@ -1,13 +1,8 @@
-import sys
-from pydub import AudioSegment
-from google.cloud import texttospeech
-from google.cloud import translate_v2 as translate
-from typing import List, Optional
+from typing import Optional
 from dataclasses import dataclass, field
 from dataclasses_json import dataclass_json, Undefined, CatchAll
 from .audio import Audio
 from .constants import *
-import tempfile
 import os
 import re
 from .timings import Timings
@@ -16,7 +11,7 @@ from .phrasetiming import PhraseTiming
 MINIMUM_GAP = 0.3
 
 
-@dataclass_json(undefined=Undefined.INCLUDE)
+@dataclass_json
 @dataclass
 class LanguagePhrase:
     lang: str
@@ -25,8 +20,10 @@ class LanguagePhrase:
     timings: Timings = field(default_factory=Timings)
     natural_audio: Audio = None
     duration_audio: Audio = None
-
-    extra: CatchAll = None
+    start_time: float = None
+    end_time: float = None
+    freeze_time: float = None
+    freeze_duration: float = None
 
     AUDIO_SUBDIR = 'audio-clips'
     ASS_CLASSES = {
@@ -35,13 +32,18 @@ class LanguagePhrase:
     }
 
     def __post_init__(self):
-        if self.extra is not None and hasattr(self.extra, 'start_time') and self.timings.get() is None:
+        if hasattr(self, 'start_time') and self.timings.get() is None:
+            # print(f"{self.id}  {self.lang}  {self.text}")
             self.timings.set(timing=PhraseTiming(
-                start_time=self.extra.start_time,
-                end_time=self.extra.end_time if hasattr(self.extra, 'end_time') else None,
-                freeze_time=self.extra.freeze_time if hasattr(self.extra, 'freeze_time') else None,
-                freeze_duration=self.extra.freeze_duration if hasattr(self.extra, 'freeze_duration') else None,
+                start_time=self.start_time,
+                end_time=self.end_time if hasattr(self, 'end_time') else None,
+                freeze_time=self.freeze_time if hasattr(self, 'freeze_time') else None,
+                freeze_duration=self.freeze_duration if hasattr(self, 'freeze_duration') else None,
             ))
+            del self.start_time
+            del self.end_time
+            del self.freeze_time
+            del self.freeze_duration
 
     def get_timing(self, timing_scheme: str = None) -> PhraseTiming:
         return self.timings.get(timing_scheme)
@@ -61,9 +63,11 @@ class LanguagePhrase:
             overwrite=overwrite,
         )
 
-    def get_tts_duration_audio(self, service: str = SERVICE_AZURE, overwrite: bool = False, voice_name: str = None):
+    def get_tts_duration_audio(self, timing_scheme: str, service: str = SERVICE_AZURE, overwrite: bool = False, voice_name: str = None):
+        # print(f"{self.id} {self.duration_audio}")
         if self.duration_audio is None or overwrite:
-            self.duration_audio = Audio(self.audio_fullpath(service=service))
+            # print(f"{self.id}")
+            self.duration_audio = Audio(file_name=self.audio_fullpath(service=service))
 
         if self.natural_audio is None:
             self.get_tts_natural_audio(
@@ -72,19 +76,16 @@ class LanguagePhrase:
                 voice_name=voice_name,
             )
 
-        ratio = self.natural_audio.duration / self.duration()
+        ratio = self.natural_audio.duration / self.timings.get(timing_scheme).duration()
 
         # if the audio fits, return it
-        if ratio <= 1:
-            return self.get_tts_natural_audio(
-                overwrite=overwrite,
-                voice_name=voice_name
-            )
+        if ratio <= 1.0:
+            ratio = 1.0
 
         # round to one decimal point and go a little faster to be safe,
         ratio = round(ratio, 1)
-        if ratio > 4:
-            ratio = 4
+        if ratio > 3.0:
+            ratio = 3.0
 
         self.duration_audio.tts_audio(
             text=self.text,

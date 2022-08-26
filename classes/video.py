@@ -42,7 +42,7 @@ class Video:
             return
 
         # Also, grab the original audio
-        dubbed = AudioSegment.from_file("audio-en.mp3")
+        dubbed = AudioSegment.from_file(f"audio-{timing_scheme}-en.mp3")
 
         clip = VideoFileClip(self.source_file)
 
@@ -51,14 +51,15 @@ class Video:
         frozen = 0
         for phrase in transcript.phrases:
             target = phrase.get_target(lang)
+            timing = target.timings.get(timing_scheme)
             dubbed = dubbed.overlay(
                 AudioSegment.from_mp3(target.natural_audio.file_name),
-                position=target.timings.get(timing_scheme).start_time * 1000,
+                position=timing.start_time * 1000,
                 gain_during_overlay=overlay_gain
             )
-            if target.freeze_time is not None:  # and frozen < 1000:
-                print(f"freezing at: {target.freeze_time}")
-                clip = freeze(clip, t=target.freeze_time, freeze_duration=target.freeze_duration)
+            if timing.freeze_time is not None:  # and frozen < 1000:
+                print(f"freezing at: {timing.freeze_time}")
+                clip = freeze(clip, t=timing.freeze_time, freeze_duration=timing.freeze_duration)
                 frozen += 1
 
         # Write the final audio to a temporary output file

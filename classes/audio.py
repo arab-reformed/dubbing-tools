@@ -59,10 +59,8 @@ class Audio:
     def tts_google_audio(self, text: str, lang: str, voice_name: str = None, speaking_rate: float = 1.0, overwrite: bool = False):
         print(f"Getting audio: {text}", file=sys.stderr)
         if not overwrite and os.path.exists(self.file_name):
-            with open(self.file_name, 'r+b') as f:
-                audio = f.read()
-                f.close()
-                return audio
+            self.get_duration()
+            return
 
         if voice_name is None:
             voice_name = GOOGLE_VOICES[lang]
@@ -102,6 +100,10 @@ class Audio:
 
     def tts_azure_audio(self, text: str, lang: str, voice_name: str = None, speaking_rate: float = 1.0, overwrite: bool = False):
 
+        if not overwrite and os.path.exists(self.file_name):
+            self.get_duration()
+            return
+
         if voice_name is None:
             voice_name = AZURE_VOICES[lang]
 
@@ -135,7 +137,7 @@ class Audio:
         speech_synthesis_result = speech_synthesizer.speak_ssml_async(ssml).get()
 
         if speech_synthesis_result.reason == speechsdk.ResultReason.SynthesizingAudioCompleted:
-            print(f"Speech synthesized for text [{text}]", file=sys.stderr)
+            print(f"Speech synthesized for text [{text}] to {self.file_name}", file=sys.stderr)
             self.get_duration(from_file=True)
 
         elif speech_synthesis_result.reason == speechsdk.ResultReason.Canceled:

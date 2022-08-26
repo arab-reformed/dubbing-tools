@@ -16,10 +16,10 @@ def cmd(transcript_path: str,  video_file: str):
 
     for phrase in transcript.phrases:
         target = phrase.source
-        print(f"Id: {phrase.id}  Start: {target.timings.get(Timings.TIMING_SOURCE).start_time}, End: {target.timings.get(Timings.TIMING_SOURCE).end_time}  {target.text}")
-        clip_start = target.timings.get(Timings.TIMING_SOURCE).start_time*1000-MARGIN
-        clip_duration = target.timings.get(Timings.TIMING_SOURCE).duration()*1000+MARGIN
-        clip_end = target.timings.get(Timings.TIMING_SOURCE).end_time * 1000 + MARGIN
+        print(f"Id: {phrase.id}  Start: {target.timings.get(Timings.SOURCE).start_time}, End: {target.timings.get(Timings.SOURCE).end_time}  {target.text}")
+        clip_start = target.timings.get(Timings.SOURCE).start_time * 1000 - MARGIN
+        clip_duration = target.timings.get(Timings.SOURCE).duration() * 1000 + MARGIN
+        clip_end = target.timings.get(Timings.SOURCE).end_time * 1000 + MARGIN
         segment = audio[clip_start:clip_end]
         segment.export(target.natural_audio_fullpath(service=SERVICE_SOURCE))
 

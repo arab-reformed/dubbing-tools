@@ -2,7 +2,7 @@ import os.path
 import glob
 import re
 from dataclasses_json import dataclass_json
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from .word import Word
 from .phrase import Phrase
 import json
@@ -35,16 +35,17 @@ class Transcript:
         for phrase in self.phrases:
             srt += phrase.to_srt(
                 lang=lang,
-                timings_lang= timings_lang,
+                timings_lang=timings_lang,
                 include_source=include_source
             )
             srt += "\n\n"
 
         return srt
 
-    def get_tts_duration_audio(self, lang: str, service: str = SERVICE_AZURE, overwrite: bool = False, voice_name: str = None):
+    def get_tts_duration_audio(self, lang: str, timing_scheme: str, service: str = SERVICE_AZURE, overwrite: bool = False, voice_name: str = None):
         for phrase in self.phrases:
             phrase.get_target(lang).get_tts_duration_audio(
+                timing_scheme=timing_scheme,
                 service=service,
                 overwrite=overwrite,
                 voice_name=voice_name,
@@ -130,7 +131,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         for phrase in self.phrases:
             subtitles += phrase.to_ass(
                 lang=lang,
-                timings_lang= timings_lang,
+                timings_lang=timings_lang,
                 include_source=include_source
             )
             subtitles += "\n"
@@ -197,9 +198,9 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                     ),
                     reason=reason
                 )
-                phrase.source.timings.default = Timings.TIMING_SOURCE
+                phrase.source.timings.default = Timings.SOURCE
                 phrase.source.timings.set(
-                    scheme=Timings.TIMING_SOURCE,
+                    scheme=Timings.SOURCE,
                     timing=PhraseTiming(
                         start_time=word.start_time,
                         end_time=word.end_time
@@ -287,17 +288,53 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
     def reset_timings(self, lang: str, timing_scheme: str):
         for phrase in self.phrases:
-            phrase.get_timing(lang, timing_scheme).reset_timing(phrase.source.timings.get(Timings.TIMING_SOURCE))
+            timing = phrase.get_timing(lang=lang, timing_scheme=timing_scheme)
+            if timing is None:
+                timing = PhraseTiming()
+                phrase.set_timing(lang=lang, timing_scheme=timing_scheme, timing=timing)
+
+            timing.reset_timing(phrase.source.timings.get(Timings.SOURCE))
 
     def gap_between(self, lang: str, timing_scheme: str, id1: int, id2: int) -> Optional[float]:
         if id2 > self.phrase_count()-1 or id1 < 0:
             return None
 
-        return round(self.phrases[id2].get_timing(lang, timing_scheme).start_time - self.phrases[id1].get_timing(lang, timing_scheme).end_time, 3)
+        return round(self.phrases[id2].get_timing(lang, timing_scheme).start_time
+                     - self.phrases[id1].get_timing(lang, timing_scheme).end_time, 3)
 
-    def adjust_timings(self, lang: str, timing_scheme: str):
+    def build_translation_timings(self, lang: str):
+        self.reset_timings(lang=lang, timing_scheme=Timings.TRANSLATION)
+
+        last_end = 0.0
+        last_src_end = 0.0
+        for phrase in self.phrases:
+            src_timing = phrase.source.timings.get(Timings.SOURCE)
+            start = last_end + src_timing.start_time - last_src_end
+            end = start + src_timing.duration()
+            timing = PhraseTiming(
+                start_time=start,
+                end_time=end,
+            )
+            phrase.source.timings.set(timing=timing, scheme=Timings.TRANSLATION)
+            last_src_end = src_timing.end_time
+
+            target = phrase.get_target(lang)
+            start = end
+            # end += target.duration_audio.duration
+            end += target.duration_audio.get_duration()
+            tgt_timing = PhraseTiming(
+                start_time=start,
+                end_time=end,
+                freeze_time=start,
+                freeze_duration=target.duration_audio.duration
+            )
+            phrase.set_timing(lang=lang, timing_scheme=Timings.TRANSLATION, timing=tgt_timing)
+
+            last_end = end
+
+    def adjust_dub_timings(self, lang: str):
         # set the start and end times for the target language
-        self.reset_timings(lang=lang)
+        self.reset_timings(lang=lang, timing_scheme=Timings.DUBBED)
         i = 0
         speeds = []  # type: list[Phrase]
         for phrase in self.phrases:
@@ -311,26 +348,26 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         while not finished and iterations < 4000:
             finished = True
             iterations += 1
-            speeds.sort(key=lambda p: p.get_target(lang).audio_speed(timing_scheme=timing_scheme), reverse=True)
+            speeds.sort(key=lambda p: p.get_target(lang).audio_speed(timing_scheme=Timings.DUBBED), reverse=True)
 
             # print("Looping...", file=sys.stderr)
             for phrase in speeds:
                 target = phrase.get_target(lang)
                 # print(f"Speed: {target.audio_speed()}", file=sys.stderr)
 
-                if target.audio_speed(timing_scheme=timing_scheme) <= SPEED_MODERATE:
+                if target.audio_speed(timing_scheme=Timings.DUBBED) <= SPEED_MODERATE:
                     finished = True
                     break
 
-                if target.audio_speed(timing_scheme=timing_scheme) > SPEED_VERY_FAST:
+                if target.audio_speed(timing_scheme=Timings.DUBBED) > SPEED_VERY_FAST:
                     # look ahead and back 3 blocks
                     look = 4
 
-                elif target.audio_speed(timing_scheme=timing_scheme) > SPEED_FAST:
+                elif target.audio_speed(timing_scheme=Timings.DUBBED) > SPEED_FAST:
                     # look ahead and back 2 blocks
                     look = 3
 
-                elif target.audio_speed(timing_scheme=timing_scheme) > SPEED_HIGH_MODERATE:
+                elif target.audio_speed(timing_scheme=Timings.DUBBED) > SPEED_HIGH_MODERATE:
                     # look ahead and back 1 block
                     look = 2
 
@@ -338,20 +375,20 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                     look = 1
 
                 for i in range(0, look+1):
-                    gap = self.gap_between(lang, id1=phrase.id+i, id2=phrase.id+i+1, timing_scheme=timing_scheme)
+                    gap = self.gap_between(lang, id1=phrase.id+i, id2=phrase.id+i+1, timing_scheme=Timings.DUBBED)
                     if gap is not None and gap > DESIRED_GAP + GAP_INCREMENT:
-                        if target.timings.get(timing_scheme).move_end(GAP_INCREMENT):
+                        if target.timings.get(Timings.DUBBED).move_end(GAP_INCREMENT):
                             for j in range(i, 0, -1):
-                                self.phrases[phrase.id+i].get_timing(lang, timing_scheme).shift(GAP_INCREMENT)
+                                self.phrases[phrase.id+i].get_timing(lang, Timings.DUBBED).shift(GAP_INCREMENT)
                             finished = False
                             # print(f"Gap+: {gap}, Ratio: {target.audio_speed()} Id: {phrase.id}, Btwn: {phrase.id+i}-{phrase.id+i+1}", file=sys.stderr)
                             break
 
-                    gap = self.gap_between(lang, id1=phrase.id-i-1, id2=phrase.id-i, timing_scheme=timing_scheme)
+                    gap = self.gap_between(lang, id1=phrase.id-i-1, id2=phrase.id-i, timing_scheme=Timings.DUBBED)
                     if gap is not None and gap > DESIRED_GAP + GAP_INCREMENT:
-                        if target.timings.get(timing_scheme).move_start(-GAP_INCREMENT):
+                        if target.timings.get(Timings.DUBBED).move_start(-GAP_INCREMENT):
                             for j in range(i, 0, -1):
-                                self.phrases[phrase.id-i].get_timing(lang, timing_scheme).shift(-GAP_INCREMENT)
+                                self.phrases[phrase.id-i].get_timing(lang, Timings.DUBBED).shift(-GAP_INCREMENT)
                             finished = False
                             # print(f"Gap-: {gap}, Ratio: {target.audio_speed()}, Id: {phrase.id}, Btwn: {phrase.id-i-1}-{phrase.id-i}", file=sys.stderr)
                             break
@@ -363,20 +400,20 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                 for i in range(1, look+1):
                     if phrase.id+i < self.phrase_count():
                         next_target = self.phrases[phrase.id+i].get_target(lang)
-                        if next_target.audio_speed(timing_scheme=timing_scheme) < SPEED_ACCEPTABLE \
-                                and next_target.timings.get(timing_scheme).move_start(GAP_INCREMENT):
+                        if next_target.audio_speed(timing_scheme=Timings.DUBBED) < SPEED_ACCEPTABLE \
+                                and next_target.timings.get(Timings.DUBBED).move_start(GAP_INCREMENT):
                             for j in range(i-1, 0, -1):
-                                self.phrases[phrase.id+i].get_timing(lang, timing_scheme).shift(GAP_INCREMENT)
+                                self.phrases[phrase.id+i].get_timing(lang, Timings.DUBBED).shift(GAP_INCREMENT)
                             finished = False
                             print(f"Compress Id: {phrase.id+i}", file=sys.stderr)
                             break
 
                     if phrase.id-i >= 0:
                         prev_target = self.phrases[phrase.id-i].get_target(lang)
-                        if prev_target.audio_speed(timing_scheme=timing_scheme) < SPEED_ACCEPTABLE \
-                                and prev_target.timings.get(timing_scheme).move_end(-GAP_INCREMENT):
+                        if prev_target.audio_speed(timing_scheme=Timings.DUBBED) < SPEED_ACCEPTABLE \
+                                and prev_target.timings.get(Timings.DUBBED).move_end(-GAP_INCREMENT):
                             for j in range(i-1, 0, -1):
-                                self.phrases[phrase.id-i].get_timing(lang, timing_scheme).shift(-GAP_INCREMENT)
+                                self.phrases[phrase.id-i].get_timing(lang, Timings.DUBBED).shift(-GAP_INCREMENT)
                             finished = False
                             print(f"Compress Id: {phrase.id-i}", file=sys.stderr)
                             break
@@ -386,17 +423,25 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         for phrase in self.phrases:
             target = phrase.get_target(lang)
             if total_shift > 0.0:
-                target.timings.get(timing_scheme).shift(total_shift)
+                target.timings.get(Timings.DUBBED).shift(total_shift)
 
-            expansion = target.timings.get(timing_scheme).expand(SPEED_ACCEPTABLE)
+            expansion = target.timings.get(Timings.DUBBED).expand(SPEED_ACCEPTABLE)
 
             total_shift += expansion
 
             if expansion > 0.0 and phrase.id < self.phrase_count()-1:
-                gap = target.timings.get(timing_scheme).gap_between(
-                    self.phrases[phrase.id+1].get_timing(lang, timing_scheme)
+                gap = target.timings.get(Timings.DUBBED).gap_between(
+                    self.phrases[phrase.id+1].get_timing(lang, Timings.DUBBED)
                 ) + total_shift
                 if gap < MINIMUM_GAP:
                     extra = MINIMUM_GAP - gap
-                    target.timings.get(timing_scheme).freeze_duration += extra
+                    target.timings.get(Timings.DUBBED).freeze_duration += extra
                     total_shift += extra
+
+        # Set dubbing times for the source audio
+        for phrase in self.phrases:
+            timing = phrase.get_timing(lang=lang, timing_scheme=Timings.DUBBED)
+            phrase.source.timings.set(scheme=Timings.DUBBED, timing=PhraseTiming(
+                start_time=timing.start_time,
+                end_time=timing.start_time + phrase.source.natural_audio.duration
+            ))

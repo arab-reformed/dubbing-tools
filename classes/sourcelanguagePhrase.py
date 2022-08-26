@@ -14,8 +14,8 @@ class SourceLanguagePhrase(LanguagePhrase):
     end_word: int = None
 
     def __post_init__(self):
-        if self.extra is not None and hasattr(self.extra, 'start_time'):
-            self.timings.default = Timings.TIMING_SOURCE
+        if hasattr(self, 'start_time'):
+            self.timings.default = Timings.SOURCE
         super().__post_init__()
 
     def word_count(self) -> Optional[int]:

@@ -64,5 +64,7 @@ class PhraseTiming:
         self.freeze_time = None
 
     @staticmethod
-    def rnd(value: float) -> float:
+    def rnd(value: float) -> Optional[float]:
+        if value is None:
+            return None
         return round(value, 3)

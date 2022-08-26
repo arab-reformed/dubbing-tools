@@ -7,16 +7,16 @@ from .phrasetiming import PhraseTiming
 @dataclass_json
 @dataclass
 class Timings:
-    TIMING_SOURCE = 'src'
-    TIMING_DUBBED = 'dub'
-    TIMING_TRANSLATION = 'trn'
-    TIMING_SCHEMES = {
-        TIMING_SOURCE: 'timing',
-        TIMING_DUBBED: 'dubbed',
-        TIMING_TRANSLATION: 'translation',
+    SOURCE = 'src'
+    DUBBED = 'dub'
+    TRANSLATION = 'trn'
+    SCHEMES = {
+        SOURCE: 'timing',
+        DUBBED: 'dubbed',
+        TRANSLATION: 'translation',
     }
 
-    default: str = TIMING_DUBBED
+    default: str = DUBBED
 
     phrase_timings: dict[str, PhraseTiming] = field(default_factory=dict)
 
@@ -24,7 +24,7 @@ class Timings:
         if scheme is None:
             scheme = self.default
 
-        if scheme in self.TIMING_SCHEMES and scheme in self.phrase_timings:
+        if scheme in self.SCHEMES and scheme in self.phrase_timings:
             return self.phrase_timings[scheme]
 
         return None

@@ -4,6 +4,7 @@ out_*
 /.env
 *.mp3
 *.mp4
+*.m4a
 *.wav
 __pycache__/
 /.credentials.json
