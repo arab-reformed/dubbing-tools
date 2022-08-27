@@ -56,6 +56,7 @@ class Phrase:
         )
 
         self.set_text(target_lang, result['translatedText'])
+        print(f"{self.id}: {self.source.text} --> {result['translatedText']}")
 
     def get_text(self, lang: str) -> Optional[str]:
         if lang in self.targets:
@@ -146,15 +147,25 @@ class Phrase:
             include_source=include_source
         )
 
-    def to_ass(self, lang: str, timings_lang: str = None, timing_scheme: str = None, include_source: bool = False) -> str:
-        timings = None
-        if timings_lang is not None:
-            timings = self.get_target(timings_lang).timings.get(timing_scheme)
+    def to_ass(self, lang: str, timing_scheme: str, subtitle_lang: str, include_source: bool = False) -> str:
+        if timing_scheme in [Timings.DUBBED, Timings.TRANSLATION]:
+            start = self.source.timings.get(timing_scheme).start_time
+            end = self.get_timing(lang, timing_scheme).end_time
+        else:
+            start = self.source.timings.get(timing_scheme).start_time
+            end = self.source.timings.get(timing_scheme).end_time
 
-        return self.get_target(lang).to_ass(
-            source=self.source,
-            timing=timings,
-            include_source=include_source
+        timings = None
+
+        if subtitle_lang == self.source.lang:
+            target = self.source
+        else:
+            target = self.get_target(subtitle_lang)\
+
+        return target.to_ass(
+            start=start,
+            end=end,
+            source=self.source if include_source else None,
         )
 
     def to_csv(self, lang: str) -> tuple:

@@ -13,10 +13,10 @@ class SourceLanguagePhrase(LanguagePhrase):
     start_word: int = None
     end_word: int = None
 
-    def __post_init__(self):
-        if hasattr(self, 'start_time'):
-            self.timings.default = Timings.SOURCE
-        super().__post_init__()
+    # def __post_init__(self):
+    #     if hasattr(self, 'start_time'):
+    #         self.timings.default = Timings.SOURCE
+    #     super().__post_init__()
 
     def word_count(self) -> Optional[int]:
         if self.start_word is not None and self.end_word is not None:

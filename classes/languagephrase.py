@@ -25,25 +25,28 @@ class LanguagePhrase:
     freeze_time: float = None
     freeze_duration: float = None
 
+    # extras: CatchAll = None
+
     AUDIO_SUBDIR = 'audio-clips'
     ASS_CLASSES = {
         'ar': 'Arabic',
-        'en': 'Latin'
+        'en': 'Latin',
+        'pt': 'Latin',
     }
 
-    def __post_init__(self):
-        if hasattr(self, 'start_time') and self.timings.get() is None:
-            # print(f"{self.id}  {self.lang}  {self.text}")
-            self.timings.set(timing=PhraseTiming(
-                start_time=self.start_time,
-                end_time=self.end_time if hasattr(self, 'end_time') else None,
-                freeze_time=self.freeze_time if hasattr(self, 'freeze_time') else None,
-                freeze_duration=self.freeze_duration if hasattr(self, 'freeze_duration') else None,
-            ))
-            del self.start_time
-            del self.end_time
-            del self.freeze_time
-            del self.freeze_duration
+    # def __post_init__(self):
+    #     if hasattr(self, 'start_time') and self.timings.get() is None:
+    #         # print(f"{self.id}  {self.lang}  {self.text}")
+    #         self.timings.set(timing=PhraseTiming(
+    #             start_time=self.start_time,
+    #             end_time=self.end_time if hasattr(self, 'end_time') else None,
+    #             freeze_time=self.freeze_time if hasattr(self, 'freeze_time') else None,
+    #             freeze_duration=self.freeze_duration if hasattr(self, 'freeze_duration') else None,
+    #         ))
+    #         del self.start_time
+    #         del self.end_time
+    #         del self.freeze_time
+    #         del self.freeze_duration
 
     def get_timing(self, timing_scheme: str = None) -> PhraseTiming:
         return self.timings.get(timing_scheme)
@@ -153,19 +156,12 @@ class LanguagePhrase:
                + self.time_to_str(end, milli_sep=',') \
                + f"\n{text}"
 
-    def to_ass(self, source: 'SourceLanguagePhrase', timing: PhraseTiming = None, timing_scheme: str = None, include_source: bool = False):
+    def to_ass(self, start: float, end: float, source: 'SourceLanguagePhrase' = None):
         # Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         # Dialogue: 0,0:00:00.63,0:00:04.56,Arabic,,0,0,0,,أود أن ألفت انتباهكم إلى خمسة أمور
 
-        if timing is not None:
-            start = timing.start_time
-            end = timing.end_time
-        else:
-            start = self.timings.get(timing_scheme).start_time
-            end = self.timings.get(timing_scheme).end_time
-
         text = self.subtitle_text()
-        if include_source:
+        if source is not None:
             text = '\u202d' + source.subtitle_text() + '\\N' + text
 
         return f"Dialogue: 0,{self.time_to_str(start)},{self.time_to_str(end)},{self.ASS_CLASSES[self.lang]},,0,0,0,,{text}"

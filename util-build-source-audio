@@ -8,7 +8,9 @@ from classes.constants import *
 MARGIN = 5
 
 
-def cmd(transcript_path: str,  lang: str, timing_scheme: str, audio_output: str):
+def cmd(transcript_path: str,  lang: str, timing_scheme: str, audio_output: str = None):
+    if audio_output is None:
+        audio_output = f"source-{timing_scheme}-{lang}.mp3"
     transcript = Transcript.load(transcript_path)
 
     # dubbed = AudioSegment.silent(duration=transcript.phrases[-1].get_target(lang).end_time*1000+100)

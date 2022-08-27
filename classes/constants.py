@@ -23,6 +23,7 @@ GOOGLE_VOICES = {
 }
 AZURE_VOICES = {
     'ar': 'ar-EG-ShakirNeural',
+    'pt': 'pt-BR-AntonioNeural',
 }
 
 SERVICE_AZURE = 'azure'

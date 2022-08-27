@@ -26,16 +26,11 @@ class PhraseTiming:
 
         return self.rnd(self.start_time - timing.end_time)
 
-    def expand(self, at_speed: float) -> float:
-        self.freeze_time = None
-        self.freeze_duration = None
-        if self.audio_speed() > at_speed:
-            self.freeze_time = round(self.end_time, 3)
-            self.freeze_duration = round(self.natural_audio.duration / at_speed - self.duration(), 3)
-            self.end_time = round(self.end_time + self.freeze_duration, 3)
-            return self.freeze_duration
-
-        return 0.0
+    def expand_and_freeze(self, expansion: float) -> float:
+        self.freeze_time = self.end_time
+        self.freeze_duration = expansion
+        self.end_time += self.freeze_duration
+        return self.freeze_duration
 
     def shift(self, increment: float) -> bool:
         # TODO: make sure not shifted past the end of the video

@@ -29,7 +29,7 @@ class Video:
             .set_channels(1) \
             .export(output, format="wav")
 
-    def dub_audio(self, transcript: Transcript, lang: str, timing_scheme: str, overwrite: bool = False, overlay_gain: int = -30):
+    def dub_audio(self, transcript: Transcript, lang: str, timing_scheme: str, source_audio: str, overwrite: bool = False, overlay_gain: int = -30):
         # if os.path.exists(self.target_file):
         #     return
 
@@ -42,7 +42,7 @@ class Video:
             return
 
         # Also, grab the original audio
-        dubbed = AudioSegment.from_file(f"audio-{timing_scheme}-en.mp3")
+        dubbed = AudioSegment.from_file(source_audio)
 
         clip = VideoFileClip(self.source_file)
 

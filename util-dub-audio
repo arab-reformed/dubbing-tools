@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-import sys
 
-from classes import Video
 import os
 import fire
 from classes import *
@@ -10,7 +8,8 @@ import dotenv
 dotenv.load_dotenv()
 
 
-def cmd(project_path: str, video_file: str, lang: str, timing_scheme: str, srt: bool = False, overwrite: bool = False, overlay_gain: int = -30):
+def cmd(project_path: str, video_file: str, lang: str, timing_scheme: str, srt: bool = False,
+        overwrite: bool = False, overlay_gain: int = -30):
     path = os.path.dirname(__file__)
     project_path = os.path.join(path, project_path)
     video_file = os.path.join(path, video_file)
@@ -27,6 +26,7 @@ def cmd(project_path: str, video_file: str, lang: str, timing_scheme: str, srt: 
         transcript=transcript,
         lang=lang,
         timing_scheme=timing_scheme,
+        source_audio=f"source-{timing_scheme}-{lang}.mp3",
         overwrite=overwrite,
         overlay_gain=overlay_gain,
     )

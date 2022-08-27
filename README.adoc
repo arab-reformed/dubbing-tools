@@ -1,0 +1,14 @@
+= README
+
+== Installation
+
+Install require Python libraries using `pip` and
+----
+pip3 install -r requirements.txt
+----
+
+== Process
+
+1. Extract audio from the video file
+
+2.

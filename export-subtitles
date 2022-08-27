@@ -4,21 +4,26 @@ import fire
 from classes import *
 
 
-def cmd(transcript_path: str, lang: str, timings_lang: str = None, type: str = 'ass', include_source: bool = False):
+def cmd(transcript_path: str, lang: str, timing_scheme: str, subtitle_lang: str, type: str = 'ass', include_source: bool = False):
     transcript = Transcript.load(transcript_path)
 
     if type == 'srt':
-        print(transcript.to_srt(
+        subtitles = transcript.to_srt(
             lang=lang,
-            timings_lang=timings_lang,
+            timing_scheme=timing_scheme,
             include_source=include_source
-        ))
+        )
     else:
-        print(transcript.to_ass(
+        subtitles = transcript.to_ass(
             lang=lang,
-            timings_lang=timings_lang,
+            timing_scheme=timing_scheme,
+            subtitle_lang=subtitle_lang,
             include_source=include_source
-        ))
+        )
+
+    with open(f"video-{timing_scheme}-{lang}.{subtitle_lang}.{type}", 'w') as f:
+        f.write(subtitles)
+        f.close()
 
 
 if __name__ == "__main__":
