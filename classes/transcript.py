@@ -309,7 +309,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         last_src_end = 0.0
         for phrase in self.phrases:
             src_timing = phrase.source.timings.get(Timings.SOURCE)
-            start = last_end + src_timing.start_time - last_src_end
+            gap = src_timing.start_time - last_src_end
+            start = last_end + gap
             end = start + src_timing.duration()
             timing = PhraseTiming(
                 start_time=start,

@@ -10216,6 +10216,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Baş,",
+          "id": 0,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": null
@@ -10293,6 +10315,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "bi xêr hatî soteriolojiyê.",
+          "id": 1,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "bi xêr hatî soteriolojiyê.",
           "id": 1,
           "timings": {
@@ -10408,6 +10452,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Ev qurs bi Ruhê Pîroz re mijûl dibe",
+          "id": 2,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "."
@@ -10485,6 +10551,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "û hînkirina Ruhê Pîroz,",
+          "id": 3,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "û hînkirina Ruhê Pîroz,",
           "id": 3,
           "timings": {
@@ -10600,6 +10688,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Ruhê Pîroz çawa di can de dixebite.",
+          "id": 4,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -10677,6 +10787,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Ji banga Wî ya bibandor bi tevahî direvin,",
+          "id": 5,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Ji banga Wî ya bibandor bi tevahî direvin,",
           "id": 5,
           "timings": {
@@ -10792,6 +10924,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "û nûjenkirin,",
+          "id": 6,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -10869,6 +11023,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "hemû rê ber bi rûmetê ve.",
+          "id": 7,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "hemû rê ber bi rûmetê ve.",
           "id": 7,
           "timings": {
@@ -10984,6 +11160,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Ji ber vê yekê mijarek pir girîng e",
+          "id": 8,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "."
@@ -11061,6 +11259,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "û ez kêfxweş im ku hûn bi min re ne.",
+          "id": 9,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "û ez kêfxweş im ku hûn bi min re ne.",
           "id": 9,
           "timings": {
@@ -11176,6 +11396,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Em ê bi hûrgilî lê binêrin.",
+          "id": 10,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -11253,6 +11495,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Ez difikirim ku hûn ê ji dersê kêfxweş bibin.",
+          "id": 11,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Ez difikirim ku hûn ê ji dersê kêfxweş bibin.",
           "id": 11,
           "timings": {
@@ -11368,6 +11632,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Di encamê da,",
+          "id": 12,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "."
@@ -11445,6 +11731,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "hemû yên me",
+          "id": 13,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "hemû yên me",
           "id": 13,
           "timings": {
@@ -11560,6 +11868,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Xirîstiyanî,",
+          "id": 14,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -11637,6 +11967,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "hemû ola me ya şexsî",
+          "id": 15,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "hemû ola me ya şexsî",
           "id": 15,
           "timings": {
@@ -11752,6 +12104,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "bêyî Ruhê Pîroz tenê xapandinek e.",
+          "id": 16,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "is"
@@ -11829,6 +12203,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Ji ber vê yekê em pir in,",
+          "id": 17,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Ji ber vê yekê em pir in,",
           "id": 17,
           "timings": {
@@ -11944,6 +12340,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ji bo xizmeta Ruhê Pîroz pir spasdar,",
+          "id": 18,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -12021,6 +12439,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Ez dixwazim vê dest pê bikim",
+          "id": 19,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Ez dixwazim vê dest pê bikim",
           "id": 19,
           "timings": {
@@ -12136,6 +12576,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "dersa yekem bi xwendina peyva Xwedê,",
+          "id": 20,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -12213,6 +12675,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "wek ku em ê bi her dersekê re.",
+          "id": 21,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "wek ku em ê bi her dersekê re.",
           "id": 21,
           "timings": {
@@ -12328,6 +12812,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Bi min re bizivire,",
+          "id": 22,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "."
@@ -12405,6 +12911,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ji kerema xwe ve,",
+          "id": 23,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ji kerema xwe ve,",
           "id": 23,
           "timings": {
@@ -12520,6 +13048,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ji Romayî 8 re û ez ê 13 heta 17 bixwînim.",
+          "id": 24,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -12597,6 +13147,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Romayî 8: 13 heta 17.",
+          "id": 25,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Romayî 8: 13 heta 17.",
           "id": 25,
           "timings": {
@@ -12712,6 +13284,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Bo,",
+          "id": 26,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -12789,6 +13383,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "eger hûn li gor bedenê dijîn,",
+          "id": 27,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "eger hûn li gor bedenê dijîn,",
           "id": 27,
           "timings": {
@@ -12904,6 +13520,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "hûnê bimirin.",
+          "id": 28,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -12981,6 +13619,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Lê heke hûn",
+          "id": 29,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Lê heke hûn",
           "id": 29,
           "timings": {
@@ -13096,6 +13756,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "bi Ruh dimirin,",
+          "id": 30,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "through"
@@ -13173,6 +13855,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "kirinên bedenê",
+          "id": 31,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "kirinên bedenê",
           "id": 31,
           "timings": {
@@ -13288,6 +13992,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "hûnê bijîn.",
+          "id": 32,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -13365,6 +14091,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Ji bo yên ku têne rêber kirin",
+          "id": 33,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Ji bo yên ku têne rêber kirin",
           "id": 33,
           "timings": {
@@ -13480,6 +14228,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "bi Ruhê Xwedê,",
+          "id": 34,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "by"
@@ -13557,6 +14327,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ew kurên Xwedê ne.",
+          "id": 35,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ew kurên Xwedê ne.",
           "id": 35,
           "timings": {
@@ -13672,6 +14464,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Çimkî we Ruh qebûl nekir",
+          "id": 36,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "."
@@ -13749,6 +14563,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "dîsa ji tirsa koletiyê,",
+          "id": 37,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "dîsa ji tirsa koletiyê,",
           "id": 37,
           "timings": {
@@ -13864,6 +14700,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "lê we Ruhê Kurtiyê standiye",
+          "id": 38,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -13941,6 +14799,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ku em digirîn Abba,",
+          "id": 39,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ku em digirîn Abba,",
           "id": 39,
           "timings": {
@@ -14056,6 +14936,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Bav.",
+          "id": 40,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -14133,6 +15035,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Ruh bixwe bi ruhê me re şahidiyê dike",
+          "id": 41,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Ruh bixwe bi ruhê me re şahidiyê dike",
           "id": 41,
           "timings": {
@@ -14248,6 +15172,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ku em zarokên Xwedê ne,",
+          "id": 42,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.2"
@@ -14325,6 +15271,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "û eger zarok wêris bin,",
+          "id": 43,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "û eger zarok wêris bin,",
           "id": 43,
           "timings": {
@@ -14440,6 +15408,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "wêrisên Xwedê û bi Mesîh re hevparên mîras.",
+          "id": 44,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -14517,6 +15507,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Eger wisa be",
+          "id": 45,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Eger wisa be",
           "id": 45,
           "timings": {
@@ -14632,6 +15644,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ku em bi wî re diêşin,",
+          "id": 46,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "that"
@@ -14709,6 +15743,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "da ku em jî bi hev re bi rûmet bibin.",
+          "id": 47,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "da ku em jî bi hev re bi rûmet bibin.",
           "id": 47,
           "timings": {
@@ -14824,6 +15880,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Werin em di duayê de rûyê Xwedê bigerin.",
+          "id": 48,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -14901,6 +15979,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Ya Xudan Xwedê,",
+          "id": 49,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Ya Xudan Xwedê,",
           "id": 49,
           "timings": {
@@ -15016,6 +16116,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "em li ser axa pîroz radiwestin,",
+          "id": 50,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -15093,6 +16215,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "dema em nêzî vê dibin",
+          "id": 51,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "dema em nêzî vê dibin",
           "id": 51,
           "timings": {
@@ -15208,6 +16352,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "mijara mezin a kesê sêyemîn a Trinity Pîroz",
+          "id": 52,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.4"
@@ -15285,6 +16451,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "û xebata wî ya rizgarî di canê me de ye.",
+          "id": 53,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "û xebata wî ya rizgarî di canê me de ye.",
           "id": 53,
           "timings": {
@@ -15400,6 +16588,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Û em wê dua dikin",
+          "id": 54,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "."
@@ -15477,6 +16687,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "di dawiya vê qursê de,",
+          "id": 55,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "di dawiya vê qursê de,",
           "id": 55,
           "timings": {
@@ -15592,6 +16824,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "em ê xwedî nirxek pir kûrtir bin",
+          "id": 56,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -15669,6 +16923,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ji bo xizmeta rizgariya Ruhê Pîroz,",
+          "id": 57,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ji bo xizmeta rizgariya Ruhê Pîroz,",
           "id": 57,
           "timings": {
@@ -15784,6 +17060,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ji ya ku dibe ku em niha hebin",
+          "id": 58,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -15861,6 +17159,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Alîkariya me bike ku em mezin bibin,",
+          "id": 59,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Alîkariya me bike ku em mezin bibin,",
           "id": 59,
           "timings": {
@@ -15976,6 +17296,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ne tenê di kerem û zanîna Îsa de,",
+          "id": 60,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -16053,6 +17395,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "yê ku Ruh bala xwe dide ser,",
+          "id": 61,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "yê ku Ruh bala xwe dide ser,",
           "id": 61,
           "timings": {
@@ -16168,6 +17532,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "lê di heman demê de ku em ê mezin bibin",
+          "id": 62,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -16245,6 +17631,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "di kerem û zanîna Ruhê Pîroz de,",
+          "id": 63,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "di kerem û zanîna Ruhê Pîroz de,",
           "id": 63,
           "timings": {
@@ -16360,6 +17768,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ji karê wî haydartir dibe,",
+          "id": 64,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -16437,6 +17867,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Karê wî yê rizgarkirinê,",
+          "id": 65,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Karê wî yê rizgarkirinê,",
           "id": 65,
           "timings": {
@@ -16552,6 +18004,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "û bi kûrtir binirxîne",
+          "id": 66,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -16629,6 +18103,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "firehiya xizmeta Wî",
+          "id": 67,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "firehiya xizmeta Wî",
           "id": 67,
           "timings": {
@@ -16744,6 +18240,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "çawa ku ew di nav gunehkaran û serhildêran de dixebite,",
+          "id": 68,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -16821,6 +18339,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "wekî em hemû bi xwezayê xwe ne.",
+          "id": 69,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "wekî em hemû bi xwezayê xwe ne.",
           "id": 69,
           "timings": {
@@ -16936,6 +18476,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Ji ber vê yekê Xudan vê polê pîroz bike.",
+          "id": 70,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -17013,6 +18575,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Di hînkirinê de alîkariya min bike.",
+          "id": 71,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Di hînkirinê de alîkariya min bike.",
           "id": 71,
           "timings": {
@@ -17128,6 +18712,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Di guhdarîkirinê de alîkariya xwendekaran bikin,",
+          "id": 72,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "."
@@ -17205,6 +18811,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "fêrbûn,",
+          "id": 73,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "fêrbûn,",
           "id": 73,
           "timings": {
@@ -17320,6 +18948,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "û wê her dersekê bide",
+          "id": 74,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -17397,6 +19047,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "dikare ji rûmeta te re xizmetê bike,",
+          "id": 75,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "dikare ji rûmeta te re xizmetê bike,",
           "id": 75,
           "timings": {
@@ -17512,6 +19184,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ji bo mezinbûna me ya giyanî,",
+          "id": 76,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -17589,6 +19283,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "û ji bo xweşiyê",
+          "id": 77,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "û ji bo xweşiyê",
           "id": 77,
           "timings": {
@@ -17704,6 +19420,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "tevahiya hebûna me dema ku em rêwîtiyê dikin",
+          "id": 78,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.9"
@@ -17781,6 +19519,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "berbi ebediyeta bêdawî.",
+          "id": 79,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "berbi ebediyeta bêdawî.",
           "id": 79,
           "timings": {
@@ -17896,6 +19656,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Niha bi me re be em dua dikin.",
+          "id": 80,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "."
@@ -17973,6 +19755,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Bi navê Îsa.",
+          "id": 81,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Bi navê Îsa.",
           "id": 81,
           "timings": {
@@ -18088,6 +19892,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Amîn.",
+          "id": 82,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -18165,6 +19991,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Baş,",
+          "id": 83,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Baş,",
           "id": 83,
           "timings": {
@@ -18280,6 +20128,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "spas ji bo tevlêbûna me ji bo vê polê",
+          "id": 84,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -18357,6 +20227,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "û ez dixwazim",
+          "id": 85,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "û ez dixwazim",
           "id": 85,
           "timings": {
@@ -18472,6 +20364,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "bi dersa yekem dest pê bike,",
+          "id": 86,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.6"
@@ -18549,6 +20463,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ku bi sernavê: Lêkolîn",
+          "id": 87,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ku bi sernavê: Lêkolîn",
           "id": 87,
           "timings": {
@@ -18664,6 +20600,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ji Ruhê Pîroz.",
+          "id": 88,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.6"
@@ -18741,6 +20699,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Lêkolîna Ruhê Pîroz.",
+          "id": 89,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Lêkolîna Ruhê Pîroz.",
           "id": 89,
           "timings": {
@@ -18856,6 +20836,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Ruhê Xwedê yê pîroz ji destpêkê ve bi cimeta Xwedê re bû.",
+          "id": 90,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -18933,6 +20935,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Jixwe di Genesis 1 de,",
+          "id": 91,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Jixwe di Genesis 1 de,",
           "id": 91,
           "timings": {
@@ -19048,6 +21072,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ayet 2",
+          "id": 92,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -19125,6 +21171,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "wan di dawiyê de ber bi rihetiya xwe ve dibe",
+          "id": 93,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "wan di dawiyê de ber bi rihetiya xwe ve dibe",
           "id": 93,
           "timings": {
@@ -19240,6 +21308,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "di Îsa Mesîh de (Îşaya 63 14)",
+          "id": 94,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.8"
@@ -19317,6 +21407,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Ji bo ku Ruh nas bikin",
+          "id": 95,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Ji bo ku Ruh nas bikin",
           "id": 95,
           "timings": {
@@ -19432,6 +21544,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ji ber vê yekê ew e ku di berdewamiyê de bisekinin",
+          "id": 96,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.7"
@@ -19509,6 +21643,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "bi Pîrozên her temenî re.",
+          "id": 97,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "bi Pîrozên her temenî re.",
           "id": 97,
           "timings": {
@@ -19624,6 +21780,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Xwedê soz daye,",
+          "id": 98,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -19701,6 +21879,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Ruhê wî berê xwe da Îsraêl,",
+          "id": 99,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Ruhê wî berê xwe da Îsraêl,",
           "id": 99,
           "timings": {
@@ -19816,6 +22016,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Gelê wî yê hilbijartî.",
+          "id": 100,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -19893,6 +22115,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Em dizanin ku di Peymana Kevin de,",
+          "id": 101,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Em dizanin ku di Peymana Kevin de,",
           "id": 101,
           "timings": {
@@ -20008,6 +22252,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "kesên cihêreng rihetiya wî Ruh tecrube dikin.",
+          "id": 102,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -20085,6 +22351,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Dawid bifikirin,",
+          "id": 103,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Dawid bifikirin,",
           "id": 103,
           "timings": {
@@ -20200,6 +22488,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "mesela (Zebûr 51)",
+          "id": 104,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -20277,6 +22587,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Lê Xwedê soz da",
+          "id": 105,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Lê Xwedê soz da",
           "id": 105,
           "timings": {
@@ -20392,6 +22724,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "xebatek Ruh pir dewlemendtir û berfirehtir",
+          "id": 106,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -20469,6 +22823,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ji ya ku em dikarin xeyal bikin.",
+          "id": 107,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ji ya ku em dikarin xeyal bikin.",
           "id": 107,
           "timings": {
@@ -20584,6 +22960,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Îşaya li ser padîşahekî rast pêxembertî kir",
+          "id": 108,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -20661,6 +23059,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ku rêveberiya wê bibe mîna,",
+          "id": 109,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ku rêveberiya wê bibe mîna,",
           "id": 109,
           "timings": {
@@ -20776,6 +23196,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "çemên avê li cihekî hişk",
+          "id": 110,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -20853,6 +23295,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "û veguherîna çolê ya bêhêz",
+          "id": 111,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "û veguherîna çolê ya bêhêz",
           "id": 111,
           "timings": {
@@ -20968,6 +23432,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "bikeve dinyayeke ku bi fêkiya rastdariyê tije ye (Îşaya 32).",
+          "id": 112,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.3"
@@ -21045,6 +23531,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Gava ku Ruh,",
+          "id": 113,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Gava ku Ruh,",
           "id": 113,
           "timings": {
@@ -21160,6 +23668,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Dema ku Ruhê",
+          "id": 114,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -21237,6 +23767,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ji jor ve bi ser me de tê rijandin.",
+          "id": 115,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ji jor ve bi ser me de tê rijandin.",
           "id": 115,
           "timings": {
@@ -21352,6 +23904,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Û paşê ew di Îşaya 44 de dibêje:",
+          "id": 116,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -21429,6 +24003,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ku Ruh wê li ser Îsraêl bê rijandin,",
+          "id": 117,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ku Ruh wê li ser Îsraêl bê rijandin,",
           "id": 117,
           "timings": {
@@ -21544,6 +24140,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "wek çemekî",
+          "id": 118,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -21621,6 +24239,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "avê li ser erdê hişk,",
+          "id": 119,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "avê li ser erdê hişk,",
           "id": 119,
           "timings": {
@@ -21736,6 +24376,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "avdana giyanên bêbawer ji bo hilberîna gel",
+          "id": 120,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -21813,6 +24475,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "yên ku dibêjin ez yê Xudan im.",
+          "id": 121,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "yên ku dibêjin ez yê Xudan im.",
           "id": 121,
           "timings": {
@@ -21928,6 +24612,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Û vî awayî Ruh",
+          "id": 122,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -22005,6 +24711,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "bersiva dilsoziya peymana Xwedê ye",
+          "id": 123,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "bersiva dilsoziya peymana Xwedê ye",
           "id": 123,
           "timings": {
@@ -22120,6 +24848,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ji bo pirsgirêka kronîk",
+          "id": 124,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -22197,6 +24947,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "têkçûna peymana Îsraêl.",
+          "id": 125,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "têkçûna peymana Îsraêl.",
           "id": 125,
           "timings": {
@@ -22312,6 +25084,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Hûn vê yekê jî di nav de dibînin",
+          "id": 126,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -22389,6 +25183,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Pirtûka Joel",
+          "id": 127,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Pirtûka Joel",
           "id": 127,
           "timings": {
@@ -22504,6 +25320,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ku Xudan Ruhê xwe birijîne ser hemû gelê xwe",
+          "id": 128,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.3"
@@ -22581,6 +25419,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ku her kesê ku li ser navê",
+          "id": 129,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ku her kesê ku li ser navê",
           "id": 129,
           "timings": {
@@ -22696,6 +25556,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ya Xudan wê xilas bibe",
+          "id": 130,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "of"
@@ -22773,6 +25655,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "(Yûêl 2:28 heta 32).",
+          "id": 131,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "(Yûêl 2:28 heta 32).",
           "id": 131,
           "timings": {
@@ -22888,6 +25792,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Ji ber vê yekê ku hûn karê Ruhê Pîroz bixwînin",
+          "id": 132,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -22965,6 +25891,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "xwendina karê ezmanî ye,",
+          "id": 133,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "xwendina karê ezmanî ye,",
           "id": 133,
           "timings": {
@@ -23080,6 +26028,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "karê rizgarkirinê.",
+          "id": 134,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -23157,6 +26127,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Û karê ku her û her dimîne.",
+          "id": 135,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Û karê ku her û her dimîne.",
           "id": 135,
           "timings": {
@@ -23272,6 +26264,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Niha,",
+          "id": 136,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -23349,6 +26363,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "bê guman,",
+          "id": 137,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "bê guman,",
           "id": 137,
           "timings": {
@@ -23464,6 +26500,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "di serdema Peymana Nû de hûn dizanin,",
+          "id": 138,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -23541,6 +26599,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ku gava Îsa ji nav miriyan rabû",
+          "id": 139,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ku gava Îsa ji nav miriyan rabû",
           "id": 139,
           "timings": {
@@ -23656,6 +26736,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "û hilkişiya ezmên,",
+          "id": 140,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.6"
@@ -23733,6 +26835,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Wî Ruhê xwe rijand",
+          "id": 141,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Wî Ruhê xwe rijand",
           "id": 141,
           "timings": {
@@ -23848,6 +26972,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "di tedbîrên pir mezintir ji",
+          "id": 142,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.6"
@@ -23925,6 +27071,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "berê dihat zanîn",
+          "id": 143,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "berê dihat zanîn",
           "id": 143,
           "timings": {
@@ -24040,6 +27208,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "(Karên Şandiyan 2 17,",
+          "id": 144,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -24117,6 +27307,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "heta 21 û 33 û 34)",
+          "id": 145,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "heta 21 û 33 û 34)",
           "id": 145,
           "timings": {
@@ -24232,6 +27444,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Û Petrûs, piştî xutbeya wî, ji aliyê xwe ve tê qutkirin",
+          "id": 146,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -24309,6 +27543,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "bi hezaran mirovên ku di bin baweriyek mezin a guneh de ne.",
+          "id": 147,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "bi hezaran mirovên ku di bin baweriyek mezin a guneh de ne.",
           "id": 147,
           "timings": {
@@ -24424,6 +27680,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Di bin wê de",
+          "id": 148,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "."
@@ -24501,6 +27779,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Û wan qîriyan mêr û Bira.",
+          "id": 149,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Û wan qîriyan mêr û Bira.",
           "id": 149,
           "timings": {
@@ -24616,6 +27916,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Dibe em çi bikin?",
+          "id": 150,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "."
@@ -24693,6 +28015,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Petrûs ji wan re got:",
+          "id": 151,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Petrûs ji wan re got:",
           "id": 151,
           "timings": {
@@ -24808,6 +28152,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "tobe bikin û her kes ji we imad bibe",
+          "id": 152,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -24885,6 +28251,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "bi navê Îsa Mesîh.",
+          "id": 153,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "bi navê Îsa Mesîh.",
           "id": 153,
           "timings": {
@@ -25000,6 +28388,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Û hûnê diyariya Ruhê Pîroz bistînin.",
+          "id": 154,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "."
@@ -25077,6 +28487,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Çimkî soz ji we re ye",
+          "id": 155,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Çimkî soz ji we re ye",
           "id": 155,
           "timings": {
@@ -25192,6 +28624,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "û ji zarokên xwe re",
+          "id": 156,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.3"
@@ -25269,6 +28723,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "û ji hemûyên ku dûr in.",
+          "id": 157,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "û ji hemûyên ku dûr in.",
           "id": 157,
           "timings": {
@@ -25384,6 +28860,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Bi qasî ku Xudan,",
+          "id": 158,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "."
@@ -25461,6 +28959,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Xwedayê me wê gazî bike (Karên Şandiyan 2:38 û 39).",
+          "id": 159,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Xwedayê me wê gazî bike (Karên Şandiyan 2:38 û 39).",
           "id": 159,
           "timings": {
@@ -25576,6 +29096,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Û bi vî awayî yên mayî",
+          "id": 160,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -25653,6 +29195,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ji nivîsarên Peymana Nû,",
+          "id": 161,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ji nivîsarên Peymana Nû,",
           "id": 161,
           "timings": {
@@ -25768,6 +29332,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "bi taybetî Nameyên Pawlos,",
+          "id": 162,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -25845,6 +29431,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "tenê bi Ruhê Pîroz dagirtî ne.",
+          "id": 163,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "tenê bi Ruhê Pîroz dagirtî ne.",
           "id": 163,
           "timings": {
@@ -25960,6 +29568,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Ew pir caran dipeyive",
+          "id": 164,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "."
@@ -26037,6 +29667,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "li ser jidayikbûnê",
+          "id": 165,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "li ser jidayikbûnê",
           "id": 165,
           "timings": {
@@ -26152,6 +29804,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ji Ruh wek Galatî,",
+          "id": 166,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "of"
@@ -26229,6 +29903,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "4: 29.",
+          "id": 167,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "4: 29.",
           "id": 167,
           "timings": {
@@ -26344,6 +30040,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Û ew bi berdewamî dipeyive",
+          "id": 168,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "."
@@ -26421,6 +30139,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "li ser aliyên cuda",
+          "id": 169,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "li ser aliyên cuda",
           "id": 169,
           "timings": {
@@ -26536,6 +30276,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ji xebata rizgariya Ruh.",
+          "id": 170,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "of"
@@ -26613,6 +30375,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Mîna ku em tenê çend bixwînin",
+          "id": 171,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Mîna ku em tenê çend bixwînin",
           "id": 171,
           "timings": {
@@ -26728,6 +30512,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ji wan ji Romayiyan re 8.",
+          "id": 172,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "of"
@@ -26824,6 +30630,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Ji ber vê yekê eger em Mesîh wekî navbeynkarê xwe yê yekane xezîne,",
+          "id": 173,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -26901,6 +30729,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "emê Ruhê Pîroz jî xezîne bikin",
+          "id": 174,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "emê Ruhê Pîroz jî xezîne bikin",
           "id": 174,
           "timings": {
@@ -27016,6 +30866,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "wekî diyariya mezin a Mesîh,",
+          "id": 175,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.2"
@@ -27093,6 +30965,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ku ji Wî nayê veqetandin,",
+          "id": 176,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ku ji Wî nayê veqetandin,",
           "id": 176,
           "timings": {
@@ -27208,6 +31102,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ji gunehkaran re (Yûhenna 4",
+          "id": 177,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -27285,6 +31201,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "û dîsa Yûhenna 7).",
+          "id": 178,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "û dîsa Yûhenna 7).",
           "id": 178,
           "timings": {
@@ -27400,6 +31338,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Jonathan Edwards bi vî awayî got.",
+          "id": 179,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -27477,6 +31437,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "\"Berketiyên ku Mesîh lê geriya",
+          "id": 180,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "\"Berketiyên ku Mesîh lê geriya",
           "id": 180,
           "timings": {
@@ -27592,6 +31574,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "bi çi kir û êş kişand",
+          "id": 181,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.5"
@@ -27669,6 +31673,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "di xebata rizgariyê de,",
+          "id": 182,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "di xebata rizgariyê de,",
           "id": 182,
           "timings": {
@@ -27784,6 +31810,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Ruhê Pîroz bû,",
+          "id": 183,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -27861,6 +31909,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Ruhê Pîroz di rûniştina Wî de,",
+          "id": 184,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Ruhê Pîroz di rûniştina Wî de,",
           "id": 184,
           "timings": {
@@ -27976,6 +32046,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Bandor û fêkiyên wî",
+          "id": 185,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -28053,6 +32145,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "berhevoka hemû keremê ye,",
+          "id": 186,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "berhevoka hemû keremê ye,",
           "id": 186,
           "timings": {
@@ -28168,6 +32282,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "rûhanî,",
+          "id": 187,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -28245,6 +32381,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "rihetî û şahî,",
+          "id": 188,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "rihetî û şahî,",
           "id": 188,
           "timings": {
@@ -28360,6 +32518,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "an jî bi yek gotinê",
+          "id": 189,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -28437,6 +32617,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ji hemû qenciya ruhanî ku Mesîh kirî",
+          "id": 190,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ji hemû qenciya ruhanî ku Mesîh kirî",
           "id": 190,
           "timings": {
@@ -28552,6 +32754,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ji bo mêrên vê dinyayê.",
+          "id": 191,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "for"
@@ -28629,6 +32853,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Û her weha berhevoka hemî kamilbûnê ye,",
+          "id": 192,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Û her weha berhevoka hemî kamilbûnê ye,",
           "id": 192,
           "timings": {
@@ -28744,6 +32990,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "qîmetî,",
+          "id": 193,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -28821,6 +33089,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "û şahiya herheyî,",
+          "id": 194,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "û şahiya herheyî,",
           "id": 194,
           "timings": {
@@ -28936,6 +33226,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ku wî kirî",
+          "id": 195,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -29013,6 +33325,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ji bo wan li cîhanek din.\"",
+          "id": 196,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ji bo wan li cîhanek din.\"",
           "id": 196,
           "timings": {
@@ -29128,6 +33462,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Ew gotinek ecêb ji hêla Edwards ve ye.",
+          "id": 197,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -29205,6 +33561,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Û ew bê guman nîşanî me dide",
+          "id": 198,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Û ew bê guman nîşanî me dide",
           "id": 198,
           "timings": {
@@ -29320,6 +33698,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ku îro gelek kêm dikin",
+          "id": 199,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.6"
@@ -29397,6 +33797,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "rola wezaretê",
+          "id": 200,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "rola wezaretê",
           "id": 200,
           "timings": {
@@ -29512,6 +33934,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ya Ruhê Pîroz wek",
+          "id": 201,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.5"
@@ -29589,6 +34033,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "bi tevayî re entegre",
+          "id": 202,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "bi tevayî re entegre",
           "id": 202,
           "timings": {
@@ -29704,6 +34170,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "kombûna bereketan",
+          "id": 203,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.7"
@@ -29781,6 +34269,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ku gelê Xwedê di xilasiyê de distîne.",
+          "id": 204,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ku gelê Xwedê di xilasiyê de distîne.",
           "id": 204,
           "timings": {
@@ -29896,6 +34406,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "John Brown ji Headington",
+          "id": 205,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -29973,6 +34505,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "bi vî awayî,",
+          "id": 206,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "bi vî awayî,",
           "id": 206,
           "timings": {
@@ -30088,6 +34642,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "\"Ma Mesîh Ruhê Pîroz kirî?",
+          "id": 207,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -30165,6 +34741,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Mesîh diyariyên Ruh kirî,",
+          "id": 208,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Mesîh diyariyên Ruh kirî,",
           "id": 208,
           "timings": {
@@ -30280,6 +34878,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "û bandor li ser sepandina xilasbûnê,",
+          "id": 209,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -30357,6 +34977,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "lê ne hebûna wî,",
+          "id": 210,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "lê ne hebûna wî,",
           "id": 210,
           "timings": {
@@ -30472,6 +35114,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ku serbixwe ye.\"",
+          "id": 211,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -30549,6 +35213,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Ji ber vê yekê karê Ruh",
+          "id": 212,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Ji ber vê yekê karê Ruh",
           "id": 212,
           "timings": {
@@ -30664,6 +35350,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "bi gelek awayan",
+          "id": 213,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.9"
@@ -30741,6 +35449,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "fêkî ye",
+          "id": 214,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "fêkî ye",
           "id": 214,
           "timings": {
@@ -30856,6 +35586,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "mirin û vejîna Mesîh.",
+          "id": 215,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "of"
@@ -30933,6 +35685,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Niha,",
+          "id": 216,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Niha,",
           "id": 216,
           "timings": {
@@ -31048,6 +35822,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "rizgariya di Mesîh de",
+          "id": 217,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -31125,6 +35921,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ji ber vê yekê tê qedirgirtin û kêf kirin",
+          "id": 218,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ji ber vê yekê tê qedirgirtin û kêf kirin",
           "id": 218,
           "timings": {
@@ -31240,6 +36058,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "tenê bi naskirina Ruhê Pîroz",
+          "id": 219,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.5"
@@ -31317,6 +36157,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "û xebata wî ya rizgarkirinê.",
+          "id": 220,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "û xebata wî ya rizgarkirinê.",
           "id": 220,
           "timings": {
@@ -31432,6 +36294,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Û ev yek ji wan e",
+          "id": 221,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -31509,6 +36393,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "doktrînên herî mezin ên Reformasyonê,",
+          "id": 222,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "doktrînên herî mezin ên Reformasyonê,",
           "id": 222,
           "timings": {
@@ -31624,6 +36530,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ew qas bi baldarî û dûv re jî pêşketiye",
+          "id": 223,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -31701,6 +36629,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ji hêla Puritans ve hatî zêdekirin.",
+          "id": 224,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ji hêla Puritans ve hatî zêdekirin.",
           "id": 224,
           "timings": {
@@ -31816,6 +36766,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Teolojiya Reformê çi xezîneyekê tîne ji me re",
+          "id": 225,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "."
@@ -31893,6 +36865,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "li ser xizmeta rizgariya Ruhê Pîroz.",
+          "id": 226,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "li ser xizmeta rizgariya Ruhê Pîroz.",
           "id": 226,
           "timings": {
@@ -32008,6 +37002,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Di rastî,",
+          "id": 227,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>1.0"
@@ -32085,6 +37101,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "BB Warfield gazî John Calvin kir",
+          "id": 228,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "BB Warfield gazî John Calvin kir",
           "id": 228,
           "timings": {
@@ -32200,6 +37238,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "Teologê Ruhê Pîroz.",
+          "id": 229,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.2"
@@ -32277,6 +37337,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Û Warfield li ser îdîayê çû",
+          "id": 230,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Û Warfield li ser îdîayê çû",
           "id": 230,
           "timings": {
@@ -32392,6 +37474,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "doktrîna pêşketî",
+          "id": 231,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.9"
@@ -32469,6 +37573,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "ji karê Ruhê Pîroz",
+          "id": 232,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "ji karê Ruhê Pîroz",
           "id": 232,
           "timings": {
@@ -32584,6 +37710,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "bi taybetî doktrînek Reformasyonê ye,",
+          "id": 233,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.3"
@@ -32661,6 +37809,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "û bi taybetî jî doktrînek Reformkirî,",
+          "id": 234,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "û bi taybetî jî doktrînek Reformkirî,",
           "id": 234,
           "timings": {
@@ -32776,6 +37946,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "û hîn bêtir bi taybetî doktrînek Pûrîtan.",
+          "id": 235,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -32853,6 +38045,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Û wisa,",
+          "id": 236,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Û wisa,",
           "id": 236,
           "timings": {
@@ -32968,6 +38182,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "xwendina Ruh",
+          "id": 237,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -33045,6 +38281,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "bi riya soterolojiya ezmûnî ya Reformkirî,",
+          "id": 238,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "bi riya soterolojiya ezmûnî ya Reformkirî,",
           "id": 238,
           "timings": {
@@ -33160,6 +38418,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "- ku heye,",
+          "id": 239,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": ","
@@ -33237,6 +38517,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "rizgariya ku em ji tecrûbeya",
+          "id": 240,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "rizgariya ku em ji tecrûbeya",
           "id": 240,
           "timings": {
@@ -33352,6 +38654,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "ji hêla xebatê ve",
+          "id": 241,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.2"
@@ -33429,6 +38753,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "Ruhê di giyan de -",
+          "id": 242,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "Ruhê di giyan de -",
           "id": 242,
           "timings": {
@@ -33544,6 +38890,28 @@
           "end_time": null,
           "freeze_time": null,
           "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
+          "text": "dewlemendiyek mezin a şehrezayî vedike",
+          "id": 243,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
         }
       },
       "reason": "gap>0.4"
@@ -33621,6 +38989,28 @@
         },
         "ckb": {
           "lang": "ckb",
+          "text": "û şahî ji bawermendan re.",
+          "id": 244,
+          "timings": {
+            "default": "dub",
+            "phrase_timings": {
+              "dub": {
+                "start_time": null,
+                "end_time": null,
+                "freeze_time": null,
+                "freeze_duration": null
+              }
+            }
+          },
+          "natural_audio": null,
+          "duration_audio": null,
+          "start_time": null,
+          "end_time": null,
+          "freeze_time": null,
+          "freeze_duration": null
+        },
+        "ku": {
+          "lang": "ku",
           "text": "û şahî ji bawermendan re.",
           "id": 244,
           "timings": {

@@ -18,13 +18,27 @@ class Phrase:
     reason: str = None
 
     def __post_init__(self):
-        self.set_id(self.id)
+        try:
+            self.set_children_id(self.id)
+        except Exception as e:
+            print(f"{e}")
+            raise e
 
-    def set_id(self, id: int):
-        self.id = id
-        self.source.id = self.id
-        for lang in self.targets:
-            self.get_target(lang).id = self.id
+    # def __setattr__(self, key, value):
+    #     if key == 'id':
+    #         self.set_children_id(self.id)
+    #
+    #     super().__setattr__(key, value)
+
+    def set_children_id(self, id: int):
+        try:
+            if self.source:
+                self.source.id = self.id
+            for lang in self.targets:
+                self.get_target(lang).id = self.id
+        except Exception as e:
+            print(f"{e}")
+            raise e
 
     def get_timing(self, lang: str, timing_scheme: str = None) -> PhraseTiming:
         return self.get_target(lang).timings.get(timing_scheme)
