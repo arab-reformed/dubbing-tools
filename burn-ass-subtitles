@@ -1,0 +1,8 @@
+#!/bin/bash
+
+VIDEO=$1
+ASS=$2
+OUTPUT=$3
+TEMP_ASS=`mktemp`
+
+ffmpeg -i "$VIDEO" -c:v libx264 -c:a copy -vf "ass=$ASS" "$OUTPUT" -crf 20

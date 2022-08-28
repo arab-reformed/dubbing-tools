@@ -1,0 +1,81 @@
+= Documentation
+:icons: font
+:toc:
+
+== Introduction
+
+An eleven minute segment from Dr. Beeke's first lecture on Soteriology was chosen as a test for evaluating the best way to translate a video lecture.  Our goals in this test are:
+
+1. Determine the work involved in subtitling and dubbing a lecture into Arabic
+
+2. Get feedback from prospective students on their preference for dubbing or subtitles.
+
+== Process
+
+The basic process we have so far defined is as follows:
+
+1. Use speech-to-text (STT) technology to create an English transcription of the lecture (with timings for when each word was spoken).
+
+2. Edit the transcription while maintaining word timings.
+
+3. Break the transcription into phrases for subtitles.
+
+4. Use AI Machine translation to translate the phrases into Arabic.
+
+5. Review and edit the Arabic translation.
+
+6. Create English video with Arabic subtitles.
+
+7. Use text-to-speech (TTS) technology to create Arabic audio of the translations.
+
+8. Create Arabic video with English subtitles.
+
+
+=== Speech-to-Text (STT)
+
+We tried to different services for speech-to-text conversion: Otter (https://otter.ai) and Google (https://cloud.google.com/translate/).  Otter does not appear to be able to export timings for when each word which are required for our process.  Google provides word timings and our initial test used Google for AI manuscript creation.
+
+[source, json]
+----
+  "words": [
+    {
+      "confidence": 0.91283858,
+      "endTime": "1.400s",
+      "startTime": "1.200s",
+      "word": "Well,"
+    },
+    {
+      "confidence": 0.91283858,
+      "endTime": "1.800s",
+      "startTime": "1.400s",
+      "word": "welcome"
+    },
+    {
+      "confidence": 0.91283858,
+      "endTime": "2.300s",
+      "startTime": "1.800s",
+      "word": "to"
+    },
+    {
+      "confidence": 0.91283858,
+      "endTime": "3.600s",
+      "startTime": "2.300s",
+      "word": "soteriology"
+    },
+  ]
+----
+
+The initial evaluation of Google STT was positive but it struggles in a few areas:
+
+1. It gets confused by King James English -- improvement in this area may be possible by providing the STT service with a glossary.
+
+2. Sometimes confused by similar sounding words (e.g. confuses _soul_ and _sole_)
+
+3. Does not understand verse references with colons properly (e.g. transcribes _Romans 8:13 through 17_ as _Romans 813 through 17_)
+
+NOTE: Microsoft and Amazon also provide STT services.  Given the superiority of Microsoft's TTS voices (see below) their STT service should be evaluated.  Amazon STT could also be evaluated but their TTS is not as advanced as Microsoft's TTS.
+
+
+=== English Transcription Editing
+
+The text manuscript was edited to fix errors in the STT and to add punctuation that is useful in breaking the manuscript into phrases.

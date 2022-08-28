@@ -160,7 +160,7 @@ class Phrase:
         if subtitle_lang == self.source.lang:
             target = self.source
         else:
-            target = self.get_target(subtitle_lang)\
+            target = self.get_target(subtitle_lang)
 
         return target.to_ass(
             start=start,
