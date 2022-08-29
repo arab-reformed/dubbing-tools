@@ -3,36 +3,32 @@
 import os
 import fire
 from classes import *
-import dotenv
-
-dotenv.load_dotenv()
+from classes.constants import *
 
 
-def cmd(project_path: str, video_file: str, lang: str, timing_scheme: str, srt: bool = False,
-        overwrite: bool = False, overlay_gain: int = -30):
-    path = os.path.dirname(__file__)
-    project_path = os.path.join(path, project_path)
-    video_file = os.path.join(path, video_file)
+def cmd(transcript_path: str, lang: str, timing_scheme: str, srt: bool = False,
+        overwrite: bool = False, overlay_gain: int = -20):
+
+    transcript = Transcript.load(transcript_path)
+
+    if not os.path.exists(SUBDIR_VIDEO):
+        os.makedirs(SUBDIR_VIDEO)
 
     video = Video(
-        source_file=video_file,
-        output_path=project_path,
-        target_file=os.path.join(project_path, f"video-{timing_scheme}-{lang}.mp4"),
+        source_file=os.path.join(SUBDIR_VIDEO, 'source.mp4'),
+        output_path='videos',
+        target_file=os.path.join(SUBDIR_VIDEO, f"video-{timing_scheme}-{lang}.mp4"),
         # srt_path=os.path.join(project_path, f"phrases-{lang}.srt")
     )
 
-    transcript = Transcript.load(project_path)
     video.dub_audio(
         transcript=transcript,
         lang=lang,
         timing_scheme=timing_scheme,
-        source_audio=f"source-{timing_scheme}-{lang}.mp3",
+        source_audio=os.path.join(SUBDIR_AUDIO, f"source-{timing_scheme}-{lang}.mp3"),
         overwrite=overwrite,
         overlay_gain=overlay_gain,
     )
-
-    # if not transcript.save():
-    #     print("Error saving project file.", file=sys.stderr)
 
 
 if __name__ == "__main__":

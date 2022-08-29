@@ -2,6 +2,8 @@
 
 import fire
 from classes import *
+from classes.constants import *
+import os
 
 
 def cmd(transcript_path: str, lang: str, timing_scheme: str, subtitle_lang: str, type: str = 'ass', include_source: bool = False):
@@ -21,7 +23,7 @@ def cmd(transcript_path: str, lang: str, timing_scheme: str, subtitle_lang: str,
             include_source=include_source
         )
 
-    with open(f"video-{timing_scheme}-{lang}.{subtitle_lang}.{type}", 'w') as f:
+    with open(os.path.join(SUBDIR_VIDEO, f"video-{timing_scheme}-{lang}.{subtitle_lang}.{type}"), 'w') as f:
         f.write(subtitles)
         f.close()
 

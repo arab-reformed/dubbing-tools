@@ -17,7 +17,6 @@ class Video:
     srt_path: str = None
 
     DUBBED_VIDEO_SUBDIR = 'dubbed-videos'
-    AUDIO_CLIPS_SUBDIR = 'audio-clips'
 
     def extract_audio(self, output):
         if not output[-4:] != "wav":
@@ -29,7 +28,7 @@ class Video:
             .set_channels(1) \
             .export(output, format="wav")
 
-    def dub_audio(self, transcript: Transcript, lang: str, timing_scheme: str, source_audio: str, overwrite: bool = False, overlay_gain: int = -30):
+    def dub_audio(self, transcript: Transcript, lang: str, timing_scheme: str, source_audio: str, overwrite: bool = False, overlay_gain: int = -20):
         # if os.path.exists(self.target_file):
         #     return
 
@@ -43,6 +42,7 @@ class Video:
 
         # Also, grab the original audio
         dubbed = AudioSegment.from_file(source_audio)
+        dubbed = dubbed.apply_gain(-10)
 
         clip = VideoFileClip(self.source_file)
 

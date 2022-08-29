@@ -27,7 +27,6 @@ class LanguagePhrase:
 
     # extras: CatchAll = None
 
-    AUDIO_SUBDIR = 'audio-clips'
     ASS_CLASSES = {
         'ar': 'Arabic',
         'en': 'Latin',
@@ -103,7 +102,7 @@ class LanguagePhrase:
 
     def natural_audio_path(self, service: str) -> str:
         # print(os.getcwd(), file=sys.stderr)
-        path = os.path.join(self.AUDIO_SUBDIR, self.lang, service, 'natural')
+        path = os.path.join(SUBDIR_AUDIO, self.lang, service, 'natural')
         if not os.path.exists(path):
             os.makedirs(path)
         return path
@@ -112,7 +111,7 @@ class LanguagePhrase:
         return os.path.join(self.natural_audio_path(service=service), self.audio_filename())
 
     def audio_path(self, service: str) -> str:
-        path = os.path.join(self.AUDIO_SUBDIR, self.lang, service, 'duration')
+        path = os.path.join(SUBDIR_AUDIO, self.lang, service, 'duration')
         if not os.path.exists(path):
             os.makedirs(path)
         return path

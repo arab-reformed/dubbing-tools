@@ -14,10 +14,14 @@ __all__ = [
     'SPEED_HIGH_MODERATE',
     'SPEED_MODERATE',
     'SPEED_VERY_FAST',
+    'SUBDIR_AUDIO',
+    'SUBDIR_VIDEO',
     'TRANSCRIPT_FILE',
     'VOICE_SPEAKER',
 ]
 
+SUBDIR_AUDIO = 'audio-clips'
+SUBDIR_VIDEO = 'videos'
 
 VOICE_SPEAKER = 'speaker'
 

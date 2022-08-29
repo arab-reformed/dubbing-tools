@@ -4,14 +4,18 @@ import fire
 from classes import *
 from pydub import AudioSegment
 from classes.constants import *
+import os
 
 MARGIN = 5
 
 
 def cmd(transcript_path: str,  lang: str, timing_scheme: str, audio_output: str = None):
-    if audio_output is None:
-        audio_output = f"source-{timing_scheme}-{lang}.mp3"
     transcript = Transcript.load(transcript_path)
+
+    if audio_output is None:
+        audio_output = os.path.join(SUBDIR_AUDIO, f"source-{timing_scheme}-{lang}.mp3")
+        if not os.path.exists(SUBDIR_AUDIO):
+            os.makedirs(SUBDIR_AUDIO)
 
     # dubbed = AudioSegment.silent(duration=transcript.phrases[-1].get_target(lang).end_time*1000+100)
     dubbed = AudioSegment.silent(duration=0)

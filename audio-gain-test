@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+
+from pydub import AudioSegment
+import fire
+
+
+def cmd(audio_file: str):
+
+    clip = AudioSegment.from_file(audio_file)
+
+    clip.export("audio-0.mp3")
+
+    clip1 = clip.apply_gain(-30)
+    clip1.export("audio-1.mp3")
+
+    clip = AudioSegment.from_file(audio_file)
+    clip1 = clip.apply_gain(-20)
+    clip1.export("audio-2.mp3")
+
+    clip2 = clip.apply_gain(-10)
+    clip2.export("audio-3.mp3")
+
+    clip2 = clip2.apply_gain(-20)
+    clip2.export("audio-4.mp3")
+
+
+if __name__ == "__main__":
+    fire.Fire(cmd)

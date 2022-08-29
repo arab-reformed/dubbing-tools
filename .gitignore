@@ -13,3 +13,4 @@ __pycache__/
 *~
 *.gz
 .DS_Store
+/holy-spirit-test/
