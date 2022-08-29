@@ -52,14 +52,22 @@ class Video:
         for phrase in transcript.phrases:
             target = phrase.get_target(lang)
             timing = target.timings.get(timing_scheme)
+
+            lang_clip = AudioSegment.from_mp3(target.duration_audio.file_name)
+            if 'azure' in target.duration_audio.file_name:
+                lang_clip = lang_clip[100:lang_clip.duration_seconds*1000-750]
+
             dubbed = dubbed.overlay(
-                AudioSegment.from_mp3(target.natural_audio.file_name),
+                lang_clip,
                 position=timing.start_time * 1000,
                 gain_during_overlay=overlay_gain
             )
             if timing.freeze_time is not None:  # and frozen < 1000:
                 print(f"freezing at: {timing.freeze_time}")
-                clip = freeze(clip, t=timing.freeze_time, freeze_duration=timing.freeze_duration)
+                freeze_time = timing.freeze_time
+                if freeze_time > clip.duration:
+                    freeze_time = clip.duration - 0.05
+                clip = freeze(clip, t=freeze_time, freeze_duration=timing.freeze_duration)
                 frozen += 1
 
         # Write the final audio to a temporary output file

@@ -329,12 +329,12 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             target = phrase.get_target(lang)
             start = end
             # end += target.duration_audio.duration
-            end += target.duration_audio.get_duration()
+            end += target.natural_audio.get_duration()
             tgt_timing = PhraseTiming(
                 start_time=start,
                 end_time=end,
                 freeze_time=start,
-                freeze_duration=target.duration_audio.duration
+                freeze_duration=target.natural_audio.duration
             )
             phrase.set_timing(lang=lang, timing_scheme=Timings.TRANSLATION, timing=tgt_timing)
 

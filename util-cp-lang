@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+
+import sys
+import fire
+from classes import *
+import dotenv
+import copy
+
+
+def cmd(transcript_path: str, from_lang: str, to_lang: str):
+    if from_lang == to_lang:
+        print("From and to languages must be different", file=sys.stderr)
+        exit(1)
+
+    transcript = Transcript.load(transcript_path)
+    for phrase in transcript.phrases:
+        to_phrase = copy.deepcopy(phrase.get_target(from_lang))
+        to_phrase.lang = to_lang
+        to_phrase.natural_audio = None
+        to_phrase.duration_audio = None
+
+        phrase.set_target(lang=to_lang, phrase=to_phrase)
+
+    if not transcript.save():
+        print("Error saving transcript", file=sys.stderr)
+
+
+if __name__ == "__main__":
+    fire.Fire(cmd)

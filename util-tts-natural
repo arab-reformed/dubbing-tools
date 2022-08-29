@@ -9,13 +9,17 @@ from classes.constants import *
 dotenv.load_dotenv()
 
 
-def cmd(transcript_path: str, lang: str, service: str, overwrite: bool = False):
+def cmd(transcript_path: str, lang: str, service: str, voice_name: str = None, overwrite: bool = False, reset_duration: bool = False):
     if service not in [SERVICE_AZURE, SERVICE_GOOGLE]:
         print(f"Unknown service: {service}", file=sys.stderr)
 
     transcript = Transcript.load(transcript_path)
 
-    transcript.get_tts_natural_audio(lang=lang, service=service, overwrite=overwrite)
+    if reset_duration:
+        for phrase in transcript.phrases:
+            phrase.get_target(lang).natural_audio = None
+
+    transcript.get_tts_natural_audio(lang=lang, service=service, voice_name=voice_name, overwrite=overwrite)
 
     if not transcript.save():
         print("Error saving transcript", file=sys.stderr)

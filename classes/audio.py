@@ -27,7 +27,8 @@ class Audio:
             self.duration = None
 
         elif (from_file or self.duration is None) and self.file_exists():
-            self.duration = AudioSegment.from_mp3(self.file_name).duration_seconds
+            self.duration = AudioSegment.from_mp3(self.file_name).duration_seconds \
+                            - 0.85 if SERVICE_AZURE in self.file_name else 0.0
 
         return self.duration
 

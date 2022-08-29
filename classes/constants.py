@@ -15,14 +15,19 @@ __all__ = [
     'SPEED_MODERATE',
     'SPEED_VERY_FAST',
     'TRANSCRIPT_FILE',
+    'VOICE_SPEAKER',
 ]
 
+
+VOICE_SPEAKER = 'speaker'
 
 GOOGLE_VOICES = {
     'ar': 'ar-XA-Wavenet-B',
 }
 AZURE_VOICES = {
     'ar': 'ar-EG-ShakirNeural',
+    'ar-EG': 'ar-EG-ShakirNeural',
+    'ar-JO': 'ar-JO-TaimNeural',
     'pt': 'pt-BR-AntonioNeural',
 }
 
