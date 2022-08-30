@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 
-from functions import jsonify
-from classes import *
-import json
-import os
+from dubbing_tools import *
 import fire
 
 

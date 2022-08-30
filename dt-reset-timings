@@ -1,19 +1,16 @@
 #!/usr/bin/env python3
 
-import sys
 import fire
-from classes import *
-import dotenv
-import csv
-
-dotenv.load_dotenv()
+from dubbing_tools import *
+import sys
 
 
 def cmd(transcript_path: str, lang: str):
     transcript = Transcript.load(transcript_path)
 
-    writer = csv.writer(sys.stdout)
-    writer.writerows(transcript.to_csv(lang))
+    transcript.reset_timings(lang=lang)
+    if not transcript.save():
+        print("Error saving transcript", file=sys.stderr)
 
 
 if __name__ == "__main__":

@@ -5,7 +5,7 @@ import os.path
 
 import fire
 from typing import List
-from classes import *
+from dubbing_tools import *
 import dotenv
 
 dotenv.load_dotenv()

@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 
 import fire
-from classes import *
+from dubbing_tools import *
 import sys
 
 
-def cmd(transcript_path: str, lang: str):
+def cmd(transcript_path: str, gap: float = None):
     transcript = Transcript.load(transcript_path)
 
-    transcript.reset_timings(lang=lang)
+    transcript.build_phrases(gap=gap)
+
     if not transcript.save():
         print("Error saving transcript", file=sys.stderr)
 

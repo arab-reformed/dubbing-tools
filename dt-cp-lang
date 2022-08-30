@@ -2,7 +2,7 @@
 
 import sys
 import fire
-from classes import *
+from dubbing_tools import *
 import dotenv
 import copy
 

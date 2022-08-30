@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
 import fire
-from classes import *
+from dubbing_tools import *
 from pydub import AudioSegment
-from classes.constants import *
+from dubbing_tools.constants import *
 import os
 
 MARGIN = 5

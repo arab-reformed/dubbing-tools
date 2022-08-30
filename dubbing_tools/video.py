@@ -1,6 +1,6 @@
 import sys
 from dataclasses import dataclass
-from classes import Phrase, Transcript
+from dubbing_tools import Phrase, Transcript
 import os
 from pydub import AudioSegment
 from moviepy.editor import VideoFileClip, AudioFileClip, CompositeVideoClip

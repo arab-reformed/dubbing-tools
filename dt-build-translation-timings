@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 import fire
-from classes import *
-from classes.constants import *
+from dubbing_tools import *
+from dubbing_tools.constants import *
 import sys
 
 

@@ -1,6 +1,6 @@
 from typing import List, Optional
 import sys
-from classes import *
+from dubbing_tools import *
 
 
 def jsonify(result):
