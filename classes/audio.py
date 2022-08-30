@@ -19,6 +19,11 @@ class Audio:
     file_name: str
     duration: Optional[float] = None
 
+    def __setattr__(self, key, value):
+        if key == 'duration' and value is not None:
+            value = round(value, 3)
+        super().__setattr__(key, value)
+
     def file_exists(self):
         return os.path.exists(self.file_name)
 
@@ -116,7 +121,7 @@ class Audio:
             speechsdk.SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3
         )
         # The language of the voice that speaks.
-        # speech_config.speech_synthesis_voice_name = 'ar-EG-ShakirNeural'  # 'en-US-JennyNeural'
+        speech_config.speech_synthesis_voice_name = voice_name
 
         audio_config = speechsdk.audio.AudioOutputConfig(filename=self.file_name)
 
