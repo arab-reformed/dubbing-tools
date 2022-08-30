@@ -13,4 +13,6 @@ __pycache__/
 *~
 *.gz
 .DS_Store
+/build/
 /holy-spirit-test/
+/dubbing_tools.egg-info/
