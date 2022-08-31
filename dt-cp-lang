@@ -23,7 +23,7 @@ def cmd(transcript_path: str, from_lang: str, to_lang: str, overwrite: bool = Fa
 
     transcript = Transcript.load(transcript_path)
     for phrase in transcript.phrases:
-        if not overwrite and phrase.get_target(to_lang) is None:
+        if not overwrite and phrase.get_target(to_lang) is not None:
             print(f"Language {to_lang} already exists.  To overwrite use --overwrite=1", file=sys.stderr)
             exit(1)
 
