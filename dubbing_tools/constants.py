@@ -32,6 +32,8 @@ AZURE_VOICES = {
     'ar': 'ar-EG-ShakirNeural',
     'ar-EG': 'ar-EG-ShakirNeural',
     'ar-JO': 'ar-JO-TaimNeural',
+    'ar-LB': 'ar-LB-RamiNeural',
+    'ar-MA': 'ar-MA-JamalNeural',
     'ar-SY': 'ar-SY-LaithNeural',
     'pt': 'pt-BR-AntonioNeural',
 }

@@ -31,6 +31,9 @@ class Transcript:
     def words_count(self) -> int:
         return len(self.words)
 
+    def duration(self, lang: str, timing_scheme: str) -> float:
+        return self.phrases[-1].get_timing(lang, timing_scheme).end_time + 0.5
+
     def to_srt(self, lang: str, timings_lang: str = None, include_source: bool = False) -> str:
         srt = ''
         for phrase in self.phrases:
