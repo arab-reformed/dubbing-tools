@@ -11,6 +11,7 @@ from google.cloud import texttospeech
 from typing import Optional
 import azure.cognitiveservices.speech as speechsdk
 from .constants import *
+import re
 
 
 @dataclass_json
@@ -18,6 +19,7 @@ from .constants import *
 class Audio:
     file_name: str
     duration: Optional[float] = None
+    changed: bool = False
 
     def __setattr__(self, key, value):
         if key == 'duration' and value is not None:
@@ -112,6 +114,12 @@ class Audio:
 
         if voice_name is None:
             voice_name = AZURE_VOICES[lang]
+
+        if lang.split('-')[0] == 'ar':
+            text = text.replace('«', '')
+            text = text.replace('»', '')
+            text = re.sub(r'^(.*)\s*-\s*$', '\\g<1>', text)
+            text = re.sub(r'^\s*-\s*(.*)$', '\\g<1>', text)
 
         speech_config = speechsdk.SpeechConfig(
             subscription=os.environ['AZURE_API_KEY'],

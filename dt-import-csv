@@ -17,8 +17,9 @@ def cmd(transcript_path: str, lang: str, csv_file: str):
         for row in reader:
             if first_id is None:
                 first_id = int(row['Id'])
-
-            transcript.phrases[int(row['Id'])-first_id].set_text(lang, row['Translation'])
+            i = int(row['Id'])-first_id
+            print(f"{i} {lang}: {row['Translation']}")
+            transcript.phrases[i].set_text(lang, row['Translation'])
 
     if not transcript.save():
         print("Error saving project file.", file=sys.stderr)

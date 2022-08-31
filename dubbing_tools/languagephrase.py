@@ -1,6 +1,6 @@
 from typing import Optional
 from dataclasses import dataclass, field
-from dataclasses_json import dataclass_json, Undefined, CatchAll
+from dataclasses_json import dataclass_json, Undefined, CatchAll, DataClassJsonMixin
 from .audio import Audio
 from .constants import *
 import os
@@ -11,9 +11,9 @@ from .phrasetiming import PhraseTiming
 MINIMUM_GAP = 0.3
 
 
-@dataclass_json
+# @dataclass_json
 @dataclass
-class LanguagePhrase:
+class LanguagePhrase(DataClassJsonMixin):
     lang: str
     text: str
     id: int = None
@@ -47,6 +47,19 @@ class LanguagePhrase:
     #         del self.freeze_time
     #         del self.freeze_duration
 
+    # def __setattr__(self, key, value):
+    #     try:
+    #         if key == 'text' and self.text != value:
+    #             if self.natural_audio is not None:
+    #                 self.natural_audio.changed = True
+    #             if self.duration_audio is not None:
+    #                 self.duration_audio.changed = True
+    #     except Exception as e:
+    #         print(e)
+    #         raise e
+    #
+    #     super().__setattr__(key, value)
+
     def get_timing(self, timing_scheme: str = None) -> PhraseTiming:
         return self.timings.get(timing_scheme)
 
@@ -56,6 +69,8 @@ class LanguagePhrase:
     def get_tts_natural_audio(self, service: str = SERVICE_AZURE, overwrite: bool = False, voice_name: str = None):
         if self.natural_audio is None or overwrite:
             self.natural_audio = Audio(file_name=self.natural_audio_fullpath(service=service))
+
+        overwrite = overwrite or self.natural_audio.changed
 
         self.natural_audio.tts_audio(
             text=self.text,
@@ -70,6 +85,8 @@ class LanguagePhrase:
         if self.duration_audio is None or overwrite:
             # print(f"{self.id}")
             self.duration_audio = Audio(file_name=self.audio_fullpath(service=service))
+
+        overwrite = overwrite or self.duration_audio.changed
 
         if self.natural_audio is None:
             self.get_tts_natural_audio(

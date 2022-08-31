@@ -5,7 +5,7 @@ from typing import Optional
 from .timings import Timings
 
 
-@dataclass_json
+# @dataclass_json
 @dataclass
 class SourceLanguagePhrase(LanguagePhrase):
 

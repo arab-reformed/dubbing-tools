@@ -1,8 +1,16 @@
 #!/bin/bash
 
-VIDEO=$1
-ASS=$2
-OUTPUT=$3
-TEMP_ASS=`mktemp`
+PROJECT_ROOT=$1
+LANG=$2
+TIMING=$3
+SUB_LANG=$4
 
-ffmpeg -i "$VIDEO" -c:v libx264 -c:a copy -vf "ass=$ASS" "$OUTPUT" -crf 20
+
+./dt-export-subtitles "$PROJECT_ROOT" "$LANG" "$TIMING" "$SUB_LANG"
+
+ffmpeg -i "$PROJECT_ROOT/videos/video-$TIMING-$LANG.mp4" \
+    -c:v libx264 \
+    -c:a copy \
+    -vf "ass=$PROJECT_ROOT/videos/video-$TIMING-$LANG.$SUB_LANG.ass" \
+    "$PROJECT_ROOT/subtitled/video-$TIMING-$LANG.$SUB_LANG.mp4" \
+    -crf 20
