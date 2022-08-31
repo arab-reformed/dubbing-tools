@@ -7,14 +7,32 @@ import dotenv
 import copy
 
 
-def cmd(transcript_path: str, from_lang: str, to_lang: str):
+def cmd(transcript_path: str, from_lang: str, to_lang: str, overwrite: bool = False):
+    """Copy the phrases from one language to another
+
+    Args:
+        transcript_path (String): root directory of the project
+        from_lang (String): language code from which to copy
+        to_lang (String): language code to copy to
+        overwrite (Boolean, optional): if to_lang already exists it will be overwritten.  Defaults to False
+    """
+
     if from_lang == to_lang:
         print("From and to languages must be different", file=sys.stderr)
         exit(1)
 
     transcript = Transcript.load(transcript_path)
     for phrase in transcript.phrases:
-        to_phrase = copy.deepcopy(phrase.get_target(from_lang))
+        if not overwrite and phrase.get_target(to_lang) is None:
+            print(f"Language {to_lang} already exists.  To overwrite use --overwrite=1", file=sys.stderr)
+            exit(1)
+
+        from_phrase = phrase.get_target(from_lang)
+        if from_phrase is None:
+            print(f"Language {from_lang} does  not exist in project.", file=sys.stderr)
+            exit(1)
+
+        to_phrase = copy.deepcopy(from_phrase)
         to_phrase.lang = to_lang
         to_phrase.natural_audio = None
         to_phrase.duration_audio = None
