@@ -139,11 +139,11 @@ class Audio:
             </prosody>
             </voice>
         </speak>"""
-        # speech_synthesis_result = speech_synthesizer.speak_text_async(text).get()
-        speech_synthesis_result = speech_synthesizer.speak_ssml_async(ssml).get()
+        # speech_synthesis_result = speech_synthesizer.speak_text(text)
+        speech_synthesis_result = speech_synthesizer.speak_ssml(ssml)
 
         if speech_synthesis_result.reason == speechsdk.ResultReason.SynthesizingAudioCompleted:
-            print(f"Speech synthesized for text [{text}] to {self.file_name}", file=sys.stderr)
+            print(f"{lang} {voice_name} synthesized [{text}] to {self.file_name}", file=sys.stderr)
             self.get_duration(from_file=True)
 
         elif speech_synthesis_result.reason == speechsdk.ResultReason.Canceled:
