@@ -82,6 +82,7 @@ class Transcript:
 
         if f is not None:
             tran = cls._load_file(f)
+            f.close()
             os.chdir(os.path.dirname(path))
             return tran
 
@@ -89,14 +90,16 @@ class Transcript:
 
     def _save_file(self, file_name) -> bool:
         if os.path.exists(file_name):
-            files = [f for f in glob.glob(f"{file_name}.*") if re.search(r'\.(\d+)$', f)]
+            back_file = os.path.join(os.path.dirname(file_name), 'bak', os.path.basename(file_name))
+            files = [f for f in glob.glob(f"{back_file}.*") if re.search(r'\.(\d+)$', f)]
             if len(files):
                 files.sort()
                 m = re.search(r'\.(\d+)$', files[-1])
                 last_backup = int(m.group(1)) + 1
             else:
                 last_backup = 0
-            backup_file = f"{file_name}.{str(last_backup).rjust(3,'0')}"
+
+            backup_file = f"{back_file}.{str(last_backup).rjust(3,'0')}"
             # print(f"Backup file: {backup_file}", file=sys.stderr)
             os.rename(file_name, backup_file)
 
