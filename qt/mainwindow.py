@@ -12,16 +12,15 @@ from PyQt5 import QtCore
 import os
 
 
-class MainWindow(Ui_WindowMain):
-    window: QMainWindow
+class MainWindow(QMainWindow, Ui_WindowMain):
     transcript: Transcript
     transcript_path: str
+    log: str = ''
 
     def __init__(self, args: list[str]):
         super().__init__()
-        self.window = QMainWindow()
         print('Arguments:', args)
-        self.setupUi(self.window)
+        self.setupUi(self)
         if len(args) > 1:
             self.load_transcript(args[1])
 
@@ -34,17 +33,20 @@ class MainWindow(Ui_WindowMain):
         self.actionDeleteLanguage.triggered.connect(self.delete_language)
         self.actionQuit.triggered.connect(self.quit)
 
+    def log_action(self, action: str):
+        self.log += action + "\n"
+        self.pteLog.setPlainText(self.log)
+
     def load_transcript(self, path: str):
         self.transcript = Transcript.load(path)
         if self.transcript is not None:
             self.transcript_path = path
             self.lneProjectPath.setText(path)
-            self.set_languages(self.transcript.target_languages())
+            self.set_languages()
+            self.lneSourceLanguage.setText(self.transcript.src_lang)
+            self.lneSourceDuration.setText(str(self.transcript.duration(self.transcript.src_lang, 'src')))
         else:
             self.transcript_path = ''
-
-    def show(self):
-        return self.window.show()
 
     def load_project(self):
         dialog = QFileDialog(caption='Open Project', directory=os.getcwd())
@@ -55,6 +57,7 @@ class MainWindow(Ui_WindowMain):
     def save_project(self):
         if self.transcript.has_changed:
             self.transcript.save()
+            self.log_action(f"Project saved ({self.transcript_path})")
 
     def export_subtitles(self):
         dialog = DlgExportSubtitles(self.transcript)
@@ -73,6 +76,7 @@ class MainWindow(Ui_WindowMain):
                     subtitle_lang=sub_lang,
                     type='ass',
                 )
+                self.log_action(f"Exported subtitles for {lang} {timing_scheme} {sub_lang}")
 
     def copy_language(self):
         dialog = DlgCopyLanguage(self.transcript)
@@ -82,16 +86,25 @@ class MainWindow(Ui_WindowMain):
 
             if from_lang and to_lang and from_lang != to_lang and to_lang not in self.transcript.target_languages():
                 self.transcript.copy_target(from_lang=from_lang, to_lang=to_lang)
+                self.set_languages()
+                self.log_action(f"Copied language {from_lang} to {to_lang}")
 
     def delete_language(self):
         dialog = DlgDeleteLanguage(self.transcript)
         if dialog.exec_():
             self.transcript.delete_target(dialog.get_lang())
+            self.set_languages()
+            self.log_action(f"Deleted language {dialog.get_lang()}")
 
-    def set_languages(self, langs: list[str]):
-        self.leLanguagesList.setText(', '.join(langs))
+    def set_languages(self):
+        self.lstTargetLanguages.clear()
+        self.lstTargetLanguages.addItems(self.transcript.target_languages())
 
     def quit(self):
+        self.closeEvent()
+        QCoreApplication.quit()
+
+    def closeEvent(self, event):
         if self.transcript.has_changed:
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Question)
@@ -103,5 +116,3 @@ class MainWindow(Ui_WindowMain):
             retval = msg.exec_()
             if retval == QMessageBox.Yes:
                 self.save_project()
-
-        QCoreApplication.quit()

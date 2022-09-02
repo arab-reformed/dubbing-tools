@@ -6,24 +6,24 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>806</width>
-    <height>607</height>
+    <width>942</width>
+    <height>706</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dubbing Tools</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>12</x>
-      <y>12</y>
-      <width>781</width>
-      <height>531</height>
+      <x>13</x>
+      <y>16</y>
+      <width>921</width>
+      <height>621</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QVBoxLayout" name="verticalLayout_3">
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
@@ -53,20 +53,78 @@
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>Languages</string>
-         </property>
-        </widget>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Source Video</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lneSourceLanguage">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lneSourceDuration">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
        </item>
        <item>
-        <widget class="QLineEdit" name="leLanguagesList">
-         <property name="enabled">
-          <bool>false</bool>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Languages</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QListWidget" name="lstTargetLanguages">
+           <property name="showDropIndicator" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::SingleSelection</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
-        </widget>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </item>
@@ -83,6 +141,13 @@
        </property>
       </spacer>
      </item>
+     <item>
+      <widget class="QPlainTextEdit" name="pteLog">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
   </widget>
@@ -91,7 +156,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>806</width>
+     <width>942</width>
      <height>24</height>
     </rect>
    </property>
@@ -110,6 +175,7 @@
     <addaction name="actionCopyLanguage"/>
     <addaction name="actionDeleteLanguage"/>
     <addaction name="actionExportSubtitles"/>
+    <addaction name="actionBuildVideo"/>
    </widget>
    <addaction name="menuOpenProject"/>
    <addaction name="menuTools"/>
@@ -149,6 +215,11 @@
   <action name="actionDeleteLanguage">
    <property name="text">
     <string>Delete Language</string>
+   </property>
+  </action>
+  <action name="actionBuildVideo">
+   <property name="text">
+    <string>Build Video</string>
    </property>
   </action>
  </widget>

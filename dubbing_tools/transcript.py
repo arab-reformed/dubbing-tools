@@ -38,7 +38,9 @@ class Transcript:
         return self.phrases[-1].get_timing(lang, timing_scheme).end_time + 0.5
 
     def target_languages(self):
-        return list(self.phrases[0].targets.keys())
+        langs = list(self.phrases[0].targets.keys())
+        langs.sort()
+        return langs
 
     def copy_target(self, from_lang: str, to_lang: str, overwrite: bool = False):
         for phrase in self.phrases:
