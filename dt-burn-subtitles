@@ -1,0 +1,69 @@
+#!/usr/bin/env python3
+import sys
+import re
+import fire
+from dubbing_tools.functions import *
+from dubbing_tools import *
+import os
+import ffmpeg
+import asyncio
+
+error_output = ''
+
+
+def cmd(transcript_path: str, lang: str, timing_scheme: str, subtitle_lang: str, type: str = 'ass',
+        include_source: bool = False, debug: bool = False):
+
+    transcript = Transcript.load(transcript_path)
+
+    transcript.export_subtitles(
+        lang=lang,
+        timing_scheme=timing_scheme,
+        subtitle_lang=subtitle_lang,
+        type=type,
+        include_source=include_source
+    )
+
+    mpeg = (
+        ffmpeg.FFmpeg()
+            .option('y')
+            .input(video_fullpath(lang, timing_scheme))
+            .output(
+                subtitled_video_fullpath(lang, timing_scheme, subtitle_lang),
+                acodec='copy',
+                vcodec='libx264',
+                vf=f"ass={subtitles_fullpath(lang, timing_scheme, subtitle_lang, type)}",
+                crf=20
+            )
+    )
+
+    @mpeg.on('start')
+    def on_start(arguments):
+        print('arguments:', arguments)
+
+    @mpeg.on('stderr')
+    def on_stderr(line):
+        if debug:
+            print(line, file=sys.stderr)
+
+    @mpeg.on('progress')
+    def on_progress(progress):
+        print('\r', repr(progress), progress, end='')
+
+    @mpeg.on('completed')
+    def on_completed():
+        print('completed')
+
+    @mpeg.on('terminated')
+    def on_terminated():
+        print('terminated')
+
+    @mpeg.on('error')
+    def on_error(code):
+        print('error:', code)
+
+    asyncio.run(mpeg.execute())
+
+
+if __name__ == "__main__":
+    fire.Fire(cmd)

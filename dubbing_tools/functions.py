@@ -1,6 +1,26 @@
 from typing import List, Optional
 import sys
 from dubbing_tools import *
+import os
+from dubbing_tools.constants import *
+
+__all__ = [
+    'subtitled_video_fullpath',
+    'subtitles_fullpath',
+    'video_fullpath',
+]
+
+
+def video_fullpath(lang: str, timing_scheme: str) -> str:
+    return os.path.join(SUBDIR_VIDEO, f"video-{timing_scheme}-{lang}.mp4")
+
+
+def subtitled_video_fullpath(lang: str, timing_scheme: str, subtitle_lang: str) -> str:
+    return os.path.join('subtitled', f"video-{timing_scheme}-{lang}.{subtitle_lang}.mp4")
+
+
+def subtitles_fullpath(lang: str, timing_scheme: str, subtitle_lang: str, type: str = 'ass') -> str:
+    return os.path.join(SUBDIR_VIDEO, f"video-{timing_scheme}-{lang}.{subtitle_lang}.{type}")
 
 
 def jsonify(result):

@@ -85,9 +85,12 @@ class Phrase:
 
         return None
 
-    def set_target(self, lang, phrase: LanguagePhrase):
+    def set_target(self, lang: str, phrase: LanguagePhrase):
         self.targets[lang] = phrase
         phrase.id = self.id
+
+    def delete_target(self, lang: str):
+        del self.targets[lang]
 
     def split(self, words: List[Word], split_at: int) -> 'Phrase':
         next = Phrase(
@@ -155,7 +158,11 @@ class Phrase:
         )
 
     def to_ass(self, lang: str, timing_scheme: str, subtitle_lang: str, include_source: bool = False) -> str:
-        if timing_scheme in [Timings.DUBBED, Timings.TRANSLATION]:
+        if timing_scheme == Timings.DUBBED:
+            timing = self.get_timing(lang, timing_scheme)
+            start = timing.start_time
+            end = timing.end_time
+        elif timing_scheme == Timings.TRANSLATION:
             start = self.source.timings.get(timing_scheme).start_time
             end = self.get_timing(lang, timing_scheme).end_time
         else:

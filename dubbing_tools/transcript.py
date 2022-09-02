@@ -13,6 +13,8 @@ from .constants import *
 from .timings import Timings
 from .phrasetiming import PhraseTiming
 import gzip
+from .functions import *
+import copy
 
 
 @dataclass_json
@@ -24,6 +26,7 @@ class Transcript:
     phrases: list[Phrase] = None
     tts_lang: str = None
     tts_duration: float = None
+    has_changed: bool = False
 
     def phrase_count(self) -> int:
         return len(self.phrases)
@@ -33,6 +36,35 @@ class Transcript:
 
     def duration(self, lang: str, timing_scheme: str) -> float:
         return self.phrases[-1].get_timing(lang, timing_scheme).end_time + 0.5
+
+    def target_languages(self):
+        return list(self.phrases[0].targets.keys())
+
+    def copy_target(self, from_lang: str, to_lang: str, overwrite: bool = False):
+        for phrase in self.phrases:
+            if not overwrite and phrase.get_target(to_lang) is not None:
+                print(f"Language {to_lang} already exists.  To overwrite use --overwrite=1", file=sys.stderr)
+                exit(1)
+
+            from_phrase = phrase.get_target(from_lang)
+            if from_phrase is None:
+                print(f"Language {from_lang} does  not exist in project.", file=sys.stderr)
+                exit(1)
+
+            to_phrase = copy.deepcopy(from_phrase)
+            to_phrase.lang = to_lang
+            to_phrase.natural_audio = None
+            to_phrase.duration_audio = None
+
+            phrase.set_target(lang=to_lang, phrase=to_phrase)
+
+        self.has_changed = True
+
+    def delete_target(self, lang: str):
+        for phrase in self.phrases:
+            phrase.delete_target(lang)
+
+        self.has_changed = True
 
     def to_srt(self, lang: str, timings_lang: str = None, include_source: bool = False) -> str:
         srt = ''
@@ -66,8 +98,8 @@ class Transcript:
 
     @classmethod
     def _load_file(cls, file) -> Optional['Transcript']:
-            data = json.load(file)
-            return cls.from_dict(data)
+        data = json.load(file)
+        return cls.from_dict(data)
 
     @classmethod
     def load(cls, path: str) -> Optional['Transcript']:
@@ -82,6 +114,7 @@ class Transcript:
 
         if f is not None:
             tran = cls._load_file(f)
+            tran.has_changed = False
             f.close()
             os.chdir(os.path.dirname(path))
             return tran
@@ -107,6 +140,8 @@ class Transcript:
             f.write(bytes(self.to_json(indent=2, ensure_ascii=False), 'utf-8'))
             f.close()
 
+        self.has_changed = False
+
         return True
 
     def save(self, path: str = None) -> bool:
@@ -118,6 +153,26 @@ class Transcript:
             path = os.path.join(path, TRANSCRIPT_FILE + ".gz")
 
         return self._save_file(path)
+
+    def export_subtitles(self, lang: str, timing_scheme: str, subtitle_lang: str, type: str = 'ass', include_source: bool = False):
+        if type == 'srt':
+            subtitles = self.to_srt(
+                lang=lang,
+                timing_scheme=timing_scheme,
+                include_source=include_source
+            )
+        else:
+            subtitles = self.to_ass(
+                lang=lang,
+                timing_scheme=timing_scheme,
+                subtitle_lang=subtitle_lang,
+                include_source=include_source
+            )
+
+        with open(subtitles_fullpath(lang, timing_scheme, subtitle_lang, type), 'w') as f:
+            print(subtitles_fullpath(lang, timing_scheme, subtitle_lang, type))
+            f.write(subtitles)
+            f.close()
 
     def to_ass(self, lang: str, timing_scheme: str, subtitle_lang: str, include_source: bool = False) -> str:
         subtitles = """[Script Info]
@@ -187,6 +242,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         )
 
         transcript.build_phrases(gap=phrase_gap)
+
+        transcript.has_changed = True
 
         return transcript
 
@@ -285,6 +342,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
         self.phrases = phrases
 
+        self.has_changed = True
+
     def to_manuscript(self) -> str:
         txt = ''
         section_text = ''
@@ -307,6 +366,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                 phrase.set_timing(lang=lang, timing_scheme=timing_scheme, timing=timing)
 
             timing.reset_timing(phrase.source.timings.get(Timings.SOURCE))
+
+        self.has_changed = True
 
     def gap_between(self, lang: str, timing_scheme: str, id1: int, id2: int) -> Optional[float]:
         if id2 > self.phrase_count()-1 or id1 < 0:
@@ -345,6 +406,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             phrase.set_timing(lang=lang, timing_scheme=Timings.TRANSLATION, timing=tgt_timing)
 
             last_end = end
+
+        self.has_changed = True
 
     def adjust_dub_timings(self, lang: str):
         # set the start and end times for the target language
@@ -462,3 +525,5 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                 start_time=timing.start_time,
                 end_time=timing.start_time + phrase.source.natural_audio.duration
             ))
+
+        self.has_changed = True

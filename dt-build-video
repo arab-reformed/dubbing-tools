@@ -4,6 +4,7 @@ import os
 import fire
 from dubbing_tools import *
 from dubbing_tools.constants import *
+from dubbing_tools.functions import *
 
 
 def cmd(transcript_path: str, lang: str, timing_scheme: str, srt: bool = False,
@@ -17,7 +18,7 @@ def cmd(transcript_path: str, lang: str, timing_scheme: str, srt: bool = False,
     video = Video(
         source_file=os.path.join(SUBDIR_VIDEO, 'source.mp4'),
         output_path='videos',
-        target_file=os.path.join(SUBDIR_VIDEO, f"video-{timing_scheme}-{lang}.mp4"),
+        target_file=video_fullpath(lang, timing_scheme),
         # srt_path=os.path.join(project_path, f"phrases-{lang}.srt")
     )
 

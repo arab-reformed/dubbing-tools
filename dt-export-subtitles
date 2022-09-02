@@ -9,23 +9,13 @@ import os
 def cmd(transcript_path: str, lang: str, timing_scheme: str, subtitle_lang: str, type: str = 'ass', include_source: bool = False):
     transcript = Transcript.load(transcript_path)
 
-    if type == 'srt':
-        subtitles = transcript.to_srt(
-            lang=lang,
-            timing_scheme=timing_scheme,
-            include_source=include_source
-        )
-    else:
-        subtitles = transcript.to_ass(
-            lang=lang,
-            timing_scheme=timing_scheme,
-            subtitle_lang=subtitle_lang,
-            include_source=include_source
-        )
-
-    with open(os.path.join(SUBDIR_VIDEO, f"video-{timing_scheme}-{lang}.{subtitle_lang}.{type}"), 'w') as f:
-        f.write(subtitles)
-        f.close()
+    transcript.export_subtitles(
+        lang=lang,
+        timing_scheme=timing_scheme,
+        subtitle_lang=subtitle_lang,
+        type=type,
+        include_source=include_source
+    )
 
 
 if __name__ == "__main__":
