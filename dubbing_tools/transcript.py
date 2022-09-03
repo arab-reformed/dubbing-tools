@@ -42,6 +42,9 @@ class Transcript:
         langs.sort()
         return langs
 
+    def target_lang_timings(self, lang: str):
+        return self.phrases[0].get_target(lang).timings.schemes()
+
     def copy_target(self, from_lang: str, to_lang: str, overwrite: bool = False):
         for phrase in self.phrases:
             if not overwrite and phrase.get_target(to_lang) is not None:

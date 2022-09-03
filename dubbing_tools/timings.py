@@ -34,3 +34,6 @@ class Timings:
             scheme = self.default
 
         self.phrase_timings[scheme] = timing
+
+    def schemes(self):
+        return list(self.phrase_timings.keys())

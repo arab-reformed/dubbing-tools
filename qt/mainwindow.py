@@ -16,6 +16,8 @@ class MainWindow(QMainWindow, Ui_WindowMain):
     transcript: Transcript
     transcript_path: str
     log: str = ''
+    cur_lang: str = None
+    cur_timing: str = None
 
     def __init__(self, args: list[str]):
         super().__init__()
@@ -32,6 +34,8 @@ class MainWindow(QMainWindow, Ui_WindowMain):
         self.actionExportSubtitles.triggered.connect(self.export_subtitles)
         self.actionDeleteLanguage.triggered.connect(self.delete_language)
         self.actionQuit.triggered.connect(self.quit)
+        self.lstTargetLanguages.currentItemChanged.connect(self.language_selected)
+        self.lstTimingSchemes.currentItemChanged.connect(self.timing_selected)
 
     def log_action(self, action: str):
         self.log += action + "\n"
@@ -116,3 +120,17 @@ class MainWindow(QMainWindow, Ui_WindowMain):
             retval = msg.exec_()
             if retval == QMessageBox.Yes:
                 self.save_project()
+
+    def language_selected(self):
+        self.cur_lang = self.lstTargetLanguages.currentItem().text()
+        self.lstTimingSchemes.clear()
+        self.lstTimingSchemes.addItems(self.transcript.target_lang_timings(self.cur_lang))
+        self.compute_state()
+
+    def timing_selected(self):
+        self.cur_timing = self.lstTimingSchemes.currentItem().text()
+        self.compute_state()
+
+    def compute_state(self):
+        if self.cur_lang and self.cur_timing:
+            self.pbtFetchNaturalAudio.setEnabled(True)
