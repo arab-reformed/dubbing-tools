@@ -14,7 +14,7 @@
    <string>Dubbing Tools</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>14</x>
@@ -187,6 +187,16 @@
           </widget>
          </item>
          <item>
+          <widget class="QPushButton" name="pbtBurnVideo">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Burn Video</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <spacer name="verticalSpacer_3">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
@@ -232,7 +242,7 @@
      <x>0</x>
      <y>0</y>
      <width>942</width>
-     <height>24</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuOpenProject">

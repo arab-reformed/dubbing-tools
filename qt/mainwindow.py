@@ -7,17 +7,18 @@ from .ui_mainwindow import Ui_WindowMain
 from .copy_lang import DlgCopyLanguage
 from .dlg_export_subtitles import DlgExportSubtitles
 from .dlg_delete_language import DlgDeleteLanguage
+from .dlg_burn_subtitles import DlgBurnSubtitles
 from dubbing_tools import *
-from PyQt5 import QtCore
 import os
+from typing import Optional
 
 
 class MainWindow(QMainWindow, Ui_WindowMain):
     transcript: Transcript
     transcript_path: str
     log: str = ''
-    cur_lang: str = None
-    cur_timing: str = None
+    lang: Optional[str] = None
+    timing: Optional[str] = None
 
     def __init__(self, args: list[str]):
         super().__init__()
@@ -36,6 +37,7 @@ class MainWindow(QMainWindow, Ui_WindowMain):
         self.actionQuit.triggered.connect(self.quit)
         self.lstTargetLanguages.currentItemChanged.connect(self.language_selected)
         self.lstTimingSchemes.currentItemChanged.connect(self.timing_selected)
+        self.pbtBurnVideo.clicked.connect(self.burn_video)
 
     def log_action(self, action: str):
         self.log += action + "\n"
@@ -122,15 +124,27 @@ class MainWindow(QMainWindow, Ui_WindowMain):
                 self.save_project()
 
     def language_selected(self):
-        self.cur_lang = self.lstTargetLanguages.currentItem().text()
+        self.lang = self.lstTargetLanguages.currentItem().text()
         self.lstTimingSchemes.clear()
-        self.lstTimingSchemes.addItems(self.transcript.target_lang_timings(self.cur_lang))
+        self.lstTimingSchemes.addItems(self.transcript.target_lang_timings(self.lang))
         self.compute_state()
 
     def timing_selected(self):
-        self.cur_timing = self.lstTimingSchemes.currentItem().text()
+        if self.lstTimingSchemes.currentItem():
+            self.timing = self.lstTimingSchemes.currentItem().text()
+        else:
+            self.timing = None
+
         self.compute_state()
 
     def compute_state(self):
-        if self.cur_lang and self.cur_timing:
+        if self.lang and self.timing:
             self.pbtFetchNaturalAudio.setEnabled(True)
+            self.pbtBurnVideo.setEnabled(True)
+        else:
+            self.pbtFetchNaturalAudio.setEnabled(False)
+
+    def burn_video(self):
+        dlg = DlgBurnSubtitles(self, self.transcript)
+        dlg.exec_()
+
