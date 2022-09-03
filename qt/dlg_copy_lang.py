@@ -1,4 +1,4 @@
-from .ui_copy_lang import Ui_DlgCopyLanguage
+from .ui_dlg_copy_lang import Ui_DlgCopyLanguage
 from PyQt5 import QtWidgets
 from dubbing_tools import Transcript
 
