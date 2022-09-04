@@ -1,6 +1,6 @@
 from .ui_dlg_burn_subtitles import Ui_DlgBurnSubtitles
-from PyQt5 import QtWidgets
-from PyQt5.QtCore import QThread
+from PyQt5 import QtWidgets, QtGui
+from PyQt5.QtCore import QThread, pyqtSignal
 import sys
 import re
 import fire
@@ -14,6 +14,8 @@ from .burn_subtitles import Worker
 
 class DlgBurnSubtitles(QtWidgets.QDialog, Ui_DlgBurnSubtitles):
 
+    terminate = pyqtSignal(int)
+
     transcript: Transcript
     lang: str
     timing_scheme: str
@@ -23,6 +25,7 @@ class DlgBurnSubtitles(QtWidgets.QDialog, Ui_DlgBurnSubtitles):
 
     thread: QThread
     worker: Worker
+    burn_in_progress: bool = False
 
     def __init__(self, parent, transcript: Transcript):  # , lang: str, timing_scheme: str, subtitle_lang: str, include_source: bool = False):
         super().__init__(parent=parent)
@@ -40,7 +43,7 @@ class DlgBurnSubtitles(QtWidgets.QDialog, Ui_DlgBurnSubtitles):
         self.cmbSubtitleLanguage.activated.connect(self.sub_lang_selected)
         self.language_selected()
         self.pbtBurnSubtitles.clicked.connect(self.burn_subtitles)
-        self.pbtCancel.clicked.connect(self.close)
+        self.pbtCancel.clicked.connect(self.cancel)
 
     def log_line(self, action: str):
         self.log += action + "\n"
@@ -48,6 +51,11 @@ class DlgBurnSubtitles(QtWidgets.QDialog, Ui_DlgBurnSubtitles):
 
     def set_progress(self, progress: str):
         self.lneProgress.setText(progress)
+
+    def closeEvent(self, evt: QtGui.QCloseEvent) -> None:
+        if self.burn_in_progress:
+            self.cancel()
+            evt.ignore()
 
     def language_selected(self):
         self.lang = self.cmbLanguage.currentText()
@@ -69,32 +77,46 @@ class DlgBurnSubtitles(QtWidgets.QDialog, Ui_DlgBurnSubtitles):
         self.pbtBurnSubtitles.setEnabled(bool(self.sub_lang))
 
     def cancel(self):
-        self.close()
+        print('Cancel clicked.')
+        if self.burn_in_progress:
+            print('Sent termination signal.')
+            self.worker.please_terminate = True
+            self.terminate.emit(3)
+        else:
+            print('Sent cancel signal.')
+            self.cancel.emit(1)
+            self.close()
 
     def complete(self):
-        QtWidgets.QMessageBox.information(
-            parent=self,
-            title='Burn Subtitles',
-            text='Subtitles burned successfully'
-        )
+        QtWidgets.QMessageBox.information(self, 'Burn Subtitles', 'Subtitles burned successfully.')
+        self.burn_in_progress = False
+        self.close()
+
+    def terminated(self):
+        self.thread.quit()
+        self.thread.deleteLater()
+        QtWidgets.QMessageBox.information(self, 'Burn Subtitles', 'Subtitle burned cancelled.')
+        self.burn_in_progress = False
         self.close()
 
     def burn_subtitles(self):
         self.pbtBurnSubtitles.setEnabled(False)
-        self.pbtCancel.setEnabled(False)
+        # self.pbtCancel.setEnabled(False)
 
         self.thread = QThread()
         self.worker = Worker(self.transcript, self.lang, self.timing_scheme, self.sub_lang)
-
         self.worker.moveToThread(self.thread)
 
+        self.worker.terminated.connect(self.terminated)
+        # self.terminate.connect(self.worker.terminate)
         self.thread.started.connect(self.worker.run)
         self.thread.finished.connect(self.thread.deleteLater)
-        self.thread.finished.connect(self.complete)
+        # self.thread.finished.connect(self.complete)
 
         self.worker.finished.connect(self.thread.quit)
-        self.worker.finished.connect(self.worker.deleteLater)
+        self.worker.finished.connect(self.complete)
         self.worker.progress.connect(self.set_progress)
         self.worker.log_line.connect(self.log_line)
 
+        self.burn_in_progress = True
         self.thread.start()

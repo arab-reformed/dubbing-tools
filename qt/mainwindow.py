@@ -4,7 +4,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtWidgets import QFileDialog
 from .ui_mainwindow import Ui_WindowMain
-from .copy_lang import DlgCopyLanguage
+from .dlg_copy_lang import DlgCopyLanguage
 from .dlg_export_subtitles import DlgExportSubtitles
 from .dlg_delete_language import DlgDeleteLanguage
 from .dlg_burn_subtitles import DlgBurnSubtitles
