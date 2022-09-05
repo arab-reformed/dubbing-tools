@@ -66,6 +66,12 @@ class LanguagePhrase(DataClassJsonMixin):
     def audio_speed(self, timing_scheme: str = None):
         return round(self.natural_audio.duration / self.timings.get(timing_scheme).duration(), 2)
 
+    def mark_audio_changed(self):
+        if self.natural_audio is not None:
+            self.natural_audio.changed = True
+        if self.duration_audio is not None:
+            self.duration_audio.changed = True
+
     def get_tts_natural_audio(self, service: str = SERVICE_AZURE, overwrite: bool = False, voice_name: str = None):
         if self.natural_audio is None or overwrite:
             self.natural_audio = Audio(file_name=self.natural_audio_fullpath(service=service))
@@ -79,6 +85,7 @@ class LanguagePhrase(DataClassJsonMixin):
             voice_name=voice_name,
             overwrite=overwrite,
         )
+        self.natural_audio.changed = False
 
     def get_tts_duration_audio(self, timing_scheme: str, service: str = SERVICE_AZURE, overwrite: bool = False, voice_name: str = None):
         # print(f"{self.id} {self.duration_audio}")
@@ -113,6 +120,8 @@ class LanguagePhrase(DataClassJsonMixin):
             speaking_rate=ratio,
             overwrite=overwrite,
         )
+
+        self.duration_audio.changed = False
 
     def audio_filename(self):
         return f"{str(self.id).rjust(5, '0')}.mp3"

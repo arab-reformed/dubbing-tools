@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+
+from dubbing_tools import *
+import sys
+import os
+import fire
+import csv
+
+
+def cmd(transcript_path: str, lang: str, srt_file: str, source: bool = False):
+
+    if not os.path.exists(transcript_path):
+        transcript = Transcript.import_source_srt(srt_file=srt_file, lang=lang)
+
+        os.makedirs(transcript_path)
+        os.chdir(transcript_path)
+
+    else:
+        transcript = Transcript.load(transcript_path)
+
+        transcript.import_target_srt(srt_file=srt_file, lang=lang)
+
+    if not transcript.save():
+        print("Error saving project file.", file=sys.stderr)
+
+
+if __name__ == "__main__":
+    fire.Fire(cmd)

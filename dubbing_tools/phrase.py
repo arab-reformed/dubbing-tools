@@ -66,10 +66,8 @@ class Phrase:
     def set_text(self, lang, text):
         target = self.get_target(lang)
         if target is not None:
-            if target.natural_audio is not None:
-                target.natural_audio.changed = target.text != text
-            if target.duration_audio is not None:
-                target.duration_audio.changed = target.text != text
+            if text != target.text:
+                target.mark_audio_changed()
 
             target.text = text
 

@@ -7,6 +7,7 @@ from .word import Word
 from .phrase import Phrase
 import json
 from .sourcelanguagePhrase import SourceLanguagePhrase
+from .languagephrase import LanguagePhrase
 from typing import Optional
 import sys
 from .constants import *
@@ -15,6 +16,7 @@ from .phrasetiming import PhraseTiming
 import gzip
 from .functions import *
 import copy
+import srt
 
 
 @dataclass_json
@@ -71,6 +73,34 @@ class Transcript:
 
         self.has_changed = True
 
+    def combine_phrases(self, start_index: int, end_index: int):
+        if end_index < start_index:
+            raise ValueError(f'end_index ({end_index}) is less that start_index ({start_index}')
+        elif start_index < 0 or start_index >= len(self.phrases):
+            raise ValueError(f'start_index ({start_index}) out of bounds')
+        elif end_index < 0 or end_index >= len(self.phrases):
+            raise ValueError(f'end_index ({end_index}) out of bounds')
+        elif start_index == end_index:
+            return
+
+        start_phrase = self.phrases[start_index]
+        i = start_index + 1
+        while start_index < len(self.phrases):
+            phrase = self.phrases[i]
+            if i <= end_index:
+                start_phrase.source.text += '\n' + phrase.source.text
+                for target in phrase.targets.items():  # type: LanguagePhrase
+                    target.text += '\n' + phrase.get_target(target.lang).text
+                del self.phrases[i]
+            else:
+                break
+
+        # Renumber phrases
+        i = 0
+        for phrase in self.phrases:
+            phrase.id = i
+            phrase.set_children_id(i)
+
     def to_srt(self, lang: str, timings_lang: str = None, include_source: bool = False) -> str:
         srt = ''
         for phrase in self.phrases:
@@ -126,9 +156,73 @@ class Transcript:
 
         return None
 
+    @classmethod
+    def import_source_srt(cls, srt_file: str, lang: str) -> 'Transcript':
+        transcript = cls()
+        transcript.phrases = []
+
+        f = open(srt_file, 'r')
+        i = 0
+        for sub in srt.parse(f.read()):
+            source = SourceLanguagePhrase(
+                id=i,
+                lang=lang,
+                text=sub.content,
+            )
+            source.timings.set(
+                timing=PhraseTiming(
+                    start_time=sub.start.seconds + sub.start.microseconds/1000000,
+                    end_time=sub.end.seconds + sub.end.microseconds/1000000,
+                ),
+                scheme=Timings.SOURCE,
+            )
+            phrase = Phrase(
+                id=i,
+                source=source
+            )
+
+            transcript.phrases.append(phrase)
+
+            i += 1
+
+        f.close()
+
+        transcript.has_changed = True
+
+        return transcript
+
+    def import_target_srt(self, srt_file:str, lang: str):
+        f = open(srt_file, 'r')
+        i = 0
+        for sub in srt.parse(f.read()):
+            lp = LanguagePhrase(
+                id=i,
+                lang=lang,
+                text=sub.content,
+            )
+            lp.timings.set(
+                timing=PhraseTiming(
+                    start_time=sub.start.seconds + sub.start.microseconds/1000000,
+                    end_time=sub.end.seconds + sub.end.microseconds/1000000,
+                ),
+                scheme=Timings.SOURCE,
+            )
+
+            self.phrases[i].set_target(lang=lang, phrase=lp)
+
+            i += 1
+
+        f.close()
+
+        self.has_changed = True
+
     def _save_file(self, file_name) -> bool:
+        # print(f"CWD: {os.getcwd()}", file=sys.stderr)
         if os.path.exists(file_name):
-            back_file = os.path.join(os.path.dirname(file_name), 'bak', os.path.basename(file_name))
+            back_path = os.path.join(os.path.dirname(file_name), 'bak')
+            if not os.path.exists(back_path):
+                os.makedirs(back_path)
+            back_file = os.path.join(back_path, os.path.basename(file_name))
             files = [f for f in glob.glob(f"{back_file}.*") if re.search(r'\.(\d+)$', f)]
             if len(files):
                 files.sort()

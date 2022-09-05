@@ -120,6 +120,7 @@ class Audio:
             text = text.replace('»', '')
             text = re.sub(r'^(.*)\s*-\s*$', '\\g<1>', text)
             text = re.sub(r'^\s*-\s*(.*)$', '\\g<1>', text)
+            text = re.sub(r'(\d+):\s*(\d+)', '\\g<1> عَدَد \\g<2>', text)
 
         speech_config = speechsdk.SpeechConfig(
             subscription=os.environ['AZURE_API_KEY'],
