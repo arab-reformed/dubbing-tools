@@ -24,6 +24,7 @@ def cmd(transcript_path: str, lang: str, timing_scheme: str, subtitle_lang: str,
         include_source=include_source
     )
 
+    print(f"Subtitled video: {subtitled_video_fullpath(lang, timing_scheme, subtitle_lang)}")
     mpeg = (
         ffmpeg.FFmpeg()
             .option('y')
@@ -48,7 +49,7 @@ def cmd(transcript_path: str, lang: str, timing_scheme: str, subtitle_lang: str,
 
     @mpeg.on('progress')
     def on_progress(progress):
-        print('\r', repr(progress), progress, end='')
+        print(f'\r{progress.time}, fps={progress.fps}, speed={progress.speed}', end='')
 
     @mpeg.on('completed')
     def on_completed():

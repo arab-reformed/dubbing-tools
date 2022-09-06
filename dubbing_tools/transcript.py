@@ -74,6 +74,7 @@ class Transcript:
         self.has_changed = True
 
     def combine_phrases(self, start_index: int, end_index: int):
+        print(f"Combining: {start_index} thru {end_index}", file=sys.stderr)
         if end_index < start_index:
             raise ValueError(f'end_index ({end_index}) is less that start_index ({start_index}')
         elif start_index < 0 or start_index >= len(self.phrases):
@@ -85,21 +86,23 @@ class Transcript:
 
         start_phrase = self.phrases[start_index]
         i = start_index + 1
-        while start_index < len(self.phrases):
+        to_delete = []
+        for i in range(start_index+1, end_index+1):
             phrase = self.phrases[i]
-            if i <= end_index:
-                start_phrase.source.text += '\n' + phrase.source.text
-                for target in phrase.targets.items():  # type: LanguagePhrase
-                    target.text += '\n' + phrase.get_target(target.lang).text
-                del self.phrases[i]
-            else:
-                break
+            start_phrase.source.text += '\n' + phrase.source.text
+            for lang in phrase.targets:
+                start_phrase.get_target(lang).text += '\n' + phrase.get_target(lang).text
+            to_delete.append(i)
+
+        while len(to_delete) > 0:
+            del self.phrases[to_delete.pop()]
 
         # Renumber phrases
         i = 0
         for phrase in self.phrases:
             phrase.id = i
             phrase.set_children_id(i)
+            i += 1
 
     def to_srt(self, lang: str, timings_lang: str = None, include_source: bool = False) -> str:
         srt = ''

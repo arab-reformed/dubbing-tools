@@ -5,13 +5,23 @@ import sys
 import os
 import fire
 import csv
+from dataclasses import dataclass
 
 
-def cmd(transcript_path: str, lang: str, csv_file: str):
+@dataclass
+class Combination:
+    start: int
+    end: int = None
+
+
+def cmd(transcript_path: str, lang: str, csv_file: str, combine: bool = False):
 
     transcript = Transcript.load(transcript_path)
 
     first_id = None
+    combinations = []  # type: list[Combination]
+    combinator = None
+
     with open(csv_file, 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
@@ -20,6 +30,20 @@ def cmd(transcript_path: str, lang: str, csv_file: str):
             i = int(row['Id'])-first_id
             print(f"{i} {lang}: {row['Translation']}")
             transcript.phrases[i].set_text(lang, row['Translation'])
+
+            if combine:
+                if 'Combine' in row and row['Combine']:
+                    if combinator == row['Combine']:
+                        combinations[-1].end = i
+                    else:
+                        combinations.append(Combination(start=i))
+                        combinator = row['Combine']
+                else:
+                    combinator = None
+
+        while len(combinations):
+            combo = combinations.pop()
+            transcript.combine_phrases(start_index=combo.start, end_index=combo.end)
 
     if not transcript.save():
         print("Error saving project file.", file=sys.stderr)
