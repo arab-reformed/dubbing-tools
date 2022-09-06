@@ -81,7 +81,7 @@ class LanguagePhrase(DataClassJsonMixin):
         if self.natural_audio is None or overwrite:
             self.natural_audio = Audio(file_name=self.natural_audio_fullpath(service=service))
 
-        overwrite = overwrite or self.natural_audio.changed
+        overwrite = overwrite or self.natural_audio.changed or self.natural_audio.is_null()
 
         self.natural_audio.tts_audio(
             text=self.text,

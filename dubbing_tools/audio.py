@@ -29,6 +29,9 @@ class Audio:
     def file_exists(self):
         return os.path.exists(self.file_name)
 
+    def is_null(self):
+        return not self.file_exists() or os.path.getsize(self.file_name) == 0
+
     def get_duration(self, from_file: bool = False) -> Optional[float]:
         if self.duration is not None and not self.file_exists():
             self.duration = None
