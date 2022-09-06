@@ -5,14 +5,16 @@ from dubbing_tools import *
 from pydub import AudioSegment
 from dubbing_tools.constants import *
 from dubbing_tools.timings import Timings
+from dubbing_tools.functions import *
+import os
 
 MARGIN = 5
 
 
-def cmd(transcript_path: str,  video_file: str):
+def cmd(transcript_path: str):
     transcript = Transcript.load(transcript_path)
 
-    audio = AudioSegment.from_file(video_file)
+    audio = AudioSegment.from_file(video_source_fullpath())
 
     for phrase in transcript.phrases:
         target = phrase.source

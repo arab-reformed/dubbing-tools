@@ -8,7 +8,12 @@ __all__ = [
     'subtitled_video_fullpath',
     'subtitles_fullpath',
     'video_fullpath',
+    'video_source_fullpath',
 ]
+
+
+def video_source_fullpath() -> str:
+    return os.path.join(SUBDIR_VIDEO, f"source.mp4")
 
 
 def video_fullpath(lang: str, timing_scheme: str) -> str:
