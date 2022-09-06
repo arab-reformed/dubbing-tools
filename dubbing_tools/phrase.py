@@ -66,10 +66,7 @@ class Phrase:
     def set_text(self, lang, text):
         target = self.get_target(lang)
         if target is not None:
-            if text != target.text:
-                target.mark_audio_changed()
-
-            target.text = text
+            target.set_text(text)
 
         else:
             self.set_target(lang, LanguagePhrase(lang=lang, text=text))

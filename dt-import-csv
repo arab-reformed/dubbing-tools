@@ -14,7 +14,7 @@ class Combination:
     end: int = None
 
 
-def cmd(transcript_path: str, lang: str, csv_file: str, combine: bool = False):
+def cmd(transcript_path: str, lang: str, csv_file: str, combine: bool = False, update_source: bool = False):
 
     transcript = Transcript.load(transcript_path)
 
@@ -30,6 +30,8 @@ def cmd(transcript_path: str, lang: str, csv_file: str, combine: bool = False):
             i = int(row['Id'])-first_id
             print(f"{i} {lang}: {row['Translation']}")
             transcript.phrases[i].set_text(lang, row['Translation'])
+            if update_source:
+                transcript.phrases[i].source.set_text(row['Source'])
 
             if combine:
                 if 'Combine' in row and row['Combine']:

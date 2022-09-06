@@ -60,6 +60,11 @@ class LanguagePhrase(DataClassJsonMixin):
     #
     #     super().__setattr__(key, value)
 
+    def set_text(self, text):
+        if text != self.text:
+            self.mark_audio_changed()
+        self.text = text
+
     def get_timing(self, timing_scheme: str = None) -> PhraseTiming:
         return self.timings.get(timing_scheme)
 
