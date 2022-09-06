@@ -6,7 +6,8 @@ from dubbing_tools.constants import *
 import os
 
 
-def cmd(transcript_path: str, lang: str, timing_scheme: str, subtitle_lang: str, type: str = 'ass', include_source: bool = False):
+def cmd(transcript_path: str, lang: str, timing_scheme: str, subtitle_lang: str, type: str = 'ass',
+        include_source: bool = False, debug: bool = False):
     transcript = Transcript.load(transcript_path)
 
     transcript.export_subtitles(
@@ -14,7 +15,8 @@ def cmd(transcript_path: str, lang: str, timing_scheme: str, subtitle_lang: str,
         timing_scheme=timing_scheme,
         subtitle_lang=subtitle_lang,
         type=type,
-        include_source=include_source
+        include_source=include_source,
+        debug=debug,
     )
 
 

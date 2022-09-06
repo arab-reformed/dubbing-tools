@@ -11,6 +11,7 @@ class DlgExportSubtitles(QDialog, Ui_DlgExportSubtitles):
     lang: str = None
     timing: str = None
     sub_lang: str = None
+    debug: bool = False
 
     def __init__(self, transcript: Transcript):
         super().__init__()
@@ -21,16 +22,20 @@ class DlgExportSubtitles(QDialog, Ui_DlgExportSubtitles):
         self.cmbLanguage.activated.connect(self.language_selected)
         self.cmbTimingScheme.activated.connect(self.timing_selected)
         self.cmbSubtitleLanguage.activated.connect(self.sub_lang_selected)
+        self.chkDebug.setChecked(self.debug)
         self.language_selected()
 
-    def get_lang(self):
+    def get_lang(self) -> str:
         return self.cmbLanguage.currentText()
 
-    def get_timing_scheme(self):
+    def get_timing_scheme(self) -> str:
         return self.cmbTimingScheme.currentText()
 
-    def get_subtitle_lang(self):
+    def get_subtitle_lang(self) -> str:
         return self.cmbSubtitleLanguage.currentText()
+
+    def get_debug(self) -> bool:
+        return self.chkDebug.isChecked()
 
     def language_selected(self):
         self.lang = self.cmbLanguage.currentText()

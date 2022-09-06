@@ -186,13 +186,16 @@ class LanguagePhrase(DataClassJsonMixin):
                + self.time_to_str(end, milli_sep=',') \
                + f"\n{text}"
 
-    def to_ass(self, start: float, end: float, source: 'SourceLanguagePhrase' = None):
+    def to_ass(self, start: float, end: float, source: 'SourceLanguagePhrase' = None, debug: bool = False):
         # Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         # Dialogue: 0,0:00:00.63,0:00:04.56,Arabic,,0,0,0,,أود أن ألفت انتباهكم إلى خمسة أمور
 
         text = self.subtitle_text()
         if source is not None:
             text = '\u202d' + source.subtitle_text() + '\\N' + text
+
+        if debug:
+            text = f"{self.id}: {text}"
 
         return f"Dialogue: 0,{self.time_to_str(start)},{self.time_to_str(end)},{self.ASS_CLASSES[self.lang]},,0,0,0,,{text}"
 
@@ -220,6 +223,10 @@ class LanguagePhrase(DataClassJsonMixin):
             return reverse
 
         text = self.text
+
+        # remove periods at end of sentences
+        text = re.sub('\\.$', '', text, re.MULTILINE)
+
         text = text.replace("\n", '\\N')
 
         if self.lang == 'ar':

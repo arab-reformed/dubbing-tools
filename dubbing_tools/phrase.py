@@ -152,7 +152,7 @@ class Phrase:
             include_source=include_source
         )
 
-    def to_ass(self, lang: str, timing_scheme: str, subtitle_lang: str, include_source: bool = False) -> str:
+    def to_ass(self, lang: str, timing_scheme: str, subtitle_lang: str, include_source: bool = False, debug: bool = False) -> str:
         if timing_scheme == Timings.DUBBED:
             timing = self.get_timing(lang, timing_scheme)
             start = timing.start_time
@@ -175,6 +175,7 @@ class Phrase:
             start=start,
             end=end,
             source=self.source if include_source else None,
+            debug=debug,
         )
 
     def to_csv(self, lang: str) -> tuple:

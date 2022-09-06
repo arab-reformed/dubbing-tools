@@ -1,6 +1,7 @@
 import sys
 from dataclasses import dataclass
-from dubbing_tools import Phrase, Transcript
+from .transcript import Transcript
+from .timings import Timings
 import os
 from pydub import AudioSegment
 from moviepy.editor import VideoFileClip, AudioFileClip, CompositeVideoClip
@@ -38,8 +39,8 @@ class Video:
             .export(output, format="wav")
 
     def dub_audio(self, transcript: Transcript, lang: str, timing_scheme: str, source_audio: str,
-                  lengthen_mode: LengthenMode = LengthenMode.stretch, overwrite: bool = False,
-                  overlay_gain: int = -20, source_gain: int = -50, use_source_audio: bool = False):
+                   lengthen_mode: LengthenMode = LengthenMode.stretch, overwrite: bool = False,
+                  overlay_gain: int = -20, source_gain: int = None, use_source_audio: bool = False):
         # if os.path.exists(self.target_file):
         #     return
 
@@ -49,9 +50,17 @@ class Video:
             print(f"Video file {self.target_file} already exists.", file=sys.stderr)
             return
 
+        if source_gain is None:
+            source_gain = -50
+            if timing_scheme == Timings.TRANSLATION:
+                source_gain = 0
+
         print(f"Loading audio for {lang}", file=sys.stderr)
 
-        if use_source_audio:
+        if timing_scheme == Timings.TRANSLATION:
+            lengthen_mode = LengthenMode.freeze
+
+        if use_source_audio or timing_scheme == Timings.TRANSLATION:
             # grab the original audio
             dubbed = AudioSegment.from_file(source_audio)
             dubbed = dubbed.apply_gain(source_gain)

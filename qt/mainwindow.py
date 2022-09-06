@@ -14,8 +14,8 @@ from typing import Optional
 
 
 class MainWindow(QMainWindow, Ui_WindowMain):
-    transcript: Transcript
-    transcript_path: str
+    transcript: Transcript = None
+    transcript_path: str = None
     log: str = ''
     lang: Optional[str] = None
     timing: Optional[str] = None
@@ -61,7 +61,7 @@ class MainWindow(QMainWindow, Ui_WindowMain):
             self.load_transcript(dialog.selectedFiles()[0])
 
     def save_project(self):
-        if self.transcript.has_changed:
+        if self.transcript and self.transcript.has_changed:
             self.transcript.save()
             self.log_action(f"Project saved ({self.transcript_path})")
 
@@ -81,6 +81,7 @@ class MainWindow(QMainWindow, Ui_WindowMain):
                     timing_scheme=timing_scheme,
                     subtitle_lang=sub_lang,
                     type='ass',
+                    debug=dialog.get_debug(),
                 )
                 self.log_action(f"Exported subtitles for {lang} {timing_scheme} {sub_lang}")
 
@@ -111,17 +112,22 @@ class MainWindow(QMainWindow, Ui_WindowMain):
         QCoreApplication.quit()
 
     def closeEvent(self, event):
-        if self.transcript.has_changed:
+        if self.transcript and self.transcript.has_changed:
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Question)
             msg.setText("Save the project?")
             msg.setInformativeText("If changes are not saved they will be lost.")
             msg.setWindowTitle("Save Changes?")
-            msg.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+            msg.setStandardButtons(QMessageBox.Yes | QMessageBox.No | QMessageBox.Cancel)
 
             retval = msg.exec_()
             if retval == QMessageBox.Yes:
                 self.save_project()
+                event.accept()
+            elif retval == QMessageBox.No:
+                event.accept()
+            else:
+                event.ignore()
 
     def language_selected(self):
         self.lang = self.lstTargetLanguages.currentItem().text()
