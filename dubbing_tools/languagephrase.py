@@ -72,8 +72,14 @@ class LanguagePhrase(DataClassJsonMixin):
         return round(self.natural_audio.duration / self.timings.get(timing_scheme).duration(), 2)
 
     def mark_audio_changed(self):
+        self.mark_natural_audio_changed()
+        self.mark_duration_audio_changed()
+
+    def mark_natural_audio_changed(self):
         if self.natural_audio is not None:
             self.natural_audio.changed = True
+
+    def mark_duration_audio_changed(self):
         if self.duration_audio is not None:
             self.duration_audio.changed = True
 

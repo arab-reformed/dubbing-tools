@@ -521,6 +521,9 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         self.has_changed = True
 
     def adjust_dub_timings(self, lang: str):
+        from copy import deepcopy
+        old_transcript = deepcopy(self)
+
         # set the start and end times for the target language
         self.reset_timings(lang=lang, timing_scheme=Timings.DUBBED)
         i = 0
@@ -636,5 +639,12 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                 start_time=timing.start_time,
                 end_time=timing.start_time + phrase.source.natural_audio.duration
             ))
+
+        # Mark audio changed for changed timings
+        for i in range(0, len(self.phrases)):
+            timing = self.phrases[i].get_timing(lang, Timings.DUBBED)
+            old_timing = old_transcript.phrases[i].get_timing(lang, Timings.DUBBED)
+            if old_timing and timing.duration() != old_timing.duration():
+                self.phrases[i].get_target(lang).mark_duration_audio_changed()
 
         self.has_changed = True
