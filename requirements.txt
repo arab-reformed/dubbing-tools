@@ -18,3 +18,4 @@ jinja2
 dotted-dict
 azure-cognitiveservices-speech
 srt
+spacy

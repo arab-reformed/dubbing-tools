@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+
+import fire
+import spacy
+from spacy.lang.en import English
+import re
+
+def cmd(doc_file: str, compact: bool = False):
+	# nlp = English()
+	nlp = spacy.load('en_core_web_sm')
+
+	file = open(doc_file)
+	text = file.read()
+	doc = nlp(text)
+	
+	parentheticals = [m.span() for m in re.finditer('\([^)]+\)', text, flags=re.IGNORECASE)]
+	for start,end in parentheticals:
+		doc.retokenizer().merge(start_idx=start,end_idx=end)
+	
+	spacy.displacy.serve(
+		list(doc.sents),
+		style='dep',
+		port=8000,
+		options={
+			'compact': compact,
+			'collapse_punct': False,
+		}
+	)
+
+	for token in list(doc.sents)[-1]:
+		print(token.text, token.dep_, token.pos_)
+
+
+if __name__ == "__main__":
+    fire.Fire(cmd)

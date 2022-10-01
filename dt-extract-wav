@@ -1,22 +1,28 @@
 #!/usr/bin/env python3
+import sys
 
 from pydub import AudioSegment
 import os
 import fire
 
 
-def cmd(video_file: str, output: str = None):
+def cmd(video_file: str, format: str = 'wav', output: str = None):
+    print(f'Format: {format}')
+    if format not in ['wav', 'mp3']:
+        print('Audio format must be one of: wav, mp3', file=sys.stderr)
+        exit(1)
+
     if output is None:
         output = os.path.split(video_file)[-1].split('.')[0]
 
-    if not output[-4:] != "wav":
-        output += ".wav"
+    if not output[-4:] != format:
+        output += f'.{format}'
 
     # TODO: can we output MP3?
     AudioSegment \
         .from_file(video_file) \
         .set_channels(1) \
-        .export(output, format="wav")
+        .export(output, format=format)
 
 
 if __name__ == "__main__":

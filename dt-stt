@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+import sys
+
+from dubbing_tools.audio import Audio
+from dubbing_tools.azurespeech import AzureSpeechServices
+import os
+import fire
+
+
+def cmd(audio_file: str, output: str = None):
+
+    audio = Audio(file_name=audio_file)
+    if audio.file_exists():
+        azure = AzureSpeechServices(lang='en')
+        text = azure.speech_to_text(audio)
+
+        if output is not None:
+            out = open(output, 'w')
+            out.write(text)
+            out.close()
+        else:
+            return text
+
+    else:
+        print(f'Audio file {audio_file} not found.', file=sys.stderr)
+
+
+if __name__ == "__main__":
+    fire.Fire(cmd)
