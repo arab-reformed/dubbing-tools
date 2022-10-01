@@ -13,6 +13,7 @@ class Word:
     end_time: float
     hard_break: bool = False
     manuscript_break_before: bool = False
+    comment: str = None
 
     def __post_init__(self):
         self.set_word(self.word)
