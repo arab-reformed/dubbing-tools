@@ -63,27 +63,28 @@ def cmd(audio_file: str, output: str = None, debug: bool = False):
 					end_time=(word['Offset'] + word['Duration']) / TICKS_PER_SECOND
 				)
 			)
-		logger.debug(evt)
+		logger.debug(f'PARSING: {evt.result.reason} - {response["DisplayText"]}')
 
 	# Service callback that stops continuous recognition upon receiving an event `evt`
 	def stop_cb(evt):
-		logger.debug('CLOSING on {}'.format(evt))
-		speech_recognizer.stop_continuous_recognition()
 		nonlocal done
-		done = True
+		if not done:
+			done = True
+			logger.debug('CLOSING on {}'.format(evt))
+			speech_recognizer.stop_continuous_recognition()
 
-		# Do something with the combined responses
-		if output is not None:
-			f = open(output, 'w')
-			json.dump(results, f, indent=2)
-			f.close()
+			# Do something with the combined responses
+			if output is not None:
+				f = open(output, 'w')
+				json.dump(results, f, indent=2)
+				f.close()
 
-			f = open('azure-words.json', 'w')
-			json.dump(Word.schema().dump(words, many=True), f, indent=2)
-			f.close()
+				f = open('azure-words.json', 'w')
+				json.dump(Word.schema().dump(words, many=True), f, indent=2)
+				f.close()
 
 	# Connect callbacks to the events fired by the speech recognizer
-	speech_recognizer.recognizing.connect(lambda evt: logger.debug('RECOGNIZING: {}'.format(evt)))
+	speech_recognizer.recognizing.connect(lambda evt: logger.debug(f'RECOGNIZING: {evt.result.reason} - {evt.result.text}'))
 	speech_recognizer.recognized.connect(parse_azure_result)
 	speech_recognizer.session_started.connect(lambda evt: logger.debug('SESSION STARTED: {}'.format(evt)))
 	speech_recognizer.session_stopped.connect(lambda evt: logger.debug('SESSION STOPPED {}'.format(evt)))
