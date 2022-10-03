@@ -8,7 +8,7 @@ import logging
 import time
 import os
 import json
-from dubbing_tools.word import Word
+from dubbing_tools import Word, Transcript
 
 logging.basicConfig(
     stream=stderr,
@@ -18,7 +18,7 @@ config = dotenv.load_dotenv()
 TICKS_PER_SECOND = 10000000
 
 
-def cmd(audio_file: str, output: str = None, debug: bool = False):
+def cmd(audio_file: str, transcript_path: str, azure_json: str = None, debug: bool = False):
     logger = logging.getLogger('azure')
     if debug:
         logger.setLevel(logging.DEBUG)
@@ -83,14 +83,16 @@ def cmd(audio_file: str, output: str = None, debug: bool = False):
             # speech_recognizer.stop_continuous_recognition()
 
             # Do something with the combined responses
-            if output is not None:
-                f = open(output, 'w')
+            if azure_json is not None:
+                f = open(azure_json, 'w')
                 json.dump(results, f, indent=2)
                 f.close()
 
-            f = open('azure-words.json', 'w')
-            json.dump(Word.schema().dump(words, many=True), f, indent=2)
-            f.close()
+            transcript = Transcript(
+                name=audio_file,
+                words=words,
+            )
+            transcript.save(transcript_path)
 
         except Exception as e:
             logger.error(str(e))
