@@ -165,6 +165,35 @@ class Transcript:
 
         return None
 
+    def import_words_srt(self, srt_file: str) -> None:
+        def seconds(sub_time):
+            return sub_time.seconds + sub_time.microseconds/1000000
+
+        f = open(srt_file, 'r')
+        self.words = []
+        for sub in srt.parse(f.read()):
+            sub_words = re.split(r'\s+', sub.content)
+            letter_count = 0
+            for sw in sub_words:
+                letter_count += len(sw)
+
+            duration = seconds(sub.end) - seconds(sub.start)
+            last_end = seconds(sub.start)
+            for sw in sub_words:
+                end_time = last_end + duration * len(sw) / letter_count
+                self.words.append(
+                    Word(
+                        id=len(self.words),
+                        word=sw,
+                        start_time=last_end,
+                        end_time=end_time,
+                    )
+                )
+                last_end = end_time
+
+        f.close()
+        self.has_changed = True
+
     @classmethod
     def import_source_srt(cls, srt_file: str, lang: str) -> 'Transcript':
         transcript = cls()
