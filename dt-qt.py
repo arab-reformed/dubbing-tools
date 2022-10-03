@@ -12,7 +12,11 @@ import os
 
 
 def window():
+    QApplication.setApplicationName('Dubber')
     app = QApplication(sys.argv)
+    print(app.applicationName())
+    app.setApplicationName('Dubber')
+    print(app.applicationName())
     mw = MainWindow(app.arguments())
     mw.show()
     sys.exit(app.exec_())
