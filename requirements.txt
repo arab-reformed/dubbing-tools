@@ -19,3 +19,5 @@ dotted-dict
 azure-cognitiveservices-speech
 srt
 spacy
+opencv-python
+scikit-image
