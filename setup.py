@@ -29,6 +29,7 @@ setup(
         'dt-translate',
         'dt-tts-duration',
         'dt-tts-natural',
+        'find-slides',
     ],
     install_requires=[
         'ffmpeg-python',
@@ -50,6 +51,11 @@ setup(
         'jinja2',
         'dotted-dict',
         'azure-cognitiveservices-speech',
+        'srt',
+        'spacy',
+        'opencv-python',
+        'scikit-image',
+
     ],
     zip_safe=False
 )
