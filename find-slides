@@ -8,7 +8,7 @@ import os
 # from skimage.measure import compare_ssim as ssim
 from skimage.metrics import structural_similarity as ssim
 import json
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from dataclasses_json import dataclass_json
 import numpy
 
@@ -20,16 +20,34 @@ class Frame:
     frame_number: int
 
 
-def write_json(output_path: str, stills: list):
-    with open(os.path.join(output_path, 'still-frames.json'), 'w') as file:
-        json.dump({'stills': stills}, file, indent=2)
+@dataclass_json
+@dataclass
+class StillData:
+    frame_start: int
+    frame_end: int
+    time_start: float
+    time_end: float
+    image_file: str = None
+
+
+@dataclass_json
+@dataclass
+class VideoData:
+    video_file: str
+    stills: list[StillData] = field(default_factory=list)
 
 
 def cmd(video_file: str, output_path: str,
-        debug: bool = False, skip: int = 20, similarity: float = 0.98, look_behind: int = 2):
+        debug: bool = False, skip: int = 30, similarity: float = 0.98, look_behind: int = 2):
+
+    data = VideoData(video_file=video_file)
 
     def similar(frame1: Frame, frame2: Frame) -> bool:
         return ssim(frame1.frame, frame2.frame, multichannel=True) > similarity
+
+    def write_json():
+        with open(os.path.join(output_path, 'still-frames.json'), 'w') as file:
+            file.write(data.to_json(indent=2, ensure_ascii=False))
 
     if not os.path.exists(output_path):
         os.makedirs(output_path)
@@ -44,9 +62,9 @@ def cmd(video_file: str, output_path: str,
     time_end = None
     previous = {}  # type: dict[int, Frame]
     current = {}  # type: dict[int, Frame]
-    still_frames = []
     still_images = []  # type: list[Frame]
-    write_json(output_path, still_frames)
+
+    write_json()
 
     while (True):
         success, f = capture.read()
@@ -72,15 +90,17 @@ def cmd(video_file: str, output_path: str,
                                 time_start = previous[n].time
                                 frame_start = n
                                 break
-                        still_frames.append({
-                            'frame_start': frame_start,
-                            'frame_end': frame_start,
-                            'time_start': time_start,
-                            'time_end': time_end,
-                        })
+                        data.stills.append(
+                            StillData(
+                                frame_start=frame_start,
+                                frame_end=frame_start,
+                                time_start=time_start,
+                                time_end=time_end,
+                            )
+                        )
 
                     frame_end = frame_num
-                    still_frames[-1]['frame_end'] = frame_end
+                    data.stills[-1].frame_end = frame_end
 
                 else:
                     if frame_start is not None and frame_end - frame_start >= skip:
@@ -91,22 +111,22 @@ def cmd(video_file: str, output_path: str,
                             else:
                                 break
 
-                        still_frames[-1]['frame_end'] = frame_end
-                        still_frames[-1]['time_end'] = time_end
+                        data.stills[-1].frame_end = frame_end
+                        data.stills[-1].time_end = time_end
 
                         # check for similar still
                         image_file = None
                         for i in range(min(len(still_images), look_behind)):
                             if similar(last_frame, still_images[-i]):
-                                image_file = still_frames[-i-1]['image_file']
+                                image_file = data.stills[-i-1].image_file
                                 break
                         if image_file is None:
                             still_images.append(last_frame)
                             image_file = f'slide-{str(len(still_images)).rjust(3, "0")}.jpg'
 
-                        still_frames[-1]['image_file'] = image_file
+                        data.stills[-1].image_file = image_file
                         cv2.imwrite(os.path.join(output_path, image_file), last_frame.frame)
-                        write_json(output_path, still_frames)
+                        write_json()
 
                         frame_start = None
                         frame_end = None
@@ -137,4 +157,3 @@ def cmd(video_file: str, output_path: str,
 
 if __name__ == "__main__":
     fire.Fire(cmd)
-
