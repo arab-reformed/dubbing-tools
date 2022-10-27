@@ -29,7 +29,7 @@ setup(
         'dt-translate',
         'dt-tts-duration',
         'dt-tts-natural',
-        'find-slides',
+        'dt-find-slides',
     ],
     install_requires=[
         'ffmpeg-python',
