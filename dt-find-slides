@@ -11,6 +11,8 @@ import json
 from dataclasses import dataclass, field
 from dataclasses_json import dataclass_json
 import numpy
+import re
+import glob
 
 
 @dataclass
@@ -37,8 +39,22 @@ class VideoData:
     stills: list[StillData] = field(default_factory=list)
 
 
-def cmd(video_file: str, output_path: str,
-        debug: bool = False, skip: int = 30, similarity: float = 0.98, look_behind: int = 2):
+def cmd(
+        video_file: str = None,
+        output_path: str = './slides',
+        verbose: bool = False,
+        skip: int = 30,
+        similarity: float = 0.98,
+        look_behind: int = 2):
+
+    if video_file is None:
+        files = glob.glob("*-src.mp4")
+        if len(files):
+            files.sort()
+            video_file = files[0]
+        else:
+            print('No video source found.', file=sys.stderr)
+            exit(1)
 
     data = VideoData(video_file=video_file)
 
@@ -66,7 +82,7 @@ def cmd(video_file: str, output_path: str,
 
     write_json()
 
-    while (True):
+    while True:
         success, f = capture.read()
         time = round(capture.get(cv2.CAP_PROP_POS_MSEC)/1000, 2)
 
@@ -141,7 +157,7 @@ def cmd(video_file: str, output_path: str,
 
         frame_num += 1
 
-        if debug and frame_num % 300 == 0:
+        if verbose and frame_num % 30 == 0:
             total_seconds = round(time, 0)
             seconds = total_seconds % 60
             seconds = int(seconds)
@@ -151,6 +167,9 @@ def cmd(video_file: str, output_path: str,
 
             print("\rTime:  %d:%02d:%02d" % (hours, minutes, seconds), file=sys.stderr, end='')
             # print(f'Frame: {frame_num}, {round(time/1000,1)}', file=sys.stderr)
+
+    if verbose:
+        print(file=sys.stderr)
 
     capture.release()
 
