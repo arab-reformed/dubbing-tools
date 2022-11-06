@@ -16,3 +16,8 @@ __pycache__/
 /build/
 /holy-spirit-test/
 /dubbing_tools.egg-info/
+*.jpg
+*.json
+*.csv
+*.srt
+*.egg

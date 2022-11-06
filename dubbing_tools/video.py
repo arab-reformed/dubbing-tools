@@ -12,7 +12,6 @@ from enum import Enum, unique
 import tempfile
 
 
-
 @unique
 class LengthenMode(Enum):
     freeze = 'freeze'

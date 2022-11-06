@@ -2,10 +2,10 @@ import sys
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
 import os
-from pydub import AudioSegment
-from moviepy.editor import VideoFileClip, AudioFileClip, CompositeVideoClip
-from moviepy.video.tools.subtitles import SubtitlesClip, TextClip
-import tempfile
+# from pydub import AudioSegment
+# from moviepy.editor import VideoFileClip, AudioFileClip, CompositeVideoClip
+# from moviepy.video.tools.subtitles import SubtitlesClip, TextClip
+# import tempfile
 from pydub import AudioSegment
 from google.cloud import texttospeech
 from typing import Optional
