@@ -16,6 +16,8 @@ from .audio import Audio
 from .video import Video
 from .timings import Timings
 from .phrasetiming import PhraseTiming
+from .stilldata import StillData
+from .videodata import VideoData
 
 __all__ = [
     'Audio',
@@ -24,8 +26,10 @@ __all__ = [
     'PhrasesContainer',
     'PhraseTiming',
     'SourceLanguagePhrase',
+    'StillData',
     'Timings',
     'Transcript',
     'Video',
+    'VideoData',
     'Word',
 ]

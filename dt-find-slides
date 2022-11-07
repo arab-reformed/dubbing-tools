@@ -13,6 +13,8 @@ from dataclasses_json import dataclass_json
 import numpy
 import re
 import glob
+from dubbing_tools import StillData, VideoData
+from typing import Optional
 
 
 @dataclass
@@ -20,23 +22,6 @@ class Frame:
     time: int
     frame: any
     frame_number: int
-
-
-@dataclass_json
-@dataclass
-class StillData:
-    frame_start: int
-    frame_end: int
-    time_start: float
-    time_end: float
-    image_file: str = None
-
-
-@dataclass_json
-@dataclass
-class VideoData:
-    video_file: str
-    stills: list[StillData] = field(default_factory=list)
 
 
 def cmd(
@@ -61,38 +46,35 @@ def cmd(
     def similar(frame1: Frame, frame2: Frame) -> bool:
         return ssim(frame1.frame, frame2.frame, multichannel=True) > similarity
 
-    def write_json():
-        with open(os.path.join(output_path, 'still-frames.json'), 'w') as file:
-            file.write(data.to_json(indent=2, ensure_ascii=False))
-
     if not os.path.exists(output_path):
         os.makedirs(output_path)
 
     capture = cv2.VideoCapture(video_file)
 
     frame_num = 0
-    last_frame = None
+    last_frame = None  # type: Optional[Frame]
     frame_start = None
     frame_end = None
     time_start = None
     time_end = None
-    previous = {}  # type: dict[int, Frame]
-    current = {}  # type: dict[int, Frame]
+    previous = []  # type: list[Frame]
+    current = []  # type: list[Frame]
     still_images = []  # type: list[Frame]
 
-    write_json()
+    data.write(output_path=output_path)
 
     while True:
         success, f = capture.read()
         time = round(capture.get(cv2.CAP_PROP_POS_MSEC)/1000, 2)
+        frame_num += 1
 
         if not success:
             break
 
-        frame = Frame(time, f, frame_num+1)
-        current[frame_num] = frame
+        frame = Frame(time, f, frame_num)
+        current.append(frame)
 
-        if frame_num % skip == 0:
+        if (frame_num-1) % skip == 0:
             # print(f'Frame: {frame_num}', file=sys.stderr)
             try:
                 if last_frame is None:
@@ -101,11 +83,28 @@ def cmd(
                 elif similar(frame, last_frame):
                     if frame_start is None:
                         frame_start = frame_num
-                        for n in previous:
-                            if similar(frame, previous[n]):
-                                time_start = previous[n].time
-                                frame_start = n
-                                break
+                        time_end = frame.time
+
+                        i = None
+                        matched = False
+                        for j in [32, 16, 8, 4, 2, 1]:
+                            if j >= len(previous):
+                                continue
+
+                            if i is None:
+                                i = j
+                            elif matched or i >= len(previous):
+                                i -= j
+                            else:
+                                i += j
+
+                            if 0 <= i < len(previous) and similar(frame, previous[i]):
+                                time_start = previous[i].time
+                                frame_start = previous[i].frame_number
+                                matched = True
+                            else:
+                                matched = False
+
                         data.stills.append(
                             StillData(
                                 frame_start=frame_start,
@@ -116,19 +115,32 @@ def cmd(
                         )
 
                     frame_end = frame_num
-                    data.stills[-1].frame_end = frame_end
+                    data.last_still.frame_end = frame_end
 
                 else:
                     if frame_start is not None and frame_end - frame_start >= skip:
-                        for n in current:
-                            if similar(last_frame, current[n]):
-                                frame_end = n
-                                time_end = current[n].time
-                            else:
-                                break
+                        i = None
+                        matched = False
+                        for j in [32, 16, 8, 4, 2, 1]:
+                            if j >= len(current):
+                                continue
 
-                        data.stills[-1].frame_end = frame_end
-                        data.stills[-1].time_end = time_end
+                            if i is None:
+                                i = j
+                            elif matched or i < 0:
+                                i += j
+                            else:
+                                i -= j
+
+                            if 0 <= i < len(current) and similar(last_frame, current[i]):
+                                time_end = current[i].time
+                                frame_end = current[i].frame_number
+                                matched = True
+                            else:
+                                matched = False
+
+                        data.last_still.frame_end = frame_end
+                        data.last_still.time_end = time_end
 
                         # check for similar still
                         image_file = None
@@ -140,9 +152,9 @@ def cmd(
                             still_images.append(last_frame)
                             image_file = f'slide-{str(len(still_images)).rjust(3, "0")}.jpg'
 
-                        data.stills[-1].image_file = image_file
+                        data.last_still.image_file = image_file
                         cv2.imwrite(os.path.join(output_path, image_file), last_frame.frame)
-                        write_json()
+                        data.write(output_path=output_path)
 
                         frame_start = None
                         frame_end = None
@@ -153,20 +165,18 @@ def cmd(
 
             last_frame = frame
             previous = current
-            current = {}
+            current = []
 
-        frame_num += 1
+            if verbose:
+                total_seconds = round(time, 0)
+                seconds = total_seconds % 60
+                seconds = int(seconds)
+                minutes = (total_seconds/60) % 60
+                minutes = int(minutes)
+                hours = (total_seconds/(60*60)) % 24
 
-        if verbose and frame_num % 30 == 0:
-            total_seconds = round(time, 0)
-            seconds = total_seconds % 60
-            seconds = int(seconds)
-            minutes = (total_seconds/60) % 60
-            minutes = int(minutes)
-            hours = (total_seconds/(60*60)) % 24
-
-            print("\rTime:  %d:%02d:%02d" % (hours, minutes, seconds), file=sys.stderr, end='')
-            # print(f'Frame: {frame_num}, {round(time/1000,1)}', file=sys.stderr)
+                print("\rTime:  %d:%02d:%02d" % (hours, minutes, seconds), file=sys.stderr, end='')
+                # print(f'Frame: {frame_num}, {round(time/1000,1)}', file=sys.stderr)
 
     if verbose:
         print(file=sys.stderr)
