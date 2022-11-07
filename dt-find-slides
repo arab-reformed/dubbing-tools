@@ -61,7 +61,7 @@ def cmd(
     current = []  # type: list[Frame]
     still_images = []  # type: list[Frame]
 
-    data.write(output_path=output_path)
+    data.write(path=output_path)
 
     while True:
         success, f = capture.read()
@@ -154,7 +154,7 @@ def cmd(
 
                         data.last_still.image_file = image_file
                         cv2.imwrite(os.path.join(output_path, image_file), last_frame.frame)
-                        data.write(output_path=output_path)
+                        data.write(path=output_path)
 
                         frame_start = None
                         frame_end = None

@@ -15,16 +15,16 @@ class VideoData:
     video_file: str
     stills: list[StillData] = field(default_factory=list)
 
-    def write(self, output_path: str):
-        with open(os.path.join(output_path, DATA_FILENAME), 'w') as file:
+    def write(self, path: str):
+        with open(os.path.join(path, DATA_FILENAME), 'w') as file:
             file.write(self.to_json(indent=2, ensure_ascii=False))
 
     @classmethod
-    def read(cls, output_path: str):
-        with open(os.path.join(output_path, DATA_FILENAME), 'r') as file:
+    def read(cls, path: str) -> 'VideoData':
+        with open(os.path.join(path, DATA_FILENAME), 'r') as file:
             data = json.load(file)
             return cls.from_dict(data)
 
     @property
-    def last_still(self):
+    def last_still(self) -> StillData:
         return self.stills[-1]

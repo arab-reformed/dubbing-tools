@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
 from dataclasses_json import dataclass_json
+import re
+from typing import Optional
 
 __all__ = ['StillData']
 
@@ -12,3 +14,10 @@ class StillData:
     time_start: float
     time_end: float
     image_file: str = None
+
+    def powerpoint_image_file(self) -> Optional[str]:
+        m = re.search(r'-(?P<num>\d+)', self.image_file)
+        if m:
+            return f'Slide{int(m.group("num"))}.JPG'
+
+        return None
