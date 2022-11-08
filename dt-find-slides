@@ -81,26 +81,29 @@ def cmd(
                     last_frame = frame
 
                 elif similar(frame, last_frame):
+                    frame_end = frame.frame_number
+                    time_end = frame.time
+
                     if frame_start is None:
-                        frame_start = frame_num
-                        time_end = frame.time
+                        frame_start = frame.frame_number
+                        time_start = frame.time
 
                         i = None
                         matched = False
                         for j in [32, 16, 8, 4, 2, 1]:
-                            if j >= len(previous):
+                            if j >= len(current):
                                 continue
 
                             if i is None:
                                 i = j
-                            elif matched or i >= len(previous):
+                            elif matched or i >= len(current):
                                 i -= j
                             else:
                                 i += j
 
-                            if 0 <= i < len(previous) and similar(frame, previous[i]):
-                                time_start = previous[i].time
-                                frame_start = previous[i].frame_number
+                            if 0 <= i < len(current) and similar(frame, current[i]):
+                                time_start = current[i].time
+                                frame_start = current[i].frame_number
                                 matched = True
                             else:
                                 matched = False
@@ -108,21 +111,21 @@ def cmd(
                         data.stills.append(
                             StillData(
                                 frame_start=frame_start,
-                                frame_end=frame_start,
+                                frame_end=frame_end,
                                 time_start=time_start,
                                 time_end=time_end,
                             )
                         )
 
-                    frame_end = frame_num
-                    data.last_still.frame_end = frame_end
+                    # data.last_still.frame_end = frame.frame_number
+                    # data.last_still.time_end = frame.time
 
                 else:
-                    if frame_start is not None and frame_end - frame_start >= skip:
+                    if frame_start is not None:  # and frame_end - frame_start >= skip:
                         i = None
                         matched = False
                         for j in [32, 16, 8, 4, 2, 1]:
-                            if j >= len(current):
+                            if j >= len(previous):
                                 continue
 
                             if i is None:
@@ -132,9 +135,9 @@ def cmd(
                             else:
                                 i -= j
 
-                            if 0 <= i < len(current) and similar(last_frame, current[i]):
-                                time_end = current[i].time
-                                frame_end = current[i].frame_number
+                            if 0 <= i < len(previous) and similar(last_frame, previous[i]):
+                                time_end = previous[i].time
+                                frame_end = previous[i].frame_number
                                 matched = True
                             else:
                                 matched = False
