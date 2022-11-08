@@ -21,3 +21,6 @@ class StillData:
             return f'Slide{int(m.group("num"))}.JPG'
 
         return None
+
+    def duration(self) -> float:
+        return self.time_start - self.time_end

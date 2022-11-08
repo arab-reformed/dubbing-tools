@@ -53,7 +53,7 @@ def cmd(
     for still in video_data.stills:
         image = ImageClip(os.path.join(arabic_slides_path, still.powerpoint_image_file())) \
             .set_start(still.time_start) \
-            .set_duration(still.time_end - still.time_start) \
+            .set_duration(still.duration()) \
             .set_pos(("center", "center"))
 
         if image.h != video.h or image.w != video.w:
