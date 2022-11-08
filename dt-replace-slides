@@ -1,0 +1,74 @@
+#!/usr/bin/env python3
+
+import cv2
+import fire
+from dubbing_tools import *
+import sys
+import os
+# from skimage.measure import compare_ssim as ssim
+from skimage.metrics import structural_similarity as ssim
+import json
+from dataclasses import dataclass, field
+from dataclasses_json import dataclass_json
+import numpy
+import re
+import glob
+from dubbing_tools import StillData, VideoData
+from typing import Optional
+from moviepy.editor import VideoFileClip, ImageClip, CompositeVideoClip
+
+
+@dataclass
+class Frame:
+    time: int
+    frame: any
+    frame_number: int
+
+
+def cmd(
+        source_video: str = None,
+        output_video: str = 'output.mp4',
+        slides_path: str = './slides',
+        arabic_slides_path: str = './arabic-slides',
+        resize: bool = False,
+        verbose: bool = False,
+):
+    if source_video is None:
+        files = glob.glob("*-src.mp4")
+        if len(files):
+            files.sort()
+            source_video = files[0]
+        else:
+            print('No video source found.', file=sys.stderr)
+            exit(1)
+
+    video = VideoFileClip(source_video)
+    video_height = video.h
+    video_width = video.w
+
+    clips = [video]
+
+    video_data = VideoData.read(path=slides_path)
+
+    for still in video_data.stills:
+        image = ImageClip(os.path.join(arabic_slides_path, still.powerpoint_image_file())) \
+            .set_start(still.time_start) \
+            .set_duration(still.time_end - still.time_start) \
+            .set_pos(("center", "center"))
+
+        if image.h != video.h or image.w != video.w:
+            if resize:
+                print(f'Resizing {still.powerpoint_image_file()} from {image.w}x{image.h} --> {video.w}x{video.h}', file=sys.stderr)
+                image = image.resize(height=video.h, width=video.w)
+            else:
+                print(f'{still.powerpoint_image_file()} size ({image.w}x{image.h}) differs from video ({video.w}x{video.h})', file=sys.stderr)
+                exit(1)
+
+        clips.append(image)
+
+    final = CompositeVideoClip(clips)
+    final.write_videofile(output_video)
+
+
+if __name__ == "__main__":
+    fire.Fire(cmd)
