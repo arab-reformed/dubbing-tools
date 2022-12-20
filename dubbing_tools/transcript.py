@@ -390,8 +390,10 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     def build_phrases(self, gap: float = 1.0):
         clauses = [
             ['through', 'that', 'which', 'whereby', 'is'],
-            ['of', 'by', 'about', 'from', 'in', 'into', 'for']
+            ['and', 'or', 'of', 'by', 'about', 'from', 'in', 'into', 'for']
         ]
+
+        not_last_word = ['and', 'or', 'which']
 
         phrases = []
         phrase = None
@@ -475,6 +477,13 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                                 break
 
                 phrases = shortened
+
+        for i in range(len(phrases)):
+            if re.sub(r'["\';,.?()!@#$%^&*\-=+\\/:]', self.words[phrases[i].source.end_word].word, '') in not_last_word:
+                if i+1 < len(phrases):
+                    # move the last word of the phrase to the next phrase
+                    phrases[i].source.set_by_word_indices(self.words, phrases[i].source.start_word, phrases[i].source.end_word - 1)
+                    phrases[i+1].source.set_by_word_indices(self.words, phrases[i + 1].source.start_word - 1, phrases[i + 1].source.end_word)
 
         # renumber phrases
         for i, phrase in enumerate(phrases):

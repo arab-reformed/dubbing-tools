@@ -6,7 +6,7 @@ import os
 import fire
 
 
-def cmd(transcript_path: str, srt_file: str, lang: str = 'en-US'):
+def cmd(transcript_path: str, srt_file: str, lang: str = 'en'):
 
     transcript = Transcript.load(transcript_path)
     if transcript is None:

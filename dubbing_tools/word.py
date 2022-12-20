@@ -27,7 +27,7 @@ class Word:
     def duration(self) -> float:
         return round(self.end_time - self.start_time, 3)
 
-    def gap_between(self, next_word: 'Word'):
+    def gap_between(self, next_word: 'Word') -> float:
         return round(next_word.start_time - self.end_time, 3)
 
     def break_reason(self, next_word: 'Word', gap: float = 0.5) -> Optional[str]:
@@ -35,8 +35,10 @@ class Word:
             return "^"
 
         # if self.gap_between(next_word) > 0.0:
+        import sys
         # print(f"  {self.gap_between(next_word)}", file=sys.stderr)
-
+        # print(type(self.gap_between(next_word)))
+        # print(type(gap))
         if self.gap_between(next_word) > gap:
             return f"gap>{gap}"
 

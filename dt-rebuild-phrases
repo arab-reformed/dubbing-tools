@@ -5,7 +5,7 @@ from dubbing_tools import *
 import sys
 
 
-def cmd(transcript_path: str, gap: float = None):
+def cmd(transcript_path: str, gap: float = 1.0):
     transcript = Transcript.load(transcript_path)
 
     transcript.build_phrases(gap=gap)

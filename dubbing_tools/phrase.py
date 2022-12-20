@@ -1,3 +1,4 @@
+import sys
 from dataclasses import dataclass, field
 from .languagephrase import LanguagePhrase
 from google.cloud import translate_v2 as translate

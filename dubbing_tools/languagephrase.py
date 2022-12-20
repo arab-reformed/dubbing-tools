@@ -7,6 +7,7 @@ import os
 import re
 from .timings import Timings
 from .phrasetiming import PhraseTiming
+from .word import Word
 
 MINIMUM_GAP = 0.3
 
@@ -60,7 +61,13 @@ class LanguagePhrase(DataClassJsonMixin):
     #
     #     super().__setattr__(key, value)
 
-    def set_text(self, text):
+    def set_by_word_indices(self, words: list[Word], start: int, end: int):
+        self.start_time = words[start].start_time
+        self.end_time = words[end].end_time
+        self.text = ' '.join([w.word for w in words[start:end + 1]])
+        self.timings.get(Timings.SOURCE).end_time = words[end].end_time
+
+    def set_text(self, text: str):
         if text != self.text:
             self.mark_audio_changed()
         self.text = text
