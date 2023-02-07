@@ -9,7 +9,7 @@ SUB_LANG=$4
 ./dt-export-subtitles "$PROJECT_ROOT" "$LANG" "$TIMING" "$SUB_LANG"
 
 ffmpeg -i "$PROJECT_ROOT/videos/video-$TIMING-$LANG.mp4" \
-    -codce:v libx264 \
+    -codec:v libx264 \
     -codec:a copy \
     -filter:v "ass=$PROJECT_ROOT/videos/video-$TIMING-$LANG.$SUB_LANG.ass" \
     "$PROJECT_ROOT/subtitled/video-$TIMING-$LANG.$SUB_LANG.mp4" \
