@@ -108,10 +108,10 @@ class MainWindow(QMainWindow, Ui_WindowMain):
         self.lstTargetLanguages.addItems(self.transcript.target_languages())
 
     def quit(self):
-        self.closeEvent()
+        self.closeEvent(QCloseEvent())
         QCoreApplication.quit()
 
-    def closeEvent(self, event):
+    def closeEvent(self, event: QCloseEvent):
         if self.transcript and self.transcript.has_changed:
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Question)
