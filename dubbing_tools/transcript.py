@@ -389,7 +389,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
     def build_phrases(self, gap: float = 1.0):
         clauses = [
-            ['through', 'that', 'which', 'whereby', 'is'],
+            ['through', 'that', 'which', 'whereby', 'is', 'as'],
             ['and', 'or', 'of', 'by', 'about', 'from', 'in', 'into', 'for']
         ]
 
