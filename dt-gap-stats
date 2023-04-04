@@ -2,7 +2,7 @@
 
 import json
 import fire
-from dubbing_tools import *
+from dubbing_tools.transcript import *
 
 
 def cmd(transcript_path: str):

@@ -3,7 +3,7 @@ import os
 from tkinter import *
 import tkinter as ttk
 from tkinter import filedialog
-from dubbing_tools import *
+from dubbing_tools.transcript import *
 import os
 
 root = Tk()

@@ -1,6 +1,6 @@
 from .ui_dlg_copy_lang import Ui_DlgCopyLanguage
 from PyQt5 import QtWidgets
-from dubbing_tools import Transcript
+from dubbing_tools.transcript import Transcript
 
 
 class DlgCopyLanguage(Ui_DlgCopyLanguage):

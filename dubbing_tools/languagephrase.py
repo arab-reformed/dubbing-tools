@@ -9,8 +9,6 @@ from .timings import Timings
 from .phrasetiming import PhraseTiming
 from .word import Word
 
-MINIMUM_GAP = 0.3
-
 
 # @dataclass_json
 @dataclass
@@ -23,8 +21,8 @@ class LanguagePhrase(DataClassJsonMixin):
     duration_audio: Audio = None
     start_time: float = None
     end_time: float = None
-    freeze_time: float = None
-    freeze_duration: float = None
+    freeze_time: Optional[float] = None
+    freeze_duration: Optional[float] = None
 
     # extras: CatchAll = None
 

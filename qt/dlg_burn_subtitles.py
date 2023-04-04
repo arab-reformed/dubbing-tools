@@ -5,7 +5,7 @@ import sys
 import re
 import fire
 from dubbing_tools.functions import *
-from dubbing_tools import *
+from dubbing_tools.transcript import *
 import os
 import ffmpeg
 import asyncio

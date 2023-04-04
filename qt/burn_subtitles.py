@@ -1,5 +1,5 @@
 from PyQt5.QtCore import QObject, QThread, pyqtSignal, pyqtSlot
-from dubbing_tools import Transcript
+from dubbing_tools.transcript import Transcript
 from dubbing_tools.functions import *
 import ffmpeg
 import asyncio

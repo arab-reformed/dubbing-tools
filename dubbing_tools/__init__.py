@@ -1,35 +1,16 @@
 import os
-# setup environment variable for FFMPEG.  Loading of moviepy with fail if the
+# setup environment variable for FFMPEG.  Loading of moviepy will fail if the
 # path cannot be found.
 for path in ['/opt/homebrew/bin/ffmpeg']:
     if os.path.exists(path):
         os.environ['IMAGEIO_FFMPEG_EXE'] = path
         break
 
-from .phrase import Phrase
-from .transcript import Transcript
-from .sourcelanguagePhrase import SourceLanguagePhrase
-from .languagephrase import LanguagePhrase
-from .phrasescontainer import PhrasesContainer
-from .word import Word
-from .audio import Audio
-from .video import Video
-from .timings import Timings
-from .phrasetiming import PhraseTiming
-from .stilldata import StillData
-from .videodata import VideoData
-
 __all__ = [
-    'Audio',
-    'LanguagePhrase',
-    'Phrase',
-    'PhrasesContainer',
-    'PhraseTiming',
-    'SourceLanguagePhrase',
-    'StillData',
-    'Timings',
-    'Transcript',
-    'Video',
-    'VideoData',
-    'Word',
+    'MINIMUM_GAP',
+    'SUBTITLE_GAP',
 ]
+
+
+MINIMUM_GAP = 0.3
+SUBTITLE_GAP = 0.1

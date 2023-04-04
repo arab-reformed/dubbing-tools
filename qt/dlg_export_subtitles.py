@@ -1,6 +1,6 @@
 from .ui_dlg_export_subtitles import Ui_DlgExportSubtitles
 from PyQt5 import QtWidgets
-from dubbing_tools import Transcript, Timings
+from dubbing_tools.transcript import Transcript
 # from .mixins import DialogMixin
 from PyQt5.QtWidgets import QDialog
 

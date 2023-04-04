@@ -2,7 +2,7 @@
 
 import sys
 import fire
-from dubbing_tools import *
+from dubbing_tools.transcript import *
 import dotenv
 import csv
 

@@ -3,7 +3,7 @@ import sys
 import re
 import fire
 from dubbing_tools.functions import *
-from dubbing_tools import *
+from dubbing_tools.transcript import *
 import os
 import ffmpeg
 import asyncio
@@ -16,6 +16,8 @@ def cmd(transcript_path: str, lang: str, timing_scheme: str, subtitle_lang: str,
 
     transcript = Transcript.load(transcript_path)
 
+    os.chdir(transcript_path)
+
     transcript.export_subtitles(
         lang=lang,
         timing_scheme=timing_scheme,
@@ -23,8 +25,6 @@ def cmd(transcript_path: str, lang: str, timing_scheme: str, subtitle_lang: str,
         type=type,
         include_source=include_source
     )
-
-    os.chdir(transcript_path)
 
     print(f"Subtitled video: {subtitled_video_fullpath(lang, timing_scheme, subtitle_lang)}")
     mpeg = (

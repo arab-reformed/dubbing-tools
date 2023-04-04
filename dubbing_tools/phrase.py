@@ -1,13 +1,14 @@
 import sys
 from dataclasses import dataclass, field
-from .languagephrase import LanguagePhrase
 from google.cloud import translate_v2 as translate
 from typing import List, Optional
 from dataclasses_json import dataclass_json
+from .languagephrase import LanguagePhrase
 from .word import Word
 from .sourcelanguagePhrase import SourceLanguagePhrase
 from .timings import Timings
 from .phrasetiming import PhraseTiming
+from dubbing_tools import SUBTITLE_GAP
 
 
 @dataclass_json
@@ -153,24 +154,26 @@ class Phrase:
             include_source=include_source
         )
 
-    def to_ass(self, lang: str, timing_scheme: str, subtitle_lang: str, include_source: bool = False, debug: bool = False) -> str:
-        if timing_scheme == Timings.DUBBED:
-            timing = self.get_timing(lang, timing_scheme)
-            start = timing.start_time
-            end = timing.end_time
-        elif timing_scheme == Timings.TRANSLATION:
-            start = self.source.timings.get(timing_scheme).start_time
-            end = self.get_timing(lang, timing_scheme).end_time
-        else:
-            start = self.source.timings.get(timing_scheme).start_time
-            end = self.source.timings.get(timing_scheme).end_time
+    def to_ass(self, prev_phrase: 'Phrase', next_phrase: 'Phrase', lang: str, timing_scheme: str, subtitle_lang: str,
+               include_source: bool = False, debug: bool = False) -> str:
+        timing = self.get_timing(subtitle_lang, timing_scheme)
+        target = self.get_target(subtitle_lang)
+        count = len(target.text)
+        start = timing.start_time
+        if prev_phrase:
+            prev_timing = prev_phrase.get_timing(subtitle_lang, timing_scheme)
+            gap = start - prev_timing.end_time
+            if gap > SUBTITLE_GAP:
+                prev_count = len(prev_phrase.get_target(subtitle_lang).text)
+                start -= (gap - SUBTITLE_GAP) * count / (prev_count + count)
 
-        timings = None
-
-        if subtitle_lang == self.source.lang:
-            target = self.source
-        else:
-            target = self.get_target(subtitle_lang)
+        end = timing.end_time
+        if next_phrase:
+            next_timing = next_phrase.get_timing(subtitle_lang, timing_scheme)
+            gap = next_timing.start_time - end
+            if gap > SUBTITLE_GAP:
+                next_count = len(next_phrase.get_target(subtitle_lang).text)
+                end += (gap - SUBTITLE_GAP) * count / (count + next_count)
 
         return target.to_ass(
             start=start,

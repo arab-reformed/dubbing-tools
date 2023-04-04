@@ -2,7 +2,8 @@
 
 import os
 import fire
-from dubbing_tools import *
+from dubbing_tools.transcript import Transcript
+from dubbing_tools.video import Video
 from dubbing_tools.constants import *
 from dubbing_tools.functions import *
 

@@ -5,7 +5,11 @@ import os.path
 
 import fire
 from typing import List
-from dubbing_tools import *
+from dubbing_tools.transcript import Transcript
+from dubbing_tools.phrase import Phrase
+from dubbing_tools.sourcelanguagePhrase import SourceLanguagePhrase
+from dubbing_tools.word import Word
+
 import dotenv
 
 dotenv.load_dotenv()

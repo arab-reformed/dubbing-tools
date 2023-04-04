@@ -8,7 +8,7 @@ from .dlg_copy_lang import DlgCopyLanguage
 from .dlg_export_subtitles import DlgExportSubtitles
 from .dlg_delete_language import DlgDeleteLanguage
 from .dlg_burn_subtitles import DlgBurnSubtitles
-from dubbing_tools import *
+from dubbing_tools.transcript import *
 import os
 from typing import Optional
 

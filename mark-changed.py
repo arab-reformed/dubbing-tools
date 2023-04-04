@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from dubbing_tools import *
+from dubbing_tools.transcript import *
 import sys
 import os
 import fire

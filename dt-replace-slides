@@ -2,7 +2,7 @@
 
 import cv2
 import fire
-from dubbing_tools import *
+from dubbing_tools.transcript import *
 import sys
 import os
 # from skimage.measure import compare_ssim as ssim
@@ -13,7 +13,7 @@ from dataclasses_json import dataclass_json
 import numpy
 import re
 import glob
-from dubbing_tools import StillData, VideoData
+from dubbing_tools.videodata import StillData, VideoData
 from typing import Optional
 from moviepy.editor import VideoFileClip, ImageClip, CompositeVideoClip
 

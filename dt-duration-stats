@@ -3,7 +3,7 @@
 import json
 import fire
 from typing import List
-from dubbing_tools import *
+from dubbing_tools.transcript import *
 import dotenv
 from jinja2 import Environment, PackageLoader, select_autoescape, TemplateNotFound, Template
 from dotted_dict import DottedDict

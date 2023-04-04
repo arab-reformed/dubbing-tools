@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import fire
-from dubbing_tools import *
+from dubbing_tools.audio import *
 
 
 def cmd(text: str, mp3_file: str, speaking_rate: float = 1.0, voice_name: str = 'ar-EG-ShakirNeural'):

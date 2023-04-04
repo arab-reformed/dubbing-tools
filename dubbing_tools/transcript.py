@@ -296,7 +296,7 @@ class Transcript:
         if type == 'srt':
             subtitles = self.to_srt(
                 lang=lang,
-                timing_scheme=timing_scheme,
+                timings_lang=subtitle_lang,
                 include_source=include_source
             )
         else:
@@ -334,8 +334,10 @@ Style: Arabic,Simplified Arabic,36,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
 
-        for phrase in self.phrases:
-            subtitles += phrase.to_ass(
+        for i in range(len(self.phrases)):
+            subtitles += self.phrases[i].to_ass(
+                prev_phrase=self.phrases[i-1] if i > 0 else None,
+                next_phrase=self.phrases[i+1] if i < len(self.phrases)-1 else None,
                 lang=lang,
                 timing_scheme=timing_scheme,
                 subtitle_lang=subtitle_lang,
@@ -389,7 +391,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
     def build_phrases(self, gap: float = 1.0):
         clauses = [
-            ['through', 'that', 'which', 'whereby', 'is', 'as'],
+            ['through', 'that', 'which', 'when', 'whereby', 'is', 'as'],
             ['and', 'or', 'of', 'by', 'about', 'from', 'in', 'into', 'for']
         ]
 

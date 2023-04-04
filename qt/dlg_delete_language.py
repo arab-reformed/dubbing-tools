@@ -1,4 +1,4 @@
-from dubbing_tools import Transcript, Timings
+from dubbing_tools.transcript import Transcript
 from .ui_dlg_delete_language import Ui_DlgDeleteLanguage
 from .mixins import DialogMixin
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox

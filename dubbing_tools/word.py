@@ -42,8 +42,7 @@ class Word:
         if self.gap_between(next_word) > gap:
             return f"gap>{gap}"
 
-        matches = re.search(r'(?P<punc>[.!?,])"*$', self.word)
-        if matches:
+        if (matches := re.search(r'^(?P<word>.*?)(?P<punc>[.!?,])"*$', self.word)) and matches.group('word') != next_word.word:
             return matches.group('punc')
 
         return None
