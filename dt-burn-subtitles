@@ -24,6 +24,8 @@ def cmd(transcript_path: str, lang: str, timing_scheme: str, subtitle_lang: str,
         include_source=include_source
     )
 
+    os.chdir(transcript_path)
+
     print(f"Subtitled video: {subtitled_video_fullpath(lang, timing_scheme, subtitle_lang)}")
     mpeg = (
         ffmpeg.FFmpeg()
