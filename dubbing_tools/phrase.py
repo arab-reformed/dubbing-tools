@@ -17,7 +17,7 @@ class Phrase:
     id: int
     source: SourceLanguagePhrase
     targets:  dict[str, LanguagePhrase] = field(default_factory=dict)
-    reason: str = None
+    reason: Optional[str] = None
 
     def __post_init__(self):
         try:
@@ -156,12 +156,12 @@ class Phrase:
 
     def to_ass(self, prev_phrase: 'Phrase', next_phrase: 'Phrase', lang: str, timing_scheme: str, subtitle_lang: str,
                include_source: bool = False, debug: bool = False) -> str:
-        timing = self.get_timing(subtitle_lang, timing_scheme)
+        timing = self.get_timing(lang, timing_scheme)
         target = self.get_target(subtitle_lang)
         count = len(target.text)
         start = timing.start_time
         if prev_phrase:
-            prev_timing = prev_phrase.get_timing(subtitle_lang, timing_scheme)
+            prev_timing = prev_phrase.get_timing(lang, timing_scheme)
             gap = start - prev_timing.end_time
             if gap > SUBTITLE_GAP:
                 prev_count = len(prev_phrase.get_target(subtitle_lang).text)
@@ -169,7 +169,7 @@ class Phrase:
 
         end = timing.end_time
         if next_phrase:
-            next_timing = next_phrase.get_timing(subtitle_lang, timing_scheme)
+            next_timing = next_phrase.get_timing(lang, timing_scheme)
             gap = next_timing.start_time - end
             if gap > SUBTITLE_GAP:
                 next_count = len(next_phrase.get_target(subtitle_lang).text)

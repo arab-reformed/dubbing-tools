@@ -17,10 +17,10 @@ class LanguagePhrase(DataClassJsonMixin):
     text: str
     id: int = None
     timings: Timings = field(default_factory=Timings)
-    natural_audio: Audio = None
-    duration_audio: Audio = None
-    start_time: float = None
-    end_time: float = None
+    natural_audio: Optional[Audio] = None
+    duration_audio: Optional[Audio] = None
+    start_time: Optional[float] = None
+    end_time: Optional[float] = None
     freeze_time: Optional[float] = None
     freeze_duration: Optional[float] = None
 

@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 
 import sys
+import os
 import fire
 from dubbing_tools.transcript import *
 import dotenv
 
-dotenv.load_dotenv()
+if not dotenv.load_dotenv(dotenv_path=os.path.join(os.getcwd(), '.env')):
+    if not dotenv.load_dotenv(dotenv_path=os.environ['HOME']):
+        print('credentials not found in %s' % str([os.getcwd(), os.environ['HOME']]), file=sys.stderr)
+        exit(2)
 
 
 def cmd(transcript_path: str, to_lang: str):

@@ -10,7 +10,7 @@ from .word import Word
 @dataclass
 class SourceLanguagePhrase(LanguagePhrase):
 
-    reason: str = None
+    reason: Optional[str] = None
     start_word: int = None
     end_word: int = None
 

@@ -26,9 +26,10 @@ class Transcript:
     src_lang: str = 'en-US'
     words: list[Word] = None
     phrases: list[Phrase] = None
-    tts_lang: str = None
-    tts_duration: float = None
+    tts_lang: Optional[str] = None
+    tts_duration: Optional[float] = None
     has_changed: bool = False
+    obey_manuscript_breaks: bool = False
 
     def phrase_count(self) -> int:
         return len(self.phrases)
@@ -85,7 +86,6 @@ class Transcript:
             return
 
         start_phrase = self.phrases[start_index]
-        i = start_index + 1
         to_delete = []
         for i in range(start_index+1, end_index+1):
             phrase = self.phrases[i]
@@ -398,8 +398,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         not_last_word = ['and', 'or', 'which']
 
         phrases = []
-        phrase = None
-        reason = None
+        phrase: Optional[Phrase] = None
+        reason: Optional[str] = None
         for i, word in enumerate(self.words):
             if phrase is None:
                 phrase = Phrase(
@@ -426,66 +426,70 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                 phrase.source.timings.get().end_time = word.end_time
                 phrase.source.end_word = i
 
-            if i < len(self.words)-1:
-                reason = word.break_reason(next_word=self.words[i+1], gap=gap)
-            else:
-                reason = None
+            next_word: Optional[Word] = self.words[i+1] if i < len(self.words)-1 else None
+            reason = None
+            if self.obey_manuscript_breaks:
+                if next_word and next_word.manuscript_break_before:
+                    reason = 'manuscript_break'
 
-            # If there's greater than one second gap, assume this is a new sentence
+            elif i < len(self.words)-1:
+                reason = word.break_reason(next_word=self.words[i+1], gap=gap)
+
             if reason is not None:
                 phrases.append(phrase)
                 phrase = None
 
         if phrase:
             phrases.append(phrase)
-        import sys
-        # Process phrases to make sure none are too long
-        for small_gap in [0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0.0]:
-            changed = True
-            while changed:
-                changed = False
-                shortened = []
-                print(f"gap = {small_gap}", file=sys.stderr)
-                for p, phrase in enumerate(phrases):
-                    shortened.append(phrase)
-                    print(f"Phrase: {p}", file=sys.stderr)
-                    if phrase.source.word_count() > 6:
-                        for i in range(phrase.source.start_word+3, phrase.source.end_word-3):
-                            reason = self.words[i].break_reason(next_word=self.words[i+1], gap=small_gap)
-                            # print(i, reason, file=sys.stderr)
-                            if reason is not None:
-                                new = phrase.split(self.words, split_at=i)
-                                new.reason = reason
-                                shortened.append(new)
-                                changed = True
-                                break
 
-                phrases = shortened
+        if not self.obey_manuscript_breaks:
+            # Process phrases to make sure none are too long
+            for small_gap in [0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0.0]:
+                changed = True
+                while changed:
+                    changed = False
+                    shortened = []
+                    print(f"gap = {small_gap}", file=sys.stderr)
+                    for p, phrase in enumerate(phrases):
+                        shortened.append(phrase)
+                        print(f"Phrase: {p}", file=sys.stderr)
+                        if phrase.source.word_count() > 6:
+                            for i in range(phrase.source.start_word+3, phrase.source.end_word-3):
+                                reason = self.words[i].break_reason(next_word=self.words[i+1], gap=small_gap)
+                                # print(i, reason, file=sys.stderr)
+                                if reason is not None:
+                                    new = phrase.split(self.words, split_at=i)
+                                    new.reason = reason
+                                    shortened.append(new)
+                                    changed = True
+                                    break
 
-        for intros in clauses:
-            changed = True
-            while changed:
-                changed = False
-                shortened = []
-                for phrase in phrases:
-                    shortened.append(phrase)
-                    if phrase.source.word_count() > 6:
-                        for i in range(phrase.source.start_word+3, phrase.source.end_word-3):
-                            if self.words[i].word in intros:
-                                new = phrase.split(self.words, split_at=i-1)
-                                new.reason = self.words[i].word
-                                shortened.append(new)
-                                changed = True
-                                break
+                    phrases = shortened
 
-                phrases = shortened
+            for intros in clauses:
+                changed = True
+                while changed:
+                    changed = False
+                    shortened = []
+                    for phrase in phrases:
+                        shortened.append(phrase)
+                        if phrase.source.word_count() > 6:
+                            for i in range(phrase.source.start_word+3, phrase.source.end_word-3):
+                                if self.words[i].word in intros:
+                                    new = phrase.split(self.words, split_at=i-1)
+                                    new.reason = self.words[i].word
+                                    shortened.append(new)
+                                    changed = True
+                                    break
 
-        for i in range(len(phrases)):
-            if re.sub(r'["\';,.?()!@#$%^&*\-=+\\/:]', self.words[phrases[i].source.end_word].word, '') in not_last_word:
-                if i+1 < len(phrases):
-                    # move the last word of the phrase to the next phrase
-                    phrases[i].source.set_by_word_indices(self.words, phrases[i].source.start_word, phrases[i].source.end_word - 1)
-                    phrases[i+1].source.set_by_word_indices(self.words, phrases[i + 1].source.start_word - 1, phrases[i + 1].source.end_word)
+                    phrases = shortened
+
+            for i in range(len(phrases)):
+                if re.sub(r'["\';,.?()!@#$%^&*\-=+\\/:]', self.words[phrases[i].source.end_word].word, '') in not_last_word:
+                    if i+1 < len(phrases):
+                        # move the last word of the phrase to the next phrase
+                        phrases[i].source.set_by_word_indices(self.words, phrases[i].source.start_word, phrases[i].source.end_word - 1)
+                        phrases[i+1].source.set_by_word_indices(self.words, phrases[i + 1].source.start_word - 1, phrases[i + 1].source.end_word)
 
         # renumber phrases
         for i, phrase in enumerate(phrases):

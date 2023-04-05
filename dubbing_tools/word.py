@@ -13,7 +13,7 @@ class Word:
     end_time: float
     hard_break: bool = False
     manuscript_break_before: bool = False
-    comment: str = None
+    comment: Optional[str] = None
 
     def __post_init__(self):
         self.set_word(self.word)
@@ -39,10 +39,13 @@ class Word:
         # print(f"  {self.gap_between(next_word)}", file=sys.stderr)
         # print(type(self.gap_between(next_word)))
         # print(type(gap))
-        if self.gap_between(next_word) > gap:
+        if next_word.manuscript_break_before:
+            return 'manuscript_break'
+
+        elif self.gap_between(next_word) > gap:
             return f"gap>{gap}"
 
-        if (matches := re.search(r'^(?P<word>.*?)(?P<punc>[.!?,])"*$', self.word)) and matches.group('word') != next_word.word:
+        elif (matches := re.search(r'^(?P<word>.*?)(?P<punc>[.!?,])"*$', self.word)) and matches.group('word') != next_word.word:
             return matches.group('punc')
 
         return None
