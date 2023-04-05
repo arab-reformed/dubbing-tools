@@ -235,8 +235,11 @@ class LanguagePhrase(DataClassJsonMixin):
 
         text = self.text
 
-        # remove periods at end of sentences
-        text = re.sub('\\.$', '', text, re.MULTILINE)
+        # replace three dots with ellipsis character
+        text = text.replace('...', '\u2026')
+
+        # remove periods and Arabic Faslah at end of sentences
+        text = re.sub(r'[،.]$', '', text, re.MULTILINE)
 
         text = text.replace("\n", '\\N')
 
@@ -255,4 +258,4 @@ class LanguagePhrase(DataClassJsonMixin):
             text = re.sub(r'\d+', number_replace, text)
             text = '\u202e' + text
 
-        return text
+        return text.strip()
