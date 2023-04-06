@@ -353,7 +353,12 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             ('Id', 'Start', 'End', 'Source', 'Translation')
         ]
         for phrase in self.phrases:
-            csv.append(phrase.to_csv(lang=lang))
+            try:
+                csv.append(phrase.to_csv(lang=lang))
+            except AttributeError as exc:
+                print(str(phrase), file=sys.stderr)
+                print(str(exc), file=sys.stderr)
+                exit(2)
 
         return csv
 
