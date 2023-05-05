@@ -5,12 +5,15 @@ import fire
 from dubbing_tools.transcript import *
 import dotenv
 import csv
-
+import codecs
 dotenv.load_dotenv()
 
 
-def cmd(transcript_path: str, lang: str):
+def cmd(transcript_path: str, lang: str, utf8_bom: bool = False):
     transcript = Transcript.load(transcript_path)
+
+    if utf8_bom:
+        sys.stdout.write('\xef\xbb\xbf')
 
     writer = csv.writer(sys.stdout)
     writer.writerows(transcript.to_csv(lang))
