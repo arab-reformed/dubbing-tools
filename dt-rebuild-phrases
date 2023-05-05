@@ -5,10 +5,10 @@ from dubbing_tools.transcript import *
 import sys
 
 
-def cmd(transcript_path: str, gap: float = 1.0):
+def cmd(transcript_path: str, gap: float = 1.0, mark_breaks: bool = False):
     transcript = Transcript.load(transcript_path)
 
-    transcript.build_phrases(gap=gap)
+    transcript.compute_phrases(gap=gap, mark_breaks=mark_breaks)
 
     if not transcript.save():
         print("Error saving transcript", file=sys.stderr)

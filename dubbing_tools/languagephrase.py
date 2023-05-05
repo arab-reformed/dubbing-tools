@@ -63,6 +63,9 @@ class LanguagePhrase(DataClassJsonMixin):
         self.start_time = words[start].start_time
         self.end_time = words[end].end_time
         self.text = ' '.join([w.word for w in words[start:end + 1]])
+        if self.timings.get(scheme=Timings.SOURCE) is None:
+            self.timings.set(scheme=Timings.SOURCE, timing=PhraseTiming())
+        self.timings.get(Timings.SOURCE).start_time = words[end].start_time
         self.timings.get(Timings.SOURCE).end_time = words[end].end_time
 
     def set_text(self, text: str):

@@ -388,13 +388,38 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             words=words,
         )
 
-        transcript.build_phrases(gap=phrase_gap)
+        transcript.compute_phrases(gap=phrase_gap)
 
         transcript.has_changed = True
 
         return transcript
 
-    def build_phrases(self, gap: float = 1.0):
+    def build_phrases(self):
+        phrases = []
+        start = None
+        for i, word in enumerate(self.words):
+            if word.manuscript_break_before:
+                if start is not None:
+                    phrase = Phrase(
+                        id=len(phrases),
+                        source=SourceLanguagePhrase(lang=self.src_lang, text=''),
+                    )
+                    phrase.source.set_by_word_indices(words=self.words, start=start, end=i-1)
+                    phrases.append(phrase)
+
+                start = i
+
+        phrase = Phrase(
+            id=len(phrases),
+            source=SourceLanguagePhrase(lang=self.src_lang, text=''),
+        )
+        phrase.source.set_by_word_indices(words=self.words, start=start, end=len(self.words)-1)
+        phrases.append(phrase)
+
+        self.phrases = phrases
+        self.has_changed = True
+
+    def compute_phrases(self, gap: float = 1.0, mark_breaks: bool = False):
         clauses = [
             ['through', 'that', 'which', 'when', 'whereby', 'is', 'as'],
             ['and', 'or', 'of', 'by', 'about', 'from', 'in', 'into', 'for']
@@ -499,6 +524,13 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         # renumber phrases
         for i, phrase in enumerate(phrases):
             phrase.id = i
+
+        if mark_breaks:
+            for word in self.words:
+                word.manuscript_break_before = False
+
+            for phrase in self.phrases:
+                self.words[phrase.source.start_word].manuscript_break_before = True
 
         self.phrases = phrases
 
