@@ -26,6 +26,8 @@ setup(
         'dt-gap-stats',
         'dt-import-csv',
         'dt-import-manuscript',
+        'dt-import-srt',
+        'dt-import-words-srt',
         'dt-rebuild-phrases',
         'dt-reset-timings',
         'dt-translate',
