@@ -2,10 +2,18 @@
 
 == Installation
 
-Install require Python libraries using `pip` and
+Install required Python libraries using `pip3`
+
+[source,bash]
 ----
 pip3 install -r requirements.txt
 ----
+
+== Project Folder Structure
+
+* `videos`
+
+  - `source.mp4` -- Source video file
 
 == Process
 

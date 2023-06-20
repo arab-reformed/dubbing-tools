@@ -6,6 +6,7 @@ import sys
 
 
 def cmd(transcript_path: str, lang: str):
+    """Build new timings from the word data"""
     transcript = Transcript.load(transcript_path)
 
     transcript.adjust_dub_timings(lang=lang)

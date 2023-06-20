@@ -7,6 +7,7 @@ import fire
 
 
 def cmd(transcript_path: str, srt_file: str, lang: str = 'en'):
+    """Import SRT file as new words with times.  Should only have one word per line."""
 
     transcript = Transcript.load(transcript_path)
     if transcript is None:
