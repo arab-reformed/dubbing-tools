@@ -38,9 +38,13 @@ def cmd(transcript_path: str, manuscript_file: str, save: bool = False):
                     transcript.words[k].manuscript_break_before = j == 0
 
                     word = transcript.words[k]
+                    if words[j] == '':
+                        # print(j, k)
+                        del transcript.words[k]
+
                     # if no spaces between the backticks and the words, join them
                     # TODO: this fails if trying to combine more than two words
-                    if j < len(words)-1 and words[j][-1] != ' ' and words[j+1][0] != ' ':
+                    elif j < len(words)-1 and words[j][-1] != ' ' and words[j+1][0] != ' ':
                         if word.word != words[j].strip():
                             print('%s: %s --> %s' % (line_num, word.word, (words[j] + words[j+1]).strip()), file=sys.stderr)
 
@@ -48,15 +52,16 @@ def cmd(transcript_path: str, manuscript_file: str, save: bool = False):
                         word.end_time = transcript.words[k+1].end_time
                         del transcript.words[k+1]
                         j += 1
+                        k += 1
 
                     else:
                         if word.word != words[j].strip():
                             print('%s: %s --> %s' % (line_num, word.word, words[j].strip()), file=sys.stderr)
 
                         word.set_word(words[j].strip())
+                        k += 1
 
                     j += 1
-                    k += 1
 
     if save:
         transcript.build_phrases()
