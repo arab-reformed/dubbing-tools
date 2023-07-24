@@ -6,7 +6,7 @@ TIMING=$3
 SUB_LANG=$4
 
 
-./dt-export-subtitles "$PROJECT_ROOT" "$LANG" "$TIMING" "$SUB_LANG"
+dt-export-subtitles "$PROJECT_ROOT" "$LANG" "$TIMING" "$SUB_LANG"
 
 ffmpeg -i "$PROJECT_ROOT/videos/video-$TIMING-$LANG.mp4" \
     -codec:v libx264 \
