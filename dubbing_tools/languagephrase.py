@@ -259,6 +259,7 @@ class LanguagePhrase(DataClassJsonMixin):
             text = re.sub(r'،', '\u202e،', text, flags=re.UNICODE)
             text = re.sub(r'\(', '\u202e(', text, flags=re.UNICODE)
             text = re.sub(r'\d+', number_replace, text)
+            text = re.sub(r'(\(*[A-Za-z]+\)*)', '\u202d\\g<1>\u202e', text)
             text = '\u202e' + text
 
         return text.strip()
