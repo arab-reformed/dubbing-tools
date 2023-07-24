@@ -273,7 +273,7 @@ class Transcript:
             # print(f"Backup file: {backup_file}", file=sys.stderr)
             os.rename(file_name, backup_file)
 
-        with gzip.open(file_name, 'w') as f:
+        with gzip.open(file_name, mode='w') as f:
             f.write(bytes(self.to_json(indent=2, ensure_ascii=False), 'utf-8'))
             f.close()
 
@@ -291,9 +291,9 @@ class Transcript:
 
         return self._save_file(path)
 
-    def export_subtitles(self, lang: str, timing_scheme: str, subtitle_lang: str, type: str = 'ass',
+    def export_subtitles(self, lang: str, timing_scheme: str, subtitle_lang: str, sub_type: str = 'ass',
                          include_source: bool = False, debug: bool = False):
-        if type == 'srt':
+        if sub_type == 'srt':
             subtitles = self.to_srt(
                 lang=lang,
                 timings_lang=subtitle_lang,
@@ -308,8 +308,8 @@ class Transcript:
                 debug=debug,
             )
 
-        with open(subtitles_fullpath(lang, timing_scheme, subtitle_lang, type), 'w') as f:
-            print(subtitles_fullpath(lang, timing_scheme, subtitle_lang, type))
+        with open(subtitles_fullpath(lang, timing_scheme, subtitle_lang, sub_type), mode='w', encoding='UTF-8') as f:
+            print(subtitles_fullpath(lang, timing_scheme, subtitle_lang, sub_type), file=sys.stderr)
             f.write(subtitles)
             f.close()
 

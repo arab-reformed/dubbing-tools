@@ -14,7 +14,7 @@ def cmd(transcript_path: str, lang: str, timing_scheme: str, subtitle_lang: str,
         lang=lang,
         timing_scheme=timing_scheme,
         subtitle_lang=subtitle_lang,
-        type=type,
+        sub_type=type,
         include_source=include_source,
         debug=debug,
     )

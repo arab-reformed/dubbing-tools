@@ -41,7 +41,7 @@ class Worker(QObject):
             lang=self.lang,
             timing_scheme=self.timing_scheme,
             subtitle_lang=self.sub_lang,
-            type='ass',
+            sub_type='ass',
             include_source=self.include_source
         )
 

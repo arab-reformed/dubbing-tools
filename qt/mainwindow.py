@@ -80,7 +80,7 @@ class MainWindow(QMainWindow, Ui_WindowMain):
                     lang=lang,
                     timing_scheme=timing_scheme,
                     subtitle_lang=sub_lang,
-                    type='ass',
+                    sub_type='ass',
                     debug=dialog.get_debug(),
                 )
                 self.log_action(f"Exported subtitles for {lang} {timing_scheme} {sub_lang}")

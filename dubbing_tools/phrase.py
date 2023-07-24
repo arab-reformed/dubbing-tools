@@ -189,5 +189,5 @@ class Phrase:
             timing.start_time,
             timing.end_time,
             self.source.text,
-            self.get_target(lang).text,
+            self.get_target(lang).text if self.get_target(lang) else '',
         )
