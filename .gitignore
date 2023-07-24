@@ -1,6 +1,7 @@
 test_videos
 out_*
 /.idea/
+/.vscode/
 /.env
 *.mp3
 *.mp4
@@ -15,6 +16,7 @@ __pycache__/
 .DS_Store
 /build/
 /holy-spirit-test/
+/holy-spirit-test.bak/
 /dubbing_tools.egg-info/
 *.jpg
 *.json
