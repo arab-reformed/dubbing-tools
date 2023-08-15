@@ -9,8 +9,8 @@ import os
 MARGIN = 5
 
 
-def cmd(transcript_path: str,  lang: str, timing_scheme: str, audio_output: str = None):
-    transcript = Transcript.load(transcript_path)
+def cmd(project_path: str,  lang: str, timing_scheme: str, audio_output: str = None):
+    transcript = Transcript.load(project_path)
 
     if audio_output is None:
         audio_output = os.path.join(SUBDIR_AUDIO, f"source-{timing_scheme}-{lang}.mp3")

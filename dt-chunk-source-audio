@@ -11,8 +11,8 @@ import os
 MARGIN = 5
 
 
-def cmd(transcript_path: str):
-    transcript = Transcript.load(transcript_path)
+def cmd(project_path: str):
+    transcript = Transcript.load(project_path)
 
     audio = AudioSegment.from_file(video_source_fullpath())
 

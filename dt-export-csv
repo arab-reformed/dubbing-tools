@@ -9,8 +9,8 @@ import codecs
 dotenv.load_dotenv()
 
 
-def cmd(transcript_path: str, lang: str, utf8_bom: bool = False):
-    transcript = Transcript.load(transcript_path)
+def cmd(project_path: str, lang: str, utf8_bom: bool = False):
+    transcript = Transcript.load(project_path)
 
     if utf8_bom:
         sys.stdout.write('\xef\xbb\xbf')

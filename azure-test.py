@@ -18,7 +18,7 @@ config = dotenv.load_dotenv()
 TICKS_PER_SECOND = 10000000
 
 
-def cmd(audio_file: str, transcript_path: str, azure_json: str = None, debug: bool = False):
+def cmd(audio_file: str, project_path: str, azure_json: str = None, debug: bool = False):
     logger = logging.getLogger('azure')
     if debug:
         logger.setLevel(logging.DEBUG)
@@ -92,7 +92,7 @@ def cmd(audio_file: str, transcript_path: str, azure_json: str = None, debug: bo
                 name=audio_file,
                 words=words,
             )
-            transcript.save(transcript_path)
+            transcript.save(project_path)
 
         except Exception as e:
             logger.error(str(e))

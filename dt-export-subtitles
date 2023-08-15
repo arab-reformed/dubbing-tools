@@ -6,9 +6,9 @@ from dubbing_tools.constants import *
 import os
 
 
-def cmd(transcript_path: str, lang: str, timing_scheme: str, subtitle_lang: str, type: str = 'ass',
+def cmd(project_path: str, lang: str, timing_scheme: str, subtitle_lang: str, type: str = 'ass',
         include_source: bool = False, debug: bool = False):
-    transcript = Transcript.load(transcript_path)
+    transcript = Transcript.load(project_path)
 
     transcript.export_subtitles(
         lang=lang,

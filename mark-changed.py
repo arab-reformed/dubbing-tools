@@ -6,9 +6,9 @@ import os
 import fire
 
 
-def cmd(transcript_path: str, lang: str):
+def cmd(project_path: str, lang: str):
 
-    transcript = Transcript.load(transcript_path)
+    transcript = Transcript.load(project_path)
 
     for phrase in transcript.phrases:
         target = phrase.get_target(lang)

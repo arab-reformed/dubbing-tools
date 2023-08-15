@@ -1,15 +1,23 @@
 = README
 
-== Installation
+== Installation: Ubuntu
 
-Install required Python libraries using `pip3`
+Install Python using `apt`:
+
+[source, bash]
+----
+sudo apt install python3 ffmpeg
+----
+
+Install required Python libraries using `pip3` at the root of the project directory:
 
 [source,bash]
 ----
 pip3 install -r requirements.txt
 ----
 
-To work with the graphical user interface you need the `tkinter` module.  To install from an `apt` package:
+
+Optionally, to work with the graphical user interface you need the `tkinter` module.  To install from an `apt` package:
 
 [source, bash]
 ----
@@ -19,12 +27,40 @@ sudo apt install python3-tk
 
 == Project Folder Structure
 
-* `videos`
+All files belonging should be contained in a single folder with the following structure.
 
-  - `source.mp4` -- Source video file
+* *transcript.json.gz* -- gzipped JSON data file containing text and timings
+
+* `./bak` -- when *transcript.json.gz* is updated the old version is copied into this directory
+  with an ascending numeric suffix appended.
+
+* `./videos`
+
+  - *source.mp4* -- Source video file
+
+* `./audio-clips` -- storage for TTS audio
+
 
 == Process
 
 1. Extract audio from the video file
++
+[source, bash]
+----
+ffmpeg -i <video>.mp4 <audio>.mp3
+----
 
-2.
+2. STT conversion at https://otter.ai
+
+    a. Upload to Otter for STT conversion.
+
+    b. Edit the transcript and resync the edited text to the audio
+
+    c. Download as `.srt` subtitles.
++
+image::export-subtitles-dialog.png[Export Subtitles Dialog, 500, align=center]
+
+3. Create a project using `dt-import-words-srt`
++
+[source, bash]
+dt-import-words-srt <project path> <subtitle file>.srt --lang=en

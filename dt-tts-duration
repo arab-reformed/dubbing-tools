@@ -9,14 +9,14 @@ from dubbing_tools.constants import *
 dotenv.load_dotenv()
 
 
-def cmd(transcript_path: str, lang: str, timing_scheme: str, service: str, overwrite: bool = False):
+def cmd(project_path: str, lang: str, timing_scheme: str, service: str, overwrite: bool = False):
     if service not in [SERVICE_AZURE, SERVICE_GOOGLE]:
         print(f"Unknown service: {service}", file=sys.stderr)
 
     if timing_scheme not in Timings.SCHEMES:
         print(f"Unknown timing scheme: {timing_scheme}", file=sys.stderr)
 
-    transcript = Transcript.load(transcript_path)
+    transcript = Transcript.load(project_path)
 
     transcript.get_tts_duration_audio(
         lang=lang,

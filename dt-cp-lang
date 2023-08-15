@@ -7,21 +7,27 @@ import dotenv
 import copy
 
 
-def cmd(transcript_path: str, from_lang: str, to_lang: str, overwrite: bool = False):
-    """Copy the phrases from one language to another
+def cmd(project_path: str, from_lang: str, to_lang: str, overwrite: bool = False):
+    """
+    copy phrases from one language to another
+
+    Copies the phrases from one language to another including their timings.
+
+    This can be useful when moving between dialects.  For instance, Saudi Arabian Arabic (ar-SA) can be
+    copied to Syrian Arabic (ar-SY) and then edited.
 
     Args:
-        transcript_path (String): root directory of the project
+        project_path (String): root directory of the project
         from_lang (String): language code from which to copy
         to_lang (String): language code to copy to
-        overwrite (Boolean, optional): if to_lang already exists it will be overwritten.  Defaults to False
+        overwrite (Boolean, default=false): if to_lang already exists it will be overwritten.  Defaults to False
     """
 
     if from_lang == to_lang:
         print("From and to languages must be different", file=sys.stderr)
         exit(1)
 
-    transcript = Transcript.load(transcript_path)
+    transcript = Transcript.load(project_path)
     for phrase in transcript.phrases:
         if not overwrite and phrase.get_target(to_lang) is not None:
             print(f"Language {to_lang} already exists.  To overwrite use --overwrite=1", file=sys.stderr)

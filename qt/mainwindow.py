@@ -15,7 +15,7 @@ from typing import Optional
 
 class MainWindow(QMainWindow, Ui_WindowMain):
     transcript: Transcript = None
-    transcript_path: str = None
+    project_path: str = None
     log: str = ''
     lang: Optional[str] = None
     timing: Optional[str] = None
@@ -46,13 +46,13 @@ class MainWindow(QMainWindow, Ui_WindowMain):
     def load_transcript(self, path: str):
         self.transcript = Transcript.load(path)
         if self.transcript is not None:
-            self.transcript_path = path
+            self.project_path = path
             self.lneProjectPath.setText(path)
             self.set_languages()
             self.lneSourceLanguage.setText(self.transcript.src_lang)
             self.lneSourceDuration.setText(str(self.transcript.duration(self.transcript.src_lang, 'src')))
         else:
-            self.transcript_path = ''
+            self.project_path = ''
 
     def load_project(self):
         dialog = QFileDialog(caption='Open Project', directory=os.getcwd())
@@ -63,7 +63,7 @@ class MainWindow(QMainWindow, Ui_WindowMain):
     def save_project(self):
         if self.transcript and self.transcript.has_changed:
             self.transcript.save()
-            self.log_action(f"Project saved ({self.transcript_path})")
+            self.log_action(f"Project saved ({self.project_path})")
 
     def export_subtitles(self):
         dialog = DlgExportSubtitles(self.transcript)

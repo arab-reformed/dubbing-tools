@@ -10,7 +10,7 @@ root = Tk()
 
 root.title = 'Dubbing Tools'
 root.geometry('480x480')
-transcript_path = StringVar()
+project_path = StringVar()
 transcript = None
 languages = StringVar()
 
@@ -18,14 +18,14 @@ languages = StringVar()
 def select_project():
     global transcript
 
-    transcript_path.set(filedialog.askdirectory(initialdir=os.getcwd()))
-    transcript = Transcript.load(transcript_path.get())
+    project_path.set(filedialog.askdirectory(initialdir=os.getcwd()))
+    transcript = Transcript.load(project_path.get())
     languages.set(', '.join(list(transcript.phrases[0].targets.keys())))
 
 
 project_label = Label(
     root,
-    textvariable=transcript_path,
+    textvariable=project_path,
 )
 project_label.pack()
 

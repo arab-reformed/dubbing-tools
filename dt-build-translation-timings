@@ -6,8 +6,8 @@ from dubbing_tools.constants import *
 import sys
 
 
-def cmd(transcript_path: str, lang: str):
-    transcript = Transcript.load(transcript_path)
+def cmd(project_path: str, lang: str):
+    transcript = Transcript.load(project_path)
     # for phrase in transcript.phrases:
     #     phrase.source.natural_audio = Audio(file_name=phrase.source.natural_audio_fullpath(service=SERVICE_SOURCE))
     #     phrase.source.natural_audio.get_duration()

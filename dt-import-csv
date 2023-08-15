@@ -14,9 +14,9 @@ class Combination:
     end: int = None
 
 
-def cmd(transcript_path: str, lang: str, csv_file: str, combine: bool = False, update_source: bool = False):
+def cmd(project_path: str, lang: str, csv_file: str, combine: bool = False, update_source: bool = False):
 
-    transcript = Transcript.load(transcript_path)
+    transcript = Transcript.load(project_path)
 
     first_id = None
     combinations = []  # type: list[Combination]

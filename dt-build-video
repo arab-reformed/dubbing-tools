@@ -8,10 +8,10 @@ from dubbing_tools.constants import *
 from dubbing_tools.functions import *
 
 
-def cmd(transcript_path: str, lang: str, timing_scheme: str, srt: bool = False,
+def cmd(project_path: str, lang: str, timing_scheme: str, srt: bool = False,
         overwrite: bool = False, overlay_gain: int = -20):
 
-    transcript = Transcript.load(transcript_path)
+    transcript = Transcript.load(project_path)
 
     if not os.path.exists(SUBDIR_VIDEO):
         os.makedirs(SUBDIR_VIDEO)

@@ -9,11 +9,11 @@ from dubbing_tools.constants import *
 dotenv.load_dotenv()
 
 
-def cmd(transcript_path: str, lang: str, service: str, voice_name: str = None, overwrite: bool = False, reset_duration: bool = False):
+def cmd(project_path: str, lang: str, service: str, voice_name: str = None, overwrite: bool = False, reset_duration: bool = False):
     if service not in [SERVICE_AZURE, SERVICE_GOOGLE]:
         print(f"Unknown service: {service}", file=sys.stderr)
 
-    transcript = Transcript.load(transcript_path)
+    transcript = Transcript.load(project_path)
 
     if reset_duration:
         for phrase in transcript.phrases:

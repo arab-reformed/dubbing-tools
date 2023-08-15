@@ -5,8 +5,8 @@ from dubbing_tools.transcript import *
 import sys
 
 
-def cmd(transcript_path: str, lang: str):
-    transcript = Transcript.load(transcript_path)
+def cmd(project_path: str, lang: str):
+    transcript = Transcript.load(project_path)
 
     transcript.reset_timings(lang=lang)
     if not transcript.save():

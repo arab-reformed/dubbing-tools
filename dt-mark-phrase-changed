@@ -6,9 +6,9 @@ import os
 import fire
 
 
-def cmd(transcript_path: str, lang: str, ids: list):
+def cmd(project_path: str, lang: str, ids: list):
 
-    transcript = Transcript.load(transcript_path)
+    transcript = Transcript.load(project_path)
 
     for id in ids:
         print(f"Id: {id}")
