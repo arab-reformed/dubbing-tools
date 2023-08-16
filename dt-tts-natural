@@ -10,6 +10,19 @@ dotenv.load_dotenv()
 
 
 def cmd(project_path: str, lang: str, service: str, voice_name: str = None, overwrite: bool = False, reset_duration: bool = False):
+    """
+    generate TTS audio
+
+    Generates TTS audio for the given language using the chosen service and voice name
+
+    :param project_path: path to the root of the project directory
+    :param lang: language for which audio is to be generated
+    :param service: currently either 'azure' or 'google'
+    :param voice_name: name of the voice on the chosen service
+    :param overwrite: if there is currently saved audio for the language, should it be overwritten?
+    :param reset_duration: ??
+    """
+
     if service not in [SERVICE_AZURE, SERVICE_GOOGLE]:
         print(f"Unknown service: {service}", file=sys.stderr)
 

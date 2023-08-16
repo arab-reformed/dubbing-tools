@@ -12,10 +12,15 @@ def cmd(project_path: str, srt_file: str, lang: str = 'en'):
 
     Imports an SRT file which should have one or at most two words per timing entry.
 
-    The words and timings for the given language (default: en) are _REPLACED_ with
-    the imported data.
+    The words and timings for the given language (default: en) are *replaced* with
+    the imported data and phrases for that language are deleted.  To rebuild the phrases
+    run `dt-rebuild-phrases`.
 
     If `transcript.json.gz` does not exist in the project path it is created.
+
+    :param project_path: path to the root of the project directory
+    :param srt_file: name of the SRT file to be imported
+    :param lang: language of the imported SRT file
     """
 
     transcript = Transcript.load(project_path)

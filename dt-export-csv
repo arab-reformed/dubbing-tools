@@ -10,6 +10,21 @@ dotenv.load_dotenv()
 
 
 def cmd(project_path: str, lang: str, utf8_bom: bool = False):
+    """
+    export CSV or source and translated language
+
+    CSV of the source and chosen translated language are exported.
+
+    This file can be edited using a spreadsheet program to fix the translation and
+    then imported using `dt-import-csv`
+
+    A translation of the source can be generated using `dt-translate` before
+    exporting with this utility.
+
+    :param project_path: path to the root of the project directory
+    :param lang: translated language
+    :param utf8_bom: output UTF BOM to help with Excel import?
+    """
     transcript = Transcript.load(project_path)
 
     if utf8_bom:

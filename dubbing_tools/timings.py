@@ -15,14 +15,13 @@ class Timings:
         DUBBED: 'dubbed',
         TRANSLATION: 'translation',
     }
-
-    default: str = DUBBED
+    DEFAULT = SOURCE
 
     phrase_timings: dict[str, PhraseTiming] = field(default_factory=dict)
 
     def get(self, scheme: str = None) -> Optional[PhraseTiming]:
         if scheme is None:
-            scheme = self.default
+            scheme = self.DEFAULT
 
         if scheme in self.SCHEMES and scheme in self.phrase_timings:
             return self.phrase_timings[scheme]
@@ -31,7 +30,7 @@ class Timings:
 
     def set(self, timing: PhraseTiming, scheme: str = None) -> None:
         if scheme is None:
-            scheme = self.default
+            scheme = self.DEFAULT
 
         self.phrase_timings[scheme] = timing
 

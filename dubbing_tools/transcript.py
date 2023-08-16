@@ -22,6 +22,13 @@ import srt
 @dataclass_json
 @dataclass
 class Transcript:
+    """
+    Root project data object
+
+    `Transcript` reads and writes data to storage and has methods to perform
+    high-level functions on the data.
+    """
+
     name: str = 'Project'
     src_lang: str = 'en-US'
     words: list[Word] = None
@@ -32,9 +39,15 @@ class Transcript:
     obey_manuscript_breaks: bool = False
 
     def phrase_count(self) -> int:
+        """
+        Number of phrases in the transcript
+        """
         return len(self.phrases)
 
     def words_count(self) -> int:
+        """
+        Number of words in the transcript
+        """
         return len(self.words)
 
     def duration(self, lang: str, timing_scheme: str) -> float:
@@ -442,7 +455,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                     ),
                     reason=reason
                 )
-                phrase.source.timings.default = Timings.SOURCE
+                phrase.source.timings.DEFAULT = Timings.SOURCE
                 phrase.source.timings.set(
                     scheme=Timings.SOURCE,
                     timing=PhraseTiming(

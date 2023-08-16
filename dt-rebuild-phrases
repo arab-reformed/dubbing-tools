@@ -6,6 +6,15 @@ import sys
 
 
 def cmd(project_path: str, gap: float = 1.0, mark_breaks: bool = False):
+    """
+    rebuild phrases for the source language
+
+    Rebuilds phrases for the source language from the words with timings.
+
+    :param project_path:
+    :param gap:
+    :param mark_breaks:
+    """
     transcript = Transcript.load(project_path)
 
     transcript.compute_phrases(gap=gap, mark_breaks=mark_breaks)

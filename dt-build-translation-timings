@@ -7,6 +7,18 @@ import sys
 
 
 def cmd(project_path: str, lang: str):
+    """
+    Build timings for translated audio
+
+    Builds timings for having both the source audio and translated TTS audio
+    in the video
+
+    Note: the TTS audio for the translated language should have been generated
+    using `dt-tts-natural`
+
+    :param project_path: path to the root of the project directory
+    :param lang: language for which to build the translation
+    """
     transcript = Transcript.load(project_path)
     # for phrase in transcript.phrases:
     #     phrase.source.natural_audio = Audio(file_name=phrase.source.natural_audio_fullpath(service=SERVICE_SOURCE))
