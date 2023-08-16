@@ -5,22 +5,23 @@ import spacy
 from spacy.lang.en import English
 import re
 
+
 def cmd(doc_file: str, compact: bool = False):
 	# nlp = English()
-	nlp = spacy.load('en_core_web_sm')
+	lang_model = spacy.load('en_core_web_sm')
 
 	file = open(doc_file)
 	text = file.read()
-	doc = nlp(text)
-	
-	parentheticals = [m.span() for m in re.finditer('\([^)]+\)', text, flags=re.IGNORECASE)]
-	for start,end in parentheticals:
-		doc.retokenizer().merge(start_idx=start,end_idx=end)
-	
+	doc = lang_model(text)
+
+	# parentheticals = [m.span() for m in re.finditer('\([^)]+\)', text, flags=re.IGNORECASE)]
+	# for start,end in parentheticals:
+	# 	doc.retokenize().merge(start_idx=start, end_idx=end)
+
 	spacy.displacy.serve(
 		list(doc.sents),
 		style='dep',
-		port=8000,
+		# port=8000,
 		options={
 			'compact': compact,
 			'collapse_punct': False,
@@ -32,4 +33,4 @@ def cmd(doc_file: str, compact: bool = False):
 
 
 if __name__ == "__main__":
-    fire.Fire(cmd)
+	fire.Fire(cmd)
