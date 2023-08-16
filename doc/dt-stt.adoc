@@ -1,0 +1,15 @@
+= dt-stt
+
+
+== Synopsis
+
+    dt-stt AUDIO_FILE <flags>
+
+
+== Parameters
+
+AUDIO_FILE [str]:: 
+
+-o, --output=OUTPUT [Optional]::  (default: None)
+
+

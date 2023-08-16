@@ -1,0 +1,23 @@
+= dt-build-video
+
+
+== Synopsis
+
+    dt-build-video PROJECT_PATH LANG TIMING_SCHEME <flags>
+
+
+== Parameters
+
+PROJECT_PATH [str]:: 
+
+LANG [str]:: 
+
+TIMING_SCHEME [str]:: 
+
+-s, --srt=SRT [bool]::  (default: False)
+
+--overwrite=OVERWRITE [bool]::  (default: False)
+
+--overlay_gain=OVERLAY_GAIN [int]::  (default: -20)
+
+

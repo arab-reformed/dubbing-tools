@@ -1,0 +1,23 @@
+= dt-find-slides
+
+
+== Synopsis
+
+    dt-find-slides <flags>
+
+
+== Parameters
+
+--video_file=VIDEO_FILE [Optional]::  (default: None)
+
+-o, --output_path=OUTPUT_PATH [str]::  (default: './slides')
+
+--verbose=VERBOSE [bool]::  (default: False)
+
+--skip=SKIP [int]::  (default: 30)
+
+--similarity=SIMILARITY [float]::  (default: 0.98)
+
+-l, --look_behind=LOOK_BEHIND [int]::  (default: 2)
+
+

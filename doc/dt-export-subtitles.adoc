@@ -1,0 +1,25 @@
+= dt-export-subtitles
+
+
+== Synopsis
+
+    dt-export-subtitles PROJECT_PATH LANG TIMING_SCHEME SUBTITLE_LANG <flags>
+
+
+== Parameters
+
+PROJECT_PATH [str]:: 
+
+LANG [str]:: 
+
+TIMING_SCHEME [str]:: 
+
+SUBTITLE_LANG [str]:: 
+
+-t, --type=TYPE [str]::  (default: 'ass')
+
+-i, --include_source=INCLUDE_SOURCE [bool]::  (default: False)
+
+-d, --debug=DEBUG [bool]::  (default: False)
+
+

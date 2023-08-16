@@ -1,0 +1,13 @@
+= dt-export-manuscript
+
+
+== Synopsis
+
+    dt-export-manuscript PROJECT_PATH
+
+
+== Parameters
+
+PROJECT_PATH [str]:: 
+
+

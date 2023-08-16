@@ -1,0 +1,19 @@
+= dt-build-source-audio
+
+
+== Synopsis
+
+    dt-build-source-audio PROJECT_PATH LANG TIMING_SCHEME <flags>
+
+
+== Parameters
+
+PROJECT_PATH [str]:: 
+
+LANG [str]:: 
+
+TIMING_SCHEME [str]:: 
+
+-a, --audio_output=AUDIO_OUTPUT [Optional]::  (default: None)
+
+

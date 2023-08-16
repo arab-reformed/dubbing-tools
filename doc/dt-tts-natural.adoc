@@ -1,0 +1,30 @@
+= dt-tts-natural
+
+generate TTS audio
+
+
+== Synopsis
+
+    dt-tts-natural PROJECT_PATH LANG SERVICE <flags>
+
+
+== Description
+
+Generates TTS audio for the given language using the chosen service and voice name
+
+
+== Parameters
+
+PROJECT_PATH [str]:: path to the root of the project directory
+
+LANG [str]:: language for which audio is to be generated
+
+SERVICE [str]:: currently either 'azure' or 'google'
+
+-v, --voice_name=VOICE_NAME [Optional]:: name of the voice on the chosen service (default: None)
+
+-o, --overwrite=OVERWRITE [bool]:: if there is currently saved audio for the language, should it be overwritten? (default: False)
+
+-r, --reset_duration=RESET_DURATION [bool]:: ?? (default: False)
+
+

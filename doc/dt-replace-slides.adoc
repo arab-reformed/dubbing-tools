@@ -1,0 +1,23 @@
+= dt-replace-slides
+
+
+== Synopsis
+
+    dt-replace-slides <flags>
+
+
+== Parameters
+
+--source_video=SOURCE_VIDEO [Optional]::  (default: None)
+
+-o, --output_video=OUTPUT_VIDEO [str]::  (default: 'output.mp4')
+
+--slides_path=SLIDES_PATH [str]::  (default: './slides')
+
+-a, --arabic_slides_path=ARABIC_SLIDES_PATH [str]::  (default: './arabic-slides')
+
+-r, --resize=RESIZE [bool]::  (default: False)
+
+-v, --verbose=VERBOSE [bool]::  (default: False)
+
+

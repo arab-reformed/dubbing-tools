@@ -1,0 +1,19 @@
+= dt-import-srt
+
+
+== Synopsis
+
+    dt-import-srt PROJECT_PATH LANG SRT_FILE <flags>
+
+
+== Parameters
+
+PROJECT_PATH [str]:: 
+
+LANG [str]:: 
+
+SRT_FILE [str]:: 
+
+-s, --source=SOURCE [bool]::  (default: False)
+
+

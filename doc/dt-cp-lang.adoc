@@ -1,0 +1,29 @@
+= dt-cp-lang
+
+copy phrases from one language to another
+
+
+== Synopsis
+
+    dt-cp-lang PROJECT_PATH FROM_LANG TO_LANG <flags>
+
+
+== Description
+
+Copies the phrases from one language to another including their timings.
+
+This can be useful when moving between dialects.  For instance, Saudi Arabian Arabic (ar-SA) can be
+copied to Syrian Arabic (ar-SY) and then edited.
+
+
+== Parameters
+
+PROJECT_PATH [str]:: root directory of the project
+
+FROM_LANG [str]:: language code from which to copy
+
+TO_LANG [str]:: language code to copy to
+
+-o, --overwrite=OVERWRITE [bool]:: if to_lang already exists it will be overwritten.  Defaults to False (default: False)
+
+

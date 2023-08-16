@@ -1,0 +1,21 @@
+= dt-tts-duration
+
+
+== Synopsis
+
+    dt-tts-duration PROJECT_PATH LANG TIMING_SCHEME SERVICE <flags>
+
+
+== Parameters
+
+PROJECT_PATH [str]:: 
+
+LANG [str]:: 
+
+TIMING_SCHEME [str]:: 
+
+SERVICE [str]:: 
+
+-o, --overwrite=OVERWRITE [bool]::  (default: False)
+
+

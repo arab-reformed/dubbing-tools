@@ -1,0 +1,15 @@
+= dt-translate
+
+
+== Synopsis
+
+    dt-translate PROJECT_PATH TO_LANG
+
+
+== Parameters
+
+PROJECT_PATH [str]:: 
+
+TO_LANG [str]:: 
+
+

@@ -1,0 +1,24 @@
+= dt-rebuild-phrases
+
+rebuild phrases for the source language
+
+
+== Synopsis
+
+    dt-rebuild-phrases PROJECT_PATH <flags>
+
+
+== Description
+
+Rebuilds phrases for the source language from the words with timings.
+
+
+== Parameters
+
+PROJECT_PATH [str]:: 
+
+-g, --gap=GAP [float]::  (default: 1.0)
+
+-m, --mark_breaks=MARK_BREAKS [bool]::  (default: False)
+
+

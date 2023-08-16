@@ -1,0 +1,30 @@
+= dt-import-words-srt
+
+imports SRT file.
+
+
+== Synopsis
+
+    dt-import-words-srt PROJECT_PATH SRT_FILE <flags>
+
+
+== Description
+
+Imports an SRT file which should have one or at most two words per timing entry.
+
+The words and timings for the given language (default: en) are *replaced* with
+the imported data and phrases for that language are deleted.  To rebuild the phrases
+run `dt-rebuild-phrases`.
+
+If `transcript.json.gz` does not exist in the project path it is created.
+
+
+== Parameters
+
+PROJECT_PATH [str]:: path to the root of the project directory
+
+SRT_FILE [str]:: name of the SRT file to be imported
+
+-l, --lang=LANG [str]:: language of the imported SRT file (default: 'en')
+
+

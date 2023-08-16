@@ -1,0 +1,22 @@
+= dt-build-dub-timings
+
+Build new timings from the word data
+
+
+== Synopsis
+
+    dt-build-dub-timings PROJECT_PATH LANG
+
+
+== Description
+
+Build new timings from the word data
+
+
+== Parameters
+
+PROJECT_PATH [str]:: 
+
+LANG [str]:: 
+
+

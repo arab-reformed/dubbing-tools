@@ -1,0 +1,17 @@
+= dt-extract-wav
+
+
+== Synopsis
+
+    dt-extract-wav VIDEO_FILE <flags>
+
+
+== Parameters
+
+VIDEO_FILE [str]:: 
+
+-f, --format=FORMAT [str]::  (default: 'wav')
+
+-o, --output=OUTPUT [Optional]::  (default: None)
+
+

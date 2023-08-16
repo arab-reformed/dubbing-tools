@@ -1,0 +1,30 @@
+= dt-export-csv
+
+export CSV or source and translated language
+
+
+== Synopsis
+
+    dt-export-csv PROJECT_PATH LANG <flags>
+
+
+== Description
+
+CSV of the source and chosen translated language are exported.
+
+This file can be edited using a spreadsheet program to fix the translation and
+then imported using `dt-import-csv`
+
+A translation of the source can be generated using `dt-translate` before
+exporting with this utility.
+
+
+== Parameters
+
+PROJECT_PATH [str]:: path to the root of the project directory
+
+LANG [str]:: translated language
+
+-u, --utf8_bom=UTF8_BOM [bool]:: output UTF BOM to help with Excel import? (default: False)
+
+

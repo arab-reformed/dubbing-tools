@@ -1,0 +1,15 @@
+= dt-duration-stats
+
+
+== Synopsis
+
+    dt-duration-stats TRANSCRIPT_FILE LANG
+
+
+== Parameters
+
+TRANSCRIPT_FILE [str]:: 
+
+LANG [str]:: 
+
+
