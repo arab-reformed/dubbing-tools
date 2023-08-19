@@ -5,15 +5,15 @@ from dubbing_tools.transcript import *
 import sys
 
 
-def cmd(project_path: str, gap: float = 1.0, mark_breaks: bool = False):
+def cmd(project_path: str, mark_breaks: bool = True, gap: float = 1.0):
     """
     rebuild phrases for the source language
 
     Rebuilds phrases for the source language from the words with timings.
 
-    :param project_path:
-    :param gap:
-    :param mark_breaks:
+    :param project_path: path to the root of the project directory
+    :param mark_breaks: mark the phrase breaks in the words list (default: true)
+    :param gap: value in seconds to use for splitting phrases (default: 1.0)
     """
     transcript = Transcript.load(project_path)
 

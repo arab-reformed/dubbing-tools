@@ -1,13 +1,22 @@
 = dt-export-manuscript
 
+export manuscript
+
 
 == Synopsis
 
     dt-export-manuscript PROJECT_PATH
 
 
+== Description
+
+Exports a manuscript as a text file with a line for each phrase.
+
+See manuscript documentation for details on the format.
+
+
 == Parameters
 
-PROJECT_PATH [str]:: 
+PROJECT_PATH [str]:: path to the root of the project directory
 
 

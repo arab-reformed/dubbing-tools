@@ -25,6 +25,6 @@ PROJECT_PATH [str]:: path to the root of the project directory
 
 SRT_FILE [str]:: name of the SRT file to be imported
 
--l, --lang=LANG [str]:: language of the imported SRT file (default: 'en')
+-l, --lang=LANG [str]:: language of the imported SRT file (default: en) (default: 'en')
 
 

@@ -20,7 +20,7 @@ def cmd(project_path: str, srt_file: str, lang: str = 'en'):
 
     :param project_path: path to the root of the project directory
     :param srt_file: name of the SRT file to be imported
-    :param lang: language of the imported SRT file
+    :param lang: language of the imported SRT file (default: en)
     """
 
     transcript = Transcript.load(project_path)

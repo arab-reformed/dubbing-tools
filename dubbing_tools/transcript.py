@@ -539,9 +539,11 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             phrase.id = i
 
         if mark_breaks:
+            # set manuscript break to False on every
             for word in self.words:
                 word.manuscript_break_before = False
 
+            # set manuscript breaks for first word of each phrase
             for phrase in self.phrases:
                 self.words[phrase.source.start_word].manuscript_break_before = True
 

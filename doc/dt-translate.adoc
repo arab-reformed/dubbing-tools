@@ -1,15 +1,23 @@
 = dt-translate
 
+translate phrases using a translation service
+
 
 == Synopsis
 
     dt-translate PROJECT_PATH TO_LANG
 
 
+== Description
+
+Translates the phrases of the source language into the target language
+using Google Translation Services.
+
+
 == Parameters
 
-PROJECT_PATH [str]:: 
+PROJECT_PATH [str]:: path to the root of the project directory
 
-TO_LANG [str]:: 
+TO_LANG [str]:: language code of the target language into which the source language is to be translated
 
 

@@ -94,3 +94,47 @@ image::export-subtitles-dialog.png[Export Subtitles Dialog, 500, align=center]
 +
 [source, bash]
 dt-import-words-srt <project path> <subtitle file>.srt --lang=en
+
+4. Build subtitle phrases from the words data using:
++
+[source, bash]
+dt-rebuild-phrases <project path>
+
+5. Export the phrases:
++
+[source, bash]
+dt-export-manuscript <project path> > manuscript.txt
+
+6. Edit manuscript to fix phrasing and errors in transcript using text editor.
+
+7. Import the edited manuscript back into the project.
++
+Run the import script and check for errors:
++
+[source,bash]
+dt-import-manuscript <project path> <manuscript file>
++
+Check for errors and then and once everything is fixed repeat the import with the `--save` option.
+
+8. Generate translations using Google Translation Services
++
+[source, bash]
+dt-translate <project path> ar
+
+9. Export the subtitles (phrases) into a CSV file for editing by a translator.
+[source, bash]
+dt-export-csv <project path> ar
+
+10. Edit CSV file in Spreadsheet program.
++
+Be careful not to change the structure of the file while editing.  E.g. do not rearrange columns or rows.
+
+11. Export the edited data back into CSV and import back into the project
+[source, bash]
+dt-import-csv <project path> ar
+
+12. Burn the subtitles into the video
++
+[source, bash]
+dt-burn-ass-subtitles <project path> en src ar
+

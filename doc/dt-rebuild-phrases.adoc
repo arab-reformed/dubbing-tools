@@ -15,10 +15,10 @@ Rebuilds phrases for the source language from the words with timings.
 
 == Parameters
 
-PROJECT_PATH [str]:: 
+PROJECT_PATH [str]:: path to the root of the project directory
 
--g, --gap=GAP [float]::  (default: 1.0)
+-m, --mark_breaks=MARK_BREAKS [bool]:: mark the phrase breaks in the words list (default: true) (default: True)
 
--m, --mark_breaks=MARK_BREAKS [bool]::  (default: False)
+-g, --gap=GAP [float]:: value in seconds to use for splitting phrases (default: 1.0) (default: 1.0)
 
 

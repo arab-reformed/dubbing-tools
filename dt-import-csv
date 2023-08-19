@@ -15,6 +15,20 @@ class Combination:
 
 
 def cmd(project_path: str, lang: str, csv_file: str, combine: bool = False, update_source: bool = False):
+    """
+    import CSV translation data
+
+    Imports data that has been previously exported using `dt-export-csv` back into the project.
+
+    This operation overwrites the target language translation currently in the project.  Changes to
+    timings are discarded.  Source changes are discarded unless the `--update-source` option is used.
+
+    :param project_path: path to the root of the project directory
+    :param lang: target language code to be imported from the CSV file
+    :param csv_file: name of the CSV file
+    :param combine: see documentation (default: false)
+    :param update_source: updates the source language from the CSV.  Use this option with caution (default: false).
+    """
 
     transcript = Transcript.load(project_path)
 

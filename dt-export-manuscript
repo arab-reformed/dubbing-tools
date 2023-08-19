@@ -9,6 +9,15 @@ PHRASE_HINTS = []
 
 
 def cmd(project_path: str):
+    """
+    export manuscript
+
+    Exports a manuscript as a text file with a line for each phrase.
+
+    See manuscript documentation for details on the format.
+
+    :param project_path: path to the root of the project directory
+    """
     transcript = Transcript.load(project_path)
 
     print(transcript.to_manuscript())
