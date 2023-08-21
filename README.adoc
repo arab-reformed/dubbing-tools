@@ -114,6 +114,8 @@ Run the import script and check for errors:
 [source,bash]
 dt-import-manuscript <project path> <manuscript file>
 +
+Program will give feedback on words that have been changed.
++
 Check for errors and then and once everything is fixed repeat the import with the `--save` option.
 
 8. Generate translations using Google Translation Services

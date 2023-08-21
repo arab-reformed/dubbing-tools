@@ -1,0 +1,73 @@
+= Manuscript
+
+A manuscript is a text file with special formatting.  The division between words needs to be maintained as each word is stored in the database with its timings.  Timings being at what the speaker starts speaking the word and when he finishes.
+
+Manuscript file syntax is as follows:
+
+* backticks (`) mark the division between words
+
+* new lines mark the divisions between phrases.
+
+* blank lines are ignored
+
+== Modifying Phrases
+
+[source]
+----
+Avoid ` intellectual ` pride,
+
+avoid ` careless,
+
+sloppy ` research
+
+in ` theological ` study.
+----
+
+If the second and third lines should be combined the new text would look like:
+
+[source]
+----
+Avoid ` intellectual ` pride,
+
+avoid ` careless, ` sloppy ` research
+
+in ` theological ` study.
+----
+
+Notice the second and third lines were combined on the same line separated by a backtick.
+
+== Combining Words
+
+Sometimes it is necessary to combine two words into a single word.
+
+[source]
+----
+All ` right,
+----
+
+Tom combine them into the single word "alright" the following syntax would be used:
+
+[source]
+Al`right,
+
+The two words "All" and "right" will be combined into one word, "alright".
+
+== Deleting Words
+
+To remove a word from the manuscript, delete the word leaving the backtick before and after it in place.
+
+[source]
+----
+to ` make ` clear ` any ` presuppositions
+
+that, ` that ` you ` are ` bringing ` to ` your ` research,
+----
+
+becomes:
+
+[source]
+----
+to ` make ` clear ` any ` presuppositions
+
+ ` that ` you ` are ` bringing ` to ` your ` research,
+----
