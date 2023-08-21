@@ -45,15 +45,15 @@ def cmd(project_path: str, manuscript_file: str, save: bool = False):
                     transcript.words[k].manuscript_break_before = j == 0
 
                     word = transcript.words[k]
-                    if words[j] == '':
-                        # print(j, k)
+                    if words[j].strip() == '':
+                        print('%s: %s --> (deleted)' % (line_num, word.word))
                         del transcript.words[k]
 
                     # if no spaces between the backticks and the words, join them
                     # TODO: this fails if trying to combine more than two words
                     elif j < len(words)-1 and words[j][-1] != ' ' and words[j+1][0] != ' ':
                         if word.word != words[j].strip():
-                            print('%s: %s --> %s' % (line_num, word.word, (words[j] + words[j+1]).strip()), file=sys.stderr)
+                            print('%s: %s %s --> %s' % (line_num, word.word, transcript.words[k+1].word, (words[j] + words[j+1]).strip()), file=sys.stderr)
 
                         word.set_word((words[j] + words[j+1]).strip())
                         word.end_time = transcript.words[k+1].end_time
