@@ -1,0 +1,13 @@
+= Modes
+:icons: font
+
+There are currently three modes of operation supported by the library.
+
+* Subtitling -- subtitles are displayed in the translated language
+
+* Dubbing -- translated audio using TTS.  Since TTS audio can have a different duration than the translated audio, the video is stretched (slowed down) or compressed (sped up) to fit the TTS audio.
+
+* Translation -- Video has both the original language and the translated TTS audio.
++
+NOTE: the video freezes for the translated audio
+
