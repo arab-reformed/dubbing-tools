@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-
+from os.path import join, isfile, basename
 import fire
 import re
 import subprocess
 from typing import Optional
 
 
-def help_to_asciidoc(script: str):
+def parse_help(script: str) -> dict:
 
     result = subprocess.run([script, '--help'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, encoding='UTF-8')
 
@@ -70,6 +70,10 @@ def help_to_asciidoc(script: str):
         sections['name'] = l[0]
         sections['short_description'] = l[1]
 
+    return sections
+
+
+def sections_to_asciidoc(sections: dict) -> str:
     ascii_doc = '= {name}\n\n'.format(name=sections['name'])
 
     if 'short_description' in sections:
@@ -92,5 +96,38 @@ def help_to_asciidoc(script: str):
     return ascii_doc
 
 
+def get_python_scripts(script_path: str, doc_path: str, adoc_file: str):
+    import glob
+
+    scripts = {}
+    for s in [basename(file) for file in glob.glob(join(script_path, 'dt-*')) if isfile(file) and basename(file) not in ['dt-qt.py', 'dt-gui.py']]:
+        f = open(join(script_path, s), 'r')
+        if f.readline().strip() in ['#!/usr/bin/python3', '#!/usr/bin/env python3']:
+            scripts[s] = parse_help(join(script_path, s))
+
+    adoc = open(join(doc_path, adoc_file), 'w')
+    adoc.write("""= Script Documentation
+:icons:font
+    
+""")
+
+    for script in sorted(scripts.keys()):
+        script_adoc_file = join(doc_path, script + '.adoc')
+        adoc.write('* xref:%s[`%s`]' % (script_adoc_file, script))
+        if 'short_description' in scripts[script]:
+            adoc.write(' -- %s' % scripts[script]['short_description'])
+
+#         adoc.write("""
+# +
+# [source, bash]
+# %s
+# """ % (scripts[script]['synopsis']))
+
+        adoc.write('\n\n')
+
+        with open(script_adoc_file, 'w') as script_adoc:
+            script_adoc.write(sections_to_asciidoc(scripts[script]))
+
+
 if __name__ == "__main__":
-    fire.Fire(help_to_asciidoc)
+    fire.Fire(get_python_scripts)

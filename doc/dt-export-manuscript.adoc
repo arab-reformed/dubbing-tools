@@ -12,11 +12,10 @@ export manuscript
 
 Exports a manuscript as a text file with a line for each phrase.
 
-See manuscript documentation for details on the format (xref:manuscript.adoc#_manuscript).
+See manuscript documentation for details on the format (xref:manuscript.adoc[Manuscript Documentation]).
 
 
 == Parameters
 
 PROJECT_PATH [str]:: path to the root of the project directory
-
 

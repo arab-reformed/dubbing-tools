@@ -27,4 +27,3 @@ SRT_FILE [str]:: name of the SRT file to be imported
 
 -l, --lang=LANG [str]:: language of the imported SRT file (default: en) (default: 'en')
 
-

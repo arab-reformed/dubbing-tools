@@ -14,4 +14,3 @@ VIDEO_FILE [str]::
 
 -o, --output=OUTPUT [Optional]::  (default: None)
 
-

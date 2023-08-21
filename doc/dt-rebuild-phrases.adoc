@@ -21,4 +21,3 @@ PROJECT_PATH [str]:: path to the root of the project directory
 
 -g, --gap=GAP [float]:: value in seconds to use for splitting phrases (default: 1.0) (default: 1.0)
 
-

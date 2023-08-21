@@ -1,0 +1,25 @@
+= dt-build-translation-timings
+
+Build timings for translated audio
+
+
+== Synopsis
+
+    dt-build-translation-timings PROJECT_PATH LANG
+
+
+== Description
+
+Builds timings for having both the source audio and translated TTS audio
+in the video
+
+Note: the TTS audio for the translated language should have been generated
+using `dt-tts-natural`
+
+
+== Parameters
+
+PROJECT_PATH [str]:: path to the root of the project directory
+
+LANG [str]:: language for which to build the translation
+

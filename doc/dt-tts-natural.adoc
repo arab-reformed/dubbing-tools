@@ -27,4 +27,3 @@ SERVICE [str]:: currently either 'azure' or 'google'
 
 -r, --reset_duration=RESET_DURATION [bool]:: ?? (default: False)
 
-

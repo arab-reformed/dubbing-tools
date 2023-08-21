@@ -20,4 +20,3 @@ TIMING_SCHEME [str]::
 
 --overlay_gain=OVERLAY_GAIN [int]::  (default: -20)
 
-

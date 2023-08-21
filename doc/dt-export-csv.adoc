@@ -27,4 +27,3 @@ LANG [str]:: translated language
 
 -u, --utf8_bom=UTF8_BOM [bool]:: output UTF BOM to help with Excel import? (default: False)
 
-

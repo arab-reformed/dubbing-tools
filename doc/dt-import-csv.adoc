@@ -28,4 +28,3 @@ CSV_FILE [str]:: name of the CSV file
 
 -u, --update_source=UPDATE_SOURCE [bool]:: updates the source language from the CSV.  Use this option with caution (default: false). (default: False)
 
-

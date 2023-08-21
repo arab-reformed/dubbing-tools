@@ -29,4 +29,6 @@ sudo apt install python3-tk
 
 == Documentation
 
-See xref:doc/documentation.adoc#_dubbing_tools_documentation
+See xref:doc/documentation.adoc[Dubbing Tools Documentation]
+
+Script documentation can be found xref:doc/scripts-doc.adoc[here]

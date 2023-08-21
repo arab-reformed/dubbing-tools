@@ -16,4 +16,3 @@ SRT_FILE [str]::
 
 -s, --source=SOURCE [bool]::  (default: False)
 
-

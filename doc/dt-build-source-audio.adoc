@@ -16,4 +16,3 @@ TIMING_SCHEME [str]::
 
 -a, --audio_output=AUDIO_OUTPUT [Optional]::  (default: None)
 
-
