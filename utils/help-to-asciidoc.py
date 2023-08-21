@@ -108,20 +108,14 @@ def get_python_scripts(script_path: str, doc_path: str, adoc_file: str):
     adoc = open(join(doc_path, adoc_file), 'w')
     adoc.write("""= Script Documentation
 :icons:font
-    
+
 """)
 
     for script in sorted(scripts.keys()):
         script_adoc_file = join(doc_path, script + '.adoc')
-        adoc.write('* xref:%s[`%s`]' % (script_adoc_file, script))
+        adoc.write('* xref:%s[`%s`]' % (script + '.adoc', script))
         if 'short_description' in scripts[script]:
-            adoc.write(' -- %s' % scripts[script]['short_description'])
-
-#         adoc.write("""
-# +
-# [source, bash]
-# %s
-# """ % (scripts[script]['synopsis']))
+            adoc.write(' -- %s' % scripts[script]['short_description'].strip())
 
         adoc.write('\n\n')
 
