@@ -24,8 +24,8 @@ def subtitled_video_fullpath(lang: str, timing_scheme: str, subtitle_lang: str) 
     return os.path.join('subtitled', f"video-{timing_scheme}-{lang}.{subtitle_lang}.mp4")
 
 
-def subtitles_fullpath(lang: str, timing_scheme: str, subtitle_lang: str, type: str = 'ass') -> str:
-    return os.path.join(SUBDIR_VIDEO, f"video-{timing_scheme}-{lang}.{subtitle_lang}.{type}")
+def subtitles_fullpath(lang: str, timing_scheme: str, subtitle_lang: str, sub_type: str = 'ass') -> str:
+    return os.path.join(SUBDIR_VIDEO, f"video-{timing_scheme}-{lang}.{subtitle_lang}.{sub_type}")
 
 
 def jsonify(result):

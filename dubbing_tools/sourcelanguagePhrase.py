@@ -1,4 +1,5 @@
 from .languagephrase import LanguagePhrase
+from .phrasetiming import PhraseTiming
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
 from typing import Optional
@@ -28,3 +29,10 @@ class SourceLanguagePhrase(LanguagePhrase):
         super().set_by_word_indices(words, start, end)
         self.start_word = start
         self.end_word = end
+
+        # update source timings for phrase
+        src_timing = PhraseTiming(
+            start_time=words[start].start_time,
+            end_time=words[end].end_time
+        )
+        self.timings.set(src_timing, Timings.SOURCE)
