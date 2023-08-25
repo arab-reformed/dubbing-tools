@@ -8,13 +8,13 @@
 
 == Parameters
 
-PROJECT_PATH [str]:: 
+_project-path_ [str]:: 
 
-LANG [str]:: 
+_lang_ [str]:: 
 
-TIMING_SCHEME [str]:: 
+_timing-scheme_ [str]:: 
 
-SERVICE [str]:: 
+_service_ [str]:: 
 
--o, --overwrite=OVERWRITE [bool]::  (default: False)
+_-o, --overwrite=overwrite_ [bool]::  (default: False)
 

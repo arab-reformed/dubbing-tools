@@ -15,7 +15,7 @@ Build new timings from the word data
 
 == Parameters
 
-PROJECT_PATH [str]:: 
+_project-path_ [str]:: 
 
-LANG [str]:: 
+_lang_ [str]:: 
 

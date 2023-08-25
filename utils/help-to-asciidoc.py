@@ -88,10 +88,12 @@ def sections_to_asciidoc(sections: dict) -> str:
     if sections['arguments'] or sections['flags']:
         ascii_doc += '== Parameters\n\n'
         for arg in sections['arguments']:
-            ascii_doc += '{name} [{type}]:: {description}\n\n'.format(**arg)
+            arg['name'] = arg['name'].replace('_', '-').lower()
+            ascii_doc += '_{name}_ [{type}]:: {description}\n\n'.format(**arg)
 
         for flag in sections['flags']:
-            ascii_doc += '{name} [{type}]:: {description} (default: {default})\n\n'.format(**flag)
+            flag['name'] = flag['name'].replace('_', '-').lower()
+            ascii_doc += '_{name}_ [{type}]:: {description} (default: {default})\n\n'.format(**flag)
 
     return ascii_doc
 

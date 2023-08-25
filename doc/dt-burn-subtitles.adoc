@@ -1,24 +1,34 @@
 = dt-burn-subtitles
 
+burn subtitles a video
+
 
 == Synopsis
 
-    dt-burn-subtitles PROJECT_PATH LANG TIMING_SCHEME SUBTITLE_LANG <flags>
+    dt-burn-subtitles PROJECT_PATH SUBTITLE_LANG <flags>
+
+
+== Description
+
+Burns subtitles into a video using the chosen subtitle language.
+
+See documentation here on xref:documentation.adoc#_project_folder_structure[Project Folder Structure]
+for an explanation of
 
 
 == Parameters
 
-PROJECT_PATH [str]:: 
+_project-path_ [str]:: path to the root of the project directory
 
-LANG [str]:: 
+_subtitle-lang_ [str]:: language code of the target language for subtitles
 
-TIMING_SCHEME [str]:: 
+_-m, --mode=mode_ [str]:: one of `src`, `dub`, or `trn`.  (default: src) (default: 'src')
 
-SUBTITLE_LANG [str]:: 
+_-s, --sub-type=sub-type_ [str]:: type of subtitles to be generated (default: ASS).  Currently ASS and SRT are accepted. (default: 'ASS')
 
--t, --type=TYPE [str]::  (default: 'ass')
+_-i, --include-source=include-source_ [bool]:: display subtitles for the source language as well as the target language (default: False)
 
--i, --include_source=INCLUDE_SOURCE [bool]::  (default: False)
+_-a, --audio-lang=audio-lang_ [Optional]:: language code of the audio (default: source audio language) (default: None)
 
--d, --debug=DEBUG [bool]::  (default: False)
+_-d, --debug=debug_ [bool]::  (default: False)
 

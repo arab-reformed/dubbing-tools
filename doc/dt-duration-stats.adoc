@@ -8,7 +8,7 @@
 
 == Parameters
 
-TRANSCRIPT_FILE [str]:: 
+_transcript-file_ [str]:: 
 
-LANG [str]:: 
+_lang_ [str]:: 
 

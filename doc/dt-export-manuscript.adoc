@@ -17,5 +17,5 @@ See manuscript documentation for details on the format (xref:manuscript.adoc[Man
 
 == Parameters
 
-PROJECT_PATH [str]:: path to the root of the project directory
+_project-path_ [str]:: path to the root of the project directory
 

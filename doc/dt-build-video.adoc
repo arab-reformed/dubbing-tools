@@ -8,15 +8,15 @@
 
 == Parameters
 
-PROJECT_PATH [str]:: 
+_project-path_ [str]:: 
 
-LANG [str]:: 
+_lang_ [str]:: 
 
-TIMING_SCHEME [str]:: 
+_timing-scheme_ [str]:: 
 
--s, --srt=SRT [bool]::  (default: False)
+_-s, --srt=srt_ [bool]::  (default: False)
 
---overwrite=OVERWRITE [bool]::  (default: False)
+_--overwrite=overwrite_ [bool]::  (default: False)
 
---overlay_gain=OVERLAY_GAIN [int]::  (default: -20)
+_--overlay-gain=overlay-gain_ [int]::  (default: -20)
 

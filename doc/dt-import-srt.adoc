@@ -8,11 +8,11 @@
 
 == Parameters
 
-PROJECT_PATH [str]:: 
+_project-path_ [str]:: 
 
-LANG [str]:: 
+_lang_ [str]:: 
 
-SRT_FILE [str]:: 
+_srt-file_ [str]:: 
 
--s, --source=SOURCE [bool]::  (default: False)
+_-s, --source=source_ [bool]::  (default: False)
 

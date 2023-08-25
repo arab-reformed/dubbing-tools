@@ -15,9 +15,9 @@ Imports a manuscript document in the format defined in xref:manuscript.adoc[Manu
 
 == Parameters
 
-PROJECT_PATH [str]:: path to the root of the project directory
+_project-path_ [str]:: path to the root of the project directory
 
-MANUSCRIPT_FILE [str]:: name of the manuscript file
+_manuscript-file_ [str]:: name of the manuscript file
 
--s, --save=SAVE [bool]:: save changes.  Without this parameter changes will not be saved (default: false) (default: False)
+_-s, --save=save_ [bool]:: save changes (default: false).  Without this parameter changes will not be saved. (default: False)
 

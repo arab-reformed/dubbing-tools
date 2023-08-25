@@ -8,5 +8,5 @@
 
 == Parameters
 
-PROJECT_PATH [str]:: 
+_project-path_ [str]:: 
 

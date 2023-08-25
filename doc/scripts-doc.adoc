@@ -9,7 +9,7 @@
 
 * xref:dt-build-video.adoc[`dt-build-video`]
 
-* xref:dt-burn-subtitles.adoc[`dt-burn-subtitles`]
+* xref:dt-burn-subtitles.adoc[`dt-burn-subtitles`] -- burn subtitles a video
 
 * xref:dt-chunk-source-audio.adoc[`dt-chunk-source-audio`]
 

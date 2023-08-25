@@ -21,9 +21,9 @@ If `transcript.json.gz` does not exist in the project path it is created.
 
 == Parameters
 
-PROJECT_PATH [str]:: path to the root of the project directory
+_project-path_ [str]:: path to the root of the project directory
 
-SRT_FILE [str]:: name of the SRT file to be imported
+_srt-file_ [str]:: name of the SRT file to be imported
 
--l, --lang=LANG [str]:: language of the imported SRT file (default: en) (default: 'en')
+_-l, --lang=lang_ [str]:: language of the imported SRT file (default: en) (default: 'en')
 

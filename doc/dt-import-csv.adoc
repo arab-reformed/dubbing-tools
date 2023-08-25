@@ -18,13 +18,13 @@ timings are discarded.  Source changes are discarded unless the `--update-source
 
 == Parameters
 
-PROJECT_PATH [str]:: path to the root of the project directory
+_project-path_ [str]:: path to the root of the project directory
 
-LANG [str]:: target language code to be imported from the CSV file
+_lang_ [str]:: target language code to be imported from the CSV file
 
-CSV_FILE [str]:: name of the CSV file
+_csv-file_ [str]:: name of the CSV file
 
--c, --combine=COMBINE [bool]:: see documentation (default: false) (default: False)
+_-c, --combine=combine_ [bool]:: see documentation (default: false) (default: False)
 
--u, --update_source=UPDATE_SOURCE [bool]:: updates the source language from the CSV.  Use this option with caution (default: false). (default: False)
+_-u, --update-source=update-source_ [bool]:: updates the source language from the CSV.  Use this option with caution (default: false). (default: False)
 

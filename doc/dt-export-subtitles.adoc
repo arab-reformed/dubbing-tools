@@ -8,17 +8,17 @@
 
 == Parameters
 
-PROJECT_PATH [str]:: 
+_project-path_ [str]:: 
 
-LANG [str]:: 
+_lang_ [str]:: 
 
-TIMING_SCHEME [str]:: 
+_timing-scheme_ [str]:: 
 
-SUBTITLE_LANG [str]:: 
+_subtitle-lang_ [str]:: 
 
--t, --type=TYPE [str]::  (default: 'ass')
+_-t, --type=type_ [str]::  (default: 'ass')
 
--i, --include_source=INCLUDE_SOURCE [bool]::  (default: False)
+_-i, --include-source=include-source_ [bool]::  (default: False)
 
--d, --debug=DEBUG [bool]::  (default: False)
+_-d, --debug=debug_ [bool]::  (default: False)
 

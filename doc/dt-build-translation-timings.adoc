@@ -19,7 +19,7 @@ using `dt-tts-natural`
 
 == Parameters
 
-PROJECT_PATH [str]:: path to the root of the project directory
+_project-path_ [str]:: path to the root of the project directory
 
-LANG [str]:: language for which to build the translation
+_lang_ [str]:: language for which to build the translation
 

@@ -8,15 +8,15 @@
 
 == Parameters
 
---video_file=VIDEO_FILE [Optional]::  (default: None)
+_--video-file=video-file_ [Optional]::  (default: None)
 
--o, --output_path=OUTPUT_PATH [str]::  (default: './slides')
+_-o, --output-path=output-path_ [str]::  (default: './slides')
 
---verbose=VERBOSE [bool]::  (default: False)
+_--verbose=verbose_ [bool]::  (default: False)
 
---skip=SKIP [int]::  (default: 30)
+_--skip=skip_ [int]::  (default: 30)
 
---similarity=SIMILARITY [float]::  (default: 0.98)
+_--similarity=similarity_ [float]::  (default: 0.98)
 
--l, --look_behind=LOOK_BEHIND [int]::  (default: 2)
+_-l, --look-behind=look-behind_ [int]::  (default: 2)
 

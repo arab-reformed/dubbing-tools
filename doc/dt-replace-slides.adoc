@@ -8,15 +8,15 @@
 
 == Parameters
 
---source_video=SOURCE_VIDEO [Optional]::  (default: None)
+_--source-video=source-video_ [Optional]::  (default: None)
 
--o, --output_video=OUTPUT_VIDEO [str]::  (default: 'output.mp4')
+_-o, --output-video=output-video_ [str]::  (default: 'output.mp4')
 
---slides_path=SLIDES_PATH [str]::  (default: './slides')
+_--slides-path=slides-path_ [str]::  (default: './slides')
 
--a, --arabic_slides_path=ARABIC_SLIDES_PATH [str]::  (default: './arabic-slides')
+_-a, --arabic-slides-path=arabic-slides-path_ [str]::  (default: './arabic-slides')
 
--r, --resize=RESIZE [bool]::  (default: False)
+_-r, --resize=resize_ [bool]::  (default: False)
 
--v, --verbose=VERBOSE [bool]::  (default: False)
+_-v, --verbose=verbose_ [bool]::  (default: False)
 

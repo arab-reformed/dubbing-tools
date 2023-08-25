@@ -16,7 +16,7 @@ using Google Translation Services.
 
 == Parameters
 
-PROJECT_PATH [str]:: path to the root of the project directory
+_project-path_ [str]:: path to the root of the project directory
 
-TO_LANG [str]:: language code of the target language into which the source language is to be translated
+_to-lang_ [str]:: language code of the target language into which the source language is to be translated
 

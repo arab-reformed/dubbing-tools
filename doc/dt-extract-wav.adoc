@@ -8,9 +8,9 @@
 
 == Parameters
 
-VIDEO_FILE [str]:: 
+_video-file_ [str]:: 
 
--f, --format=FORMAT [str]::  (default: 'wav')
+_-f, --format=format_ [str]::  (default: 'wav')
 
--o, --output=OUTPUT [Optional]::  (default: None)
+_-o, --output=output_ [Optional]::  (default: None)
 

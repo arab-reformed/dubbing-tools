@@ -21,9 +21,9 @@ exporting with this utility.
 
 == Parameters
 
-PROJECT_PATH [str]:: path to the root of the project directory
+_project-path_ [str]:: path to the root of the project directory
 
-LANG [str]:: translated language
+_lang_ [str]:: translated language
 
--u, --utf8_bom=UTF8_BOM [bool]:: output UTF BOM to help with Excel import? (default: False)
+_-u, --utf8-bom=utf8-bom_ [bool]:: output UTF BOM to help with Excel import? (default: False)
 

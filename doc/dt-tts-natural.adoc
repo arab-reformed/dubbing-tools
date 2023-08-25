@@ -15,15 +15,15 @@ Generates TTS audio for the given language using the chosen service and voice na
 
 == Parameters
 
-PROJECT_PATH [str]:: path to the root of the project directory
+_project-path_ [str]:: path to the root of the project directory
 
-LANG [str]:: language for which audio is to be generated
+_lang_ [str]:: language for which audio is to be generated
 
-SERVICE [str]:: currently either 'azure' or 'google'
+_service_ [str]:: currently either 'azure' or 'google'
 
--v, --voice_name=VOICE_NAME [Optional]:: name of the voice on the chosen service (default: None)
+_-v, --voice-name=voice-name_ [Optional]:: name of the voice on the chosen service (default: None)
 
--o, --overwrite=OVERWRITE [bool]:: if there is currently saved audio for the language, should it be overwritten? (default: False)
+_-o, --overwrite=overwrite_ [bool]:: if there is currently saved audio for the language, should it be overwritten? (default: False)
 
--r, --reset_duration=RESET_DURATION [bool]:: ?? (default: False)
+_-r, --reset-duration=reset-duration_ [bool]:: ?? (default: False)
 

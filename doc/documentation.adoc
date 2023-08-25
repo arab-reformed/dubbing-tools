@@ -30,7 +30,7 @@ Date is stored in a compressed file (gzip) in JSON format.  The root object is a
 
 ** *trn* -- timings for having both the original language audio and the translated language audio.
 
-For details of all the data stored see `dubbing_tools.transcript`.
+For details of all the data stored see `dubbing_tools.transcript` Python module.
 
 
 == Project Folder Structure
@@ -44,7 +44,7 @@ with an ascending numeric suffix appended.
 
 * `./videos`
 
-- *source.mp4* -- Source video file
+- *source.mp4* or *source-<lang>.mp4* -- Source video file
 
 * `./audio-clips` -- storage for TTS audio
 
