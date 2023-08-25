@@ -38,7 +38,7 @@ class Worker(QObject):
 
     def run(self):
         self.transcript.export_subtitles(
-            lang=self.lang,
+            audio_lang=self.lang,
             timing_scheme=self.timing_scheme,
             subtitle_lang=self.sub_lang,
             sub_type='ass',

@@ -11,7 +11,7 @@ def cmd(project_path: str, lang: str, timing_scheme: str, subtitle_lang: str, ty
     transcript = Transcript.load(project_path)
 
     transcript.export_subtitles(
-        lang=lang,
+        audio_lang=lang,
         timing_scheme=timing_scheme,
         subtitle_lang=subtitle_lang,
         sub_type=type,

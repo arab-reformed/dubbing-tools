@@ -77,7 +77,7 @@ class MainWindow(QMainWindow, Ui_WindowMain):
                     and sub_lang in self.transcript.target_languages() or sub_lang == self.transcript.src_lang:
 
                 self.transcript.export_subtitles(
-                    lang=lang,
+                    audio_lang=lang,
                     timing_scheme=timing_scheme,
                     subtitle_lang=sub_lang,
                     sub_type='ass',

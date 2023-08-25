@@ -143,25 +143,25 @@ class Phrase:
             overwrite=overwrite
         )
 
-    def to_srt(self, lang: str, timings_lang: str = None, timing_scheme: str = None, include_source: bool = False) -> str:
+    def to_srt(self, audio_lang: str, timings_lang: str = None, timing_scheme: str = None, include_source: bool = False) -> str:
         timings = None
         if timings_lang is not None:
             timings = self.get_target(timings_lang).timings.get(timing_scheme)
 
-        return self.get_target(lang).to_srt(
+        return self.get_target(audio_lang).to_srt(
             source=self.source,
             timing=timings,
             include_source=include_source
         )
 
-    def to_ass(self, prev_phrase: 'Phrase', next_phrase: 'Phrase', lang: str, timing_scheme: str, subtitle_lang: str,
+    def to_ass(self, prev_phrase: 'Phrase', next_phrase: 'Phrase', audio_lang: str, timing_scheme: str, subtitle_lang: str,
                include_source: bool = False, debug: bool = False) -> str:
-        timing = self.get_timing(lang, timing_scheme)
+        timing = self.get_timing(audio_lang, timing_scheme)
         target = self.get_target(subtitle_lang)
         count = len(target.text)
         start = timing.start_time
         if prev_phrase:
-            prev_timing = prev_phrase.get_timing(lang, timing_scheme)
+            prev_timing = prev_phrase.get_timing(audio_lang, timing_scheme)
             gap = start - prev_timing.end_time
             if gap > SUBTITLE_GAP:
                 prev_count = len(prev_phrase.get_target(subtitle_lang).text)
@@ -169,7 +169,7 @@ class Phrase:
 
         end = timing.end_time
         if next_phrase:
-            next_timing = next_phrase.get_timing(lang, timing_scheme)
+            next_timing = next_phrase.get_timing(audio_lang, timing_scheme)
             gap = next_timing.start_time - end
             if gap > SUBTITLE_GAP:
                 next_count = len(next_phrase.get_target(subtitle_lang).text)
