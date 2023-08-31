@@ -44,7 +44,7 @@ def cmd(
     data = VideoData(video_file=video_file)
 
     def similar(frame1: Frame, frame2: Frame) -> bool:
-        return ssim(frame1.frame, frame2.frame, multichannel=True) > similarity
+        return ssim(frame1.frame, frame2.frame, channel_axis=2) > similarity
 
     if not os.path.exists(output_path):
         os.makedirs(output_path)
