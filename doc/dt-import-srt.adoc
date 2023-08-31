@@ -14,5 +14,5 @@ _lang_ [str]::
 
 _srt-file_ [str]:: 
 
-_-s, --source=source_ [bool]::  (default: False)
+_-s, --source_ [bool]::  (default: False)
 

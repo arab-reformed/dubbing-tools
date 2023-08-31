@@ -12,8 +12,8 @@ def cmd(project_path: str, mark_breaks: bool = True, gap: float = 1.0):
     Rebuilds phrases for the source language from the words with timings.
 
     :param project_path: path to the root of the project directory
-    :param mark_breaks: mark the phrase breaks in the words list (default: true)
-    :param gap: value in seconds to use for splitting phrases (default: 1.0)
+    :param mark_breaks: mark the phrase breaks in the words list
+    :param gap: value in seconds to use for splitting phrases
     """
     transcript = Transcript.load(project_path)
 

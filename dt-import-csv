@@ -26,8 +26,8 @@ def cmd(project_path: str, lang: str, csv_file: str, combine: bool = False, upda
     :param project_path: path to the root of the project directory
     :param lang: target language code to be imported from the CSV file
     :param csv_file: name of the CSV file
-    :param combine: see documentation (default: false)
-    :param update_source: updates the source language from the CSV.  Use this option with caution (default: false).
+    :param combine: see documentation
+    :param update_source: updates the source language from the CSV.  Use this option with caution
     """
 
     transcript = Transcript.load(project_path)

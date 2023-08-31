@@ -25,7 +25,7 @@
 
 * xref:dt-extract-wav.adoc[`dt-extract-wav`]
 
-* xref:dt-find-slides.adoc[`dt-find-slides`]
+* xref:dt-find-slides.adoc[`dt-find-slides`] -- find presentation slides in videos
 
 * xref:dt-gap-stats.adoc[`dt-gap-stats`]
 
@@ -41,7 +41,7 @@
 
 * xref:dt-rebuild-phrases.adoc[`dt-rebuild-phrases`] -- rebuild phrases for the source language
 
-* xref:dt-replace-slides.adoc[`dt-replace-slides`]
+* xref:dt-replace-slides.adoc[`dt-replace-slides`] -- replace slides (still frames) in a video with images in a folder
 
 * xref:dt-reset-timings.adoc[`dt-reset-timings`]
 

@@ -19,5 +19,5 @@ _project-path_ [str]:: path to the root of the project directory
 
 _manuscript-file_ [str]:: name of the manuscript file
 
-_-s, --save=save_ [bool]:: save changes (default: false).  Without this parameter changes will not be saved. (default: False)
+_-s, --save_ [bool]:: save changes.  Without this parameter changes will not be saved. (default: False)
 

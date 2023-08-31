@@ -24,7 +24,7 @@ _lang_ [str]:: target language code to be imported from the CSV file
 
 _csv-file_ [str]:: name of the CSV file
 
-_-c, --combine=combine_ [bool]:: see documentation (default: false) (default: False)
+_-c, --combine_ [bool]:: see documentation (default: False)
 
-_-u, --update-source=update-source_ [bool]:: updates the source language from the CSV.  Use this option with caution (default: false). (default: False)
+_-u, --update-source_ [bool]:: updates the source language from the CSV.  Use this option with caution (default: False)
 

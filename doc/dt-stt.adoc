@@ -10,5 +10,5 @@
 
 _audio-file_ [str]:: 
 
-_-o, --output=output_ [Optional]::  (default: None)
+_-o, --output_ [Optional]::  (default: None)
 

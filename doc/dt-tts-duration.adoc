@@ -16,5 +16,5 @@ _timing-scheme_ [str]::
 
 _service_ [str]:: 
 
-_-o, --overwrite=overwrite_ [bool]::  (default: False)
+_-o, --overwrite_ [bool]::  (default: False)
 

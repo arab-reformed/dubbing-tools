@@ -16,9 +16,9 @@ _timing-scheme_ [str]::
 
 _subtitle-lang_ [str]:: 
 
-_-t, --type=type_ [str]::  (default: 'ass')
+_-t, --type_ [str]::  (default: 'ass')
 
-_-i, --include-source=include-source_ [bool]::  (default: False)
+_-i, --include-source_ [bool]::  (default: False)
 
-_-d, --debug=debug_ [bool]::  (default: False)
+_-d, --debug_ [bool]::  (default: False)
 

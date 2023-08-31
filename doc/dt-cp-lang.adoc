@@ -24,5 +24,5 @@ _from-lang_ [str]:: language code from which to copy
 
 _to-lang_ [str]:: language code to copy to
 
-_-o, --overwrite=overwrite_ [bool]:: if to_lang already exists it will be overwritten.  Defaults to False (default: False)
+_-o, --overwrite_ [bool]:: if `to_lang` already exists it will be overwritten. (default: False)
 

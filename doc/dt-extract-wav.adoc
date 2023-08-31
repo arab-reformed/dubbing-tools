@@ -10,7 +10,7 @@
 
 _video-file_ [str]:: 
 
-_-f, --format=format_ [str]::  (default: 'wav')
+_-f, --format_ [str]::  (default: 'wav')
 
-_-o, --output=output_ [Optional]::  (default: None)
+_-o, --output_ [Optional]::  (default: None)
 

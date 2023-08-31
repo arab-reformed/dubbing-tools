@@ -1,22 +1,33 @@
 = dt-find-slides
 
+find presentation slides in videos
+
 
 == Synopsis
 
     dt-find-slides <flags>
 
 
+== Description
+
+This program examines a video to find when a fullscreen slide (still image) is displayed on the screen.
+These images are output to the specified directory along with timings for display of the images
+in JSON format.
+
+Translated slides can then be overlaid on the video using xref:dt-replace-slides.adoc[`dt-replace-slides`]
+
+
 == Parameters
 
-_--video-file=video-file_ [Optional]::  (default: None)
+_--video-file_ [Optional]:: name of the source video file (default: None)
 
-_-o, --output-path=output-path_ [str]::  (default: './slides')
+_-o, --output-path_ [str]:: directory into which slide images and timings are written. If the path does not exist, it is created (default: './slides')
 
-_--verbose=verbose_ [bool]::  (default: False)
+_--verbose_ [bool]:: display verbose progress on STDERR (default: False)
 
-_--skip=skip_ [int]::  (default: 30)
+_--skip_ [int]:: number of frames to skip between checks for movement (default: 30)
 
-_--similarity=similarity_ [float]::  (default: 0.98)
+_--similarity_ [float]:: number representing how similar frames should be to be considered a match where 1.0 equals a perfect match (default: 0.98)
 
-_-l, --look-behind=look-behind_ [int]::  (default: 2)
+_-l, --look-behind_ [int]:: check if a still image has been previously displayed by checking the last `n` still images (default: 2)
 

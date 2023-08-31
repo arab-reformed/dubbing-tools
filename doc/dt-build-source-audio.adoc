@@ -14,5 +14,5 @@ _lang_ [str]::
 
 _timing-scheme_ [str]:: 
 
-_-a, --audio-output=audio-output_ [Optional]::  (default: None)
+_-a, --audio-output_ [Optional]::  (default: None)
 

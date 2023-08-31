@@ -19,7 +19,7 @@ def cmd(project_path: str, manuscript_file: str, save: bool = False):
 
     :param project_path: path to the root of the project directory
     :param manuscript_file: name of the manuscript file
-    :param save: save changes (default: false).  Without this parameter changes will not be saved.
+    :param save: save changes.  Without this parameter changes will not be saved.
     """
 
     transcript = Transcript.load(project_path)

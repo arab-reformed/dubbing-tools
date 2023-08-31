@@ -14,9 +14,9 @@ _lang_ [str]::
 
 _timing-scheme_ [str]:: 
 
-_-s, --srt=srt_ [bool]::  (default: False)
+_-s, --srt_ [bool]::  (default: False)
 
-_--overwrite=overwrite_ [bool]::  (default: False)
+_--overwrite_ [bool]::  (default: False)
 
-_--overlay-gain=overlay-gain_ [int]::  (default: -20)
+_--overlay-gain_ [int]::  (default: -20)
 

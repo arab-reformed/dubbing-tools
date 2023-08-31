@@ -22,13 +22,13 @@ _project-path_ [str]:: path to the root of the project directory
 
 _subtitle-lang_ [str]:: language code of the target language for subtitles
 
-_-m, --mode=mode_ [str]:: one of `src`, `dub`, or `trn`.  (default: src) (default: 'src')
+_-m, --mode_ [str]:: one of `src`, `dub`, or `trn`. (default: 'src')
 
-_-s, --sub-type=sub-type_ [str]:: type of subtitles to be generated (default: ASS).  Currently ASS and SRT are accepted. (default: 'ASS')
+_-s, --sub-type_ [str]:: type of subtitles to be generated.  Currently ASS and SRT are accepted. (default: 'ASS')
 
-_-i, --include-source=include-source_ [bool]:: display subtitles for the source language as well as the target language (default: False)
+_-i, --include-source_ [bool]:: display subtitles for the source language as well as the target language (default: False)
 
-_-a, --audio-lang=audio-lang_ [Optional]:: language code of the audio (default: source audio language) (default: None)
+_-a, --audio-lang_ [Optional]:: language code of the audio (default: source audio language) (default: None)
 
-_-d, --debug=debug_ [bool]::  (default: False)
+_-d, --debug_ [bool]::  (default: False)
 

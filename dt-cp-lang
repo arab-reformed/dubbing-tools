@@ -16,11 +16,10 @@ def cmd(project_path: str, from_lang: str, to_lang: str, overwrite: bool = False
     This can be useful when moving between dialects.  For instance, Saudi Arabian Arabic (ar-SA) can be
     copied to Syrian Arabic (ar-SY) and then edited.
 
-    Args:
-        project_path (String): root directory of the project
-        from_lang (String): language code from which to copy
-        to_lang (String): language code to copy to
-        overwrite (Boolean, default=false): if to_lang already exists it will be overwritten.  Defaults to False
+    :param project_path: root directory of the project
+    :param from_lang: language code from which to copy
+    :param to_lang: language code to copy to
+    :param overwrite: should `to_lang` be overwritten if it exists.
     """
 
     if from_lang == to_lang:

@@ -92,6 +92,8 @@ def sections_to_asciidoc(sections: dict) -> str:
             ascii_doc += '_{name}_ [{type}]:: {description}\n\n'.format(**arg)
 
         for flag in sections['flags']:
+            if '=' in flag['name']:
+                flag['name'] = re.sub(r'^(.*?)(\w+)=.*', '\\1\\2', flag['name'])
             flag['name'] = flag['name'].replace('_', '-').lower()
             ascii_doc += '_{name}_ [{type}]:: {description} (default: {default})\n\n'.format(**flag)
 

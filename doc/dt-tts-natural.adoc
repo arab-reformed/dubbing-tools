@@ -21,9 +21,9 @@ _lang_ [str]:: language for which audio is to be generated
 
 _service_ [str]:: currently either 'azure' or 'google'
 
-_-v, --voice-name=voice-name_ [Optional]:: name of the voice on the chosen service (default: None)
+_-v, --voice-name_ [Optional]:: name of the voice on the chosen service (default: None)
 
-_-o, --overwrite=overwrite_ [bool]:: if there is currently saved audio for the language, should it be overwritten? (default: False)
+_-o, --overwrite_ [bool]:: if there is currently saved audio for the language, should it be overwritten? (default: False)
 
-_-r, --reset-duration=reset-duration_ [bool]:: ?? (default: False)
+_-r, --reset-duration_ [bool]:: ?? (default: False)
 

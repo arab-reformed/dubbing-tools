@@ -25,5 +25,5 @@ _project-path_ [str]:: path to the root of the project directory
 
 _lang_ [str]:: translated language
 
-_-u, --utf8-bom=utf8-bom_ [bool]:: output UTF BOM to help with Excel import? (default: False)
+_-u, --utf8-bom_ [bool]:: output UTF BOM to help with Excel import? (default: False)
 

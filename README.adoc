@@ -2,7 +2,11 @@
 :icons:font
 :toc:
 
-== Installation: Ubuntu
+
+== Installation
+
+The scripts run under Linux or Mac OSX.  To run them on Windows the Windows Subsystem for Linux (WSL) should be used.
+
 
 Install Python using `apt`:
 
