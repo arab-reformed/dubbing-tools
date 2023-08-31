@@ -2,21 +2,21 @@
 :icons:font
 :toc:
 
-== Modes
+== Timing Schemes
 
-There are currently three modes of operation supported by the library.
+There are currently three timing schemes supported by the library.
 
-* Subtitling -- subtitles are displayed in the translated language
+* Subtitling (sub)-- this is the natural timing of the video and is used for displaying subtitles in a translated language a translated language with original audio.
 
-* Dubbing -- translated audio using TTS.  Since TTS audio can have a different duration than the translated audio, the video is stretched (slowed down) or compressed (sped up) to fit the TTS audio.
+* Dubbing (dub) -- original audio is replaced with TTS audio.  Since TTS audio can have a different duration (timing) than the translated audio, the video is stretched (slowed down) or compressed (sped up) to fit the TTS audio.  So the timing of the generated audio is different than the source video.
 
-* Translation -- Video has both the original language and the translated TTS audio (the video freezes for the translated audio)
+* Translation (trn) -- Video has both the source audio and the translated TTS audio (the video freezes for the translated audio).  The video will be about twice as long as the source video.
 
 == Data Storage
 
-Date is stored in a compressed file (gzip) in JSON format.  The root object is a `Transcript` object (dubbing_tools.transcript).  The `Transcript` object has two arrays (lists) for words (dubbing_tools.word) and phrases (dubbing_tools.phrase).  Each `Phrase` in the list contains the source phrase (original language of the video) and any target phrases (languages into which the orignal has been translated).
+Date is stored in a compressed file (gzip) in JSON format.  The root object is a `Transcript` object (see `dubbing_tools.transcript`).  The `Transcript` object has two arrays (lists) for words (see `dubbing_tools.word`) and phrases (see `dubbing_tools.phrase`).  Each `Phrase` in the list contains the source phrase (original language of the video) and any target phrases (languages into which the original has been translated).
 
-* *words* -- the words list contains an entry for every word (dubbing_tools.word) in the transcript along with its start time (when the speaker began saying the word) and its end time (when the speaker finished saying the word).
+* *words* -- the words list contains an entry for every word (see `dubbing_tools.word`) in the transcript along with its start time (when the speaker began saying the word) and its end time (when the speaker finished saying the word).
 
 * *phrases* -- phrases are built from the *words* data and are like *words* in that they have start and end timings.  Each entry in the phrase list has two types of phrases.
 
@@ -117,3 +117,10 @@ dt-import-csv <project path> ar
 +
 [source, bash]
 dt-burn-ass-subtitles <project path> en src ar
+
+
+== Glossary
+
+source audio:: the original audio from the source video
+
+source video:: video in the original language
