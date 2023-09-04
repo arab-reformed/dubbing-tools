@@ -34,7 +34,7 @@ def cmd(project_path: str, manuscript_file: str, save: bool = False):
                 words = line.split('`')
 
                 j = 0
-                while j < len(words):
+                while j < len(words) and k < len(transcript.words):
                     transcript.words[k].manuscript_break_before = j == 0
 
                     word = transcript.words[k]
@@ -62,6 +62,10 @@ def cmd(project_path: str, manuscript_file: str, save: bool = False):
                         k += 1
 
                     j += 1
+
+    if k >= len(transcript.words):
+        print("ERROR: number of words in manuscript is greater than in the database")
+        exit(2)
 
     if save:
         transcript.build_phrases()
