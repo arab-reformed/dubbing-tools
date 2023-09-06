@@ -93,16 +93,21 @@ def cmd(
         frame = Frame(time, f, frame_num)
         current.append(frame)
 
+        # enter this if every (skip or 30) frmes
         if (frame_num-1) % skip == 0:
             # print(f'Frame: {frame_num}', file=sys.stderr)
             try:
+                # in the case of the first major frame
                 if last_frame is None:
                     last_frame = frame
 
+                # in case the current major frame is the same as the last major frame (it's a slide)
                 elif similar(frame, last_frame):
+                    # assume the current major frame is the end of the slide, and set the frame_end of the slide to the current major frame number, and the time_end of the slide to the current major frame time
                     frame_end = frame.frame_number
                     time_end = frame.time
 
+                    # if frame_start is None (meaning this is the second major frame in the slide and it's the first time to notice it's a slide), now calculate the start of the slide
                     if frame_start is None:
                         frame_start = frame.frame_number
                         time_start = frame.time
@@ -110,19 +115,19 @@ def cmd(
                         i = None
                         matched = False
                         for j in [32, 16, 8, 4, 2, 1]:
-                            if j >= len(current):
+                            if j >= len(previous):
                                 continue
 
                             if i is None:
                                 i = j
-                            elif matched or i >= len(current):
+                            elif matched or i >= len(previous):
                                 i -= j
                             else:
                                 i += j
 
-                            if 0 <= i < len(current) and similar(frame, current[i]):
-                                time_start = current[i].time
-                                frame_start = current[i].frame_number
+                            if 0 <= i < len(previous) and similar(frame, previous[i]):
+                                time_start = previous[i].time
+                                frame_start = previous[i].frame_number
                                 matched = True
                             else:
                                 matched = False
@@ -138,13 +143,15 @@ def cmd(
 
                     # data.last_still.frame_end = frame.frame_number
                     # data.last_still.time_end = frame.time
-
+                
+                # in all other cases (meaning the current major frame is NOT the same as the last major frame)
                 else:
+                    # in case frame start has a value (meaning we did calculate the start of the slide), now calculate the end of the slide
                     if frame_start is not None:  # and frame_end - frame_start >= skip:
                         i = None
                         matched = False
                         for j in [32, 16, 8, 4, 2, 1]:
-                            if j >= len(previous):
+                            if j >= len(current):
                                 continue
 
                             if i is None:
@@ -154,9 +161,9 @@ def cmd(
                             else:
                                 i -= j
 
-                            if 0 <= i < len(previous) and similar(last_frame, previous[i]):
-                                time_end = previous[i].time
-                                frame_end = previous[i].frame_number
+                            if 0 <= i < len(current) and similar(last_frame, current[i]):
+                                time_end = current[i].time
+                                frame_end = current[i].frame_number
                                 matched = True
                             else:
                                 matched = False
