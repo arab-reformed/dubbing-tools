@@ -37,7 +37,7 @@ class Transcript:
     tts_duration: Optional[float] = None
     has_changed: bool = False
     obey_manuscript_breaks: bool = False
-    project_path: str = None
+    project_path: Optional[str] = None
 
     def phrase_count(self) -> int:
         """
