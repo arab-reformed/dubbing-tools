@@ -29,6 +29,7 @@ def cmd(project_path: str, srt_file: str, lang: str = 'en'):
         os.makedirs(project_path, exist_ok=True)
 
     transcript.import_words_srt(srt_file=srt_file)
+    transcript.compute_phrases(mark_breaks=True)
 
     if not transcript.save():
         print("Error saving project file.", file=sys.stderr)
