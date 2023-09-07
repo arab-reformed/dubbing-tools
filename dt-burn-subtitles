@@ -38,22 +38,22 @@ def cmd(project_path: str, subtitle_lang: str, mode: str = Timings.SOURCE, sub_t
         sub_type=sub_type,
         include_source=include_source
     )
-    source_video = video_source_fullpath(lang=audio_lang)
+    source_video = transcript.video_source_fullpath(lang=audio_lang)
     if not os.path.isfile(source_video):
         print('Video source "%s" not found' % source_video, file=sys.stderr)
         exit(2)
 
-    print(f"Subtitled video: {subtitled_video_fullpath(audio_lang, mode, subtitle_lang)}")
+    print(f"Subtitled video: {transcript.subtitled_video_fullpath(audio_lang, mode, subtitle_lang)}")
 
     mpeg = (
         FFmpeg()
             .option('y')
             .input(source_video)
             .output(
-                subtitled_video_fullpath(audio_lang, mode, subtitle_lang),
+                transcript.subtitled_video_fullpath(audio_lang, mode, subtitle_lang),
                 acodec='copy',
                 vcodec='libx264',
-                vf=f"ass={subtitles_fullpath(audio_lang, mode, subtitle_lang, sub_type.lower())}",
+                vf=f"ass={transcript.subtitles_fullpath(audio_lang, mode, subtitle_lang, sub_type.lower())}",
                 crf=20
             )
     )

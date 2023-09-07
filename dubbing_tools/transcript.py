@@ -37,6 +37,7 @@ class Transcript:
     tts_duration: Optional[float] = None
     has_changed: bool = False
     obey_manuscript_breaks: bool = False
+    project_path: str = None
 
     def phrase_count(self) -> int:
         """
@@ -154,29 +155,45 @@ class Transcript:
             )
 
     @classmethod
-    def _load_file(cls, file) -> Optional['Transcript']:
-        data = json.load(file)
-        return cls.from_dict(data)
+    def _load_file(cls, path: str) -> Optional['Transcript']:
+        file = None
+        # print(os.path.curdir)
+        if os.path.isfile(gzipped_file := f"{path}.gz"):
+            # print('gzipped:', gzipped_file)
+            file = gzip.open(gzipped_file, mode='r')
+        elif os.path.isfile(path):
+            file = open(path, mode='r')
+
+        if file:
+            data = json.load(file)
+            return cls.from_dict(data)
+
+        return None
 
     @classmethod
     def load(cls, path: str) -> Optional['Transcript']:
         if os.path.isdir(path):
             path = os.path.join(path, TRANSCRIPT_FILE)
 
-        f = None
-        if os.path.isfile(f"{path}.gz"):
-            f = gzip.open(f"{path}.gz", mode='r')
-        elif os.path.isfile(path):
-            f = open(path, mode='r')
-
-        if f is not None:
-            tran = cls._load_file(f)
+        tran = cls._load_file(path)
+        if tran is not None:
             tran.has_changed = False
-            f.close()
-            os.chdir(os.path.dirname(path))
+            tran.project_path = os.path.dirname(path)
             return tran
 
         return None
+
+    def video_source_fullpath(self, lang: str = None) -> str:
+        return os.path.join(self.project_path, SUBDIR_VIDEO, f"source-{lang}.mp4" if lang else "source.mp4")
+
+    def video_fullpath(self, audio_lang: str, timing_scheme: str) -> str:
+        return os.path.join(self.project_path, SUBDIR_VIDEO, f"video-{timing_scheme}-{audio_lang}.mp4")
+
+    def subtitled_video_fullpath(self, audio_lang: str, timing_scheme: str, subtitle_lang: str) -> str:
+        return os.path.join(self.project_path, 'subtitled', f"video-{timing_scheme}-{audio_lang}.{subtitle_lang}.mp4")
+
+    def subtitles_fullpath(self, audio_lang: str, timing_scheme: str, subtitle_lang: str, sub_type: str = 'ass') -> str:
+        return os.path.join(self.project_path, SUBDIR_VIDEO, f"video-{timing_scheme}-{audio_lang}.{subtitle_lang}.{sub_type}")
 
     def import_words_srt(self, srt_file: str) -> None:
         def seconds(sub_time):
@@ -297,7 +314,7 @@ class Transcript:
     def save(self, path: str = None) -> bool:
 
         if path is None:
-            path = TRANSCRIPT_FILE + ".gz"
+            path = os.path.join(self.project_path, TRANSCRIPT_FILE + ".gz")
 
         elif os.path.isdir(path):
             path = os.path.join(path, TRANSCRIPT_FILE + ".gz")
@@ -325,8 +342,8 @@ class Transcript:
                 debug=debug,
             )
 
-        with open(subtitles_fullpath(audio_lang, timing_scheme, subtitle_lang, sub_type), mode='w', encoding='UTF-8') as f:
-            print(subtitles_fullpath(audio_lang, timing_scheme, subtitle_lang, sub_type), file=sys.stderr)
+        with open(self.subtitles_fullpath(audio_lang, timing_scheme, subtitle_lang, sub_type), mode='w', encoding='UTF-8') as f:
+            print(self.subtitles_fullpath(audio_lang, timing_scheme, subtitle_lang, sub_type), file=sys.stderr)
             f.write(subtitles)
             f.close()
 
@@ -496,10 +513,10 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                 while changed:
                     changed = False
                     shortened = []
-                    print(f"gap = {small_gap}", file=sys.stderr)
+                    # print(f"gap = {small_gap}", file=sys.stderr)
                     for p, phrase in enumerate(phrases):
                         shortened.append(phrase)
-                        print(f"Phrase: {p}", file=sys.stderr)
+                        # print(f"Phrase: {p}", file=sys.stderr)
                         if phrase.source.word_count() > 6:
                             for i in range(phrase.source.start_word+3, phrase.source.end_word-3):
                                 reason = self.words[i].break_reason(next_word=self.words[i+1], gap=small_gap)

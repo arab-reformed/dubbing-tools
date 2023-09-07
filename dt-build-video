@@ -17,9 +17,9 @@ def cmd(project_path: str, lang: str, timing_scheme: str, srt: bool = False,
         os.makedirs(SUBDIR_VIDEO)
 
     video = Video(
-        source_file=video_source_fullpath(),
+        source_file=transcript.video_source_fullpath(),
         output_path='videos',
-        target_file=video_fullpath(lang, timing_scheme),
+        target_file=transcript.video_fullpath(lang, timing_scheme),
         # srt_path=os.path.join(project_path, f"phrases-{lang}.srt")
     )
 

@@ -91,6 +91,7 @@ def cmd(audio_file: str, project_path: str, azure_json: str = None, debug: bool 
             transcript = Transcript(
                 name=audio_file,
                 words=words,
+                project_path=project_path,
             )
             transcript.save(project_path)
 
