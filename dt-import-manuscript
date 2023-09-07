@@ -25,16 +25,21 @@ def cmd(project_path: str, manuscript_file: str, save: bool = False):
     transcript = Transcript.load(project_path)
 
     line_num = 0
+    too_many_words = False
     with open(manuscript_file, mode='r', encoding='UTF-8') as f:
         k = 0
         for line in f.readlines():
             line_num += 1
 
-            if len(line.strip()) > 0:
+            if len(line.strip()) > 0 and not too_many_words:
                 words = line.split('`')
 
                 j = 0
-                while j < len(words) and k < len(transcript.words):
+                while j < len(words):
+                    if k >= len(transcript.words):
+                        too_many_words = True
+                        break
+
                     transcript.words[k].manuscript_break_before = j == 0
 
                     word = transcript.words[k]
@@ -63,8 +68,12 @@ def cmd(project_path: str, manuscript_file: str, save: bool = False):
 
                     j += 1
 
-    if k >= len(transcript.words):
+    if too_many_words:
         print("ERROR: number of words in manuscript is greater than in the database")
+        exit(2)
+
+    elif k < len(transcript.words):
+        print("ERROR: number of words in manuscript is less than in the database")
         exit(2)
 
     if save:
