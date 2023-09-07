@@ -14,7 +14,6 @@ from .constants import *
 from .timings import Timings
 from .phrasetiming import PhraseTiming
 import gzip
-from .functions import *
 import copy
 import srt
 
