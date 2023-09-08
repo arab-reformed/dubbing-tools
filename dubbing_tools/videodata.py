@@ -15,6 +15,7 @@ class VideoData:
     video_file: str
     stills: list[StillData] = field(default_factory=list)
 
+    # write new entry in the json file
     def write(self, path: str):
         with open(os.path.join(path, DATA_FILENAME), 'w') as file:
             file.write(self.to_json(indent=2, ensure_ascii=False))
