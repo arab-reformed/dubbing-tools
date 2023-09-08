@@ -23,4 +23,4 @@ class StillData:
         return None
 
     def duration(self) -> float:
-        return self.time_start - self.time_end
+        return self.time_end - self.time_start
