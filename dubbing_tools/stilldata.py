@@ -15,12 +15,13 @@ class StillData:
     time_end: float
     image_file: str = None
 
-    def powerpoint_image_file(self) -> Optional[str]:
-        m = re.search(r'-(?P<num>\d+)', self.image_file)
-        if m:
-            return f'Slide{int(m.group("num"))}.JPG'
-
-        return None
+    def get_image_file(self, still, pp) -> Optional[str]:
+        if pp:
+            m = re.search(r'-(?P<num>\d+)', self.image_file)
+            if m:
+                return f'Slide{int(m.group("num"))}.JPG'
+        else:
+            return still.image_file
 
     def duration(self) -> float:
         return self.time_end - self.time_start
