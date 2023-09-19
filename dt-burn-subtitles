@@ -21,7 +21,7 @@ def cmd(project_path: str, subtitle_lang: str, mode: str = Timings.SOURCE, sub_t
     :param project_path: path to the root of the project directory
     :param mode: one of `src`, `dub`, or `trn`.
     :param subtitle_lang: language code of the target language for subtitles
-    :param sub_type: type of subtitles to be generated.  Currently ASS and SRT are accepted.
+    :param sub_type: type of subtitles to be generated.  Currently `ASS` and `SRT` are accepted.
     :param audio_lang: language code of the audio (default: source audio language)
     :param include_source: display subtitles for the source language as well as the target language
     :param debug:
