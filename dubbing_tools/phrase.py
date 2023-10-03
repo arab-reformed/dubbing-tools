@@ -60,6 +60,12 @@ class Phrase:
         self.set_text(target_lang, result['translatedText'])
         print(f"{self.id}: {self.source.text} --> {result['translatedText']}")
 
+    def get_word_count(self, lang: str) -> int:
+        p = self.get_target(lang)
+        if p:
+            return p.word_count()
+        return 0
+
     def get_text(self, lang: str) -> Optional[str]:
         if lang in self.targets:
             return self.get_target(lang).text

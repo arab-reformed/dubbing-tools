@@ -68,6 +68,9 @@ class LanguagePhrase(DataClassJsonMixin):
         self.timings.get(Timings.SOURCE).start_time = words[end].start_time
         self.timings.get(Timings.SOURCE).end_time = words[end].end_time
 
+    def word_count(self) -> int:
+        return len([word for word in re.split(r'\s+', self.text) if word])
+
     def set_text(self, text: str):
         if text != self.text:
             self.mark_audio_changed()

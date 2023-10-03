@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+
+import fire
+from dubbing_tools.transcript import *
+
+
+def cmd(project_path: str, lang: str):
+    """
+    count the number of words for the given language
+
+    Calculate the word count for the given language.
+
+    :param project_path: root directory of the project
+    :param lang: language code from which to copy
+    """
+
+    word_count = 0
+
+    transcript = Transcript.load(project_path)
+    for phrase in transcript.phrases:
+        word_count += phrase.get_word_count(lang)
+
+    print(word_count)
+
+
+if __name__ == "__main__":
+    fire.Fire(cmd)
