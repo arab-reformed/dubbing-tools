@@ -341,8 +341,12 @@ class Transcript:
                 debug=debug,
             )
 
-        with open(self.subtitles_fullpath(audio_lang, timing_scheme, subtitle_lang, sub_type), mode='w', encoding='UTF-8') as f:
-            print(self.subtitles_fullpath(audio_lang, timing_scheme, subtitle_lang, sub_type), file=sys.stderr)
+        full_path = self.subtitles_fullpath(audio_lang, timing_scheme, subtitle_lang, sub_type)
+        if not os.path.exists(os.path.dirname(full_path)):
+            os.makedirs(os.path.dirname(full_path))
+
+        with open(full_path, mode='w', encoding='UTF-8') as f:
+            print(full_path, file=sys.stderr)
             f.write(subtitles)
             f.close()
 
