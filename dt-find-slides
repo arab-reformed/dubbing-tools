@@ -31,7 +31,13 @@ def cmd(
         verbose: bool = True,
         skip: int = 30,
         similarity: float = 0.98,
-        ignore: int = 0,
+        # i1 to 4 tells the program to ignore one quarter in comparing still images starting from the top left going CW.
+        i1: bool = False,
+        i2: bool = False,
+        i3: bool = False,
+        i4: bool = False,
+        # default head, tells the program to compare stills first based on middle upper third in a 3X2 division (where the head normaly would be)
+        defhead: bool = True,
         look_behind: int = 2):
     """
     find presentation slides in videos
@@ -69,29 +75,37 @@ def cmd(
         mid_height = height // 2
         mid_width = width // 2
 
+        third_width = width // 3
+        # first check for default head position similarity
+        if defhead:
+            top_center1 = frame1.frame[:mid_height, third_width:2*third_width, :]
+            top_center2 = frame2.frame[:mid_height, third_width:2*third_width, :]
+            if ssim(top_center1, top_center2, channel_axis=2) < similarity:
+                return False
+
         # top left quarter
-        if(ignore != 1):
+        if not i1:
             top_left1 = frame1.frame[:mid_height, :mid_width, :]
             top_left2 = frame2.frame[:mid_height, :mid_width, :]
             if ssim(top_left1, top_left2, channel_axis=2) < similarity:
                 return False 
 
         # top right quarter
-        if(ignore != 2):
+        if not i2:
             top_right1 = frame1.frame[:mid_height, mid_width:, :]
             top_right2 = frame2.frame[:mid_height, mid_width:, :]
             if ssim(top_right1, top_right2, channel_axis=2) < similarity:
                 return False 
 
         # bottom right quarter
-        if(ignore != 3):
+        if not i3:
             bottom_right1 = frame1.frame[mid_height:, mid_width:, :]
             bottom_right2 = frame2.frame[mid_height:, mid_width:, :]
             if ssim(bottom_right1, bottom_right2, channel_axis=2) < similarity:
                 return False 
 
         # bottom left quarter
-        if(ignore != 4):
+        if not i4:
             bottom_left1 = frame1.frame[mid_height:, :mid_width, :]
             bottom_left2 = frame2.frame[mid_height:, :mid_width, :]
             if ssim(bottom_left1, bottom_left2, channel_axis=2) < similarity:
