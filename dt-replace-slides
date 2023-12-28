@@ -25,7 +25,7 @@ def cmd(
         slides_path: str = './slides',
         arabic_slides_path: str = './arabic-slides',
         pp: bool = False,
-        resize: bool = False,
+        resize: bool = True,
         verbose: bool = False,
 ):
     """
