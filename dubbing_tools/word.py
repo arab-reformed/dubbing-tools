@@ -1,3 +1,4 @@
+from . import strip_text
 from typing import List, Optional
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
@@ -56,3 +57,6 @@ class Word:
     @staticmethod
     def secs_to_float(secs: str):
         return round(float(secs.replace('s', '')), 3)
+
+    def is_equal(self, text: str) -> bool:
+        return strip_text(self.word) == strip_text(text)

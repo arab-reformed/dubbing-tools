@@ -53,3 +53,5 @@
 
 * xref:dt-tts-natural.adoc[`dt-tts-natural`] -- generate TTS audio
 
+* xref:dt-word-count.adoc[`dt-word-count`] -- count the number of words for the given language
+

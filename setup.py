@@ -23,6 +23,8 @@ setup(
         'dt-export-manuscript',
         'dt-export-subtitles',
         'dt-extract-wav',
+        'dt-find-slides',
+        'dt-replace-slides',
         'dt-gap-stats',
         'dt-import-csv',
         'dt-import-manuscript',
@@ -33,7 +35,7 @@ setup(
         'dt-translate',
         'dt-tts-duration',
         'dt-tts-natural',
-        'dt-find-slides',
+        'dt-word-count',
     ],
     install_requires=[
         'ffmpeg-python',

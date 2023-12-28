@@ -5,6 +5,7 @@ from dataclasses_json import dataclass_json
 from typing import Optional
 from .timings import Timings
 from .word import Word
+from . import strip_text
 
 
 # @dataclass_json
@@ -30,9 +31,20 @@ class SourceLanguagePhrase(LanguagePhrase):
         self.start_word = start
         self.end_word = end
 
-        # update source timings for phrase
-        src_timing = PhraseTiming(
-            start_time=words[start].start_time,
-            end_time=words[end].end_time
-        )
-        self.timings.set(src_timing, Timings.SOURCE)
+        if start > end:
+            # self.start_word = None
+            # self.end_word = None
+            self.timings.remove(Timings.SOURCE)
+        else:
+            # update source timings for phrase
+            src_timing = PhraseTiming(
+                start_time=words[start].start_time,
+                end_time=words[end].end_time
+            )
+            self.timings.set(src_timing, Timings.SOURCE)
+
+    def is_empty(self) -> bool:
+        return self.start_word is None or self.end_word is None
+
+    def is_equal(self, text: str) -> bool:
+        return strip_text(self.text) == strip_text(text)

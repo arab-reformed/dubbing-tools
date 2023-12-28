@@ -5,7 +5,7 @@ import CSV translation data
 
 == Synopsis
 
-    dt-import-csv PROJECT_PATH LANG CSV_FILE <flags>
+    dt-import-csv PROJECT_PATH LANG CSV_FILE
 
 
 == Description
@@ -13,7 +13,12 @@ import CSV translation data
 Imports data that has been previously exported using `dt-export-csv` back into the project.
 
 This operation overwrites the target language translation currently in the project.  Changes to
-timings are discarded.  Source changes are discarded unless the `--update-source` option is used.
+timings are discarded.
+
+Source changes must consist of moving words between lines.  If source words are moved to a different line then
+new times are computed for the phrase and the source phrase updated.
+
+If source words are edited or re-ordered the import will fail.
 
 
 == Parameters
@@ -23,8 +28,4 @@ _project-path_ [str]:: path to the root of the project directory
 _lang_ [str]:: target language code to be imported from the CSV file
 
 _csv-file_ [str]:: name of the CSV file
-
-_-c, --combine_ [bool]:: see documentation (default: False)
-
-_-u, --update-source_ [bool]:: updates the source language from the CSV.  Use this option with caution (default: False)
 

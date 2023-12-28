@@ -34,5 +34,9 @@ class Timings:
 
         self.phrase_timings[scheme] = timing
 
+    def remove(self, scheme: str):
+        if scheme in self.phrase_timings:
+            del self.phrase_timings[scheme]
+
     def schemes(self):
         return list(self.phrase_timings.keys())

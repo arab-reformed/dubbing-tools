@@ -2,64 +2,83 @@
 
 from dubbing_tools.transcript import Transcript
 import sys
-import os
+import re
 import fire
 import csv
-from dataclasses import dataclass
+from dubbing_tools.phrase import Phrase
+from dubbing_tools.sourcelanguagePhrase import SourceLanguagePhrase
 
 
-@dataclass
-class Combination:
-    start: int
-    end: int = None
-
-
-def cmd(project_path: str, lang: str, csv_file: str, combine: bool = False, update_source: bool = False):
+def cmd(project_path: str, lang: str, csv_file: str):
     """
     import CSV translation data
 
     Imports data that has been previously exported using `dt-export-csv` back into the project.
 
     This operation overwrites the target language translation currently in the project.  Changes to
-    timings are discarded.  Source changes are discarded unless the `--update-source` option is used.
+    timings are discarded.
+
+    Source changes must consist of moving words between lines.  If source words are moved to a different line then
+    new times are computed for the phrase and the source phrase updated.
+
+    If source words are edited or re-ordered the import will fail.
 
     :param project_path: path to the root of the project directory
     :param lang: target language code to be imported from the CSV file
     :param csv_file: name of the CSV file
-    :param combine: see documentation
-    :param update_source: updates the source language from the CSV.  Use this option with caution
     """
 
     transcript = Transcript.load(project_path)
 
-    first_id = None
-    combinations = []  # type: list[Combination]
-    combinator = None
-
     with open(csv_file, 'r') as f:
         reader = csv.DictReader(f)
+        phrase_num = 0
         for row in reader:
-            if first_id is None:
-                first_id = int(row['Id'])
-            i = int(row['Id'])-first_id
-            print(f"{i} {lang}: {row['Translation']}")
-            transcript.phrases[i].set_text(lang, row['Translation'])
-            if update_source:
-                transcript.phrases[i].source.set_text(row['Source'])
+            translation = row['Translation']
+            source = row['Source']
 
-            if combine:
-                if 'Combine' in row and row['Combine']:
-                    if combinator == row['Combine']:
-                        combinations[-1].end = i
-                    else:
-                        combinations.append(Combination(start=i))
-                        combinator = row['Combine']
-                else:
-                    combinator = None
+            if not source.strip():
+                assert not translation.strip(), f"No source so translation on row {row['Id']} should be blank.  Found '{translation}'"
+                continue
 
-        while len(combinations):
-            combo = combinations.pop()
-            transcript.combine_phrases(start_index=combo.start, end_index=combo.end)
+            if not transcript.phrases[phrase_num].source.is_equal(source):
+                print(f"{phrase_num} {row['Id']}: {transcript.phrases[phrase_num].source.text} --- {source}")
+                src_words = re.split(r'\s+', source.strip())
+                start = transcript.phrases[phrase_num].source.start_word
+                end = transcript.phrases[phrase_num].source.end_word
+
+                if len(src_words) != end-start+1:
+                    # print(f"{phrase_num} {transcript.phrases[phrase_num].source.text} --- {source}")
+                    transcript.phrases[phrase_num].source.set_by_word_indices(
+                        words=transcript.words,
+                        start=start,
+                        end=start + len(src_words) - 1
+                    )
+                    if transcript.phrase_count() <= phrase_num+1:
+                        phrase = Phrase(
+                            id=len(transcript.phrases),
+                            source=SourceLanguagePhrase(lang=transcript.src_lang, text=''),
+                        )
+                        phrase.source.end_word = transcript.words_count() - 1
+                        transcript.phrases.append(phrase)
+
+                    transcript.phrases[phrase_num+1].source.set_by_word_indices(
+                        words=transcript.words,
+                        start=start + len(src_words),
+                        end=transcript.phrases[phrase_num+1].source.end_word
+                    )
+                    print(f"{phrase_num} {transcript.phrases[phrase_num].source.text} --- {source}")
+                    print()
+
+                    assert transcript.phrases[phrase_num].source.is_equal(source), f'Phrases not equal in row {row["Id"]}:\n\t{transcript.phrases[phrase_num].source.text}\n\t{source}\n'
+                # print(f"{phrase_num} {lang}: {translation} --- {source}")
+
+            transcript.phrases[phrase_num].set_text(lang, translation)
+
+            phrase_num += 1
+
+        # truncate the phrases array since it may be less
+        transcript.phrases = transcript.phrases[:phrase_num]
 
     if not transcript.save():
         print("Error saving project file.", file=sys.stderr)

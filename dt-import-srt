@@ -13,7 +13,6 @@ def cmd(project_path: str, lang: str, srt_file: str, source: bool = False):
         transcript = Transcript.import_source_srt(srt_file=srt_file, lang=lang)
 
         os.makedirs(project_path)
-        os.chdir(project_path)
 
     else:
         transcript = Transcript.load(project_path)

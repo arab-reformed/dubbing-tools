@@ -48,12 +48,12 @@ class Worker(QObject):
         self.mpeg = (
             ffmpeg.FFmpeg()
             .option('y')
-            .input(video_fullpath(self.lang, self.timing_scheme))
+            .input(self.transcript.video_fullpath(self.lang, self.timing_scheme))
             .output(
-                subtitled_video_fullpath(self.lang, self.timing_scheme, self.sub_lang),
+                self.transcript.subtitled_video_fullpath(self.lang, self.timing_scheme, self.sub_lang),
                 acodec='copy',
                 vcodec='libx264',
-                vf=f"ass={subtitles_fullpath(self.lang, self.timing_scheme, self.sub_lang, 'ass')}",
+                vf=f"ass={self.transcript.subtitles_fullpath(self.lang, self.timing_scheme, self.sub_lang, 'ass')}",
                 crf=20
             )
         )

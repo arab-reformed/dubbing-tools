@@ -19,7 +19,7 @@ from typing import Optional
 
 @dataclass
 class Frame:
-    time: int
+    time: float
     frame: any
     frame_number: int
     image_file: str
@@ -43,7 +43,7 @@ def cmd(
     find presentation slides in videos
 
     This program examines a video to find when a fullscreen slide (still image) is displayed on the screen.
-    These images are output to the specified directory along with timings for display of the images
+    These images are output to the specified directory as JPEGs along with timings for display of the images
     in JSON format.
 
     Translated slides can then be overlaid on the video using xref:dt-replace-slides.adoc[`dt-replace-slides`]

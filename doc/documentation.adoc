@@ -44,7 +44,7 @@ with an ascending numeric suffix appended.
 
 * `./videos`
 
-- *source.mp4* or *source-<lang>.mp4* -- Source video file
+    - *source.mp4* or *source-<lang>.mp4* -- Source video file
 
 * `./audio-clips` -- storage for TTS audio
 
@@ -116,7 +116,7 @@ dt-import-csv <project path> ar
 12. Burn the subtitles into the video
 +
 [source, bash]
-dt-burn-ass-subtitles <project path> en src ar
+dt-burn-subtitles <project path> en src ar
 
 
 == Glossary

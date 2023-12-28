@@ -14,7 +14,7 @@ MARGIN = 5
 def cmd(project_path: str):
     transcript = Transcript.load(project_path)
 
-    audio = AudioSegment.from_file(video_source_fullpath())
+    audio = AudioSegment.from_file(transcript.video_source_fullpath())
 
     for phrase in transcript.phrases:
         target = phrase.source

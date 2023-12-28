@@ -5,27 +5,9 @@ import os
 from dubbing_tools.constants import *
 
 __all__ = [
-    'subtitled_video_fullpath',
-    'subtitles_fullpath',
-    'video_fullpath',
-    'video_source_fullpath',
+    'jsonify',
+    'textify',
 ]
-
-
-def video_source_fullpath(lang: str = None) -> str:
-    return os.path.join(SUBDIR_VIDEO, f"source-{lang}.mp4" if lang else "source.mp4")
-
-
-def video_fullpath(audio_lang: str, timing_scheme: str) -> str:
-    return os.path.join(SUBDIR_VIDEO, f"video-{timing_scheme}-{audio_lang}.mp4")
-
-
-def subtitled_video_fullpath(audio_lang: str, timing_scheme: str, subtitle_lang: str) -> str:
-    return os.path.join('subtitled', f"video-{timing_scheme}-{audio_lang}.{subtitle_lang}.mp4")
-
-
-def subtitles_fullpath(audio_lang: str, timing_scheme: str, subtitle_lang: str, sub_type: str = 'ass') -> str:
-    return os.path.join(SUBDIR_VIDEO, f"video-{timing_scheme}-{audio_lang}.{subtitle_lang}.{sub_type}")
 
 
 def jsonify(result):

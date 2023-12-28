@@ -24,7 +24,7 @@ _subtitle-lang_ [str]:: language code of the target language for subtitles
 
 _-m, --mode_ [str]:: one of `src`, `dub`, or `trn`. (default: 'src')
 
-_-s, --sub-type_ [str]:: type of subtitles to be generated.  Currently ASS and SRT are accepted. (default: 'ASS')
+_-s, --sub-type_ [str]:: type of subtitles to be generated.  Currently `ASS` and `SRT` are accepted. (default: 'ASS')
 
 _-i, --include-source_ [bool]:: display subtitles for the source language as well as the target language (default: False)
 

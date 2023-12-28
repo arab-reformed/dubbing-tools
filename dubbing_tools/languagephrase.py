@@ -60,13 +60,21 @@ class LanguagePhrase(DataClassJsonMixin):
     #     super().__setattr__(key, value)
 
     def set_by_word_indices(self, words: list[Word], start: int, end: int):
-        self.start_time = words[start].start_time
-        self.end_time = words[end].end_time
-        self.text = ' '.join([w.word for w in words[start:end + 1]])
-        if self.timings.get(scheme=Timings.SOURCE) is None:
-            self.timings.set(scheme=Timings.SOURCE, timing=PhraseTiming())
-        self.timings.get(Timings.SOURCE).start_time = words[end].start_time
-        self.timings.get(Timings.SOURCE).end_time = words[end].end_time
+        if start > end:
+            self.start_time = None
+            self.end_time = None
+            self.text = ''
+        else:
+            self.start_time = words[start].start_time
+            self.end_time = words[end].end_time
+            self.text = ' '.join([w.word for w in words[start:end + 1]])
+            if self.timings.get(scheme=Timings.SOURCE) is None:
+                self.timings.set(scheme=Timings.SOURCE, timing=PhraseTiming())
+            self.timings.get(Timings.SOURCE).start_time = words[end].start_time
+            self.timings.get(Timings.SOURCE).end_time = words[end].end_time
+
+    def word_count(self) -> int:
+        return len([word for word in re.split(r'\s+', self.text) if word])
 
     def set_text(self, text: str):
         if text != self.text:
