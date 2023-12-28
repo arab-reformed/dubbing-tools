@@ -14,11 +14,16 @@ class StillData:
     time_start: float
     time_end: float
     image_file: str = None
+    slide_file: str = None
 
-    def powerpoint_image_file(self) -> Optional[str]:
-        m = re.search(r'-(?P<num>\d+)', self.image_file)
-        if m:
-            return f'Slide{int(m.group("num"))}.JPG'
+    def powerpoint_image_file(self, num: int = None) -> Optional[str]:
+        if num is None:
+            m = re.search(r'-(?P<num>\d+)', self.image_file)
+            if m:
+                num = int(m.group("num"))
+
+        if num is not None:
+            return f'Slide{num}.JPG'
 
         return None
 

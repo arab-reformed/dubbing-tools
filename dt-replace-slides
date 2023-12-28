@@ -5,13 +5,7 @@ import fire
 from dubbing_tools.transcript import *
 import sys
 import os
-# from skimage.measure import compare_ssim as ssim
-from skimage.metrics import structural_similarity as ssim
-import json
 from dataclasses import dataclass, field
-from dataclasses_json import dataclass_json
-import numpy
-import re
 import glob
 from dubbing_tools.videodata import StillData, VideoData
 from typing import Optional
@@ -64,22 +58,41 @@ def cmd(
 
     video_data = VideoData.read(path=slides_path)
 
+    slide_num = 0
+    still_names = {}
     for still in video_data.stills:
-        image = ImageClip(os.path.join(arabic_slides_path, still.powerpoint_image_file())) \
+        if still.image_file not in still_names:
+            slide_num += 1
+            still.slide_file = still.powerpoint_image_file(slide_num)
+            still_names[still.image_file] = still.slide_file
+        else:
+            still.slide_file = still_names[still.image_file]
+
+        # continue
+        # image = ImageClip(os.path.join(arabic_slides_path, still.powerpoint_image_file())) \
+        #     .set_start(still.time_start) \
+        #     .set_duration(still.duration()) \
+        #     .set_pos(("center", "center"))
+        image = ImageClip(os.path.join(arabic_slides_path, still.slide_file)) \
             .set_start(still.time_start) \
             .set_duration(still.duration()) \
             .set_pos(("center", "center"))
 
         if image.h != video.h or image.w != video.w:
             if resize:
-                print(f'Resizing {still.powerpoint_image_file()} from {image.w}x{image.h} --> {video.w}x{video.h}', file=sys.stderr)
+                # print(f'Resizing {still.powerpoint_image_file()} from {image.w}x{image.h} --> {video.w}x{video.h}', file=sys.stderr)
+                print(f'Resizing {still.slide_file} from {image.w}x{image.h} --> {video.w}x{video.h}', file=sys.stderr)
                 image = image.resize(height=video.h, width=video.w)
             else:
-                print(f'{still.powerpoint_image_file()} size ({image.w}x{image.h}) differs from video ({video.w}x{video.h})', file=sys.stderr)
+                # print(f'{still.powerpoint_image_file()} size ({image.w}x{image.h}) differs from video ({video.w}x{video.h})', file=sys.stderr)
+                print(f'{still.slide_file} size ({image.w}x{image.h}) differs from video ({video.w}x{video.h})', file=sys.stderr)
                 exit(1)
 
         clips.append(image)
 
+    # import pprint
+    # pprint.pprint(video_data.stills)
+    # exit(1)
     final = CompositeVideoClip(clips)
     final.write_videofile(output_video)
 
